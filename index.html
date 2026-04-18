@@ -1,10 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>The Merchant</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merchant | Best Deals</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f9;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: white;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 700px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .products {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 10px 0 8px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 65px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 12px 0;
+      color: #111827;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .note {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      padding: 0 20px;
+      color: #666;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #111827;
+      color: #ddd;
+      text-align: center;
+      padding: 18px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
-  <h1>Merchant 🚀</h1>
-  <p>My website is live</p>
+<body>
+
+  <header>
+    <h1>Merchant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Best Product Picks & Deals</h2>
+    <p>
+      Browse our featured products and check the latest prices through our trusted affiliate partners.
+    </p>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80" alt="Product 1">
+      <h3>Smartphone Holder</h3>
+      <p>Simple and practical holder for desk use, video calls, and comfortable viewing.</p>
+      <div class="price">$19.99</div>
+      <a class="btn" href="https://example.com/affiliate-link-1" target="_blank" rel="nofollow sponsored">Check Price</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=700&q=80" alt="Product 2">
+      <h3>Wireless Earbuds</h3>
+      <p>Lightweight earbuds with clean sound and a compact charging case.</p>
+      <div class="price">$29.99</div>
+      <a class="btn" href="https://example.com/affiliate-link-2" target="_blank" rel="nofollow sponsored">Check Price</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80" alt="Product 3">
+      <h3>Portable Speaker</h3>
+      <p>Portable Bluetooth speaker for everyday use at home, outdoors, or during travel.</p>
+      <div class="price">$34.99</div>
+      <a class="btn" href="https://example.com/affiliate-link-3" target="_blank" rel="nofollow sponsored">Check Price</a>
+    </div>
+  </section>
+
+  <div class="note">
+    Disclosure: Some links on this site may be affiliate links, which means we may earn a commission at no extra cost to you.
+  </div>
+
+  <footer>
+    © 2026 Merchant. All rights reserved.
+  </footer>
+
 </body>
 </html>
