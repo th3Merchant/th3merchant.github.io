@@ -153,26 +153,15 @@
     }
 
     .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 22px;
-}
-
-.product-card {
-  width: 100%;
-  max-width: 260px;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
 
     .product-card {
+      width: 100%;
+      max-width: 260px;
       background: white;
       border-radius: 20px;
       overflow: hidden;
@@ -386,26 +375,14 @@
     }
 
     .disclosure {
-  margin-top: 34px;
-  background: #fff7ed;
-  border: 1px solid #fdba74;
-  color: #9a3412;
-  padding: 14px 18px;
-  border-radius: 12px;
-  font-size: 13px;
-  text-align: center;
-}
-
-    .about-box {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
-    }
-
-    .about-box p + p {
-      margin-top: 12px;
+      margin-top: 34px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      text-align: center;
     }
 
     footer {
@@ -435,13 +412,8 @@
       }
 
       .products {
-  justify-content: center;
-}
-
-.product-card {
-  width: 100%;
-  max-width: 320px;
-}
+        justify-content: center;
+      }
 
       .product-card {
         width: 100%;
@@ -502,7 +474,7 @@
         <a href="#pet">Pet</a>
         <a href="#home">Home</a>
         <a href="#sports">Sports</a>
-         </nav>
+      </nav>
     </div>
   </header>
 
@@ -641,8 +613,8 @@
       </div>
 
       <div class="disclosure">
-  As an Amazon Associate, Merchant earns from qualifying purchases.
-</div>
+        As an Amazon Associate, Merchant earns from qualifying purchases.
+      </div>
     </div>
   </section>
 
@@ -679,7 +651,7 @@
           <div class="category-card">
             <div class="category-icon">🏠</div>
             <h3>Home & Kitchen</h3>
-            <p>Comfort, cleaning, kitchen picks, and practical home essentials.</p>
+            <p>Comfort, storage, kitchen picks, drinkware, and practical home essentials.</p>
             <a class="category-btn" href="#home">Explore</a>
           </div>
 
@@ -740,12 +712,119 @@
     <div class="container">
       <div class="category-header">
         <h2>Home & Kitchen</h2>
-        <p>This section is ready for more home and kitchen products beyond current best sellers.</p>
+        <p>Useful kitchen and home picks with quick review summaries based on customer feedback.</p>
       </div>
 
-      <div class="coming-soon">
-        <h3>More Home & Kitchen Products Coming Soon</h3>
-        <p>We will add more home and kitchen recommendations here soon.</p>
+      <div class="products">
+        <div class="product-card">
+          <img src="images/instant-pot-1.jpg" alt="Instant Pot Duo Mini">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>Instant Pot Duo Mini</h3>
+            <p>A compact multi-cooker that combines pressure cooking, slow cooking, steaming, rice cooking, and more in one smaller format.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.9/5 from 20 verified reviews</div>
+              <p class="review-summary">Widely praised for convenience, compact size, and making everyday cooking easier without taking much counter space.</p>
+              <ul class="review-highlights">
+                <li>Great size for small kitchens and everyday use</li>
+                <li>Easy and convenient for quick meals</li>
+                <li>Popular for versatility and multi-use cooking</li>
+                <li>Best for smaller households more than large batch cooking</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Instant-Pot-Duo-Mini-Programmable/dp/B06Y1YD5W7?th=1&linkCode=ll2&tag=themerchant00-20&linkId=42b282b635556ada98691f20d410a708&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/food-containers-1.jpg" alt="Food Storage Containers">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>5 PCS Food Storage Containers</h3>
+            <p>Fridge-friendly storage containers with removable colanders designed to help keep produce organized and easier to rinse and store.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.7/5 from 20 verified reviews</div>
+              <p class="review-summary">Often liked for organization, convenience, and helping fruits or vegetables stay separated and easier to manage in the fridge.</p>
+              <ul class="review-highlights">
+                <li>Useful for organizing produce neatly</li>
+                <li>Colander design adds everyday convenience</li>
+                <li>Good option for fridge storage and meal prep</li>
+                <li>Size may feel smaller than expected for some buyers</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Containers-Removable-Leakproof-Dishwasher-Microwave/dp/B0DRJ32K54?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=67b76bee7f4b35fdfda70feb8ea2f221&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/brumate-1.jpg" alt="BrüMate Era Flip 40oz Tumbler">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>BrüMate Era Flip 40oz Tumbler</h3>
+            <p>An insulated tumbler with a covered straw lid made for daily hydration, travel, and longer cold retention throughout the day.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.6/5 from 20 verified reviews</div>
+              <p class="review-summary">Frequently praised for cold retention, leak-resistant design, and practical everyday use at home, work, or on the go.</p>
+              <ul class="review-highlights">
+                <li>Keeps drinks cold for long periods</li>
+                <li>Covered straw feels cleaner and more practical</li>
+                <li>Popular for travel and daily carry use</li>
+                <li>Some buyers mention the price is high, and one review reported leaking</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Br%C3%BCMate-Leakproof-Hygienic-Insulated-Stainless/dp/B0GKR3D7SZ?th=1&linkCode=ll2&tag=themerchant00-20&linkId=925c4197e42e1e03be5423d8e098b69d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/oil-sprayer-1.jpg" alt="2-in-1 Oil Sprayer">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>2-in-1 Oil Sprayer</h3>
+            <p>A kitchen oil bottle and sprayer combo designed for cooking, air fryer use, salad prep, and more controlled oil application.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.6/5 from 20 verified reviews</div>
+              <p class="review-summary">Often appreciated for convenience, better oil control, and making cooking or air-fryer prep feel cleaner and more efficient.</p>
+              <ul class="review-highlights">
+                <li>Handy for air fryer and everyday cooking</li>
+                <li>Helps control oil use more easily</li>
+                <li>Useful bottle-and-sprayer combo design</li>
+                <li>Some buyers mention spray performance can vary</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/YARRAMATE-Sprayer-Stickers-Food-Grade-Dispenser/dp/B0DJXPTRW6?th=1&linkCode=ll2&tag=themerchant00-20&linkId=bbecb4463e3ba317e7c5c57bb77d8e2e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/bbq-cleaner-1.jpg" alt="Scrub Daddy BBQ Daddy Grill Cleaner">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>Scrub Daddy BBQ Daddy Grill Cleaner</h3>
+            <p>A grill-cleaning kit designed to make barbecue cleanup easier with a temperature-controlled scrubbing approach.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.8/5 from 20 verified reviews</div>
+              <p class="review-summary">Strong customer feedback around cleaning performance, easy handling, and making grill cleanup much less annoying.</p>
+              <ul class="review-highlights">
+                <li>Highly liked for effective grill cleaning</li>
+                <li>Easy to handle and practical to use</li>
+                <li>Good option for frequent grill users</li>
+                <li>Most useful for people who actually grill regularly</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Scrub-Daddy-BBQ-Cleaner-Temperature-Controlled/dp/B0D5PFLYLP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=04b5dee1eb16c3b190178c46bca9de1f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -764,15 +843,14 @@
     </div>
   </section>
 
-  
   <footer>
-  <p>© 2026 Merchant. All rights reserved.</p>
-  <p>This website contains affiliate links.</p>
-  <p>
-    <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
-    <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
-  </p>
-</footer>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>
+      <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
+      <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
+    </p>
+  </footer>
 
 </body>
 </html>
