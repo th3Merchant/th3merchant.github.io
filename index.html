@@ -21,7 +21,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      background: #f3f6fb;
       color: #1f2937;
       line-height: 1.6;
     }
@@ -36,11 +36,12 @@
     }
 
     header {
-      background: #111827;
+      background: rgba(17, 24, 39, 0.95);
       color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -56,7 +57,7 @@
     .logo {
       color: white;
       font-size: 28px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.5px;
     }
 
@@ -69,6 +70,7 @@
     .nav-links a {
       color: #d1d5db;
       font-size: 14px;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
@@ -76,21 +78,22 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1f2937);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
-      padding: 78px 0 60px;
+      padding: 86px 0 64px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 46px;
       margin-bottom: 14px;
+      line-height: 1.15;
     }
 
     .hero p {
       max-width: 760px;
-      margin: 0 auto 26px;
-      color: #d1d5db;
+      margin: 0 auto 28px;
+      color: #cbd5e1;
       font-size: 17px;
     }
 
@@ -105,7 +108,7 @@
     .btn {
       display: inline-block;
       padding: 13px 22px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: 700;
       transition: 0.2s ease;
     }
@@ -113,15 +116,17 @@
     .btn-primary {
       background: #f59e0b;
       color: #111827;
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.25);
     }
 
     .btn-primary:hover {
       background: #fbbf24;
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
       color: white;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.22);
     }
 
     .btn-secondary:hover {
@@ -129,79 +134,22 @@
     }
 
     .section {
-      padding: 60px 0;
+      padding: 68px 0;
     }
 
     .section-title {
       text-align: center;
-      font-size: 32px;
-      color: #111827;
+      font-size: 34px;
+      color: #0f172a;
       margin-bottom: 12px;
     }
 
     .section-subtitle {
       text-align: center;
       max-width: 760px;
-      margin: 0 auto 34px;
-      color: #6b7280;
+      margin: 0 auto 38px;
+      color: #64748b;
       font-size: 15px;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .category-card {
-      background: white;
-      border-radius: 16px;
-      padding: 22px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .category-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .category-card h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #111827;
-    }
-
-    .category-card p {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .category-card a {
-      font-weight: 700;
-      color: #d97706;
-    }
-
-    .category-section {
-      margin-top: 18px;
-    }
-
-    .category-header {
-      margin-bottom: 28px;
-    }
-
-    .category-header h2 {
-      font-size: 30px;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .category-header p {
-      color: #6b7280;
-      font-size: 15px;
-      max-width: 760px;
     }
 
     .products {
@@ -212,12 +160,18 @@
 
     .product-card {
       background: white;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
       border: 1px solid #e5e7eb;
       box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
     }
 
     .product-card img {
@@ -260,9 +214,9 @@
     }
 
     .review-box {
-      background: #f9fafb;
+      background: #f8fafc;
       border: 1px solid #e5e7eb;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 14px;
       margin-top: 4px;
       margin-bottom: 14px;
@@ -277,13 +231,13 @@
 
     .review-summary {
       font-size: 14px;
-      color: #4b5563;
+      color: #475569;
       margin-bottom: 10px;
     }
 
     .review-highlights {
       padding-left: 18px;
-      color: #4b5563;
+      color: #475569;
       font-size: 14px;
     }
 
@@ -296,27 +250,123 @@
       text-align: center;
       background: #ff9900;
       color: #111827;
-      font-weight: 700;
+      font-weight: 800;
       padding: 12px 14px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-top: auto;
+      transition: 0.2s ease;
     }
 
     .amazon-btn:hover {
       background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    .categories-wrap {
+      background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7ff;
+      border-radius: 26px;
+      padding: 34px 24px;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.06);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 20px;
+      padding: 22px 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1);
+    }
+
+    .category-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #eff6ff;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .category-card h3 {
+      font-size: 22px;
+      line-height: 1.3;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .category-card p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .category-btn {
+      display: inline-block;
+      background: #0f172a;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .category-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .category-section {
+      margin-top: 18px;
+    }
+
+    .category-header {
+      margin-bottom: 28px;
+    }
+
+    .category-header h2 {
+      font-size: 30px;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .category-header p {
+      color: #6b7280;
+      font-size: 15px;
+      max-width: 760px;
     }
 
     .coming-soon {
       background: white;
-      border: 2px dashed #d1d5db;
-      border-radius: 18px;
-      padding: 28px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 20px;
+      padding: 32px;
       text-align: center;
-      color: #6b7280;
+      color: #64748b;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
     }
 
     .coming-soon h3 {
-      color: #111827;
+      color: #0f172a;
       margin-bottom: 10px;
       font-size: 22px;
     }
@@ -334,7 +384,7 @@
     .about-box {
       background: white;
       border: 1px solid #e5e7eb;
-      border-radius: 18px;
+      border-radius: 20px;
       padding: 28px;
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
     }
@@ -358,7 +408,7 @@
 
     @media (max-width: 640px) {
       .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .nav {
@@ -367,6 +417,10 @@
 
       .nav-links {
         justify-content: center;
+      }
+
+      .category-card {
+        min-height: auto;
       }
     }
   </style>
@@ -381,10 +435,10 @@
         <a href="#best-sellers">Best Sellers</a>
         <a href="#categories">Categories</a>
         <a href="#baby">Baby</a>
-        <a href="#beauty">Beauty & Personal Care</a>
-        <a href="#pet">Pet Supplies</a>
-        <a href="#home">Home & Kitchen</a>
-        <a href="#sports">Sports & Outdoors</a>
+        <a href="#beauty">Beauty</a>
+        <a href="#pet">Pet</a>
+        <a href="#home">Home</a>
+        <a href="#sports">Sports</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -392,10 +446,10 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Best Amazon Picks in One Place</h1>
+      <h1>Best Amazon Picks in One Clean Place</h1>
       <p>
-        Browse our best sellers, read quick review summaries based on customer feedback,
-        and explore products by familiar Amazon categories.
+        Browse our best sellers, check quick review summaries, and explore products
+        by familiar Amazon categories.
       </p>
 
       <div class="hero-actions">
@@ -418,20 +472,16 @@
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>TERRO Ant Killer Bait Stations</h3>
-            <p>
-              Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.
-            </p>
+            <p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
 
             <div class="review-box">
               <div class="review-score">4.9/5 from 20 verified reviews</div>
-              <p class="review-summary">
-                Often praised for fast results, easy placement, and strong effectiveness against indoor ant problems.
-              </p>
+              <p class="review-summary">Often praised for fast results, easy placement, and strong effectiveness against indoor ant problems.</p>
               <ul class="review-highlights">
                 <li>Works quickly for many common ant issues</li>
-                <li>Easy to place and use with no complicated setup</li>
+                <li>Easy to place and use</li>
                 <li>Frequently described as highly effective</li>
-                <li>Some buyers mention it can take a bit of patience in certain cases</li>
+                <li>May require a little patience in some cases</li>
               </ul>
             </div>
 
@@ -444,20 +494,16 @@
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>OLANLY Bathroom Rug 30x20</h3>
-            <p>
-              A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.
-            </p>
+            <p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
 
             <div class="review-box">
               <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">
-                Frequently liked for softness, absorbency, easy washing, and overall bathroom comfort.
-              </p>
+              <p class="review-summary">Frequently liked for softness, absorbency, easy washing, and overall bathroom comfort.</p>
               <ul class="review-highlights">
                 <li>Soft feel and comfortable underfoot</li>
-                <li>Absorbs water well and dries nicely</li>
-                <li>Washes well and keeps a good overall look</li>
-                <li>Some buyers mention the grip could be better on certain floors</li>
+                <li>Absorbs water well</li>
+                <li>Washes well and keeps a nice look</li>
+                <li>Grip could be better on some floors</li>
               </ul>
             </div>
 
@@ -470,20 +516,16 @@
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>Queen Size 4 Piece Sheet Set</h3>
-            <p>
-              A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.
-            </p>
+            <p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
 
             <div class="review-box">
               <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">
-                Commonly praised for softness, comfort, value, and a fit that works well on deeper mattresses.
-              </p>
+              <p class="review-summary">Commonly praised for softness, comfort, value, and a fit that works well on deeper mattresses.</p>
               <ul class="review-highlights">
                 <li>Soft and comfortable feel</li>
                 <li>Good value for the price</li>
                 <li>Deep-pocket fit works well for many beds</li>
-                <li>Some buyers mention the material feels thinner than expected</li>
+                <li>Some buyers say the fabric feels thin</li>
               </ul>
             </div>
 
@@ -496,20 +538,16 @@
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>BISSELL Little Green Cleaner</h3>
-            <p>
-              A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.
-            </p>
+            <p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
 
             <div class="review-box">
               <div class="review-score">4.7/5 from 20 verified reviews</div>
-              <p class="review-summary">
-                Often recommended for portable spot cleaning, upholstery use, and everyday messes from kids or pets.
-              </p>
+              <p class="review-summary">Often recommended for portable spot cleaning, upholstery use, and everyday messes from kids or pets.</p>
               <ul class="review-highlights">
                 <li>Strong for small messes and targeted cleaning</li>
                 <li>Useful on carpets, upholstery, and car interiors</li>
-                <li>Portable and easy to move around the house</li>
-                <li>Some buyers mention the tank feels small for bigger jobs</li>
+                <li>Portable and easy to move around</li>
+                <li>Tank feels small for bigger jobs</li>
               </ul>
             </div>
 
@@ -522,20 +560,16 @@
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>DREO Tower Fan</h3>
-            <p>
-              A modern tower fan for home use with a clean design and convenient airflow for daily comfort.
-            </p>
+            <p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
 
             <div class="review-box">
               <div class="review-score">4.95/5 from 20 verified reviews</div>
-              <p class="review-summary">
-                Frequently praised for quiet performance, strong airflow, easy setup, and convenient everyday use.
-              </p>
+              <p class="review-summary">Frequently praised for quiet performance, strong airflow, easy setup, and convenient everyday use.</p>
               <ul class="review-highlights">
                 <li>Strong airflow with good everyday cooling comfort</li>
-                <li>Quiet at many normal-use speed settings</li>
-                <li>Easy to set up and use, with useful controls</li>
-                <li>Some buyers note higher speeds can sound louder</li>
+                <li>Quiet at many normal-use settings</li>
+                <li>Easy to set up and use</li>
+                <li>Higher speeds can sound louder</li>
               </ul>
             </div>
 
@@ -552,40 +586,47 @@
 
   <section class="section" id="categories">
     <div class="container">
-      <h2 class="section-title">Shop by Amazon Category</h2>
+      <h2 class="section-title">Shop by Category</h2>
       <p class="section-subtitle">
-        Browse by familiar Amazon categories as we continue adding more curated products.
+        Explore familiar Amazon categories in a cleaner and more modern layout.
       </p>
 
-      <div class="category-grid">
-        <div class="category-card">
-          <h3>Baby</h3>
-          <p>Baby essentials, nursery products, feeding gear, and daily-use baby items.</p>
-          <a href="#baby">Explore Baby</a>
-        </div>
+      <div class="categories-wrap">
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-icon">👶</div>
+            <h3>Baby</h3>
+            <p>Nursery, feeding, daily baby essentials, and family-friendly must-haves.</p>
+            <a class="category-btn" href="#baby">Explore</a>
+          </div>
 
-        <div class="category-card">
-          <h3>Beauty & Personal Care</h3>
-          <p>Beauty tools, grooming products, and practical everyday personal care picks.</p>
-          <a href="#beauty">Explore Beauty & Personal Care</a>
-        </div>
+          <div class="category-card">
+            <div class="category-icon">✨</div>
+            <h3>Beauty & Personal Care</h3>
+            <p>Beauty tools, grooming picks, and practical personal care products.</p>
+            <a class="category-btn" href="#beauty">Explore</a>
+          </div>
 
-        <div class="category-card">
-          <h3>Pet Supplies</h3>
-          <p>Pet-related finds, home cleanup helpers, and useful daily pet supplies.</p>
-          <a href="#pet">Explore Pet Supplies</a>
-        </div>
+          <div class="category-card">
+            <div class="category-icon">🐾</div>
+            <h3>Pet Supplies</h3>
+            <p>Helpful pet products, cleanup tools, and useful everyday pet finds.</p>
+            <a class="category-btn" href="#pet">Explore</a>
+          </div>
 
-        <div class="category-card">
-          <h3>Home & Kitchen</h3>
-          <p>Home comfort, cleaning tools, kitchen essentials, and everyday household products.</p>
-          <a href="#home">Explore Home & Kitchen</a>
-        </div>
+          <div class="category-card">
+            <div class="category-icon">🏠</div>
+            <h3>Home & Kitchen</h3>
+            <p>Comfort, cleaning, kitchen picks, and practical home essentials.</p>
+            <a class="category-btn" href="#home">Explore</a>
+          </div>
 
-        <div class="category-card">
-          <h3>Sports & Outdoors</h3>
-          <p>Fitness items, active lifestyle products, and outdoor-use gear.</p>
-          <a href="#sports">Explore Sports & Outdoors</a>
+          <div class="category-card">
+            <div class="category-icon">🏃</div>
+            <h3>Sports & Outdoors</h3>
+            <p>Fitness gear, active lifestyle picks, and outdoor-use products.</p>
+            <a class="category-btn" href="#sports">Explore</a>
+          </div>
         </div>
       </div>
     </div>
@@ -595,9 +636,7 @@
     <div class="container">
       <div class="category-header">
         <h2>Baby</h2>
-        <p>
-          This section is ready for baby-related Amazon products. You can add your future baby picks here.
-        </p>
+        <p>This section is ready for baby-related Amazon products.</p>
       </div>
 
       <div class="coming-soon">
@@ -611,14 +650,12 @@
     <div class="container">
       <div class="category-header">
         <h2>Beauty & Personal Care</h2>
-        <p>
-          This section is ready for beauty and personal care items like grooming tools and self-care products.
-        </p>
+        <p>This section is ready for beauty and personal care products.</p>
       </div>
 
       <div class="coming-soon">
-        <h3>Beauty & Personal Care Products Coming Soon</h3>
-        <p>We will add selected beauty and personal care picks here soon.</p>
+        <h3>Beauty Products Coming Soon</h3>
+        <p>We will add selected beauty and self-care picks here soon.</p>
       </div>
     </div>
   </section>
@@ -627,9 +664,7 @@
     <div class="container">
       <div class="category-header">
         <h2>Pet Supplies</h2>
-        <p>
-          This section is ready for pet products and helpful home solutions for pet owners.
-        </p>
+        <p>This section is ready for pet products and useful pet-owner finds.</p>
       </div>
 
       <div class="coming-soon">
@@ -643,9 +678,7 @@
     <div class="container">
       <div class="category-header">
         <h2>Home & Kitchen</h2>
-        <p>
-          This section is ready for home and kitchen products beyond the current best sellers.
-        </p>
+        <p>This section is ready for more home and kitchen products beyond current best sellers.</p>
       </div>
 
       <div class="coming-soon">
@@ -659,9 +692,7 @@
     <div class="container">
       <div class="category-header">
         <h2>Sports & Outdoors</h2>
-        <p>
-          This section is ready for fitness gear, outdoor products, and active lifestyle picks.
-        </p>
+        <p>This section is ready for fitness gear and outdoor product picks.</p>
       </div>
 
       <div class="coming-soon">
@@ -675,15 +706,9 @@
     <div class="container">
       <h2 class="section-title">About This Site</h2>
       <div class="about-box">
-        <p>
-          Merchant is a simple affiliate website built to showcase selected Amazon products in a clean and organized format.
-        </p>
-        <p>
-          The homepage highlights current best sellers, while the category sections make it easier to expand the site over time.
-        </p>
-        <p>
-          Each featured product includes a short review summary to help visitors browse faster before checking the full details on Amazon.
-        </p>
+        <p>Merchant is a simple affiliate website built to showcase selected Amazon products in a clean and organized format.</p>
+        <p>The homepage highlights current best sellers, while the category sections make it easier to expand the site over time.</p>
+        <p>Each featured product includes a short review summary to help visitors browse faster before checking the full details on Amazon.</p>
       </div>
     </div>
   </section>
