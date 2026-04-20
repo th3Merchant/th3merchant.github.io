@@ -6,7 +6,7 @@
   <title>Merchant | Amazon Affiliate Picks</title>
   <meta
     name="description"
-    content="Handpicked Amazon product recommendations with direct affiliate links."
+    content="Handpicked Amazon product recommendations across popular Amazon categories."
   />
   <style>
     * {
@@ -31,7 +31,7 @@
     }
 
     .container {
-      width: min(1150px, 92%);
+      width: min(1180px, 92%);
       margin: 0 auto;
     }
 
@@ -62,13 +62,13 @@
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
       color: #d1d5db;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .nav-links a:hover {
@@ -78,7 +78,7 @@
     .hero {
       background: linear-gradient(135deg, #0f172a, #1f2937);
       color: white;
-      padding: 72px 0 56px;
+      padding: 78px 0 60px;
       text-align: center;
     }
 
@@ -129,7 +129,7 @@
     }
 
     .section {
-      padding: 58px 0;
+      padding: 60px 0;
     }
 
     .section-title {
@@ -147,37 +147,67 @@
       font-size: 15px;
     }
 
-    .features {
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 18px;
       margin-top: 28px;
     }
 
-    .feature-card {
+    .category-card {
       background: white;
       border-radius: 16px;
-      padding: 20px;
+      padding: 22px;
       border: 1px solid #e5e7eb;
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease;
     }
 
-    .feature-card h3 {
+    .category-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .category-card h3 {
       font-size: 20px;
       margin-bottom: 8px;
       color: #111827;
     }
 
-    .feature-card p {
+    .category-card p {
       color: #6b7280;
       font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .category-card a {
+      font-weight: 700;
+      color: #d97706;
+    }
+
+    .category-section {
+      margin-top: 18px;
+    }
+
+    .category-header {
+      margin-bottom: 28px;
+    }
+
+    .category-header h2 {
+      font-size: 30px;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .category-header p {
+      color: #6b7280;
+      font-size: 15px;
+      max-width: 760px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
-      margin-top: 26px;
     }
 
     .product-card {
@@ -192,7 +222,7 @@
 
     .product-card img {
       width: 100%;
-      height: 230px;
+      height: 235px;
       object-fit: cover;
       background: #f3f4f6;
     }
@@ -220,14 +250,40 @@
       font-size: 20px;
       margin-bottom: 10px;
       color: #111827;
-      min-height: 52px;
     }
 
     .product-card p {
       color: #6b7280;
       font-size: 14px;
-      margin-bottom: 16px;
-      flex: 1;
+      margin-bottom: 14px;
+    }
+
+    .review-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 4px;
+      margin-bottom: 14px;
+    }
+
+    .review-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .review-box ul {
+      padding-left: 18px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .review-box li {
+      margin-bottom: 6px;
     }
 
     .amazon-btn {
@@ -238,14 +294,30 @@
       font-weight: 700;
       padding: 12px 14px;
       border-radius: 10px;
+      margin-top: auto;
     }
 
     .amazon-btn:hover {
       background: #ffad1f;
     }
 
+    .coming-soon {
+      background: white;
+      border: 2px dashed #d1d5db;
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    .coming-soon h3 {
+      color: #111827;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
     .disclosure {
-      margin-top: 28px;
+      margin-top: 34px;
       background: #fff7ed;
       border: 1px solid #fdba74;
       color: #9a3412;
@@ -293,110 +365,234 @@
       <a href="#" class="logo">Merchant</a>
 
       <nav class="nav-links">
-        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#baby">Baby</a>
+        <a href="#beauty">Beauty & Personal Care</a>
+        <a href="#pet">Pet Supplies</a>
+        <a href="#home">Home & Kitchen</a>
+        <a href="#sports">Sports & Outdoors</a>
         <a href="#about">About</a>
-        <a href="#disclosure">Disclosure</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>Best Amazon Finds in One Place</h1>
+      <h1>Amazon Picks Organized by Category</h1>
       <p>
-        We handpick useful Amazon products and organize them in a simple, clean way
-        so you can browse quickly and check the latest details directly on Amazon.
+        Browse selected Amazon products by category with short review notes,
+        simple highlights, and direct affiliate links.
       </p>
 
       <div class="hero-actions">
-        <a href="#products" class="btn btn-primary">Browse Products</a>
-        <a href="#about" class="btn btn-secondary">Learn More</a>
+        <a href="#categories" class="btn btn-primary">Browse Categories</a>
+        <a href="#home" class="btn btn-secondary">See Featured Picks</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="categories">
     <div class="container">
-      <h2 class="section-title">Why Shop Through This Page?</h2>
+      <h2 class="section-title">Shop by Amazon Category</h2>
       <p class="section-subtitle">
-        Clean recommendations, simple product summaries, and direct Amazon links.
+        We are building this site around familiar Amazon categories so visitors can browse more easily.
       </p>
 
-      <div class="features">
-        <div class="feature-card">
-          <h3>Curated Picks</h3>
-          <p>We focus on practical and popular items instead of filling the page with random products.</p>
+      <div class="category-grid">
+        <div class="category-card">
+          <h3>Baby</h3>
+          <p>Baby essentials, nursery picks, feeding items, and daily-use products.</p>
+          <a href="#baby">Explore Baby</a>
         </div>
-        <div class="feature-card">
-          <h3>Simple Layout</h3>
-          <p>Fast browsing experience with product cards that are easy to scan on desktop and mobile.</p>
+
+        <div class="category-card">
+          <h3>Beauty & Personal Care</h3>
+          <p>Beauty tools, daily-care products, and practical personal care picks.</p>
+          <a href="#beauty">Explore Beauty</a>
         </div>
-        <div class="feature-card">
-          <h3>Direct Amazon Access</h3>
-          <p>Each product links directly to Amazon so you can view details, reviews, and the latest price.</p>
+
+        <div class="category-card">
+          <h3>Pet Supplies</h3>
+          <p>Cleaning solutions, pet-friendly home helpers, and useful pet-related finds.</p>
+          <a href="#pet">Explore Pet Supplies</a>
         </div>
-        <div class="feature-card">
-          <h3>Affiliate Transparency</h3>
-          <p>We clearly mention affiliate disclosure so the site stays clean, honest, and policy-friendly.</p>
+
+        <div class="category-card">
+          <h3>Home & Kitchen</h3>
+          <p>Home comfort, cleaning, storage, and useful everyday household products.</p>
+          <a href="#home">Explore Home & Kitchen</a>
+        </div>
+
+        <div class="category-card">
+          <h3>Sports & Outdoors</h3>
+          <p>Outdoor gear, fitness-friendly products, and active lifestyle essentials.</p>
+          <a href="#sports">Explore Sports & Outdoors</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="products">
+  <section class="section category-section" id="baby">
     <div class="container">
-      <h2 class="section-title">Featured Amazon Products</h2>
-      <p class="section-subtitle">
-        Click any card below to open the product on Amazon.
-      </p>
+      <div class="category-header">
+        <h2>Baby</h2>
+        <p>
+          This section is ready for baby-related products. Add your Amazon baby picks here as you expand the site.
+        </p>
+      </div>
+
+      <div class="coming-soon">
+        <h3>More Baby Picks Coming Soon</h3>
+        <p>Add baby products later using the same product card style for a clean and consistent layout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section category-section" id="beauty">
+    <div class="container">
+      <div class="category-header">
+        <h2>Beauty & Personal Care</h2>
+        <p>
+          This section is ready for beauty and personal care items. Add grooming, skincare, and daily care products here.
+        </p>
+      </div>
+
+      <div class="coming-soon">
+        <h3>Beauty & Personal Care Picks Coming Soon</h3>
+        <p>Once you choose products, we can add them here with images, short reviews, and Amazon buttons.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section category-section" id="pet">
+    <div class="container">
+      <div class="category-header">
+        <h2>Pet Supplies</h2>
+        <p>
+          Useful products for homes with pets, including cleaning-friendly tools and pet mess solutions.
+        </p>
+      </div>
 
       <div class="products">
         <div class="product-card">
-          <img src="images/tero-1.jpg" alt="Ant killer bait stations">
+          <img src="images/bissell-1.jpg" alt="BISSELL Little Green Cleaner">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>BISSELL Little Green Cleaner</h3>
+            <p>
+              A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.
+            </p>
+
+            <div class="review-box">
+              <div class="review-title">Quick Review</div>
+              <ul>
+                <li>Good choice for small messes and targeted cleaning.</li>
+                <li>Useful for sofas, car seats, and pet-related accidents.</li>
+                <li>Best for people who want something compact and practical.</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://amzn.to/3ZePn1u" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section category-section" id="home">
+    <div class="container">
+      <div class="category-header">
+        <h2>Home & Kitchen</h2>
+        <p>
+          Featured home products with simple summaries and short review notes to help visitors browse faster.
+        </p>
+      </div>
+
+      <div class="products">
+        <div class="product-card">
+          <img src="images/tero-1.jpg" alt="TERRO Ant Killer Bait Stations">
           <div class="product-content">
             <span class="badge">Home Care</span>
             <h3>TERRO Ant Killer Bait Stations</h3>
-            <p>Indoor liquid ant bait stations made for common household ant problems with a simple ready-to-use format.</p>
+            <p>
+              Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.
+            </p>
+
+            <div class="review-box">
+              <div class="review-title">Quick Review</div>
+              <ul>
+                <li>Good for people who want a simple no-mix solution.</li>
+                <li>Easy to place in problem areas around the home.</li>
+                <li>Best for everyday household pest control needs.</li>
+              </ul>
+            </div>
+
             <a class="amazon-btn" href="https://amzn.to/4eucCw3" target="_blank" rel="nofollow sponsored">View on Amazon</a>
           </div>
         </div>
 
         <div class="product-card">
-          <img src="images/olanly-1.jpg" alt="Bathroom rug">
+          <img src="images/olanly-1.jpg" alt="OLANLY Bathroom Rug 30x20">
           <div class="product-content">
-            <span class="badge">Home Decor</span>
+            <span class="badge">Home & Kitchen</span>
             <h3>OLANLY Bathroom Rug 30x20</h3>
-            <p>Soft absorbent bath rug with a clean simple look, quick-dry feel, and washable everyday design.</p>
+            <p>
+              A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.
+            </p>
+
+            <div class="review-box">
+              <div class="review-title">Quick Review</div>
+              <ul>
+                <li>Comfortable option for bathrooms and sink areas.</li>
+                <li>Useful if you want a softer feel underfoot.</li>
+                <li>Nice pick for practical home comfort.</li>
+              </ul>
+            </div>
+
             <a class="amazon-btn" href="https://amzn.to/3BfqsRH" target="_blank" rel="nofollow sponsored">View on Amazon</a>
           </div>
         </div>
 
         <div class="product-card">
-          <img src="images/queen-sheet-1.jpg" alt="Queen bed sheet set">
+          <img src="images/queen-sheet-1.jpg" alt="Queen Size 4 Piece Sheet Set">
           <div class="product-content">
-            <span class="badge">Best Seller</span>
+            <span class="badge">Bedroom</span>
             <h3>Queen Size 4 Piece Sheet Set</h3>
-            <p>Soft breathable microfiber bed sheet set with deep pockets and an easy everyday hotel-style feel.</p>
+            <p>
+              A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.
+            </p>
+
+            <div class="review-box">
+              <div class="review-title">Quick Review</div>
+              <ul>
+                <li>Good option for people upgrading basic bedding.</li>
+                <li>Simple style that works with many bedroom setups.</li>
+                <li>Best for everyday comfort at home.</li>
+              </ul>
+            </div>
+
             <a class="amazon-btn" href="https://amzn.to/3OPFFjk" target="_blank" rel="nofollow sponsored">View on Amazon</a>
           </div>
         </div>
 
         <div class="product-card">
-          <img src="images/bissell-1.jpg" alt="Portable carpet cleaner">
-          <div class="product-content">
-            <span class="badge">Cleaning</span>
-            <h3>BISSELL Little Green Cleaner</h3>
-            <p>Portable cleaner for carpet spots, upholstery messes, fabric cleaning, and car interior touch-ups.</p>
-            <a class="amazon-btn" href="https://amzn.to/3ZePn1u" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/dreo-fan-1.jpg" alt="Tower fan">
+          <img src="images/dreo-fan-1.jpg" alt="DREO Tower Fan">
           <div class="product-content">
             <span class="badge">Home Essential</span>
             <h3>DREO Tower Fan</h3>
-            <p>Quiet tower fan for home use with a modern shape, multiple settings, and easy everyday airflow.</p>
+            <p>
+              A modern tower fan for home use with a clean design and convenient airflow for daily comfort.
+            </p>
+
+            <div class="review-box">
+              <div class="review-title">Quick Review</div>
+              <ul>
+                <li>Useful for bedrooms, offices, and living spaces.</li>
+                <li>Nice pick if you want a slim fan design.</li>
+                <li>Works well as a practical everyday home item.</li>
+              </ul>
+            </div>
+
             <a class="amazon-btn" href="https://amzn.to/3OcTsAt" target="_blank" rel="nofollow sponsored">View on Amazon</a>
           </div>
         </div>
@@ -408,18 +604,34 @@
     </div>
   </section>
 
+  <section class="section category-section" id="sports">
+    <div class="container">
+      <div class="category-header">
+        <h2>Sports & Outdoors</h2>
+        <p>
+          This section is ready for active lifestyle and outdoor-related products once you choose your next items.
+        </p>
+      </div>
+
+      <div class="coming-soon">
+        <h3>Sports & Outdoors Picks Coming Soon</h3>
+        <p>Add fitness accessories, outdoor gear, or travel-friendly sports items here later.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="about">
     <div class="container">
       <h2 class="section-title">About This Site</h2>
       <div class="about-box">
         <p>
-          Merchant is a simple affiliate website built to showcase selected Amazon products in a clean and easy-to-browse format.
+          Merchant is a simple affiliate website built to organize selected Amazon products into familiar shopping categories.
         </p>
         <p>
-          Visitors can view product summaries and click through to Amazon for the latest pricing, reviews, and purchase options.
+          The goal is to make browsing easier by combining product images, quick review notes, and direct Amazon links in one clean layout.
         </p>
         <p>
-          This page is designed to stay lightweight, mobile-friendly, and easy to expand later with more products and categories.
+          As more products are added, each category can grow while keeping the site mobile-friendly and easy to scan.
         </p>
       </div>
     </div>
