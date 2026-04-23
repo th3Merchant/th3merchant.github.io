@@ -3,460 +3,331 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Merchant | Amazon Best Sellers & Categories</title>
-  <meta
-    name="description"
-    content="Best Amazon picks with quick review summaries and category-based browsing."
-  />
+  <title>Merchant | Curated Amazon Product Picks</title>
+  <meta name="description" content="Curated Amazon finds across home, beauty, pet, and sports categories." />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#eef3f8;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#dbe3ee;
+      --brand:#ff9900;
+      --brand-dark:#e68900;
+      --dark:#0f172a;
+      --soft:#f8fafc;
+      --tag:#fff3d6;
     }
 
-    html {
-      scroll-behavior: smooth;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f6fb;
-      color: #1f2937;
-      line-height: 1.6;
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(1200px,92%);
+      margin:0 auto;
     }
 
-    a {
-      text-decoration: none;
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(15,23,42,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
 
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:16px 0;
     }
 
-    header {
-      background: rgba(17, 24, 39, 0.95);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    .logo{
+      color:#fff;
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:.4px;
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-      flex-wrap: wrap;
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:flex-end;
     }
 
-    .logo {
-      color: white;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+    .nav-links a{
+      color:#cbd5e1;
+      font-size:14px;
+      font-weight:600;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+    .nav-links a:hover{color:#fff}
+
+    .hero{
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      color:#fff;
+      padding:78px 0 58px;
+      text-align:center;
     }
 
-    .nav-links a {
-      color: #d1d5db;
-      font-size: 14px;
-      transition: 0.2s ease;
+    .hero h1{
+      font-size:clamp(34px,5vw,52px);
+      line-height:1.12;
+      margin-bottom:14px;
     }
 
-    .nav-links a:hover {
-      color: #fbbf24;
+    .hero p{
+      max-width:820px;
+      margin:0 auto 26px;
+      color:#dbe3ee;
+      font-size:17px;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      padding: 86px 0 64px;
-      text-align: center;
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
     }
 
-    .hero h1 {
-      font-size: 46px;
-      margin-bottom: 14px;
-      line-height: 1.15;
+    .btn{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:12px;
+      font-weight:800;
+      transition:.2s ease;
     }
 
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      color: #cbd5e1;
-      font-size: 17px;
+    .btn-primary{
+      background:var(--brand);
+      color:var(--dark);
     }
 
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+    .btn-primary:hover{background:#ffad1f}
+
+    .btn-secondary{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.22);
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: 0.2s ease;
+    .btn-secondary:hover{background:rgba(255,255,255,.08)}
+
+    .section{padding:64px 0}
+
+    .section-title{
+      text-align:center;
+      font-size:clamp(28px,4vw,40px);
+      line-height:1.15;
+      margin-bottom:12px;
+      color:var(--dark);
     }
 
-    .btn-primary {
-      background: #f59e0b;
-      color: #111827;
-      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.25);
+    .section-subtitle{
+      text-align:center;
+      max-width:780px;
+      margin:0 auto 34px;
+      color:var(--muted);
+      font-size:15px;
     }
 
-    .btn-primary:hover {
-      background: #fbbf24;
-      transform: translateY(-2px);
+    .categories-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:18px;
     }
 
-    .btn-secondary {
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+    .category-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 12px 28px rgba(15,23,42,.05);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
+    .category-card h3{
+      font-size:20px;
+      margin-bottom:10px;
     }
 
-    .section {
-      padding: 68px 0;
+    .category-card p{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:16px;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 34px;
-      color: #0f172a;
-      margin-bottom: 12px;
+    .category-card a{
+      color:var(--brand-dark);
+      font-weight:800;
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 38px;
-      color: #64748b;
-      font-size: 15px;
+    .products{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:22px;
     }
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 22px;
+    .product-card{
+      width:220px;
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 14px 30px rgba(15,23,42,.08);
+      display:flex;
+      flex-direction:column;
     }
 
-    .product-card {
-      width: 100%;
-      max-width: 260px;
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .product-card img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      background:#f1f5f9;
     }
 
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    .product-content{
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
     }
 
-    .product-card img {
-      width: 100%;
-      height: 235px;
-      object-fit: cover;
-      background: #f3f4f6;
+    .badge{
+      display:inline-block;
+      align-self:flex-start;
+      background:var(--tag);
+      color:#9a5b00;
+      font-size:11px;
+      font-weight:800;
+      padding:4px 9px;
+      border-radius:999px;
+      margin-bottom:10px;
     }
 
-    .product-content {
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+    .product-card h3{
+      font-size:17px;
+      line-height:1.3;
+      min-height:44px;
+      margin-bottom:8px;
+      color:var(--dark);
     }
 
-    .badge {
-      display: inline-block;
-      width: fit-content;
-      margin-bottom: 12px;
-      background: #fef3c7;
-      color: #92400e;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 10px;
+    .product-card .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:10px;
     }
 
-    .product-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #111827;
-      min-height: 52px;
+    .mini-review{
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px;
+      margin-bottom:14px;
+      font-size:12px;
+      color:#334155;
     }
 
-    .product-card p {
-      color: #6b7280;
-      font-size: 14px;
-      margin-bottom: 14px;
+    .mini-review strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--dark);
+      font-size:12px;
     }
 
-    .review-box {
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 14px;
-      margin-top: 4px;
-      margin-bottom: 14px;
+    .mini-review ul{
+      padding-left:16px;
     }
 
-    .review-score {
-      font-size: 14px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 8px;
+    .mini-review li{
+      margin-bottom:4px;
     }
 
-    .review-summary {
-      font-size: 14px;
-      color: #475569;
-      margin-bottom: 10px;
+    .amazon-btn{
+      display:block;
+      text-align:center;
+      margin-top:auto;
+      background:var(--brand);
+      color:var(--dark);
+      font-weight:800;
+      padding:11px 14px;
+      border-radius:10px;
     }
 
-    .review-highlights {
-      padding-left: 18px;
-      color: #475569;
-      font-size: 14px;
+    .amazon-btn:hover{background:#ffad1f}
+
+    .notice{
+      background:#fff7ed;
+      border:1px solid #fdba74;
+      color:#9a3412;
+      padding:16px 18px;
+      border-radius:16px;
+      font-size:14px;
+      max-width:1180px;
+      margin:0 auto;
     }
 
-    .review-highlights li {
-      margin-bottom: 6px;
+    .placeholder-box{
+      max-width:800px;
+      margin:0 auto;
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 12px 28px rgba(15,23,42,.05);
+      text-align:center;
     }
 
-    .amazon-btn {
-      display: block;
-      text-align: center;
-      background: #ff9900;
-      color: #111827;
-      font-weight: 800;
-      padding: 12px 14px;
-      border-radius: 12px;
-      margin-top: auto;
-      transition: 0.2s ease;
+    .placeholder-box p{
+      color:var(--muted);
+      margin-bottom:16px;
     }
 
-    .amazon-btn:hover {
-      background: #ffad1f;
-      transform: translateY(-1px);
+    .about-box{
+      max-width:1000px;
+      margin:0 auto;
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 12px 28px rgba(15,23,42,.05);
     }
 
-    .categories-wrap {
-      background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
-      border: 1px solid #dbe7ff;
-      border-radius: 26px;
-      padding: 34px 24px;
-      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.06);
+    .about-box p + p{margin-top:12px}
+
+    footer{
+      background:var(--dark);
+      color:#cbd5e1;
+      padding:30px 0;
+      margin-top:28px;
     }
 
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
+    .footer-links{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
     }
 
-    .category-card {
-      background: white;
-      border-radius: 20px;
-      padding: 22px 18px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-    }
+    .footer-links a{color:#fff}
 
-    .category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1);
-    }
-
-    .category-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: #eff6ff;
-      color: #2563eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .category-card h3 {
-      font-size: 22px;
-      line-height: 1.3;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
-
-    .category-card p {
-      color: #64748b;
-      font-size: 14px;
-      margin-bottom: 18px;
-      flex: 1;
-    }
-
-    .category-btn {
-      display: inline-block;
-      background: #0f172a;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .category-btn:hover {
-      background: #1d4ed8;
-    }
-
-    .category-section {
-      margin-top: 18px;
-    }
-
-    .category-header {
-      margin-bottom: 28px;
-    }
-
-    .category-header h2 {
-      font-size: 30px;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .category-header p {
-      color: #6b7280;
-      font-size: 15px;
-      max-width: 760px;
-    }
-
-    .coming-soon {
-      background: white;
-      border: 1px dashed #cbd5e1;
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-      color: #64748b;
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
-    }
-
-    .coming-soon h3 {
-      color: #0f172a;
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    .disclosure {
-      margin-top: 34px;
-      background: #fff7ed;
-      border: 1px solid #fdba74;
-      color: #9a3412;
-      padding: 14px 18px;
-      border-radius: 12px;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 28px 20px;
-      margin-top: 20px;
-    }
-
-    footer p {
-      margin: 6px 0;
-      font-size: 14px;
-    }
-
-    @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .nav {
-        justify-content: center;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .products {
-        justify-content: center;
-      }
-
-      .product-card {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      .category-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .category-card {
-        min-height: auto;
-        padding: 18px 14px;
-        border-radius: 16px;
-      }
-
-      .category-card h3 {
-        font-size: 18px;
-      }
-
-      .category-card p {
-        font-size: 13px;
-        margin-bottom: 14px;
-      }
-
-      .category-icon {
-        width: 44px;
-        height: 44px;
-        font-size: 20px;
-        margin-bottom: 12px;
-      }
-
-      .category-btn {
-        width: 100%;
-        text-align: center;
-        padding: 10px 12px;
-        font-size: 13px;
-      }
-
-      .categories-wrap {
-        padding: 22px 14px;
-      }
+    @media (max-width:700px){
+      .nav{flex-direction:column;align-items:flex-start}
+      .nav-links{justify-content:flex-start}
+      .product-card{width:min(100%,330px)}
     }
   </style>
 </head>
@@ -465,30 +336,28 @@
   <header>
     <div class="container nav">
       <a href="#" class="logo">Merchant</a>
-
       <nav class="nav-links">
         <a href="#best-sellers">Best Sellers</a>
         <a href="#categories">Categories</a>
-        <a href="#baby">Baby</a>
+        <a href="#home-kitchen">Home & Kitchen</a>
         <a href="#beauty">Beauty</a>
-        <a href="#pet">Pet</a>
-        <a href="#home">Home</a>
+        <a href="#pet">Pet Supplies</a>
         <a href="#sports">Sports</a>
+        <a href="#about">About</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>Best Amazon Picks in One Place</h1>
+      <h1>Curated Amazon Picks, Without the Mess</h1>
       <p>
-        Browse our best sellers, check quick review summaries, and explore products
-        by familiar Amazon categories.
+        Merchant organizes selected Amazon products into clean sections so visitors can browse faster,
+        spot useful picks, and open the full product page on Amazon in one click.
       </p>
-
       <div class="hero-actions">
-        <a href="#best-sellers" class="btn btn-primary">Shop Best Sellers</a>
-        <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+        <a href="#best-sellers" class="btn btn-primary">Browse Best Sellers</a>
+        <a href="#categories" class="btn btn-secondary">Explore Categories</a>
       </div>
     </div>
   </section>
@@ -497,123 +366,99 @@
     <div class="container">
       <h2 class="section-title">Best Sellers</h2>
       <p class="section-subtitle">
-        Our current best-selling picks with quick review summaries based on customer feedback.
+        Strong everyday picks that already perform well with shoppers and fit the site naturally.
       </p>
 
       <div class="products">
-        <div class="product-card">
-          <img src="images/tero-1.jpg" alt="TERRO Ant Killer Bait Stations">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>TERRO Ant Killer Bait Stations</h3>
-            <p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.9/5 from 20 verified reviews</div>
-              <p class="review-summary">Often praised for fast results, easy placement, and strong effectiveness against indoor ant problems.</p>
-              <ul class="review-highlights">
-                <li>Works quickly for many common ant issues</li>
-                <li>Easy to place and use</li>
-                <li>Frequently described as highly effective</li>
-                <li>May require a little patience in some cases</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/olanly-1.jpg" alt="OLANLY Bathroom Rug 30x20">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>OLANLY Bathroom Rug 30x20</h3>
-            <p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently liked for softness, absorbency, easy washing, and overall bathroom comfort.</p>
-              <ul class="review-highlights">
-                <li>Soft feel and comfortable underfoot</li>
-                <li>Absorbs water well</li>
-                <li>Washes well and keeps a nice look</li>
-                <li>Grip could be better on some floors</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/queen-sheet-1.jpg" alt="Queen Size 4 Piece Sheet Set">
+        <article class="product-card">
+          <img src="images/queen-sheet-1.jpg" alt="Queen sheet set">
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>Queen Size 4 Piece Sheet Set</h3>
-            <p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Commonly praised for softness, comfort, value, and a fit that works well on deeper mattresses.</p>
-              <ul class="review-highlights">
-                <li>Soft and comfortable feel</li>
-                <li>Good value for the price</li>
-                <li>Deep-pocket fit works well for many beds</li>
-                <li>Some buyers say the fabric feels thin</li>
+            <p class="meta">Soft microfiber bedding set with deep pockets and easy daily use.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Simple everyday bedroom upgrade</li>
+                <li>Clean, practical, broad appeal</li>
+                <li>Easy product for quick browsing</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-          <img src="images/bissell-1.jpg" alt="BISSELL Little Green Cleaner">
+        <article class="product-card">
+          <img src="images/bissell-1.jpg" alt="Bissell little green cleaner">
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>BISSELL Little Green Cleaner</h3>
-            <p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.7/5 from 20 verified reviews</div>
-              <p class="review-summary">Often recommended for portable spot cleaning, upholstery use, and everyday messes from kids or pets.</p>
-              <ul class="review-highlights">
-                <li>Strong for small messes and targeted cleaning</li>
-                <li>Useful on carpets, upholstery, and car interiors</li>
-                <li>Portable and easy to move around</li>
-                <li>Tank feels small for bigger jobs</li>
+            <p class="meta">Portable spot and upholstery cleaner for home messes and car interiors.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Problem-solving cleaning tool</li>
+                <li>Useful for fabric and small spills</li>
+                <li>Easy value proposition for visitors</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-          <img src="images/dreo-fan-1.jpg" alt="DREO Tower Fan">
+        <article class="product-card">
+          <img src="images/olanly-1.jpg" alt="Olanly bathroom rug">
+          <div class="product-content">
+            <span class="badge">Best Seller</span>
+            <h3>OLANLY Bathroom Rug</h3>
+            <p class="meta">Absorbent chenille bath rug made for comfort and quick daily use.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Simple home upgrade</li>
+                <li>Useful, easy-to-understand product</li>
+                <li>Strong fit for everyday shoppers</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/dreo-fan-1.jpg" alt="Dreo tower fan">
           <div class="product-content">
             <span class="badge">Best Seller</span>
             <h3>DREO Tower Fan</h3>
-            <p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.95/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently praised for quiet performance, strong airflow, easy setup, and convenient everyday use.</p>
-              <ul class="review-highlights">
-                <li>Strong airflow with good everyday cooling comfort</li>
-                <li>Quiet at many normal-use settings</li>
-                <li>Easy to set up and use</li>
-                <li>Higher speeds can sound louder</li>
+            <p class="meta">Slim home fan with a modern look and easy room placement.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Great visual fit for the page</li>
+                <li>Home essential with clear use case</li>
+                <li>Works well in curated lists</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="disclosure">
-        As an Amazon Associate, Merchant earns from qualifying purchases.
+        <article class="product-card">
+          <img src="images/tero-1.jpg" alt="Terro ant killer bait">
+          <div class="product-content">
+            <span class="badge">Best Seller</span>
+            <h3>TERRO Ant Killer Baits</h3>
+            <p class="meta">Ready-to-use liquid bait stations for common indoor ant problems.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Clear household problem solver</li>
+                <li>Strong utility product</li>
+                <li>Good fit for practical shoppers</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -622,448 +467,473 @@
     <div class="container">
       <h2 class="section-title">Shop by Category</h2>
       <p class="section-subtitle">
-        Explore familiar Amazon categories in a cleaner and more modern layout.
+        Browse familiar Amazon categories while the site keeps expanding with more curated picks.
       </p>
 
-      <div class="categories-wrap">
-        <div class="category-grid">
-          <div class="category-card">
-            <div class="category-icon">👶</div>
-            <h3>Baby</h3>
-            <p>Nursery, feeding, daily baby essentials, and family-friendly must-haves.</p>
-            <a class="category-btn" href="#baby">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">✨</div>
-            <h3>Beauty & Personal Care</h3>
-            <p>Skincare, body care, nail products, and everyday beauty essentials.</p>
-            <a class="category-btn" href="#beauty">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🐾</div>
-            <h3>Pet Supplies</h3>
-            <p>Helpful pet products, cleanup tools, comfort picks, and daily pet essentials.</p>
-            <a class="category-btn" href="#pet">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🏠</div>
-            <h3>Home & Kitchen</h3>
-            <p>Comfort, storage, kitchen picks, drinkware, and practical home essentials.</p>
-            <a class="category-btn" href="#home">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🏃</div>
-            <h3>Sports & Outdoors</h3>
-            <p>Fitness gear, active lifestyle picks, and outdoor-use products.</p>
-            <a class="category-btn" href="#sports">Explore</a>
-          </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>Baby</h3>
+          <p>Baby essentials, nursery products, feeding gear, and useful daily items.</p>
+          <a href="#baby">Explore Baby</a>
+        </div>
+        <div class="category-card">
+          <h3>Beauty & Personal Care</h3>
+          <p>Beauty tools, body care, skincare accessories, and practical personal care picks.</p>
+          <a href="#beauty">Explore Beauty & Personal Care</a>
+        </div>
+        <div class="category-card">
+          <h3>Pet Supplies</h3>
+          <p>Pet cleaning, comfort products, feeding essentials, and smart pet helpers.</p>
+          <a href="#pet">Explore Pet Supplies</a>
+        </div>
+        <div class="category-card">
+          <h3>Home & Kitchen</h3>
+          <p>Useful kitchen tools, cleaning helpers, and practical home items.</p>
+          <a href="#home-kitchen">Explore Home & Kitchen</a>
+        </div>
+        <div class="category-card">
+          <h3>Sports & Outdoors</h3>
+          <p>Home workout gear, movement tools, and practical fitness equipment.</p>
+          <a href="#sports">Explore Sports & Outdoors</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section category-section" id="baby">
+  <section class="section" id="baby">
     <div class="container">
-      <div class="category-header">
-        <h2>Baby</h2>
-        <p>This section is ready for baby-related Amazon products.</p>
-      </div>
-
-      <div class="coming-soon">
-        <h3>Baby Products Coming Soon</h3>
-        <p>We will add selected baby essentials here soon.</p>
+      <h2 class="section-title">Baby</h2>
+      <p class="section-subtitle">This section is reserved and ready for curated baby products.</p>
+      <div class="placeholder-box">
+        <p>Baby products are not finalized yet. Keep this section live as a clean placeholder for the next update.</p>
+        <a href="#categories" class="btn btn-primary">Back to Categories</a>
       </div>
     </div>
   </section>
 
-  <section class="section category-section" id="beauty">
+  <section class="section" id="home-kitchen">
     <div class="container">
-      <div class="category-header">
-        <h2>Beauty & Personal Care</h2>
-        <p>Useful beauty picks with quick review summaries based on customer feedback.</p>
-      </div>
+      <h2 class="section-title">Home & Kitchen</h2>
+      <p class="section-subtitle">Useful kitchen and home picks with clear everyday value.</p>
 
       <div class="products">
-        <div class="product-card">
-          <img src="images/clean-towels-1.jpg" alt="Clean Skin Club Clean Towels XL">
+        <article class="product-card">
+          <img src="images/food-containers-1.jpg" alt="Food storage containers">
           <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Clean Skin Club Clean Towels XL</h3>
-            <p>Disposable face towels designed for a cleaner skincare routine, makeup removal, and daily face drying without reusing a regular bathroom towel.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.95/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently praised for cleanliness, softness, and making skincare routines feel more hygienic and convenient.</p>
-              <ul class="review-highlights">
-                <li>Very popular for skincare and face drying</li>
-                <li>Soft feel and easy everyday use</li>
-                <li>Helps users avoid reusing damp towels</li>
-                <li>Disposable format may not appeal to everyone</li>
+            <span class="badge">Home & Kitchen</span>
+            <h3>Food Storage Containers</h3>
+            <p class="meta">Fridge storage set with removable colander for easier washing and draining.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Smart storage idea</li>
+                <li>Practical for daily kitchen use</li>
+                <li>Strong visual product</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Clean-Skin-Club-Biodegradable-Disposable/dp/B0812B1FMQ?th=1&linkCode=ll2&tag=themerchant00-20&linkId=da6106eb7b5571d85e065cc7b1fa34cb&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Containers-Removable-Leakproof-Dishwasher-Microwave/dp/B0DRJ32K54?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=67b76bee7f4b35fdfda70feb8ea2f221&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-          <img src="images/dove-body-wash-1.jpg" alt="Dove Body Wash">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Dove Body Wash</h3>
-            <p>A moisturizing antibacterial body wash with pump packaging designed for daily cleansing while helping protect skin from dryness.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.95/5 from 20 verified reviews</div>
-              <p class="review-summary">Strongly liked for everyday comfort, skin feel, and being an easy body-wash choice from a trusted brand.</p>
-              <ul class="review-highlights">
-                <li>Very strong everyday-use appeal</li>
-                <li>Popular for softness and comfort</li>
-                <li>Pump bottle adds convenience</li>
-                <li>Body wash preferences can vary by scent and formula</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Dove-Body-Wash-Care-Protect/dp/B09DDD6YGJ?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=023420baa20016630d1a142936e67b7e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/back-scrubber-1.jpg" alt="Back Scrubber">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Back Scrubber</h3>
-            <p>A long-handle shower scrubber made for easier body cleansing and reaching the back more comfortably during showers.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Often appreciated for comfort, reach, and making body care easier for people who want better back cleaning in the shower.</p>
-              <ul class="review-highlights">
-                <li>Very practical for daily shower routines</li>
-                <li>Useful long-handle design</li>
-                <li>Strong broad appeal and easy use case</li>
-                <li>Brush firmness may feel different depending on preference</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Scrubber-Shower-Handle-Bristles-Exfoliator/dp/B0B1HK4WNC?th=1&linkCode=ll2&tag=themerchant00-20&linkId=909901733c9e1568433d0e103a4f4c6c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/nail-glue-1.jpg" alt="UNA GELLA Nail Glue Gel">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>UNA GELLA Nail Glue Gel</h3>
-            <p>A solid nail glue gel designed for press-on or nail-tip application with a cleaner, less runny format than traditional glue.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Commonly praised for easy handling, stronger control during application, and being helpful for nail-tip routines at home.</p>
-              <ul class="review-highlights">
-                <li>Useful for at-home nail application</li>
-                <li>Solid format is easier to control</li>
-                <li>Good niche product with strong reviews</li>
-                <li>Best suited to people already interested in nail products</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/UNA-GELLA-NAIL-TIPS-578/dp/B0B854YTCF?th=1&linkCode=ll2&tag=themerchant00-20&linkId=d21de74b1378dd87dba94bb975143268&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/sun-bum-1.jpg" alt="Sun Bum Sunscreen Spray">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Sun Bum Sunscreen Spray</h3>
-            <p>A moisturizing sunscreen body spray designed for lightweight sun protection and easier application during outdoor use.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.65/5 from 20 verified reviews</div>
-              <p class="review-summary">Often liked for convenient spray use, easy application, and a brand identity many shoppers already recognize.</p>
-              <ul class="review-highlights">
-                <li>Easy spray format for body use</li>
-                <li>Helpful seasonal and outdoor-care product</li>
-                <li>Recognizable and trusted brand feel</li>
-                <li>Sunscreen preference is personal and seasonal</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLERK?th=1&linkCode=ll2&tag=themerchant00-20&linkId=c3dff5447287b18f504241483c409b65&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section category-section" id="pet">
-    <div class="container">
-      <div class="category-header">
-        <h2>Pet Supplies</h2>
-        <p>Useful pet picks with quick review summaries based on customer feedback.</p>
-      </div>
-
-      <div class="products">
-        <div class="product-card">
-          <img src="images/petpivot-1.jpg" alt="PetPivot Self Cleaning Cat Litter Box">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>PetPivot Self Cleaning Litter Box</h3>
-            <p>An open-top automatic litter box designed to make cleanup easier while improving safety and everyday convenience for cat owners.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently praised for easy setup, strong cat acceptance, and a cleaner everyday litter routine with less odor hassle.</p>
-              <ul class="review-highlights">
-                <li>Open-top design is easier for many cats to accept</li>
-                <li>Liked for convenience and reduced daily scooping</li>
-                <li>Often praised for safety-focused design</li>
-                <li>One negative review reported a defective unit</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/PetPivot-Cleaning-Automatic-Anti-Pinch-Protection/dp/B0GL7Q6YXZ?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=7cb5904efdc09e4fa2af3de078cb6436&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/chomchom-1.jpg" alt="ChomChom Roller Pet Hair Remover">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>ChomChom Roller Pet Hair Remover</h3>
-            <p>A reusable pet hair remover designed for couches, bedding, and other fabric surfaces without relying on disposable sticky sheets.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.5/5 from 203K+ reviews</div>
-              <p class="review-summary">Very popular for quick furniture cleanup, strong hair pickup, and reusable everyday convenience for pet owners.</p>
-              <ul class="review-highlights">
-                <li>Extremely popular and easy to understand product</li>
-                <li>Useful for couches, blankets, and upholstery</li>
-                <li>Reusable design is a major plus</li>
-                <li>Works best on fabric surfaces rather than every material type</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Chom-Roller-Hair-Remover-Reusable/dp/B0C2FMZMHP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=0d2e094eec21817eeff162a5db5526d5&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/dog-bed-1.jpg" alt="OhGeni Orthopedic Dog Bed">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>OhGeni Orthopedic Dog Bed</h3>
-            <p>An orthopedic foam dog bed with a washable cover designed to improve comfort and support for everyday rest.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.5/5 from 4,000+ reviews</div>
-              <p class="review-summary">Often liked for comfort, support, and practical features like a removable washable cover.</p>
-              <ul class="review-highlights">
-                <li>Good comfort and support for dogs</li>
-                <li>Washable cover is practical for daily life</li>
-                <li>Strong broad appeal for dog owners</li>
-                <li>Size choice matters, so buyers should pick carefully</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/OhGeni-Orthopedic-Machine-Washable-Waterproof-Comfortable/dp/B0G5YMQ24M?th=1&linkCode=ll2&tag=themerchant00-20&linkId=9c933f4130a63a9d878c08acf626835e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/cat-litter-1.jpg" alt="Purina Tidy Cats Cat Litter">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>Purina Tidy Cats Cat Litter</h3>
-            <p>An unscented clumping cat litter made for multi-cat homes with low-dust performance and odor control.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.3/5 from 50+ reviews</div>
-              <p class="review-summary">Useful for cat owners who want clumping performance, low dust, and an unscented option for daily litter management.</p>
-              <ul class="review-highlights">
-                <li>Unscented option for more sensitive households</li>
-                <li>Designed for clumping and odor control</li>
-                <li>Helpful addition to the cat-focused side of the section</li>
-                <li>Not the strongest-rated product in the group</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Purina-Tidy-Cats-Performance-Unscented/dp/B0G27CQ28L?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=aa7d88a35554c82d4a6cde3d12e1923d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/puppy-food-1.jpg" alt="Nutrish Puppy Food">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>Nutrish Puppy Food</h3>
-            <p>A dry puppy food formula designed for growing dogs with chicken as the main protein source.</p>
-
-            <div class="review-box">
-              <div class="review-score">Strong category fit</div>
-              <p class="review-summary">A good section finisher that adds a clear puppy-focused dog food option and improves category balance between cats and dogs.</p>
-              <ul class="review-highlights">
-                <li>Clear puppy-focused use case</li>
-                <li>Helps round out the dog side of the section</li>
-                <li>Easy product for visitors to understand quickly</li>
-                <li>Food choices are more preference-based than utility products</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Nutrish-Rachael-Puppy-Chicken-Recipe/dp/B0FWQ164CW?th=1&linkCode=ll2&tag=themerchant00-20&linkId=3166a82f9df03f852a7905f65a2f076b&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section category-section" id="home">
-    <div class="container">
-      <div class="category-header">
-        <h2>Home & Kitchen</h2>
-        <p>Useful kitchen and home picks with quick review summaries based on customer feedback.</p>
-      </div>
-
-      <div class="products">
-        <div class="product-card">
+        <article class="product-card">
           <img src="images/instant-pot-1.jpg" alt="Instant Pot Duo Mini">
           <div class="product-content">
             <span class="badge">Home & Kitchen</span>
             <h3>Instant Pot Duo Mini</h3>
-            <p>A compact multi-cooker that combines pressure cooking, slow cooking, steaming, rice cooking, and more in one smaller format.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.9/5 from 20 verified reviews</div>
-              <p class="review-summary">Widely praised for convenience, compact size, and making everyday cooking easier without taking much counter space.</p>
-              <ul class="review-highlights">
-                <li>Great size for small kitchens and everyday use</li>
-                <li>Easy and convenient for quick meals</li>
-                <li>Popular for versatility and multi-use cooking</li>
-                <li>Best for smaller households more than large batch cooking</li>
+            <p class="meta">Compact multi-cooker for quick meals in smaller kitchens.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Recognizable problem-solving appliance</li>
+                <li>Strong home utility</li>
+                <li>Good fit for curated lists</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Instant-Pot-Duo-Mini-Programmable/dp/B06Y1YD5W7?th=1&linkCode=ll2&tag=themerchant00-20&linkId=42b282b635556ada98691f20d410a708&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Instant-Pot-Duo-Mini-Programmable/dp/B06Y1YD5W7?th=1&linkCode=ll2&tag=themerchant00-20&linkId=42b282b635556ada98691f20d410a708&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
+        </article>
 
-        <div class="product-card">
-          <img src="images/bbq-cleaner-1.jpg" alt="Scrub Daddy BBQ Daddy Grill Cleaner">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>Scrub Daddy BBQ Daddy Grill Cleaner</h3>
-            <p>A grill-cleaning kit designed to make barbecue cleanup easier with a temperature-controlled scrubbing approach.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Strong customer feedback around cleaning performance, easy handling, and making grill cleanup much less annoying.</p>
-              <ul class="review-highlights">
-                <li>Highly liked for effective grill cleaning</li>
-                <li>Easy to handle and practical to use</li>
-                <li>Good option for frequent grill users</li>
-                <li>Most useful for people who actually grill regularly</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Scrub-Daddy-BBQ-Cleaner-Temperature-Controlled/dp/B0D5PFLYLP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=04b5dee1eb16c3b190178c46bca9de1f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/food-containers-1.jpg" alt="Food Storage Containers">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>5 PCS Food Storage Containers</h3>
-            <p>Fridge-friendly storage containers with removable colanders designed to help keep produce organized and easier to rinse and store.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.7/5 from 20 verified reviews</div>
-              <p class="review-summary">Often liked for organization, convenience, and helping fruits or vegetables stay separated and easier to manage in the fridge.</p>
-              <ul class="review-highlights">
-                <li>Useful for organizing produce neatly</li>
-                <li>Colander design adds everyday convenience</li>
-                <li>Good option for fridge storage and meal prep</li>
-                <li>Size may feel smaller than expected for some buyers</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Containers-Removable-Leakproof-Dishwasher-Microwave/dp/B0DRJ32K54?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=67b76bee7f4b35fdfda70feb8ea2f221&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/brumate-1.jpg" alt="BrüMate Era Flip 40oz Tumbler">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>BrüMate Era Flip 40oz Tumbler</h3>
-            <p>An insulated tumbler with a covered straw lid made for daily hydration, travel, and longer cold retention throughout the day.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.6/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently praised for cold retention, leak-resistant design, and practical everyday use at home, work, or on the go.</p>
-              <ul class="review-highlights">
-                <li>Keeps drinks cold for long periods</li>
-                <li>Covered straw feels cleaner and more practical</li>
-                <li>Popular for travel and daily carry use</li>
-                <li>Some buyers mention the price is high, and one review reported leaking</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Br%C3%BCMate-Leakproof-Hygienic-Insulated-Stainless/dp/B0GKR3D7SZ?th=1&linkCode=ll2&tag=themerchant00-20&linkId=925c4197e42e1e03be5423d8e098b69d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/oil-sprayer-1.jpg" alt="2-in-1 Oil Sprayer">
+        <article class="product-card">
+          <img src="images/oil-sprayer-1.jpg" alt="Oil sprayer">
           <div class="product-content">
             <span class="badge">Home & Kitchen</span>
             <h3>2-in-1 Oil Sprayer</h3>
-            <p>A kitchen oil bottle and sprayer combo designed for cooking, air fryer use, salad prep, and more controlled oil application.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.6/5 from 20 verified reviews</div>
-              <p class="review-summary">Often appreciated for convenience, better oil control, and making cooking or air-fryer prep feel cleaner and more efficient.</p>
-              <ul class="review-highlights">
-                <li>Handy for air fryer and everyday cooking</li>
-                <li>Helps control oil use more easily</li>
-                <li>Useful bottle-and-sprayer combo design</li>
-                <li>Some buyers mention spray performance can vary</li>
+            <p class="meta">Kitchen oil bottle and sprayer combo for easier cooking control.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Simple hidden-gem style product</li>
+                <li>Solves a common kitchen annoyance</li>
+                <li>Looks good in discovery sections</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/YARRAMATE-Sprayer-Stickers-Food-Grade-Dispenser/dp/B0DJXPTRW6?th=1&linkCode=ll2&tag=themerchant00-20&linkId=bbecb4463e3ba317e7c5c57bb77d8e2e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/YARRAMATE-Sprayer-Stickers-Food-Grade-Dispenser/dp/B0DJXPTRW6?th=1&linkCode=ll2&tag=themerchant00-20&linkId=bbecb4463e3ba317e7c5c57bb77d8e2e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
-        </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/bbq-cleaner-1.jpg" alt="BBQ cleaner">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>BBQ Daddy Grill Cleaner</h3>
+            <p class="meta">Grill-cleaning tool designed for easier outdoor cooking cleanup.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Clear job-to-be-done product</li>
+                <li>Good fit for grill owners</li>
+                <li>Strong problem-solving angle</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Scrub-Daddy-BBQ-Cleaner-Temperature-Controlled/dp/B0D5PFLYLP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=04b5dee1eb16c3b190178c46bca9de1f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/cutting-board-1.jpg" alt="Bamboo cutting board set">
+          <div class="product-content">
+            <span class="badge">Home & Kitchen</span>
+            <h3>Bamboo Cutting Board Set</h3>
+            <p class="meta">Three-piece kitchen board set for prep, chopping, and serving use.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Safe, simple kitchen essential</li>
+                <li>Broad appeal for home shoppers</li>
+                <li>Easy card to understand fast</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Zeawec-3-Piece-Bamboo-Cutting-Kitchen/dp/B0GFCZTRKL?th=1&linkCode=ll2&tag=themerchant00-20&linkId=6bd7e4316d65bb85850989924563b5d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section category-section" id="sports">
+  <section class="section" id="beauty">
     <div class="container">
-      <div class="category-header">
-        <h2>Sports & Outdoors</h2>
-        <p>This section is ready for fitness gear and outdoor product picks.</p>
-      </div>
+      <h2 class="section-title">Beauty & Personal Care</h2>
+      <p class="section-subtitle">Simple beauty and personal-care picks with practical everyday use.</p>
 
-      <div class="coming-soon">
-        <h3>Sports & Outdoors Products Coming Soon</h3>
-        <p>We will add selected sports and outdoor products here soon.</p>
+      <div class="products">
+        <article class="product-card">
+          <img src="images/clean-towels-1.jpg" alt="Clean towels XL">
+          <div class="product-content">
+            <span class="badge">Beauty</span>
+            <h3>Clean Towels XL</h3>
+            <p class="meta">Disposable face towels designed for cleaner skincare routines.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Clear hygiene angle</li>
+                <li>Easy skincare add-on</li>
+                <li>Strong broad appeal</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Clean-Skin-Club-Biodegradable-Disposable/dp/B0812B1FMQ?th=1&linkCode=ll2&tag=themerchant00-20&linkId=da6106eb7b5571d85e065cc7b1fa34cb&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/dove-body-wash-1.jpg" alt="Dove body wash">
+          <div class="product-content">
+            <span class="badge">Beauty</span>
+            <h3>Dove Body Wash</h3>
+            <p class="meta">Pump body wash designed for daily cleansing and convenience.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Recognizable daily-use item</li>
+                <li>Easy to understand instantly</li>
+                <li>Strong category fit</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Dove-Body-Wash-Care-Protect/dp/B09DDD6YGJ?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=023420baa20016630d1a142936e67b7e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/back-scrubber-1.jpg" alt="Back scrubber">
+          <div class="product-content">
+            <span class="badge">Beauty</span>
+            <h3>Back Scrubber for Shower</h3>
+            <p class="meta">Long-handle scrubber for easier back and body cleaning.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Solves a clear body-care problem</li>
+                <li>Useful, visual product</li>
+                <li>Easy recommendation</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Scrubber-Shower-Handle-Bristles-Exfoliator/dp/B0B1HK4WNC?th=1&linkCode=ll2&tag=themerchant00-20&linkId=909901733c9e1568433d0e103a4f4c6c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/sun-bum-1.jpg" alt="Sun Bum sunscreen spray">
+          <div class="product-content">
+            <span class="badge">Beauty</span>
+            <h3>Sun Bum SPF 15 Spray</h3>
+            <p class="meta">Body sunscreen spray made for lighter everyday sun protection use.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Strong seasonal product</li>
+                <li>Recognizable use case</li>
+                <li>Good visual card for the site</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLERK?th=1&linkCode=ll2&tag=themerchant00-20&linkId=c3dff5447287b18f504241483c409b65&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/nail-glue-1.jpg" alt="Nail glue gel">
+          <div class="product-content">
+            <span class="badge">Beauty</span>
+            <h3>UNA GELLA Nail Glue Gel</h3>
+            <p class="meta">Solid nail glue gel made for press-on and tip application support.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Niche beauty utility product</li>
+                <li>Clear audience and use case</li>
+                <li>Good addition for category depth</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/UNA-GELLA-NAIL-TIPS-578/dp/B0B854YTCF?th=1&linkCode=ll2&tag=themerchant00-20&linkId=d21de74b1378dd87dba94bb975143268&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pet">
+    <div class="container">
+      <h2 class="section-title">Pet Supplies</h2>
+      <p class="section-subtitle">Practical pet products for cleaning, comfort, feeding, and litter care.</p>
+
+      <div class="products">
+        <article class="product-card">
+          <img src="images/petpivot-1.jpg" alt="PetPivot self cleaning litter box">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>PetPivot Self-Cleaning Litter Box</h3>
+            <p class="meta">Automatic open-top litter box designed for cleaner daily maintenance.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Big problem-solving pet product</li>
+                <li>Strong visual impact</li>
+                <li>High-value category item</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/PetPivot-Cleaning-Automatic-Anti-Pinch-Protection/dp/B0GL7Q6YXZ?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=7cb5904efdc09e4fa2af3de078cb6436&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/chomchom-1.jpg" alt="ChomChom hair remover">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>ChomChom Hair Remover</h3>
+            <p class="meta">Reusable pet-hair remover for furniture, fabric, and daily cleanup.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Fast utility product</li>
+                <li>Clear household pet use</li>
+                <li>Great fit for broad audiences</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Chom-Roller-Hair-Remover-Reusable/dp/B0C2FMZMHP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=0d2e094eec21817eeff162a5db5526d5&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/dog-bed-1.jpg" alt="Orthopedic dog bed">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>OhGeni Orthopedic Dog Bed</h3>
+            <p class="meta">Washable orthopedic pet bed with comfort-focused design.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Comfort-based pet essential</li>
+                <li>Simple value for dog owners</li>
+                <li>Good category balance</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/OhGeni-Orthopedic-Machine-Washable-Waterproof-Comfortable/dp/B0G5YMQ24M?th=1&linkCode=ll2&tag=themerchant00-20&linkId=9c933f4130a63a9d878c08acf626835e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/puppy-food-1.jpg" alt="Puppy food">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>Nutrish Puppy Food</h3>
+            <p class="meta">Dry puppy food built around a simple chicken and brown rice recipe.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Food product adds category depth</li>
+                <li>Clear audience and use case</li>
+                <li>Balances tools and accessories</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Nutrish-Rachael-Puppy-Chicken-Recipe/dp/B0FWQ164CW?th=1&linkCode=ll2&tag=themerchant00-20&linkId=3166a82f9df03f852a7905f65a2f076b&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/cat-litter-1.jpg" alt="Cat litter">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>Purina Tidy Cats Litter</h3>
+            <p class="meta">Clumping cat litter made for odor control and daily litter-box use.</p>
+            <div class="mini-review">
+              <strong>Why it stands out</strong>
+              <ul>
+                <li>Daily-use pet essential</li>
+                <li>Strong practical category fit</li>
+                <li>Good complement to litter box pick</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Purina-Tidy-Cats-Performance-Unscented/dp/B0G27CQ28L?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=aa7d88a35554c82d4a6cde3d12e1923d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sports">
+    <div class="container">
+      <h2 class="section-title">Sports & Outdoors</h2>
+      <p class="section-subtitle">Home fitness picks ranked using the review files you uploaded.</p>
+
+      <div class="products">
+        <article class="product-card">
+          <img src="images/resistance-bands-1.jpg" alt="Resistance bands">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>WHATAFIT Resistance Bands</h3>
+            <p class="meta">Versatile resistance-band set for home workouts and strength routines.</p>
+            <div class="mini-review">
+              <strong>Review summary</strong>
+              <ul>
+                <li>Top-ranked in your files</li>
+                <li>Average review score: 4.85/5</li>
+                <li>Strong verified-purchase support</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/WHATAFIT-Baseball-Resistance-Bands%EF%BC%8CResistance-Equipment/dp/B0F6XSBSZY?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fcae4880f0330ef1c5a27868c8540642&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/vibration-plate-1.jpg" alt="Vibration plate">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>Vibration Plate Exercise Machine</h3>
+            <p class="meta">Compact movement machine for at-home exercise routines.</p>
+            <div class="mini-review">
+              <strong>Review summary</strong>
+              <ul>
+                <li>Average review score: 4.85/5</li>
+                <li>Strong user satisfaction in your files</li>
+                <li>Distinctive visual product for the section</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Viamotion-Vibration-Exercise-Vibrating-Lymphatic/dp/B0GF1V3CC4?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=b0018e82c502145869a2492faf3b825a&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/wrist-roller-1.jpg" alt="Wrist roller">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>Yes4All Wrist & Forearm Blaster</h3>
+            <p class="meta">Focused strength tool for grip, wrist, and forearm training.</p>
+            <div class="mini-review">
+              <strong>Review summary</strong>
+              <ul>
+                <li>Average review score: 4.8/5</li>
+                <li>Strong verified-purchase backing</li>
+                <li>Clear niche performance product</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/Yes4All-wrist-roller-forearm-blaster/dp/B00HGPLEX4?th=1&linkCode=ll2&tag=themerchant00-20&linkId=02203073cf90813e5a3942c8e43e1a0d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/exercise-ball-1.jpg" alt="Exercise ball">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>APEXUP Exercise Ball</h3>
+            <p class="meta">Stability and yoga ball for balance, stretching, and core work.</p>
+            <div class="mini-review">
+              <strong>Review summary</strong>
+              <ul>
+                <li>Average review score: 4.75/5</li>
+                <li>Good all-purpose fitness appeal</li>
+                <li>Helps diversify the section</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/APEXUP-Exercise-Stability-Fitness-Physical/dp/B0D7CWB8DX?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fdbc87fa00374c487028bc3ec8414c48&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/weight-bench-1.jpg" alt="Weight bench">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>NICEPEOPLE Weight Bench</h3>
+            <p class="meta">Foldable adjustable bench designed for home-gym training setups.</p>
+            <div class="mini-review">
+              <strong>Review summary</strong>
+              <ul>
+                <li>Average review score: 4.55/5</li>
+                <li>Practical home-gym product</li>
+                <li>Keeps the section more complete</li>
+              </ul>
+            </div>
+            <a class="amazon-btn" href="https://www.amazon.com/NICEPEOPLE-Foldable-Backrests-Capacity-Adjustable/dp/B0CTMKNWF7?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=d6e3fb7631e868ba41b5bd3859372a73&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="disclosure">
+    <div class="container">
+      <div class="notice">
+        Disclosure: This site may earn a commission from qualifying purchases made through affiliate links.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About This Site</h2>
+      <div class="about-box">
+        <p>Merchant is a lightweight product-curation website built to organize selected Amazon items in a cleaner, easier-to-browse format.</p>
+        <p>The homepage focuses on useful picks, category browsing, and practical product cards that help visitors scan faster before checking the full product page on Amazon.</p>
+        <p>The structure is intentionally simple so the site can keep expanding over time with more categories, stronger SEO pages, and dedicated discovery sections like Top Amazon Finds.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>
-      <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
-      <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
-    </p>
+    <div class="container">
+      <p>© 2026 Merchant. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="terms.html">Terms</a>
+        <a href="user-agreement.html">User Agreement</a>
+      </div>
+    </div>
   </footer>
 
 </body>
