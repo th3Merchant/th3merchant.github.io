@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Merchant | Curated Amazon Picks</title>
+  <meta
+    name="description"
+    content="Learn more about Merchant, a simple affiliate website that organizes curated Amazon picks by category with quick review-style summaries."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(17, 24, 39, 0.95);
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .content-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .content-card h2 {
+      color: #0f172a;
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .content-card h3 {
+      color: #111827;
+      font-size: 22px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .content-card p {
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .content-card ul {
+      padding-left: 22px;
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .content-card li {
+      margin-bottom: 8px;
+    }
+
+    .disclosure {
+      margin-top: 24px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 22px;
+      background: #ff9900;
+      color: #111827;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: 0.2s ease;
+    }
+
+    .home-btn:hover {
+      background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #fbbf24;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .content-card {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Merchant</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>About Merchant</h1>
+      <p>
+        Merchant helps shoppers browse curated Amazon picks in a cleaner, easier way.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-card">
+        <h2>What Merchant Does</h2>
+        <p>
+          Merchant is a simple shopping guide that organizes selected Amazon products by category.
+          Instead of browsing through endless product pages, visitors can quickly explore useful picks
+          across sections such as Baby, Beauty & Personal Care, Pet Supplies, Home & Kitchen,
+          Sports & Outdoors, and Best Sellers.
+        </p>
+
+        <h3>How Products Are Selected</h3>
+        <p>
+          Product selections are based on practical usefulness, category fit, customer-review patterns,
+          everyday shopping appeal, and how easy the product is to understand at a glance.
+        </p>
+
+        <ul>
+          <li>Clear product purpose</li>
+          <li>Useful category fit</li>
+          <li>Strong or relevant customer feedback</li>
+          <li>Simple presentation for faster browsing</li>
+        </ul>
+
+        <h3>Affiliate Disclosure</h3>
+        <p>
+          Some links on this website are affiliate links. This means Merchant may earn a commission
+          when visitors click a link and make a qualifying purchase.
+        </p>
+
+        <div class="disclosure">
+          As an Amazon Associate, Merchant earns from qualifying purchases.
+        </div>
+
+        <h3>Important Note</h3>
+        <p>
+          Product prices, availability, ratings, shipping details, and product information may change
+          on Amazon. Visitors should always review the final product page on Amazon before making a purchase.
+        </p>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
