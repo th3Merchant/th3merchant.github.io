@@ -17,6 +17,11 @@
   </url>
 
   <url>
+    <loc>https://www.merchant.dedyn.io/pet-supplies.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
     <loc>https://www.merchant.dedyn.io/about.html</loc>
     <priority>0.60</priority>
   </url>
