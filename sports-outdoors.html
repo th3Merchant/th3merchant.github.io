@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sports & Outdoors Picks | Merchant</title>
+  <link rel="canonical" href="https://www.merchant.dedyn.io/sports-outdoors.html" />
+  <meta
+    name="description"
+    content="Browse curated Amazon sports and outdoors picks including resistance bands, vibration plates, forearm trainers, exercise balls, and adjustable weight benches with quick review summaries."
+  />
+
+  <meta property="og:title" content="Sports & Outdoors Picks | Merchant" />
+  <meta
+    property="og:description"
+    content="Browse curated Amazon sports and outdoors picks with quick review-style summaries and useful product highlights."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.merchant.dedyn.io/sports-outdoors.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(17, 24, 39, 0.95);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 76px 0 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #f59e0b;
+      color: #111827;
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #fbbf24;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section {
+      padding: 68px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: 260px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      background: #f3f4f6;
+    }
+
+    .product-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 12px;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #111827;
+      min-height: 52px;
+    }
+
+    .product-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .review-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 4px;
+      margin-bottom: 14px;
+    }
+
+    .review-score {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .review-summary {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .review-highlights {
+      padding-left: 18px;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    .review-highlights li {
+      margin-bottom: 6px;
+    }
+
+    .amazon-btn {
+      display: block;
+      text-align: center;
+      background: #ff9900;
+      color: #111827;
+      font-weight: 800;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-top: auto;
+      transition: 0.2s ease;
+    }
+
+    .amazon-btn:hover {
+      background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    .info-card {
+      max-width: 900px;
+      margin: 44px auto 0;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .info-card h2 {
+      color: #0f172a;
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section-links a {
+      background: #0f172a;
+      color: white;
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .section-links a:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .disclosure {
+      margin-top: 34px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .products {
+        justify-content: center;
+      }
+
+      .product-card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .product-card h3 {
+        min-height: auto;
+      }
+
+      .info-card {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sports & Outdoors Picks | Merchant",
+  "url": "https://www.merchant.dedyn.io/sports-outdoors.html",
+  "description": "Browse curated Amazon sports and outdoors picks with quick review-style summaries and useful product highlights.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Merchant",
+    "url": "https://www.merchant.dedyn.io/"
+  }
+}
+</script>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Merchant</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#best-sellers">Best Sellers</a>
+        <a href="baby.html">Baby</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="pet-supplies.html">Pet</a>
+        <a href="home-kitchen.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Sports & Outdoors Picks</h1>
+      <p>
+        Browse selected fitness and home workout products including resistance bands,
+        vibration plates, forearm trainers, exercise balls, and adjustable benches.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#sports-products" class="btn btn-primary">View Sports Products</a>
+        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sports-products">
+    <div class="container">
+      <h2 class="section-title">Selected Sports & Outdoors Products</h2>
+      <p class="section-subtitle">
+        Useful fitness picks with short descriptions, review-style summaries, and quick highlights.
+      </p>
+
+      <div class="products">
+        <div class="product-card">
+          <img loading="lazy" src="images/resistance-bands-1.jpg" alt="WHATAFIT Resistance Bands">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>WHATAFIT Resistance Bands</h3>
+            <p>A full resistance-band set for home workouts, strength training, and versatile exercise routines.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.85/5 from 20 verified reviews</div>
+              <p class="review-summary">Strongly liked for versatility, good overall workout value, and being an easy home-fitness option for a wide range of users.</p>
+              <ul class="review-highlights">
+                <li>Best-rated sports product in your uploaded review files</li>
+                <li>Very flexible for different exercises</li>
+                <li>Strong verified-purchase support</li>
+                <li>Resistance-band training still depends on user consistency and form</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/WHATAFIT-Baseball-Resistance-Bands%EF%BC%8CResistance-Equipment/dp/B0F6XSBSZY?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fcae4880f0330ef1c5a27868c8540642&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/vibration-plate-1.jpg" alt="Vibration Plate Exercise Machine">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>Vibration Plate Exercise Machine</h3>
+            <p>A compact vibration plate designed for at-home movement, light exercise, and easy routine support.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.85/5 from 20 reviews</div>
+              <p class="review-summary">Frequently appreciated for convenience, ease of use, and making home exercise feel more approachable for everyday users.</p>
+              <ul class="review-highlights">
+                <li>Tied for top average score in your files</li>
+                <li>Distinct product that helps diversify the section</li>
+                <li>Strong satisfaction across the uploaded reviews</li>
+                <li>More lifestyle-oriented than traditional strength equipment</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Viamotion-Vibration-Exercise-Vibrating-Lymphatic/dp/B0GF1V3CC4?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=b0018e82c502145869a2492faf3b825a&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/wrist-roller-1.jpg" alt="Yes4All Wrist and Forearm Blaster">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>Yes4All Wrist & Forearm Blaster</h3>
+            <p>A focused training tool designed to build grip, forearm strength, and wrist endurance.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.8/5 from 20 verified reviews</div>
+              <p class="review-summary">Often praised by users who want a more targeted forearm and grip-strength tool for focused training sessions.</p>
+              <ul class="review-highlights">
+                <li>Strong verified-purchase backing in your files</li>
+                <li>Very clear niche strength-training product</li>
+                <li>Useful for grip and forearm work</li>
+                <li>More specialized than general fitness products</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Yes4All-wrist-roller-forearm-blaster/dp/B00HGPLEX4?th=1&linkCode=ll2&tag=themerchant00-20&linkId=02203073cf90813e5a3942c8e43e1a0d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/exercise-ball-1.jpg" alt="APEXUP Exercise Ball">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>APEXUP Exercise Ball</h3>
+            <p>A stability ball made for stretching, balance work, mobility, and core-focused exercise.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.75/5 from 20 reviews</div>
+              <p class="review-summary">A broadly useful fitness product that helps round out the section with a more flexible, all-purpose training option.</p>
+              <ul class="review-highlights">
+                <li>Good general-use fitness tool</li>
+                <li>Helps diversify the section beyond strength tools</li>
+                <li>Useful for stretching and balance routines</li>
+                <li>Less visually premium than some of the other picks</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/APEXUP-Exercise-Stability-Fitness-Physical/dp/B0D7CWB8DX?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fdbc87fa00374c487028bc3ec8414c48&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/weight-bench-1.jpg" alt="NICEPEOPLE Adjustable Weight Bench">
+          <div class="product-content">
+            <span class="badge">Sports & Outdoors</span>
+            <h3>NICEPEOPLE Adjustable Weight Bench</h3>
+            <p>A foldable adjustable bench made for home-gym routines and compact workout spaces.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.55/5 from 20 reviews</div>
+              <p class="review-summary">A practical home-gym addition that still fits the section well, even though it ranked lowest of the five sports products in your files.</p>
+              <ul class="review-highlights">
+                <li>Useful product for home-gym setups</li>
+                <li>Good category fit and visual variety</li>
+                <li>Still a solid inclusion for section completeness</li>
+                <li>Weakest average score among the sports products you selected</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/NICEPEOPLE-Foldable-Backrests-Capacity-Adjustable/dp/B0CTMKNWF7?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=d6e3fb7631e868ba41b5bd3859372a73&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-links">
+        <a href="index.html#best-sellers">Best Sellers</a>
+        <a href="baby.html">Baby</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="pet-supplies.html">Pet Supplies</a>
+        <a href="home-kitchen.html">Home & Kitchen</a>
+      </div>
+
+      <div class="info-card">
+        <h2>Why These Sports Picks?</h2>
+        <p>
+          This page brings together home-fitness products with clear use cases, including resistance training,
+          light movement support, grip and forearm training, balance work, and compact home-gym setups.
+        </p>
+        <p>
+          Product details, prices, ratings, and availability can change on Amazon. Always check the final
+          Amazon product page before making a purchase.
+        </p>
+      </div>
+
+      <div class="disclosure">
+        As an Amazon Associate, Merchant earns from qualifying purchases.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+    <p>
+      <a href="index.html" style="color:#fbbf24; margin-right:12px;">Home</a>
+      <a href="baby.html" style="color:#fbbf24; margin-right:12px;">Baby</a>
+      <a href="beauty.html" style="color:#fbbf24; margin-right:12px;">Beauty</a>
+      <a href="pet-supplies.html" style="color:#fbbf24; margin-right:12px;">Pet Supplies</a>
+      <a href="home-kitchen.html" style="color:#fbbf24; margin-right:12px;">Home & Kitchen</a>
+      <a href="about.html" style="color:#fbbf24; margin-right:12px;">About</a>
+      <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
+      <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
