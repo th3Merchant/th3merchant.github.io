@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pet Supplies Picks | Merchant</title>
+  <link rel="canonical" href="https://www.merchant.dedyn.io/pet-supplies.html" />
+  <meta
+    name="description"
+    content="Browse curated Amazon pet supplies picks including cat litter boxes, pet hair removers, dog beds, cat litter, and puppy food with quick review summaries."
+  />
+
+  <meta property="og:title" content="Pet Supplies Picks | Merchant" />
+  <meta
+    property="og:description"
+    content="Browse curated Amazon pet supplies picks with quick review-style summaries and useful product highlights."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.merchant.dedyn.io/pet-supplies.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(17, 24, 39, 0.95);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 76px 0 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #f59e0b;
+      color: #111827;
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #fbbf24;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section {
+      padding: 68px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: 260px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      background: #f3f4f6;
+    }
+
+    .product-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 12px;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #111827;
+      min-height: 52px;
+    }
+
+    .product-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .review-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 4px;
+      margin-bottom: 14px;
+    }
+
+    .review-score {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .review-summary {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .review-highlights {
+      padding-left: 18px;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    .review-highlights li {
+      margin-bottom: 6px;
+    }
+
+    .amazon-btn {
+      display: block;
+      text-align: center;
+      background: #ff9900;
+      color: #111827;
+      font-weight: 800;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-top: auto;
+      transition: 0.2s ease;
+    }
+
+    .amazon-btn:hover {
+      background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    .info-card {
+      max-width: 900px;
+      margin: 44px auto 0;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .info-card h2 {
+      color: #0f172a;
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section-links a {
+      background: #0f172a;
+      color: white;
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .section-links a:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .disclosure {
+      margin-top: 34px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .products {
+        justify-content: center;
+      }
+
+      .product-card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .product-card h3 {
+        min-height: auto;
+      }
+
+      .info-card {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Pet Supplies Picks | Merchant",
+  "url": "https://www.merchant.dedyn.io/pet-supplies.html",
+  "description": "Browse curated Amazon pet supplies picks with quick review-style summaries and useful product highlights.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Merchant",
+    "url": "https://www.merchant.dedyn.io/"
+  }
+}
+</script>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Merchant</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#best-sellers">Best Sellers</a>
+        <a href="baby.html">Baby</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#sports">Sports</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Pet Supplies Picks</h1>
+      <p>
+        Browse selected pet products for cat care, pet hair cleanup, dog comfort,
+        litter management, and puppy feeding.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#pet-products" class="btn btn-primary">View Pet Products</a>
+        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pet-products">
+    <div class="container">
+      <h2 class="section-title">Selected Pet Supplies</h2>
+      <p class="section-subtitle">
+        Useful pet picks with short descriptions, review-style summaries, and quick highlights.
+      </p>
+
+      <div class="products">
+        <div class="product-card">
+          <img loading="lazy" src="images/petpivot-1.jpg" alt="PetPivot Self Cleaning Cat Litter Box">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>PetPivot Self Cleaning Cat Litter Box</h3>
+            <p>An open-top automatic litter box designed to make cleanup easier while improving safety and everyday convenience for cat owners.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.8/5 from 20 verified reviews</div>
+              <p class="review-summary">Frequently praised for easy setup, strong cat acceptance, and a cleaner everyday litter routine with less odor hassle.</p>
+              <ul class="review-highlights">
+                <li>Open-top design is easier for many cats to accept</li>
+                <li>Liked for convenience and reduced daily scooping</li>
+                <li>Often praised for safety-focused design</li>
+                <li>One negative review reported a defective unit</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/PetPivot-Cleaning-Automatic-Anti-Pinch-Protection/dp/B0GL7Q6YXZ?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=7cb5904efdc09e4fa2af3de078cb6436&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/chomchom-1.jpg" alt="ChomChom Roller Pet Hair Remover">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>ChomChom Roller Pet Hair Remover</h3>
+            <p>A reusable pet hair remover designed for couches, bedding, and other fabric surfaces without relying on disposable sticky sheets.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.5/5 from 203K+ reviews</div>
+              <p class="review-summary">Very popular for quick furniture cleanup, strong hair pickup, and reusable everyday convenience for pet owners.</p>
+              <ul class="review-highlights">
+                <li>Extremely popular and easy to understand product</li>
+                <li>Useful for couches, blankets, and upholstery</li>
+                <li>Reusable design is a major plus</li>
+                <li>Works best on fabric surfaces rather than every material type</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Chom-Roller-Hair-Remover-Reusable/dp/B0C2FMZMHP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=0d2e094eec21817eeff162a5db5526d5&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/dog-bed-1.jpg" alt="OhGeni Orthopedic Dog Bed">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>OhGeni Orthopedic Dog Bed</h3>
+            <p>An orthopedic foam dog bed with a washable cover designed to improve comfort and support for everyday rest.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.5/5 from 4,000+ reviews</div>
+              <p class="review-summary">Often liked for comfort, support, and practical features like a removable washable cover.</p>
+              <ul class="review-highlights">
+                <li>Good comfort and support for dogs</li>
+                <li>Washable cover is practical for daily life</li>
+                <li>Strong broad appeal for dog owners</li>
+                <li>Size choice matters, so buyers should pick carefully</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/OhGeni-Orthopedic-Machine-Washable-Waterproof-Comfortable/dp/B0G5YMQ24M?th=1&linkCode=ll2&tag=themerchant00-20&linkId=9c933f4130a63a9d878c08acf626835e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/cat-litter-1.jpg" alt="Purina Tidy Cats Cat Litter">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>Purina Tidy Cats Cat Litter</h3>
+            <p>An unscented clumping cat litter made for multi-cat homes with low-dust performance and odor control.</p>
+
+            <div class="review-box">
+              <div class="review-score">4.3/5 from 50+ reviews</div>
+              <p class="review-summary">Useful for cat owners who want clumping performance, low dust, and an unscented option for daily litter management.</p>
+              <ul class="review-highlights">
+                <li>Unscented option for more sensitive households</li>
+                <li>Designed for clumping and odor control</li>
+                <li>Helpful addition to the cat-focused side of the section</li>
+                <li>Not the strongest-rated product in the group</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Purina-Tidy-Cats-Performance-Unscented/dp/B0G27CQ28L?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=aa7d88a35554c82d4a6cde3d12e1923d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img loading="lazy" src="images/puppy-food-1.jpg" alt="Nutrish Puppy Food">
+          <div class="product-content">
+            <span class="badge">Pet Supplies</span>
+            <h3>Nutrish Puppy Food</h3>
+            <p>A dry puppy food formula designed for growing dogs with chicken as the main protein source.</p>
+
+            <div class="review-box">
+              <div class="review-score">Strong category fit</div>
+              <p class="review-summary">A good section finisher that adds a clear puppy-focused dog food option and improves category balance between cats and dogs.</p>
+              <ul class="review-highlights">
+                <li>Clear puppy-focused use case</li>
+                <li>Helps round out the dog side of the section</li>
+                <li>Easy product for visitors to understand quickly</li>
+                <li>Food choices are more preference-based than utility products</li>
+              </ul>
+            </div>
+
+            <a class="amazon-btn" href="https://www.amazon.com/Nutrish-Rachael-Puppy-Chicken-Recipe/dp/B0FWQ164CW?th=1&linkCode=ll2&tag=themerchant00-20&linkId=3166a82f9df03f852a7905f65a2f076b&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-links">
+        <a href="index.html#best-sellers">Best Sellers</a>
+        <a href="baby.html">Baby</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="index.html#home">Home & Kitchen</a>
+        <a href="index.html#sports">Sports & Outdoors</a>
+      </div>
+
+      <div class="info-card">
+        <h2>Why These Pet Picks?</h2>
+        <p>
+          This page brings together practical pet supplies with clear everyday use cases, including
+          litter cleanup, furniture hair removal, dog comfort, cat litter management, and puppy feeding.
+        </p>
+        <p>
+          Product details, prices, ratings, and availability can change on Amazon. Always check the final
+          Amazon product page before making a purchase.
+        </p>
+      </div>
+
+      <div class="disclosure">
+        As an Amazon Associate, Merchant earns from qualifying purchases.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+    <p>
+      <a href="index.html" style="color:#fbbf24; margin-right:12px;">Home</a>
+      <a href="baby.html" style="color:#fbbf24; margin-right:12px;">Baby</a>
+      <a href="beauty.html" style="color:#fbbf24; margin-right:12px;">Beauty</a>
+      <a href="about.html" style="color:#fbbf24; margin-right:12px;">About</a>
+      <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
+      <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
