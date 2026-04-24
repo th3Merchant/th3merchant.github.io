@@ -139,6 +139,27 @@
       font-size: 14px;
     }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      max-width: 720px;
+      margin: 12px auto 0;
+    }
+
+    .footer-links a {
+      color: #fbbf24;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: Arial, sans-serif;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #fde68a;
+    }
+
     @media (max-width: 640px) {
       .hero h1 {
         font-size: 32px;
@@ -283,14 +304,17 @@
     </div>
   </main>
 
- <footer>
-  <p>© 2026 Merchant. All rights reserved.</p>
-  <p>This website contains affiliate links.</p>
-  <p>
-    <a href="terms.html" style="color:#fbbf24; margin-right:12px;">Terms of Use</a>
-    <a href="privacy.html" style="color:#fbbf24;">Privacy Policy</a>
-  </p>
-</footer>
+  <footer>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
 
 </body>
 </html>
