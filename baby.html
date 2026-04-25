@@ -8,13 +8,13 @@
   <link rel="canonical" href="https://www.merchant.dedyn.io/baby.html" />
   <meta
     name="description"
-    content="Browse curated Amazon baby picks including baby care, feeding, nursery essentials, outdoor play, and baby car monitoring products with quick review summaries."
+    content="Browse curated Amazon baby picks including baby care, feeding, nursery essentials, outdoor play, and baby car monitoring products with quick feedback summaries."
   />
 
   <meta property="og:title" content="Baby Picks | Merchant" />
   <meta
     property="og:description"
-    content="Browse curated Amazon baby picks with quick review-style summaries and useful product highlights."
+    content="Browse curated Amazon baby picks with quick feedback snapshots and useful product highlights."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.merchant.dedyn.io/baby.html" />
@@ -59,10 +59,9 @@
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
-      gap: 20px;
+      padding: 16px 0;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -71,12 +70,61 @@
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .header-search input::placeholder {
+      color: #6b7280;
+    }
+
+    .header-search button {
+      border: 0;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
@@ -87,6 +135,13 @@
 
     .nav-links a:hover {
       color: #fbbf24;
+    }
+
+    .nav-links a.active-page {
+      color: #fbbf24;
+      font-weight: 800;
+      border-bottom: 2px solid #fbbf24;
+      padding-bottom: 4px;
     }
 
     .hero {
@@ -236,9 +291,18 @@
       margin-bottom: 14px;
     }
 
-    .review-score {
+    .review-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .merchant-score {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       color: #111827;
       margin-bottom: 8px;
     }
@@ -298,29 +362,6 @@
       margin-bottom: 12px;
     }
 
-    .section-links {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .section-links a {
-      background: #0f172a;
-      color: white;
-      padding: 9px 13px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .section-links a:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-
     .disclosure {
       margin-top: 34px;
       background: #fff7ed;
@@ -350,18 +391,20 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      max-width: 980px;
+      max-width: 1180px;
       margin: 12px auto 0;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-links a.active-page {
       color: #fde68a;
     }
 
@@ -372,10 +415,29 @@
 
       .nav {
         justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
       }
 
       .nav-links {
+        order: 3;
         justify-content: center;
+        gap: 12px;
       }
 
       .products {
@@ -403,7 +465,7 @@
   "@type": "WebPage",
   "name": "Baby Picks | Merchant",
   "url": "https://www.merchant.dedyn.io/baby.html",
-  "description": "Browse curated Amazon baby picks with quick review-style summaries and useful product highlights.",
+  "description": "Browse curated Amazon baby picks with quick feedback snapshots and useful product highlights.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Merchant",
@@ -418,14 +480,25 @@
     <div class="container nav">
       <a href="index.html" class="logo">Merchant</a>
 
+      <form class="header-search" action="search.html" method="get">
+        <input
+          type="search"
+          name="q"
+          placeholder="Search products..."
+          aria-label="Search products"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+
       <nav class="nav-links">
-        <a href="index.html">Home</a>
         <a href="best-sellers.html">Best Sellers</a>
+        <a href="top-amazon-finds.html">Top Finds</a>
+        <a href="baby.html" class="active-page">Baby</a>
         <a href="beauty.html">Beauty</a>
         <a href="pet-supplies.html">Pet</a>
         <a href="home-kitchen.html">Home &amp; Kitchen</a>
         <a href="sports-outdoors.html">Sports</a>
-        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
@@ -435,7 +508,7 @@
       <h1>Baby Picks</h1>
       <p>
         Browse selected baby care, feeding, nursery, outdoor play, and car-monitoring products
-        with quick review-style summaries.
+        with quick feedback snapshots.
       </p>
 
       <div class="hero-actions">
@@ -449,7 +522,7 @@
     <div class="container">
       <h2 class="section-title">Selected Baby Products</h2>
       <p class="section-subtitle">
-        Useful baby picks with short descriptions, review-style summaries, and quick highlights.
+        Useful baby picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
 
       <div class="products">
@@ -461,17 +534,18 @@
             <p>An electric nasal aspirator designed to help parents clear baby congestion more easily during colds, allergies, or stuffy-nose days.</p>
 
             <div class="review-box">
-              <div class="review-score">4.9/5 from 20 reviews</div>
-              <p class="review-summary">The strongest baby pick in the uploaded review files, frequently praised for suction performance, ease of use, and helpful everyday convenience.</p>
+              <div class="review-label">Customer Feedback Snapshot</div>
+              <div class="merchant-score">Merchant Pick Score: 4.9/5</div>
+              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
               <ul class="review-highlights">
-                <li>Very strong satisfaction across the review file</li>
+                <li>Often liked for suction performance and simple use</li>
                 <li>Helpful for congestion and stuffy-nose care</li>
-                <li>Easy for parents to use during baby-care routines</li>
-                <li>One review mentioned a durability or button concern</li>
+                <li>Useful during everyday baby-care routines</li>
+                <li>Some buyers may want to check durability expectations</li>
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&linkCode=ll2&tag=themerchant00-20&linkId=6596f6a851d1edf32a950f08090c5b40&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=6596f6a851d1edf32a950f08090c5b40&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -483,17 +557,18 @@
             <p>Soft fitted crib sheets made for standard crib and toddler mattresses, with a simple everyday design for nursery use.</p>
 
             <div class="review-box">
-              <div class="review-score">4.8/5 from 20 reviews</div>
-              <p class="review-summary">Often liked for softness, fit, washing convenience, and overall value as a practical nursery essential.</p>
+              <div class="review-label">Customer Feedback Snapshot</div>
+              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
               <ul class="review-highlights">
-                <li>Soft feel for everyday crib use</li>
+                <li>Often liked for softness and nursery comfort</li>
                 <li>Good fit for standard crib mattress sizing</li>
-                <li>Easy nursery product for visitors to understand</li>
-                <li>Product is crib sheets, not a crib mattress</li>
+                <li>Practical everyday nursery essential</li>
+                <li>Best understood as crib sheets, not a crib mattress</li>
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&linkCode=ll2&tag=themerchant00-20&linkId=cfcd06d1919ce90488d81b82d176ccc2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=cfcd06d1919ce90488d81b82d176ccc2&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -505,17 +580,18 @@
             <p>A weighted-straw training cup designed to help babies transition from bottles to straw drinking with easier sipping from different angles.</p>
 
             <div class="review-box">
-              <div class="review-score">4.75/5 from 20 reviews</div>
-              <p class="review-summary">A strong baby-feeding pick from a familiar brand, often praised for ease of use, baby-friendly handling, and the weighted straw design.</p>
+              <div class="review-label">Customer Feedback Snapshot</div>
+              <div class="merchant-score">Merchant Pick Score: 4.75/5</div>
+              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
               <ul class="review-highlights">
                 <li>Good first straw cup for baby transitions</li>
                 <li>Weighted straw helps with drinking from different angles</li>
                 <li>Easy for small hands to hold</li>
-                <li>Some buyers may experience leaking</li>
+                <li>Some buyers may want to check leak expectations</li>
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&linkCode=ll2&tag=themerchant00-20&linkId=756db1302dabb59659b6436b63e68586&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=756db1302dabb59659b6436b63e68586&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -527,17 +603,18 @@
             <p>A classic toddler and baby swing designed for outdoor play, secure seating, and simple backyard fun.</p>
 
             <div class="review-box">
-              <div class="review-score">4.7/5 from 20 reviews</div>
-              <p class="review-summary">A visually strong and easy-to-understand baby pick, commonly liked for play value, sturdy everyday use, and broad family appeal.</p>
+              <div class="review-label">Customer Feedback Snapshot</div>
+              <div class="merchant-score">Merchant Pick Score: 4.7/5</div>
+              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
               <ul class="review-highlights">
-                <li>Great visual variety for the Baby section</li>
-                <li>Simple outdoor play product with broad appeal</li>
-                <li>Recognizable Little Tikes brand</li>
-                <li>Some reviews mentioned buckle, rope, or delivery issues</li>
+                <li>Often liked for simple outdoor play value</li>
+                <li>Recognizable Little Tikes product with broad family appeal</li>
+                <li>Good visual variety for the Baby section</li>
+                <li>Some buyers may want to check buckle and setup details</li>
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=e299574ce76ba7187ec9c9b3b3ab4d17&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e299574ce76ba7187ec9c9b3b3ab4d17&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -549,8 +626,9 @@
             <p>An in-car baby camera designed to help parents monitor a rear-facing child through the car display without adding a separate screen.</p>
 
             <div class="review-box">
-              <div class="review-score">4.2/5 from 5 reviews</div>
-              <p class="review-summary">A useful car-focused baby monitor pick, best presented carefully because the uploaded review file had fewer reviews than the other baby products.</p>
+              <div class="review-label">Customer Feedback Snapshot</div>
+              <div class="merchant-score">Merchant Pick Score: 4.2/5</div>
+              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
               <ul class="review-highlights">
                 <li>Helpful for checking a baby in the back seat</li>
                 <li>Uses the car display instead of an extra monitor</li>
@@ -559,17 +637,9 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=a40fdb77eeecb31fca8528eaf451a80e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=a40fdb77eeecb31fca8528eaf451a80e&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
-      </div>
-
-      <div class="section-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet Supplies</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
       </div>
 
       <div class="info-card">
@@ -594,16 +664,10 @@
     <p>© 2026 Merchant. All rights reserved.</p>
     <p>This website contains affiliate links.</p>
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet Supplies</a>
-      <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
+
+    <div class="footer-links legal-footer-links">
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
       <a href="terms.html">Terms of Use</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
