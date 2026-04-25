@@ -3,46 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Merchant | Amazon Best Sellers & Categories</title>
   <link rel="canonical" href="https://www.merchant.dedyn.io/" />
-  <meta
-    name="description"
-    content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick review summaries."
-  />
+  <meta name="description" content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick review summaries." />
   <meta property="og:title" content="Merchant | Curated Amazon Picks by Category" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick review summaries."
-  />
+  <meta property="og:description" content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick review summaries." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.merchant.dedyn.io/" />
   <meta name="twitter:card" content="summary" />
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f6fb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f3f6fb; color: #1f2937; line-height: 1.6; }
+    a { text-decoration: none; }
+    .container { width: min(1180px, 92%); margin: 0 auto; }
 
     header {
       background: rgba(17, 24, 39, 0.95);
@@ -56,10 +32,9 @@
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
-      gap: 20px;
+      padding: 16px 0;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -68,12 +43,59 @@
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .header-search input::placeholder { color: #6b7280; }
+
+    .header-search button {
+      border: 0;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
@@ -82,16 +104,13 @@
       transition: 0.2s ease;
     }
 
-    .nav-links a:hover {
-      color: #fbbf24;
-    }
+    .nav-links a:hover { color: #fbbf24; }
 
     .nav-links a.active-page {
       color: #fbbf24;
       font-weight: 800;
       border-bottom: 2px solid #fbbf24;
       padding-bottom: 4px;
-      transform: translateY(-2px);
     }
 
     .hero {
@@ -146,13 +165,9 @@
       border: 1px solid rgba(255, 255, 255, 0.22);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.08); }
 
-    .section {
-      padding: 68px 0;
-    }
+    .section { padding: 68px 0; }
 
     .section-title {
       text-align: center;
@@ -224,7 +239,6 @@
       font-size: 20px;
       margin-bottom: 10px;
       color: #111827;
-      min-height: 52px;
     }
 
     .product-card p {
@@ -261,9 +275,7 @@
       font-size: 14px;
     }
 
-    .review-highlights li {
-      margin-bottom: 6px;
-    }
+    .review-highlights li { margin-bottom: 6px; }
 
     .amazon-btn {
       display: block;
@@ -349,47 +361,10 @@
       font-size: 14px;
       font-weight: 700;
       transition: 0.2s ease;
-    }
-
-    .category-btn:hover {
-      background: #1d4ed8;
-    }
-
-    .category-section {
-      margin-top: 18px;
-    }
-
-    .category-header {
-      margin-bottom: 28px;
-    }
-
-    .category-header h2 {
-      font-size: 30px;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .category-header p {
-      color: #6b7280;
-      font-size: 15px;
-      max-width: 760px;
-    }
-
-    .coming-soon {
-      background: white;
-      border: 1px dashed #cbd5e1;
-      border-radius: 20px;
-      padding: 32px;
       text-align: center;
-      color: #64748b;
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
     }
 
-    .coming-soon h3 {
-      color: #0f172a;
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
+    .category-btn:hover { background: #1d4ed8; }
 
     .trust-card {
       max-width: 900px;
@@ -423,7 +398,6 @@
       font-size: 14px;
       font-weight: 700;
     }
-
 
     .section-links {
       margin-top: 28px;
@@ -475,16 +449,15 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      flex-wrap: nowrap;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 10px 14px;
       max-width: 1180px;
       margin: 12px auto 0;
-      overflow-x: auto;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 700;
       transition: 0.2s ease;
       white-space: nowrap;
@@ -495,27 +468,34 @@
       color: #fde68a;
     }
 
-    .footer-links a.active-page {
-      border-bottom: 2px solid #fde68a;
-      padding-bottom: 3px;
-      transform: translateY(-1px);
-    }
-
     @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 34px;
-      }
+      .hero h1 { font-size: 34px; }
 
       .nav {
         justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
       }
 
       .nav-links {
+        order: 3;
         justify-content: center;
-      }
-
-      .products {
-        justify-content: center;
+        gap: 12px;
       }
 
       .product-card {
@@ -534,9 +514,7 @@
         border-radius: 16px;
       }
 
-      .category-card h3 {
-        font-size: 18px;
-      }
+      .category-card h3 { font-size: 18px; }
 
       .category-card p {
         font-size: 13px;
@@ -552,7 +530,6 @@
 
       .category-btn {
         width: 100%;
-        text-align: center;
         padding: 10px 12px;
         font-size: 13px;
       }
@@ -562,6 +539,7 @@
       }
     }
   </style>
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -575,13 +553,23 @@
     "url": "https://www.merchant.dedyn.io/"
   }
 }
-</script>
+  </script>
 </head>
-<body>
 
+<body>
   <header>
     <div class="container nav">
       <a href="index.html" class="logo">Merchant</a>
+
+      <form class="header-search" action="search.html" method="get">
+        <input
+          type="search"
+          name="q"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+        <button type="submit">Search</button>
+      </form>
 
       <nav class="nav-links">
         <a href="index.html" class="active-page">Home</a>
@@ -626,7 +614,6 @@
             <span class="badge">Best Seller</span>
             <h3>TERRO Ant Killer Bait Stations</h3>
             <p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
-
             <div class="review-box">
               <div class="review-score">4.9/5 from 20 verified reviews</div>
               <p class="review-summary">Often praised for fast results, easy placement, and strong effectiveness against indoor ant problems.</p>
@@ -637,8 +624,7 @@
                 <li>May require a little patience in some cases</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -648,7 +634,6 @@
             <span class="badge">Best Seller</span>
             <h3>OLANLY Bathroom Rug 30x20</h3>
             <p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
-
             <div class="review-box">
               <div class="review-score">4.8/5 from 20 verified reviews</div>
               <p class="review-summary">Frequently liked for softness, absorbency, easy washing, and overall bathroom comfort.</p>
@@ -659,8 +644,7 @@
                 <li>Grip could be better on some floors</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -670,7 +654,6 @@
             <span class="badge">Best Seller</span>
             <h3>Queen Size 4 Piece Sheet Set</h3>
             <p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
-
             <div class="review-box">
               <div class="review-score">4.8/5 from 20 verified reviews</div>
               <p class="review-summary">Commonly praised for softness, comfort, value, and a fit that works well on deeper mattresses.</p>
@@ -681,8 +664,7 @@
                 <li>Some buyers say the fabric feels thin</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -692,7 +674,6 @@
             <span class="badge">Best Seller</span>
             <h3>BISSELL Little Green Cleaner</h3>
             <p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
-
             <div class="review-box">
               <div class="review-score">4.7/5 from 20 verified reviews</div>
               <p class="review-summary">Often recommended for portable spot cleaning, upholstery use, and everyday messes from kids or pets.</p>
@@ -703,8 +684,7 @@
                 <li>Tank feels small for bigger jobs</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -714,7 +694,6 @@
             <span class="badge">Best Seller</span>
             <h3>DREO Tower Fan</h3>
             <p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
-
             <div class="review-box">
               <div class="review-score">4.95/5 from 20 verified reviews</div>
               <p class="review-summary">Frequently praised for quiet performance, strong airflow, easy setup, and convenient everyday use.</p>
@@ -725,8 +704,7 @@
                 <li>Higher speeds can sound louder</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -736,7 +714,6 @@
             <span class="badge">Best Seller</span>
             <h3>MINLU 65W GaN USB-C Charger Block</h3>
             <p>A compact 65W GaN USB-C charger block designed for fast everyday charging with a small travel-friendly size.</p>
-
             <div class="review-box">
               <div class="review-score">4.55/5 from 20 verified reviews</div>
               <p class="review-summary">A practical charging pick with strong appeal for phones, tablets, and everyday USB-C setups.</p>
@@ -747,8 +724,7 @@
                 <li>Charging speed can depend on cable and device support</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&linkCode=ll2&tag=themerchant00-20&linkId=387a36e59eb7949289890038ccd8e322&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&linkCode=ll2&tag=themerchant00-20&linkId=387a36e59eb7949289890038ccd8e322&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -758,7 +734,6 @@
             <span class="badge">Best Seller</span>
             <h3>THREE PEACHES Wireless Earbuds with Touch Screen Case</h3>
             <p>Wireless earbuds with a touchscreen charging case designed for music, calls, and quick control without pulling out your phone.</p>
-
             <div class="review-box">
               <div class="review-score">3.95/5 from 20 verified reviews</div>
               <p class="review-summary">Interesting feature set and strong visual appeal, but the lower review score means it should sit after stronger Best Seller picks.</p>
@@ -769,12 +744,10 @@
                 <li>Lower rating than the strongest Best Sellers</li>
               </ul>
             </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&linkCode=ll2&tag=themerchant00-20&linkId=80e0d8e98c4e763b6a0f5f2356607dea&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&linkCode=ll2&tag=themerchant00-20&linkId=80e0d8e98c4e763b6a0f5f2356607dea&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
       </div>
-
 
       <div class="section-links">
         <a href="best-sellers.html">View Full Best Sellers Page</a>
@@ -841,8 +814,6 @@
     </div>
   </section>
 
-
-
   <section class="section" id="how-we-pick">
     <div class="container">
       <h2 class="section-title">How We Pick Products</h2>
@@ -872,18 +843,16 @@
     </div>
   </section>
 
-
   <footer>
-  <p>© 2026 Merchant. All rights reserved.</p>
-  <p>This website contains affiliate links.</p>
-  <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+    <p>© 2026 Merchant. All rights reserved.</p>
+    <p>This website contains affiliate links.</p>
+    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
-  <div class="footer-links legal-footer-links">
-    <a href="about.html">About</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</footer>
-
+    <div class="footer-links legal-footer-links">
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
 </body>
 </html>
