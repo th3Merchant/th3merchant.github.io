@@ -3,21 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Search Products | Merchant</title>
   <link rel="canonical" href="https://www.merchant.dedyn.io/search.html" />
-  <meta name="description" content="Search Merchant product picks across Top Finds, Best Sellers, Baby, Beauty, Pet Supplies, Home & Kitchen, and Sports & Outdoors." />
+  <meta name="description" content="Search Merchant product picks across Top Finds, Best Sellers, Beauty, Home & Kitchen, and Sports & Outdoors." />
   <meta property="og:title" content="Search Products | Merchant" />
-  <meta property="og:description" content="Search Merchant product picks across all categories." />
+  <meta property="og:description" content="Search Merchant product picks across all available categories." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.merchant.dedyn.io/search.html" />
   <meta name="twitter:card" content="summary" />
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; background: #f3f6fb; color: #1f2937; line-height: 1.6; }
-    a { text-decoration: none; }
-    .container { width: min(1180px, 92%); margin: 0 auto; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
 
     header {
       background: rgba(17, 24, 39, 0.95);
@@ -28,116 +49,331 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 20px; flex-wrap: wrap; }
-    .logo { color: white; font-size: 28px; font-weight: 800; letter-spacing: 0.5px; }
-    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
-    .nav-links a { color: #d1d5db; font-size: 14px; transition: 0.2s ease; }
-    .nav-links a:hover, .nav-links a.active { color: #fbbf24; }
 
-    .hero { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 76px 0 56px; text-align: center; }
-    .hero h1 { font-size: 44px; margin-bottom: 14px; line-height: 1.15; }
-    .hero p { max-width: 760px; margin: 0 auto 24px; color: #cbd5e1; font-size: 17px; }
-
-    .section { padding: 56px 0 68px; }
-    .search-card {
-      max-width: 900px;
-      margin: 0 auto 28px;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    .nav {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-    .search-label { display: block; font-size: 14px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
-    .search-row { display: flex; gap: 12px; flex-wrap: wrap; }
-    #searchInput {
+
+    .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
       flex: 1;
-      min-width: 240px;
-      border: 1px solid #cbd5e1;
-      border-radius: 14px;
-      padding: 14px 16px;
-      font-size: 16px;
-      outline: none;
-      background: #f8fafc;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
       color: #111827;
     }
-    #searchInput:focus { border-color: #2563eb; background: white; box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12); }
-    .clear-btn {
+
+    .header-search input::placeholder {
+      color: #6b7280;
+    }
+
+    .header-search button {
       border: 0;
-      background: #0f172a;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 14px;
-      font-size: 14px;
+      background: #f59e0b;
+      color: #111827;
       font-weight: 800;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-    .clear-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
-    .search-help { margin-top: 12px; color: #64748b; font-size: 14px; }
-    .quick-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .filter-btn {
-      border: 1px solid #dbeafe;
-      background: #eff6ff;
-      color: #1d4ed8;
+      padding: 10px 16px;
       border-radius: 999px;
-      padding: 8px 11px;
-      font-size: 13px;
-      font-weight: 800;
       cursor: pointer;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
-    .filter-btn:hover { background: #dbeafe; transform: translateY(-1px); }
 
-    .results-meta { text-align: center; color: #64748b; margin-bottom: 22px; font-size: 14px; }
-    .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+    }
+
+    .nav-links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 76px 0 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 56px 0 68px;
+    }
+
+    .results-meta {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
     .product-card {
-      width: 100%; max-width: 260px; background: white; border-radius: 20px; overflow: hidden;
-      border: 1px solid #e5e7eb; box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-      display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+      max-width: 260px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .product-card:hover { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12); }
-    .product-card img { width: 100%; height: 210px; object-fit: cover; background: #f3f4f6; }
-    .product-content { padding: 18px; display: flex; flex-direction: column; flex: 1; }
-    .badge { display: inline-block; width: fit-content; margin-bottom: 12px; background: #fef3c7; color: #92400e; border-radius: 999px; font-size: 12px; font-weight: 700; padding: 5px 10px; }
-    .product-card h3 { font-size: 19px; margin-bottom: 10px; color: #111827; min-height: 50px; }
-    .product-card p { color: #6b7280; font-size: 14px; margin-bottom: 14px; }
-    .open-btn { display: block; text-align: center; background: #ff9900; color: #111827; font-weight: 800; padding: 12px 14px; border-radius: 12px; margin-top: auto; transition: 0.2s ease; }
-    .open-btn:hover { background: #ffad1f; transform: translateY(-1px); }
-    .empty-state { max-width: 760px; margin: 18px auto 0; background: white; border: 1px dashed #cbd5e1; border-radius: 20px; padding: 28px; text-align: center; color: #64748b; }
-    .empty-state h2 { color: #0f172a; font-size: 24px; margin-bottom: 8px; }
 
-    .disclosure { margin-top: 34px; background: #fff7ed; border: 1px solid #fdba74; color: #9a3412; padding: 14px 18px; border-radius: 12px; font-size: 13px; text-align: center; }
-    footer { background: #111827; color: #d1d5db; text-align: center; padding: 28px 20px; margin-top: 20px; }
-    footer p { margin: 6px 0; font-size: 14px; }
-    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 14px; max-width: 980px; margin: 12px auto 0; }
-    .footer-links a { color: #fbbf24; font-size: 14px; font-weight: 700; transition: 0.2s ease; }
-    .footer-links a:hover { color: #fde68a; }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #f3f4f6;
+    }
+
+    .product-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 12px;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+    }
+
+    .product-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #111827;
+      min-height: 50px;
+    }
+
+    .product-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .open-btn {
+      display: block;
+      text-align: center;
+      background: #ff9900;
+      color: #111827;
+      font-weight: 800;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-top: auto;
+      transition: 0.2s ease;
+    }
+
+    .open-btn:hover {
+      background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    .empty-state {
+      max-width: 760px;
+      margin: 18px auto 0;
+      background: white;
+      border: 1px dashed #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      color: #64748b;
+    }
+
+    .empty-state h2 {
+      color: #0f172a;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .disclosure {
+      margin-top: 34px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      max-width: 980px;
+      margin: 12px auto 0;
+    }
+
+    .footer-links a {
+      color: #fbbf24;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover {
+      color: #fde68a;
+    }
 
     @media (max-width: 640px) {
-      .hero h1 { font-size: 34px; }
-      .nav { justify-content: center; }
-      .nav-links { justify-content: center; }
-      .product-card { max-width: 320px; }
-      .product-card h3 { min-height: auto; }
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
+      }
+
+      .nav-links {
+        order: 3;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .product-card {
+        max-width: 320px;
+      }
+
+      .product-card h3 {
+        min-height: auto;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
       <a href="index.html" class="logo">Merchant</a>
+
+      <form class="header-search" action="search.html" method="get">
+        <input
+          id="searchInput"
+          type="search"
+          name="q"
+          placeholder="Search products..."
+          aria-label="Search products"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="best-sellers.html">Best Sellers</a>
         <a href="top-amazon-finds.html">Top Finds</a>
-        <a class="active" href="search.html">Search</a>
         <a href="baby.html">Baby</a>
         <a href="beauty.html">Beauty</a>
         <a href="pet-supplies.html">Pet</a>
         <a href="home-kitchen.html">Home &amp; Kitchen</a>
         <a href="sports-outdoors.html">Sports</a>
-        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
@@ -145,32 +381,16 @@
   <section class="hero">
     <div class="container">
       <h1>Search Merchant Products</h1>
-      <p>Find products across Top Finds, Best Sellers, Beauty, Pet Supplies, Home &amp; Kitchen, and Sports &amp; Outdoors.</p>
+      <p>Type a product name, category, or keyword in the search bar above.</p>
     </div>
   </section>
 
   <main class="section">
     <div class="container">
-      <div class="search-card">
-        <label class="search-label" for="searchInput">Search by product name, category, or keyword</label>
-        <div class="search-row">
-          <input id="searchInput" type="search" placeholder="Try: charger, fan, kitchen, speaker, smart, baby..." autocomplete="off" />
-          <button class="clear-btn" type="button" id="clearSearch">Clear</button>
-        </div>
-        <p class="search-help">Search works across product names, categories, and useful keywords.</p>
-        <div class="quick-filters" aria-label="Quick search filters">
-          <button class="filter-btn" type="button" data-query="Top Finds">Top Finds</button>
-          <button class="filter-btn" type="button" data-query="Home & Kitchen">Home &amp; Kitchen</button>
-          <button class="filter-btn" type="button" data-query="Sports & Outdoors">Sports</button>
-          <button class="filter-btn" type="button" data-query="Beauty">Beauty</button>
-          <button class="filter-btn" type="button" data-query="Best Seller">Best Sellers</button>
-          <button class="filter-btn" type="button" data-query="charger">Chargers</button>
-          <button class="filter-btn" type="button" data-query="smart">Smart</button>
-        </div>
-      </div>
-
       <p class="results-meta" id="resultsMeta"></p>
+
       <div class="products" id="searchResults"></div>
+
       <div class="empty-state" id="emptyState" style="display:none;">
         <h2>No products found</h2>
         <p>Try a broader keyword like “kitchen”, “charger”, “fan”, “speaker”, “smart”, or “sports”.</p>
@@ -184,16 +404,8 @@
     <p>© 2026 Merchant. All rights reserved.</p>
     <p>This website contains affiliate links.</p>
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="search.html">Search</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet Supplies</a>
-      <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
       <a href="about.html">About</a>
       <a href="terms.html">Terms of Use</a>
       <a href="privacy.html">Privacy Policy</a>
@@ -202,56 +414,293 @@
 
   <script>
     const products = [
-      { name: "EZ Outlet Electrical Outlet Extender", category: "Top Finds", image: "images/ez-outlet-extender-1.jpg", page: "top-amazon-finds.html", keywords: "outlet extender power usb c ac bedroom couch desk electricity cable hidden useful gadget" },
-      { name: "DEZIN 2L Electric Hot Pot / Mini Cooker", category: "Top Finds", image: "images/portable-electric-hot-pot-1.jpg", page: "top-amazon-finds.html", keywords: "electric hot pot mini cooker dorm office noodles kitchen portable travel food" },
-      { name: "Crock-Pot Portable Electric Lunch Box", category: "Top Finds", image: "images/portable-electric-lunch-box-1.jpg", page: "top-amazon-finds.html", keywords: "portable lunch box food warmer work office travel crock pot heat lunch" },
-      { name: "Anker Nano Smart Display 45W USB-C Charger", category: "Top Finds", image: "images/anker-nano-smart-display-charger-1.jpg", page: "top-amazon-finds.html", keywords: "charger usb c anker nano smart display gan power phone laptop travel" },
-      { name: "HCNT Levitating Magnetic Floating Bulb Lamp", category: "Top Finds", image: "images/levitating-magnetic-bulb-lamp-1.jpg", page: "top-amazon-finds.html", keywords: "levitating magnetic floating bulb lamp desk light decor gift office wow" },
-      { name: "Ring Battery Doorbell Pro", category: "Top Finds", image: "images/ring-battery-doorbell-pro-1.jpg", page: "top-amazon-finds.html", keywords: "ring doorbell battery pro smart home security camera front door new release" },
-      { name: "HOZO NeoRulerGO Digital Tape Measure", category: "Top Finds", image: "images/hozo-neorulergo-digital-tape-measure-1.jpg", page: "top-amazon-finds.html", keywords: "digital tape measure ruler laser bluetooth measuring tool tech smart" },
-      { name: "HOTO PixelDrive Electric Screwdriver", category: "Top Finds", image: "images/hoto-pixeldrive-electric-screwdriver-1.jpg", page: "top-amazon-finds.html", keywords: "electric screwdriver smart display torque diy tool repair home" },
-      { name: "ODISTAR Desktop Vacuum Cleaner", category: "Top Finds", image: "images/odistar-desktop-vacuum-cleaner-1.jpg", page: "top-amazon-finds.html", keywords: "desktop vacuum cleaner mini desk crumbs keyboard office cleaning" },
-      { name: "TQRR SharkBrush 3-in-1 Cup Lid Gap Cleaning Brush", category: "Top Finds", image: "images/sharkbrush-cup-lid-cleaning-brush-1.jpg", page: "top-amazon-finds.html", keywords: "cup lid gap cleaning brush bottle tumbler kitchen cleaning small tool" },
-      { name: "DICMKY Car Steering Wheel Laptop Desk", category: "Top Finds", image: "images/car-steering-wheel-laptop-desk-1.jpg", page: "top-amazon-finds.html", keywords: "car steering wheel laptop desk tray workstation travel vehicle table" },
-      { name: "imluckies Magnetic Laptop Phone Holder", category: "Top Finds", image: "images/magnetic-laptop-phone-holder-1.jpg", page: "top-amazon-finds.html", keywords: "magnetic laptop phone holder continuity camera macbook monitor webcam mount" },
-      { name: "Kiorafoto Magnetic Smartphone Shooting Grip", category: "Top Finds", image: "images/magnetic-smartphone-camera-grip-1.jpg", page: "top-amazon-finds.html", keywords: "smartphone shooting grip camera handle magnetic content creator tripod phone" },
-      { name: "Black Shark Magnetic Phone Cooler 5 Pro", category: "Top Finds", image: "images/black-shark-magnetic-phone-cooler-1.jpg", page: "top-amazon-finds.html", keywords: "phone cooler gaming magnetic rgb cooling fan mobile heat" },
-      { name: "Rocketbook Core Reusable Smart Notebook", category: "Top Finds", image: "images/rocketbook-reusable-smart-notebook-1.jpg", page: "top-amazon-finds.html", keywords: "reusable smart notebook rocketbook notes school office study scan" },
-      { name: "Brondell LumaWarm Heated Nightlight Toilet Seat", category: "Top Finds", image: "images/heated-nightlight-toilet-seat-1.jpg", page: "top-amazon-finds.html", keywords: "heated toilet seat nightlight bathroom warm home comfort" },
-
-      { name: "KPON Foldable 3-in-1 Wireless Charger", category: "Home & Kitchen", image: "images/foldable-3-in-1-wireless-charger-1.jpg", page: "home-kitchen.html", keywords: "wireless charger magsafe foldable iphone apple watch airpods charging station home desk" },
-      { name: "Portable Mini Air Conditioner / Cooling Fan", category: "Home & Kitchen", image: "images/portable-mini-air-conditioner-fan-1.jpg", page: "home-kitchen.html", keywords: "portable mini air conditioner cooling fan desk bedroom home summer" },
-      { name: "INCLY Pegboard Accessories Organizer Kit", category: "Home & Kitchen", image: "images/pegboard-accessories-organizer-kit-1.jpg", page: "home-kitchen.html", keywords: "pegboard organizer garage tools accessories storage wall workshop home" },
-      { name: "Bluevua RO100ROPOT Countertop Water Filter", category: "Home & Kitchen", image: "images/bluevua-countertop-water-filter-1.jpg", page: "home-kitchen.html", keywords: "water filter countertop reverse osmosis ro kitchen purifier home" },
-      { name: "Mckay Wall-Mounted Can Crusher", category: "Home & Kitchen", image: "images/wall-mounted-can-crusher-1.jpg", page: "home-kitchen.html", keywords: "can crusher wall mounted recycling aluminum kitchen garage home" },
-      { name: "Magnetic Fidget Pen", category: "Home & Kitchen", image: "images/magnetic-fidget-pen-1.jpg", page: "home-kitchen.html", keywords: "magnetic fidget pen desk toy office gift home" },
-      { name: "REVSQUARED Touchless Hand Dryer", category: "Home & Kitchen", image: "images/touchless-hand-dryer-1.jpg", page: "home-kitchen.html", keywords: "touchless hand dryer bathroom home commercial wall mounted" },
-      { name: "Chamberlain Smart Garage Door Opener", category: "Home & Kitchen", image: "images/chamberlain-smart-garage-door-opener-1.jpg", page: "home-kitchen.html", keywords: "smart garage door opener chamberlain myq home security" },
-
-      { name: "WUBEN G5 Rechargeable EDC Flashlight", category: "Sports & Outdoors", image: "images/wuben-g5-rechargeable-flashlight-1.jpg", page: "sports-outdoors.html", keywords: "flashlight rechargeable edc outdoor camping pocket magnetic sports" },
-      { name: "AYL Mini Plug-in Portable Speaker", category: "Sports & Outdoors", image: "images/ayl-mini-portable-speaker-1.jpg", page: "sports-outdoors.html", keywords: "mini portable speaker plug in aux outdoor travel music sports" },
-      { name: "Ultimate Ears WONDERBOOM Bluetooth Speaker", category: "Sports & Outdoors", image: "images/ultimate-ears-wonderboom-speaker-1.jpg", page: "sports-outdoors.html", keywords: "bluetooth speaker waterproof portable outdoor travel beach sports" },
-      { name: "Gerber Dime Mini Multitool", category: "Sports & Outdoors", image: "images/gerber-dime-mini-multitool-1.jpg", page: "sports-outdoors.html", keywords: "multitool edc camping outdoor pocket pliers gerber tools" },
-      { name: "MILESEEY GenePro G1 Golf Rangefinder", category: "Sports & Outdoors", image: "images/mileseey-genepro-g1-golf-rangefinder-1.jpg", page: "sports-outdoors.html", keywords: "golf rangefinder gps touchscreen sports outdoors distance" },
-      { name: "CYCPLUS Electric Air Compressor Portable Inflator", category: "Sports & Outdoors", image: "images/cycplus-portable-bike-tire-inflator-1.jpg", page: "sports-outdoors.html", keywords: "bike pump tire inflator air compressor portable cycling bicycle sports car tire" },
-
-      { name: "INEVIFIT Bluetooth Body Fat Scale", category: "Beauty & Personal Care", image: "images/inevifit-bluetooth-body-scale-1.jpg", page: "beauty.html", keywords: "bluetooth body scale smart bmi fitness weight personal care beauty wellness tracking" },
-      { name: "Clean Skin Club Clean Towels XL", category: "Beauty & Personal Care", image: "images/clean-towels-1.jpg", page: "beauty.html", keywords: "clean towels skincare face towel disposable beauty" },
-      { name: "Dove Body Wash", category: "Beauty & Personal Care", image: "images/dove-body-wash-1.jpg", page: "beauty.html", keywords: "dove body wash shower soap skincare beauty" },
-
-      { name: "MINLU 65W GaN USB-C Charger Block", category: "Best Sellers", image: "images/minlu-65w-gan-usb-c-charger-1.jpg", page: "best-sellers.html", keywords: "65w gan usb c charger block fast charging compact type c wall charger" },
-      { name: "THREE PEACHES Wireless Earbuds with Touch Screen Case", category: "Best Sellers", image: "images/wireless-earbuds-touch-screen-case-1.jpg", page: "best-sellers.html", keywords: "wireless earbuds bluetooth headphones touch screen case best sellers audio" },
-      { name: "TERRO Ant Killer Bait Stations", category: "Best Sellers", image: "images/tero-1.jpg", page: "best-sellers.html", keywords: "ant killer bait stations pest home best seller" },
-      { name: "BISSELL Little Green Cleaner", category: "Best Sellers", image: "images/bissell-1.jpg", page: "best-sellers.html", keywords: "bissell little green cleaner carpet upholstery spot cleaning home" },
-      { name: "DREO Tower Fan", category: "Best Sellers", image: "images/dreo-fan-1.jpg", page: "best-sellers.html", keywords: "tower fan cooling quiet home bedroom best seller" }
+      {
+        name: "EZ Outlet Electrical Outlet Extender",
+        category: "Top Finds",
+        image: "images/ez-outlet-extender-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "outlet extender power usb c ac bedroom couch desk electricity cable hidden useful gadget"
+      },
+      {
+        name: "DEZIN 2L Electric Hot Pot / Mini Cooker",
+        category: "Top Finds",
+        image: "images/portable-electric-hot-pot-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "electric hot pot mini cooker dorm office noodles kitchen portable travel food"
+      },
+      {
+        name: "Crock-Pot Portable Electric Lunch Box",
+        category: "Top Finds",
+        image: "images/portable-electric-lunch-box-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "portable lunch box food warmer work office travel crock pot heat lunch"
+      },
+      {
+        name: "Anker Nano Smart Display 45W USB-C Charger",
+        category: "Top Finds",
+        image: "images/anker-nano-smart-display-charger-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "charger usb c anker nano smart display gan power phone laptop travel"
+      },
+      {
+        name: "HCNT Levitating Magnetic Floating Bulb Lamp",
+        category: "Top Finds",
+        image: "images/levitating-magnetic-bulb-lamp-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "levitating magnetic floating bulb lamp desk light decor gift office wow"
+      },
+      {
+        name: "Ring Battery Doorbell Pro",
+        category: "Top Finds",
+        image: "images/ring-battery-doorbell-pro-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "ring doorbell battery pro smart home security camera front door new release"
+      },
+      {
+        name: "HOZO NeoRulerGO Digital Tape Measure",
+        category: "Top Finds",
+        image: "images/hozo-neorulergo-digital-tape-measure-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "digital tape measure ruler laser bluetooth measuring tool tech smart"
+      },
+      {
+        name: "HOTO PixelDrive Electric Screwdriver",
+        category: "Top Finds",
+        image: "images/hoto-pixeldrive-electric-screwdriver-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "electric screwdriver smart display torque diy tool repair home"
+      },
+      {
+        name: "ODISTAR Desktop Vacuum Cleaner",
+        category: "Top Finds",
+        image: "images/odistar-desktop-vacuum-cleaner-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "desktop vacuum cleaner mini desk crumbs keyboard office cleaning"
+      },
+      {
+        name: "TQRR SharkBrush 3-in-1 Cup Lid Gap Cleaning Brush",
+        category: "Top Finds",
+        image: "images/sharkbrush-cup-lid-cleaning-brush-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "cup lid gap cleaning brush bottle tumbler kitchen cleaning small tool"
+      },
+      {
+        name: "DICMKY Car Steering Wheel Laptop Desk",
+        category: "Top Finds",
+        image: "images/car-steering-wheel-laptop-desk-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "car steering wheel laptop desk tray workstation travel vehicle table"
+      },
+      {
+        name: "imluckies Magnetic Laptop Phone Holder",
+        category: "Top Finds",
+        image: "images/magnetic-laptop-phone-holder-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "magnetic laptop phone holder continuity camera macbook monitor webcam mount"
+      },
+      {
+        name: "Kiorafoto Magnetic Smartphone Shooting Grip",
+        category: "Top Finds",
+        image: "images/magnetic-smartphone-camera-grip-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "smartphone shooting grip camera handle magnetic content creator tripod phone"
+      },
+      {
+        name: "Black Shark Magnetic Phone Cooler 5 Pro",
+        category: "Top Finds",
+        image: "images/black-shark-magnetic-phone-cooler-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "phone cooler gaming magnetic rgb cooling fan mobile heat"
+      },
+      {
+        name: "Rocketbook Core Reusable Smart Notebook",
+        category: "Top Finds",
+        image: "images/rocketbook-reusable-smart-notebook-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "reusable smart notebook rocketbook notes school office study scan"
+      },
+      {
+        name: "Brondell LumaWarm Heated Nightlight Toilet Seat",
+        category: "Top Finds",
+        image: "images/heated-nightlight-toilet-seat-1.jpg",
+        page: "top-amazon-finds.html",
+        keywords: "heated toilet seat nightlight bathroom warm home comfort"
+      },
+      {
+        name: "KPON Foldable 3-in-1 Wireless Charger",
+        category: "Home & Kitchen",
+        image: "images/foldable-3-in-1-wireless-charger-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "wireless charger magsafe foldable iphone apple watch airpods charging station home desk"
+      },
+      {
+        name: "Portable Mini Air Conditioner / Cooling Fan",
+        category: "Home & Kitchen",
+        image: "images/portable-mini-air-conditioner-fan-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "portable mini air conditioner cooling fan desk bedroom home summer"
+      },
+      {
+        name: "INCLY Pegboard Accessories Organizer Kit",
+        category: "Home & Kitchen",
+        image: "images/pegboard-accessories-organizer-kit-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "pegboard organizer garage tools accessories storage wall workshop home"
+      },
+      {
+        name: "Bluevua RO100ROPOT Countertop Water Filter",
+        category: "Home & Kitchen",
+        image: "images/bluevua-countertop-water-filter-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "water filter countertop reverse osmosis ro kitchen purifier home"
+      },
+      {
+        name: "Mckay Wall-Mounted Can Crusher",
+        category: "Home & Kitchen",
+        image: "images/wall-mounted-can-crusher-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "can crusher wall mounted recycling aluminum kitchen garage home"
+      },
+      {
+        name: "Magnetic Fidget Pen",
+        category: "Home & Kitchen",
+        image: "images/magnetic-fidget-pen-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "magnetic fidget pen desk toy office gift home"
+      },
+      {
+        name: "REVSQUARED Touchless Hand Dryer",
+        category: "Home & Kitchen",
+        image: "images/touchless-hand-dryer-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "touchless hand dryer bathroom home commercial wall mounted"
+      },
+      {
+        name: "Chamberlain Smart Garage Door Opener",
+        category: "Home & Kitchen",
+        image: "images/chamberlain-smart-garage-door-opener-1.jpg",
+        page: "home-kitchen.html",
+        keywords: "smart garage door opener chamberlain myq home security"
+      },
+      {
+        name: "WUBEN G5 Rechargeable EDC Flashlight",
+        category: "Sports & Outdoors",
+        image: "images/wuben-g5-rechargeable-flashlight-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "flashlight rechargeable edc outdoor camping pocket magnetic sports"
+      },
+      {
+        name: "AYL Mini Plug-in Portable Speaker",
+        category: "Sports & Outdoors",
+        image: "images/ayl-mini-portable-speaker-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "mini portable speaker plug in aux outdoor travel music sports"
+      },
+      {
+        name: "Ultimate Ears WONDERBOOM Bluetooth Speaker",
+        category: "Sports & Outdoors",
+        image: "images/ultimate-ears-wonderboom-speaker-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "bluetooth speaker waterproof portable outdoor travel beach sports"
+      },
+      {
+        name: "Gerber Dime Mini Multitool",
+        category: "Sports & Outdoors",
+        image: "images/gerber-dime-mini-multitool-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "multitool edc camping outdoor pocket pliers gerber tools"
+      },
+      {
+        name: "MILESEEY GenePro G1 Golf Rangefinder",
+        category: "Sports & Outdoors",
+        image: "images/mileseey-genepro-g1-golf-rangefinder-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "golf rangefinder gps touchscreen sports outdoors distance"
+      },
+      {
+        name: "CYCPLUS Electric Air Compressor Portable Inflator",
+        category: "Sports & Outdoors",
+        image: "images/cycplus-portable-bike-tire-inflator-1.jpg",
+        page: "sports-outdoors.html",
+        keywords: "bike pump tire inflator air compressor portable cycling bicycle sports car tire"
+      },
+      {
+        name: "INEVIFIT Bluetooth Body Fat Scale",
+        category: "Beauty & Personal Care",
+        image: "images/inevifit-bluetooth-body-scale-1.jpg",
+        page: "beauty.html",
+        keywords: "bluetooth body scale smart bmi fitness weight personal care beauty wellness tracking"
+      },
+      {
+        name: "Clean Skin Club Clean Towels XL",
+        category: "Beauty & Personal Care",
+        image: "images/clean-towels-1.jpg",
+        page: "beauty.html",
+        keywords: "clean towels skincare face towel disposable beauty"
+      },
+      {
+        name: "Dove Body Wash",
+        category: "Beauty & Personal Care",
+        image: "images/dove-body-wash-1.jpg",
+        page: "beauty.html",
+        keywords: "dove body wash shower soap skincare beauty"
+      },
+      {
+        name: "MINLU 65W GaN USB-C Charger Block",
+        category: "Best Sellers",
+        image: "images/minlu-65w-gan-usb-c-charger-1.jpg",
+        page: "best-sellers.html",
+        keywords: "65w gan usb c charger block fast charging compact type c wall charger best seller"
+      },
+      {
+        name: "THREE PEACHES Wireless Earbuds with Touch Screen Case",
+        category: "Best Sellers",
+        image: "images/wireless-earbuds-touch-screen-case-1.jpg",
+        page: "best-sellers.html",
+        keywords: "wireless earbuds bluetooth headphones touch screen case best sellers audio"
+      },
+      {
+        name: "TERRO Ant Killer Bait Stations",
+        category: "Best Sellers",
+        image: "images/tero-1.jpg",
+        page: "best-sellers.html",
+        keywords: "ant killer bait stations pest home best seller"
+      },
+      {
+        name: "OLANLY Bathroom Rug 30x20",
+        category: "Best Sellers",
+        image: "images/olanly-1.jpg",
+        page: "best-sellers.html",
+        keywords: "bathroom rug bath mat absorbent chenille non slip home best seller"
+      },
+      {
+        name: "Queen Size 4 Piece Sheet Set",
+        category: "Best Sellers",
+        image: "images/queen-sheet-1.jpg",
+        page: "best-sellers.html",
+        keywords: "queen sheet set bed sheets microfiber deep pockets bedroom home best seller"
+      },
+      {
+        name: "BISSELL Little Green Cleaner",
+        category: "Best Sellers",
+        image: "images/bissell-1.jpg",
+        page: "best-sellers.html",
+        keywords: "bissell little green cleaner carpet upholstery spot cleaning home best seller"
+      },
+      {
+        name: "DREO Tower Fan",
+        category: "Best Sellers",
+        image: "images/dreo-fan-1.jpg",
+        page: "best-sellers.html",
+        keywords: "tower fan cooling quiet home bedroom best seller"
+      }
     ];
 
+    const searchForm = document.querySelector('.header-search');
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     const resultsMeta = document.getElementById('resultsMeta');
     const emptyState = document.getElementById('emptyState');
-    const clearSearch = document.getElementById('clearSearch');
-    const filterButtons = document.querySelectorAll('.filter-btn');
 
     function normalize(text) {
       return String(text || '').toLowerCase().trim();
@@ -259,23 +708,56 @@
 
     function getMatches(query) {
       const q = normalize(query);
-      if (!q) return products.slice(0, 24);
+
+      if (!q) {
+        return [];
+      }
+
       return products.filter(product => {
         const haystack = normalize(`${product.name} ${product.category} ${product.keywords}`);
         return q.split(/\s+/).every(term => haystack.includes(term));
       });
     }
 
+    function getDescription(product) {
+      const category = product.category;
+
+      if (category === 'Top Finds') {
+        return 'A clever product pick from Merchant’s Top Finds collection.';
+      }
+
+      if (category === 'Home & Kitchen') {
+        return 'A practical home or kitchen product from the Merchant collection.';
+      }
+
+      if (category === 'Sports & Outdoors') {
+        return 'A useful pick for sports, outdoor, travel, or everyday carry use.';
+      }
+
+      if (category === 'Beauty & Personal Care') {
+        return 'A beauty or personal care product with everyday-use appeal.';
+      }
+
+      if (category === 'Best Sellers') {
+        return 'A broadly useful product from Merchant’s Best Sellers collection.';
+      }
+
+      return 'A Merchant product pick.';
+    }
+
     function renderProducts(list, query) {
       searchResults.innerHTML = '';
-      emptyState.style.display = list.length ? 'none' : 'block';
+
+      emptyState.style.display = query && !list.length ? 'block' : 'none';
+
       resultsMeta.textContent = query
         ? `${list.length} result${list.length === 1 ? '' : 's'} for “${query}”`
-        : `Showing ${list.length} featured products. Start typing to search all products.`;
+        : 'Start typing to search Merchant products.';
 
       list.forEach(product => {
         const card = document.createElement('article');
         card.className = 'product-card';
+
         card.innerHTML = `
           <img loading="lazy" src="${product.image}" alt="${product.name}">
           <div class="product-content">
@@ -285,18 +767,9 @@
             <a class="open-btn" href="${product.page}">Open ${product.category}</a>
           </div>
         `;
+
         searchResults.appendChild(card);
       });
-    }
-
-    function getDescription(product) {
-      const category = product.category;
-      if (category === 'Top Finds') return 'A clever product pick from Merchant’s Top Finds collection.';
-      if (category === 'Home & Kitchen') return 'A practical home or kitchen product from the Merchant collection.';
-      if (category === 'Sports & Outdoors') return 'A useful pick for sports, outdoor, travel, or everyday carry use.';
-      if (category === 'Beauty & Personal Care') return 'A beauty or personal care product with everyday-use appeal.';
-      if (category === 'Best Sellers') return 'A broadly useful product from Merchant’s Best Sellers collection.';
-      return 'A Merchant product pick.';
     }
 
     function updateSearch() {
@@ -305,19 +778,27 @@
     }
 
     searchInput.addEventListener('input', updateSearch);
-    clearSearch.addEventListener('click', () => {
-      searchInput.value = '';
-      searchInput.focus();
-      updateSearch();
-    });
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        searchInput.value = button.dataset.query;
-        updateSearch();
-      });
+
+    searchForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const query = searchInput.value.trim();
+      const newUrl = query
+        ? `${window.location.pathname}?q=${encodeURIComponent(query)}`
+        : window.location.pathname;
+
+      window.history.replaceState({}, '', newUrl);
+      renderProducts(getMatches(query), query);
     });
 
-    renderProducts(getMatches(''), '');
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || '';
+
+    if (initialQuery) {
+      searchInput.value = initialQuery;
+    }
+
+    renderProducts(getMatches(initialQuery), initialQuery);
   </script>
 </body>
 </html>
