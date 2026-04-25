@@ -59,10 +59,9 @@
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
-      gap: 20px;
+      padding: 16px 0;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -71,12 +70,61 @@
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .header-search input::placeholder {
+      color: #6b7280;
+    }
+
+    .header-search button {
+      border: 0;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
@@ -87,6 +135,13 @@
 
     .nav-links a:hover {
       color: #fbbf24;
+    }
+
+    .nav-links a.active-page {
+      color: #fbbf24;
+      font-weight: 800;
+      border-bottom: 2px solid #fbbf24;
+      padding-bottom: 4px;
     }
 
     .hero {
@@ -350,19 +405,21 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      max-width: 980px;
+      max-width: 1180px;
       margin: 12px auto 0;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       font-family: Arial, sans-serif;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-links a.active-page {
       color: #fde68a;
     }
 
@@ -373,10 +430,29 @@
 
       .nav {
         justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
       }
 
       .nav-links {
+        order: 3;
         justify-content: center;
+        gap: 12px;
       }
 
       .products {
@@ -419,16 +495,25 @@
     <div class="container nav">
       <a href="index.html" class="logo">Merchant</a>
 
+      <form class="header-search" action="search.html" method="get">
+        <input
+          type="search"
+          name="q"
+          placeholder="Search products..."
+          aria-label="Search products"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="best-sellers.html">Best Sellers</a>
+        <a href="best-sellers.html" class="active-page">Best Sellers</a>
         <a href="top-amazon-finds.html">Top Finds</a>
         <a href="baby.html">Baby</a>
         <a href="beauty.html">Beauty</a>
         <a href="pet-supplies.html">Pet</a>
         <a href="home-kitchen.html">Home &amp; Kitchen</a>
         <a href="sports-outdoors.html">Sports</a>
-        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
@@ -474,7 +559,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -496,7 +581,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -518,7 +603,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -540,7 +625,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -562,10 +647,9 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
-
 
         <div class="product-card">
           <img loading="lazy" src="images/minlu-65w-gan-usb-c-charger-1.jpg" alt="MINLU 65W GaN USB-C Charger Block">
@@ -585,7 +669,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=387a36e59eb7949289890038ccd8e322&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=387a36e59eb7949289890038ccd8e322&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
 
@@ -607,7 +691,7 @@
               </ul>
             </div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=80e0d8e98c4e763b6a0f5f2356607dea&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=80e0d8e98c4e763b6a0f5f2356607dea&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
           </div>
         </div>
       </div>
@@ -643,16 +727,10 @@
     <p>© 2026 Merchant. All rights reserved.</p>
     <p>This website contains affiliate links.</p>
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet Supplies</a>
-      <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
+
+    <div class="footer-links legal-footer-links">
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
       <a href="terms.html">Terms of Use</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
