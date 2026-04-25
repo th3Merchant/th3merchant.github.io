@@ -71,7 +71,7 @@
       max-width: 430px;
       display: flex;
       align-items: center;
-      background: white;
+      background: #f8fafc;
       border-radius: 999px;
       padding: 4px;
       margin-left: auto;
@@ -172,7 +172,7 @@
     .product-card {
       width: 100%;
       max-width: 260px;
-      background: white;
+      background: #f8fafc;
       border-radius: 20px;
       overflow: hidden;
       border: 1px solid #e5e7eb;
@@ -246,7 +246,7 @@
     .empty-state {
       max-width: 760px;
       margin: 18px auto 0;
-      background: white;
+      background: #f8fafc;
       border: 1px dashed #cbd5e1;
       border-radius: 20px;
       padding: 28px;
@@ -287,15 +287,16 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      max-width: 980px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      max-width: 1180px;
       margin: 12px auto 0;
+      overflow-x: auto;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 700;
       transition: 0.2s ease;
       white-space: nowrap;
@@ -414,286 +415,50 @@
 
   <script>
     const products = [
-      {
-        name: "EZ Outlet Electrical Outlet Extender",
-        category: "Top Finds",
-        image: "images/ez-outlet-extender-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "outlet extender power usb c ac bedroom couch desk electricity cable hidden useful gadget"
-      },
-      {
-        name: "DEZIN 2L Electric Hot Pot / Mini Cooker",
-        category: "Top Finds",
-        image: "images/portable-electric-hot-pot-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "electric hot pot mini cooker dorm office noodles kitchen portable travel food"
-      },
-      {
-        name: "Crock-Pot Portable Electric Lunch Box",
-        category: "Top Finds",
-        image: "images/portable-electric-lunch-box-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "portable lunch box food warmer work office travel crock pot heat lunch"
-      },
-      {
-        name: "Anker Nano Smart Display 45W USB-C Charger",
-        category: "Top Finds",
-        image: "images/anker-nano-smart-display-charger-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "charger usb c anker nano smart display gan power phone laptop travel"
-      },
-      {
-        name: "HCNT Levitating Magnetic Floating Bulb Lamp",
-        category: "Top Finds",
-        image: "images/levitating-magnetic-bulb-lamp-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "levitating magnetic floating bulb lamp desk light decor gift office wow"
-      },
-      {
-        name: "Ring Battery Doorbell Pro",
-        category: "Top Finds",
-        image: "images/ring-battery-doorbell-pro-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "ring doorbell battery pro smart home security camera front door new release"
-      },
-      {
-        name: "HOZO NeoRulerGO Digital Tape Measure",
-        category: "Top Finds",
-        image: "images/hozo-neorulergo-digital-tape-measure-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "digital tape measure ruler laser bluetooth measuring tool tech smart"
-      },
-      {
-        name: "HOTO PixelDrive Electric Screwdriver",
-        category: "Top Finds",
-        image: "images/hoto-pixeldrive-electric-screwdriver-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "electric screwdriver smart display torque diy tool repair home"
-      },
-      {
-        name: "ODISTAR Desktop Vacuum Cleaner",
-        category: "Top Finds",
-        image: "images/odistar-desktop-vacuum-cleaner-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "desktop vacuum cleaner mini desk crumbs keyboard office cleaning"
-      },
-      {
-        name: "TQRR SharkBrush 3-in-1 Cup Lid Gap Cleaning Brush",
-        category: "Top Finds",
-        image: "images/sharkbrush-cup-lid-cleaning-brush-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "cup lid gap cleaning brush bottle tumbler kitchen cleaning small tool"
-      },
-      {
-        name: "DICMKY Car Steering Wheel Laptop Desk",
-        category: "Top Finds",
-        image: "images/car-steering-wheel-laptop-desk-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "car steering wheel laptop desk tray workstation travel vehicle table"
-      },
-      {
-        name: "imluckies Magnetic Laptop Phone Holder",
-        category: "Top Finds",
-        image: "images/magnetic-laptop-phone-holder-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "magnetic laptop phone holder continuity camera macbook monitor webcam mount"
-      },
-      {
-        name: "Kiorafoto Magnetic Smartphone Shooting Grip",
-        category: "Top Finds",
-        image: "images/magnetic-smartphone-camera-grip-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "smartphone shooting grip camera handle magnetic content creator tripod phone"
-      },
-      {
-        name: "Black Shark Magnetic Phone Cooler 5 Pro",
-        category: "Top Finds",
-        image: "images/black-shark-magnetic-phone-cooler-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "phone cooler gaming magnetic rgb cooling fan mobile heat"
-      },
-      {
-        name: "Rocketbook Core Reusable Smart Notebook",
-        category: "Top Finds",
-        image: "images/rocketbook-reusable-smart-notebook-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "reusable smart notebook rocketbook notes school office study scan"
-      },
-      {
-        name: "Brondell LumaWarm Heated Nightlight Toilet Seat",
-        category: "Top Finds",
-        image: "images/heated-nightlight-toilet-seat-1.jpg",
-        page: "top-amazon-finds.html",
-        keywords: "heated toilet seat nightlight bathroom warm home comfort"
-      },
-      {
-        name: "KPON Foldable 3-in-1 Wireless Charger",
-        category: "Home & Kitchen",
-        image: "images/foldable-3-in-1-wireless-charger-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "wireless charger magsafe foldable iphone apple watch airpods charging station home desk"
-      },
-      {
-        name: "Portable Mini Air Conditioner / Cooling Fan",
-        category: "Home & Kitchen",
-        image: "images/portable-mini-air-conditioner-fan-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "portable mini air conditioner cooling fan desk bedroom home summer"
-      },
-      {
-        name: "INCLY Pegboard Accessories Organizer Kit",
-        category: "Home & Kitchen",
-        image: "images/pegboard-accessories-organizer-kit-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "pegboard organizer garage tools accessories storage wall workshop home"
-      },
-      {
-        name: "Bluevua RO100ROPOT Countertop Water Filter",
-        category: "Home & Kitchen",
-        image: "images/bluevua-countertop-water-filter-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "water filter countertop reverse osmosis ro kitchen purifier home"
-      },
-      {
-        name: "Mckay Wall-Mounted Can Crusher",
-        category: "Home & Kitchen",
-        image: "images/wall-mounted-can-crusher-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "can crusher wall mounted recycling aluminum kitchen garage home"
-      },
-      {
-        name: "Magnetic Fidget Pen",
-        category: "Home & Kitchen",
-        image: "images/magnetic-fidget-pen-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "magnetic fidget pen desk toy office gift home"
-      },
-      {
-        name: "REVSQUARED Touchless Hand Dryer",
-        category: "Home & Kitchen",
-        image: "images/touchless-hand-dryer-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "touchless hand dryer bathroom home commercial wall mounted"
-      },
-      {
-        name: "Chamberlain Smart Garage Door Opener",
-        category: "Home & Kitchen",
-        image: "images/chamberlain-smart-garage-door-opener-1.jpg",
-        page: "home-kitchen.html",
-        keywords: "smart garage door opener chamberlain myq home security"
-      },
-      {
-        name: "WUBEN G5 Rechargeable EDC Flashlight",
-        category: "Sports & Outdoors",
-        image: "images/wuben-g5-rechargeable-flashlight-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "flashlight rechargeable edc outdoor camping pocket magnetic sports"
-      },
-      {
-        name: "AYL Mini Plug-in Portable Speaker",
-        category: "Sports & Outdoors",
-        image: "images/ayl-mini-portable-speaker-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "mini portable speaker plug in aux outdoor travel music sports"
-      },
-      {
-        name: "Ultimate Ears WONDERBOOM Bluetooth Speaker",
-        category: "Sports & Outdoors",
-        image: "images/ultimate-ears-wonderboom-speaker-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "bluetooth speaker waterproof portable outdoor travel beach sports"
-      },
-      {
-        name: "Gerber Dime Mini Multitool",
-        category: "Sports & Outdoors",
-        image: "images/gerber-dime-mini-multitool-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "multitool edc camping outdoor pocket pliers gerber tools"
-      },
-      {
-        name: "MILESEEY GenePro G1 Golf Rangefinder",
-        category: "Sports & Outdoors",
-        image: "images/mileseey-genepro-g1-golf-rangefinder-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "golf rangefinder gps touchscreen sports outdoors distance"
-      },
-      {
-        name: "CYCPLUS Electric Air Compressor Portable Inflator",
-        category: "Sports & Outdoors",
-        image: "images/cycplus-portable-bike-tire-inflator-1.jpg",
-        page: "sports-outdoors.html",
-        keywords: "bike pump tire inflator air compressor portable cycling bicycle sports car tire"
-      },
-      {
-        name: "INEVIFIT Bluetooth Body Fat Scale",
-        category: "Beauty & Personal Care",
-        image: "images/inevifit-bluetooth-body-scale-1.jpg",
-        page: "beauty.html",
-        keywords: "bluetooth body scale smart bmi fitness weight personal care beauty wellness tracking"
-      },
-      {
-        name: "Clean Skin Club Clean Towels XL",
-        category: "Beauty & Personal Care",
-        image: "images/clean-towels-1.jpg",
-        page: "beauty.html",
-        keywords: "clean towels skincare face towel disposable beauty"
-      },
-      {
-        name: "Dove Body Wash",
-        category: "Beauty & Personal Care",
-        image: "images/dove-body-wash-1.jpg",
-        page: "beauty.html",
-        keywords: "dove body wash shower soap skincare beauty"
-      },
-      {
-        name: "MINLU 65W GaN USB-C Charger Block",
-        category: "Best Sellers",
-        image: "images/minlu-65w-gan-usb-c-charger-1.jpg",
-        page: "best-sellers.html",
-        keywords: "65w gan usb c charger block fast charging compact type c wall charger best seller"
-      },
-      {
-        name: "THREE PEACHES Wireless Earbuds with Touch Screen Case",
-        category: "Best Sellers",
-        image: "images/wireless-earbuds-touch-screen-case-1.jpg",
-        page: "best-sellers.html",
-        keywords: "wireless earbuds bluetooth headphones touch screen case best sellers audio"
-      },
-      {
-        name: "TERRO Ant Killer Bait Stations",
-        category: "Best Sellers",
-        image: "images/tero-1.jpg",
-        page: "best-sellers.html",
-        keywords: "ant killer bait stations pest home best seller"
-      },
-      {
-        name: "OLANLY Bathroom Rug 30x20",
-        category: "Best Sellers",
-        image: "images/olanly-1.jpg",
-        page: "best-sellers.html",
-        keywords: "bathroom rug bath mat absorbent chenille non slip home best seller"
-      },
-      {
-        name: "Queen Size 4 Piece Sheet Set",
-        category: "Best Sellers",
-        image: "images/queen-sheet-1.jpg",
-        page: "best-sellers.html",
-        keywords: "queen sheet set bed sheets microfiber deep pockets bedroom home best seller"
-      },
-      {
-        name: "BISSELL Little Green Cleaner",
-        category: "Best Sellers",
-        image: "images/bissell-1.jpg",
-        page: "best-sellers.html",
-        keywords: "bissell little green cleaner carpet upholstery spot cleaning home best seller"
-      },
-      {
-        name: "DREO Tower Fan",
-        category: "Best Sellers",
-        image: "images/dreo-fan-1.jpg",
-        page: "best-sellers.html",
-        keywords: "tower fan cooling quiet home bedroom best seller"
-      }
+      { name: "EZ Outlet Electrical Outlet Extender", category: "Top Finds", image: "images/ez-outlet-extender-1.jpg", page: "top-amazon-finds.html", keywords: "outlet extender power usb c ac bedroom couch desk electricity cable hidden useful gadget" },
+      { name: "DEZIN 2L Electric Hot Pot / Mini Cooker", category: "Top Finds", image: "images/portable-electric-hot-pot-1.jpg", page: "top-amazon-finds.html", keywords: "electric hot pot mini cooker dorm office noodles kitchen portable travel food" },
+      { name: "Crock-Pot Portable Electric Lunch Box", category: "Top Finds", image: "images/portable-electric-lunch-box-1.jpg", page: "top-amazon-finds.html", keywords: "portable lunch box food warmer work office travel crock pot heat lunch" },
+      { name: "Anker Nano Smart Display 45W USB-C Charger", category: "Top Finds", image: "images/anker-nano-smart-display-charger-1.jpg", page: "top-amazon-finds.html", keywords: "charger usb c anker nano smart display gan power phone laptop travel" },
+      { name: "HCNT Levitating Magnetic Floating Bulb Lamp", category: "Top Finds", image: "images/levitating-magnetic-bulb-lamp-1.jpg", page: "top-amazon-finds.html", keywords: "levitating magnetic floating bulb lamp desk light decor gift office wow" },
+      { name: "Ring Battery Doorbell Pro", category: "Top Finds", image: "images/ring-battery-doorbell-pro-1.jpg", page: "top-amazon-finds.html", keywords: "ring doorbell battery pro smart home security camera front door new release" },
+      { name: "HOZO NeoRulerGO Digital Tape Measure", category: "Top Finds", image: "images/hozo-neorulergo-digital-tape-measure-1.jpg", page: "top-amazon-finds.html", keywords: "digital tape measure ruler laser bluetooth measuring tool tech smart" },
+      { name: "HOTO PixelDrive Electric Screwdriver", category: "Top Finds", image: "images/hoto-pixeldrive-electric-screwdriver-1.jpg", page: "top-amazon-finds.html", keywords: "electric screwdriver smart display torque diy tool repair home" },
+      { name: "ODISTAR Desktop Vacuum Cleaner", category: "Top Finds", image: "images/odistar-desktop-vacuum-cleaner-1.jpg", page: "top-amazon-finds.html", keywords: "desktop vacuum cleaner mini desk crumbs keyboard office cleaning" },
+      { name: "TQRR SharkBrush 3-in-1 Cup Lid Gap Cleaning Brush", category: "Top Finds", image: "images/sharkbrush-cup-lid-cleaning-brush-1.jpg", page: "top-amazon-finds.html", keywords: "cup lid gap cleaning brush bottle tumbler kitchen cleaning small tool" },
+      { name: "DICMKY Car Steering Wheel Laptop Desk", category: "Top Finds", image: "images/car-steering-wheel-laptop-desk-1.jpg", page: "top-amazon-finds.html", keywords: "car steering wheel laptop desk tray workstation travel vehicle table" },
+      { name: "imluckies Magnetic Laptop Phone Holder", category: "Top Finds", image: "images/magnetic-laptop-phone-holder-1.jpg", page: "top-amazon-finds.html", keywords: "magnetic laptop phone holder continuity camera macbook monitor webcam mount" },
+      { name: "Kiorafoto Magnetic Smartphone Shooting Grip", category: "Top Finds", image: "images/magnetic-smartphone-camera-grip-1.jpg", page: "top-amazon-finds.html", keywords: "smartphone shooting grip camera handle magnetic content creator tripod phone" },
+      { name: "Black Shark Magnetic Phone Cooler 5 Pro", category: "Top Finds", image: "images/black-shark-magnetic-phone-cooler-1.jpg", page: "top-amazon-finds.html", keywords: "phone cooler gaming magnetic rgb cooling fan mobile heat" },
+      { name: "Rocketbook Core Reusable Smart Notebook", category: "Top Finds", image: "images/rocketbook-reusable-smart-notebook-1.jpg", page: "top-amazon-finds.html", keywords: "reusable smart notebook rocketbook notes school office study scan" },
+      { name: "Brondell LumaWarm Heated Nightlight Toilet Seat", category: "Top Finds", image: "images/heated-nightlight-toilet-seat-1.jpg", page: "top-amazon-finds.html", keywords: "heated toilet seat nightlight bathroom warm home comfort" },
+
+      { name: "KPON Foldable 3-in-1 Wireless Charger", category: "Home & Kitchen", image: "images/foldable-3-in-1-wireless-charger-1.jpg", page: "home-kitchen.html", keywords: "wireless charger magsafe foldable iphone apple watch airpods charging station home desk" },
+      { name: "Portable Mini Air Conditioner / Cooling Fan", category: "Home & Kitchen", image: "images/portable-mini-air-conditioner-fan-1.jpg", page: "home-kitchen.html", keywords: "portable mini air conditioner cooling fan desk bedroom home summer" },
+      { name: "INCLY Pegboard Accessories Organizer Kit", category: "Home & Kitchen", image: "images/pegboard-accessories-organizer-kit-1.jpg", page: "home-kitchen.html", keywords: "pegboard organizer garage tools accessories storage wall workshop home" },
+      { name: "Bluevua RO100ROPOT Countertop Water Filter", category: "Home & Kitchen", image: "images/bluevua-countertop-water-filter-1.jpg", page: "home-kitchen.html", keywords: "water filter countertop reverse osmosis ro kitchen purifier home" },
+      { name: "Mckay Wall-Mounted Can Crusher", category: "Home & Kitchen", image: "images/wall-mounted-can-crusher-1.jpg", page: "home-kitchen.html", keywords: "can crusher wall mounted recycling aluminum kitchen garage home" },
+      { name: "Magnetic Fidget Pen", category: "Home & Kitchen", image: "images/magnetic-fidget-pen-1.jpg", page: "home-kitchen.html", keywords: "magnetic fidget pen desk toy office gift home" },
+      { name: "REVSQUARED Touchless Hand Dryer", category: "Home & Kitchen", image: "images/touchless-hand-dryer-1.jpg", page: "home-kitchen.html", keywords: "touchless hand dryer bathroom home commercial wall mounted" },
+      { name: "Chamberlain Smart Garage Door Opener", category: "Home & Kitchen", image: "images/chamberlain-smart-garage-door-opener-1.jpg", page: "home-kitchen.html", keywords: "smart garage door opener chamberlain myq home security" },
+
+      { name: "WUBEN G5 Rechargeable EDC Flashlight", category: "Sports & Outdoors", image: "images/wuben-g5-rechargeable-flashlight-1.jpg", page: "sports-outdoors.html", keywords: "flashlight rechargeable edc outdoor camping pocket magnetic sports" },
+      { name: "AYL Mini Plug-in Portable Speaker", category: "Sports & Outdoors", image: "images/ayl-mini-portable-speaker-1.jpg", page: "sports-outdoors.html", keywords: "mini portable speaker plug in aux outdoor travel music sports" },
+      { name: "Ultimate Ears WONDERBOOM Bluetooth Speaker", category: "Sports & Outdoors", image: "images/ultimate-ears-wonderboom-speaker-1.jpg", page: "sports-outdoors.html", keywords: "bluetooth speaker waterproof portable outdoor travel beach sports" },
+      { name: "Gerber Dime Mini Multitool", category: "Sports & Outdoors", image: "images/gerber-dime-mini-multitool-1.jpg", page: "sports-outdoors.html", keywords: "multitool edc camping outdoor pocket pliers gerber tools" },
+      { name: "MILESEEY GenePro G1 Golf Rangefinder", category: "Sports & Outdoors", image: "images/mileseey-genepro-g1-golf-rangefinder-1.jpg", page: "sports-outdoors.html", keywords: "golf rangefinder gps touchscreen sports outdoors distance" },
+      { name: "CYCPLUS Electric Air Compressor Portable Inflator", category: "Sports & Outdoors", image: "images/cycplus-portable-bike-tire-inflator-1.jpg", page: "sports-outdoors.html", keywords: "bike pump tire inflator air compressor portable cycling bicycle sports car tire" },
+
+      { name: "INEVIFIT Bluetooth Body Fat Scale", category: "Beauty & Personal Care", image: "images/inevifit-bluetooth-body-scale-1.jpg", page: "beauty.html", keywords: "bluetooth body scale smart bmi fitness weight personal care beauty wellness tracking" },
+      { name: "Clean Skin Club Clean Towels XL", category: "Beauty & Personal Care", image: "images/clean-towels-1.jpg", page: "beauty.html", keywords: "clean towels skincare face towel disposable beauty" },
+      { name: "Dove Body Wash", category: "Beauty & Personal Care", image: "images/dove-body-wash-1.jpg", page: "beauty.html", keywords: "dove body wash shower soap skincare beauty" },
+
+      { name: "MINLU 65W GaN USB-C Charger Block", category: "Best Sellers", image: "images/minlu-65w-gan-usb-c-charger-1.jpg", page: "best-sellers.html", keywords: "65w gan usb c charger block fast charging compact type c wall charger best seller" },
+      { name: "THREE PEACHES Wireless Earbuds with Touch Screen Case", category: "Best Sellers", image: "images/wireless-earbuds-touch-screen-case-1.jpg", page: "best-sellers.html", keywords: "wireless earbuds bluetooth headphones touch screen case best sellers audio" },
+      { name: "TERRO Ant Killer Bait Stations", category: "Best Sellers", image: "images/tero-1.jpg", page: "best-sellers.html", keywords: "ant killer bait stations pest home best seller" },
+      { name: "OLANLY Bathroom Rug 30x20", category: "Best Sellers", image: "images/olanly-1.jpg", page: "best-sellers.html", keywords: "bathroom rug bath mat absorbent chenille non slip home best seller" },
+      { name: "Queen Size 4 Piece Sheet Set", category: "Best Sellers", image: "images/queen-sheet-1.jpg", page: "best-sellers.html", keywords: "queen sheet set bed sheets microfiber deep pockets bedroom home best seller" },
+      { name: "BISSELL Little Green Cleaner", category: "Best Sellers", image: "images/bissell-1.jpg", page: "best-sellers.html", keywords: "bissell little green cleaner carpet upholstery spot cleaning home best seller" },
+      { name: "DREO Tower Fan", category: "Best Sellers", image: "images/dreo-fan-1.jpg", page: "best-sellers.html", keywords: "tower fan cooling quiet home bedroom best seller" }
     ];
 
     const searchForm = document.querySelector('.header-search');
