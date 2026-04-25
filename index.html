@@ -86,20 +86,12 @@
       color: #fbbf24;
     }
 
-    .logo.active-page,
     .nav-links a.active-page {
       color: #fbbf24;
+      font-weight: 800;
+      border-bottom: 2px solid #fbbf24;
+      padding-bottom: 4px;
       transform: translateY(-2px);
-    }
-
-    .logo.active-page {
-      border-bottom: 2px solid #fbbf24;
-      padding-bottom: 4px;
-    }
-
-    .nav-links a.active-page {
-      border-bottom: 2px solid #fbbf24;
-      padding-bottom: 4px;
     }
 
     .hero {
@@ -483,15 +475,16 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 10px;
+      flex-wrap: nowrap;
+      gap: 8px;
       max-width: 1180px;
       margin: 12px auto 0;
+      overflow-x: auto;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       transition: 0.2s ease;
       white-space: nowrap;
@@ -588,9 +581,10 @@
 
   <header>
     <div class="container nav">
-      <a href="index.html" class="logo active-page">Merchant</a>
+      <a href="index.html" class="logo">Merchant</a>
 
       <nav class="nav-links">
+        <a href="index.html" class="active-page">Home</a>
         <a href="best-sellers.html">Best Sellers</a>
         <a href="top-amazon-finds.html">Top Finds</a>
         <a href="search.html">Search</a>
