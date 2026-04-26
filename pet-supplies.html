@@ -1,26 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Pet Supplies Picks | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/pet-supplies.html" />
-  <meta
-    name="description"
-    content="Browse curated Amazon pet supplies picks including cat litter boxes, pet hair removers, dog beds, cat litter, and puppy food with quick feedback summaries."
-  />
-
-  <meta property="og:title" content="Pet Supplies Picks | Merchant" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon pet supplies picks with quick feedback snapshots and useful product highlights."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/pet-supplies.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pet Supplies Picks | Merchant</title>
+<link href="https://www.merchant.dedyn.io/pet-supplies.html" rel="canonical"/>
+<meta content="Browse curated Amazon pet supplies picks including cat litter boxes, pet hair removers, dog beds, cat litter, and puppy food with quick feedback summaries." name="description"/>
+<meta content="Pet Supplies Picks | Merchant" property="og:title"/>
+<meta content="Browse curated Amazon pet supplies picks with quick feedback snapshots and useful product highlights." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/pet-supplies.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -269,6 +261,51 @@
       padding: 5px 10px;
     }
 
+
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-row .badge {
+      margin-bottom: 0;
+    }
+
+    .customer-favorite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.1);
+      white-space: nowrap;
+    }
+
+    .cf-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fde68a);
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
+    }
+
     .product-card h3 {
       font-size: 20px;
       margin-bottom: 10px;
@@ -459,8 +496,7 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -476,203 +512,189 @@
 </script>
 </head>
 <body>
-
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
-
-      <form class="header-search" action="search.html" method="get">
-        <input
-          type="search"
-          name="q"
-          placeholder="Search products..."
-          aria-label="Search products"
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <nav class="nav-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="top-amazon-finds.html">Top Finds</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html" class="active-page">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Pet Supplies Picks</h1>
-      <p>
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a class="active-page" href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Pet Supplies Picks</h1>
+<p>
         Browse selected pet products for cat care, pet hair cleanup, dog comfort,
         litter management, and puppy feeding with quick feedback snapshots.
       </p>
-
-      <div class="hero-actions">
-        <a href="#pet-products" class="btn btn-primary">View Pet Products</a>
-        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pet-products">
-    <div class="container">
-      <h2 class="section-title">Selected Pet Supplies</h2>
-      <p class="section-subtitle">
+<div class="hero-actions">
+<a class="btn btn-primary" href="#pet-products">View Pet Products</a>
+<a class="btn btn-secondary" href="index.html#categories">Browse All Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="pet-products">
+<div class="container">
+<h2 class="section-title">Selected Pet Supplies</h2>
+<p class="section-subtitle">
         Useful pet picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
-
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/petpivot-1.jpg" alt="PetPivot Self Cleaning Cat Litter Box">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>PetPivot Self Cleaning Cat Litter Box</h3>
-            <p>An open-top automatic litter box designed to make cleanup easier while improving safety and everyday convenience for cat owners.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for easier setup and daily litter convenience</li>
-                <li>Open-top design can be easier for many cats to accept</li>
-                <li>Helpful for reducing daily scooping and odor hassle</li>
-                <li>Some buyers may want to check reliability expectations</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/PetPivot-Cleaning-Automatic-Anti-Pinch-Protection/dp/B0GL7Q6YXZ?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=7cb5904efdc09e4fa2af3de078cb6436&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/chomchom-1.jpg" alt="ChomChom Roller Pet Hair Remover">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>ChomChom Roller Pet Hair Remover</h3>
-            <p>A reusable pet hair remover designed for couches, bedding, and other fabric surfaces without relying on disposable sticky sheets.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.5/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for quick furniture and fabric cleanup</li>
-                <li>Reusable design avoids disposable sticky sheets</li>
-                <li>Very easy product for pet owners to understand</li>
-                <li>Works best on fabric surfaces, not every material type</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Chom-Roller-Hair-Remover-Reusable/dp/B0C2FMZMHP?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=0d2e094eec21817eeff162a5db5526d5&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/dog-bed-1.jpg" alt="OhGeni Orthopedic Dog Bed">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>OhGeni Orthopedic Dog Bed</h3>
-            <p>An orthopedic foam dog bed with a washable cover designed to improve comfort and support for everyday rest.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.5/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for dog comfort and daily support</li>
-                <li>Washable cover is useful for everyday pet life</li>
-                <li>Good broad appeal for dog owners</li>
-                <li>Size choice matters, so buyers should pick carefully</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/OhGeni-Orthopedic-Machine-Washable-Waterproof-Comfortable/dp/B0G5YMQ24M?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=9c933f4130a63a9d878c08acf626835e&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/cat-litter-1.jpg" alt="Purina Tidy Cats Cat Litter">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>Purina Tidy Cats Cat Litter</h3>
-            <p>An unscented clumping cat litter made for multi-cat homes with low-dust performance and odor control.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.3/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Useful for clumping and odor-control routines</li>
-                <li>Unscented option can suit sensitive households</li>
-                <li>Helpful addition to the cat-focused side of the section</li>
-                <li>Not the strongest-rated product in the group</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Purina-Tidy-Cats-Performance-Unscented/dp/B0G27CQ28L?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=aa7d88a35554c82d4a6cde3d12e1923d&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/puppy-food-1.jpg" alt="Nutrish Rachael Ray Dry Dog Food Puppy">
-          <div class="product-content">
-            <span class="badge">Pet Supplies</span>
-            <h3>Nutrish Puppy Food</h3>
-            <p>A dry puppy food formula designed for growing dogs with chicken as the main protein source.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked by puppy owners for taste and easy acceptance</li>
-                <li>Small kibble size is helpful for young or small dogs</li>
-                <li>Frequently mentioned as good everyday puppy food</li>
-                <li>Some shoppers may want to compare price by bag size</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Nutrish-Rachael-Puppy-Chicken-Recipe/dp/B0FWQ164CW?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=3166a82f9df03f852a7905f65a2f076b&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <h2>Why These Pet Picks?</h2>
-        <p>
+<div class="products">
+<div class="product-card">
+<img alt="PetPivot Self Cleaning Cat Litter Box" loading="lazy" src="images/petpivot-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Pet Supplies</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>PetPivot Self Cleaning Cat Litter Box</h3>
+<p>An open-top automatic litter box designed to make cleanup easier while improving safety and everyday convenience for cat owners.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for easier setup and daily litter convenience</li>
+<li>Open-top design can be easier for many cats to accept</li>
+<li>Helpful for reducing daily scooping and odor hassle</li>
+<li>Some buyers may want to check reliability expectations</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/PetPivot-Cleaning-Automatic-Anti-Pinch-Protection/dp/B0GL7Q6YXZ?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=7cb5904efdc09e4fa2af3de078cb6436&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="ChomChom Roller Pet Hair Remover" loading="lazy" src="images/chomchom-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Pet Supplies</span></div>
+<h3>ChomChom Roller Pet Hair Remover</h3>
+<p>A reusable pet hair remover designed for couches, bedding, and other fabric surfaces without relying on disposable sticky sheets.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.5/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for quick furniture and fabric cleanup</li>
+<li>Reusable design avoids disposable sticky sheets</li>
+<li>Very easy product for pet owners to understand</li>
+<li>Works best on fabric surfaces, not every material type</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Chom-Roller-Hair-Remover-Reusable/dp/B0C2FMZMHP?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=0d2e094eec21817eeff162a5db5526d5&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="OhGeni Orthopedic Dog Bed" loading="lazy" src="images/dog-bed-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Pet Supplies</span></div>
+<h3>OhGeni Orthopedic Dog Bed</h3>
+<p>An orthopedic foam dog bed with a washable cover designed to improve comfort and support for everyday rest.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.5/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for dog comfort and daily support</li>
+<li>Washable cover is useful for everyday pet life</li>
+<li>Good broad appeal for dog owners</li>
+<li>Size choice matters, so buyers should pick carefully</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/OhGeni-Orthopedic-Machine-Washable-Waterproof-Comfortable/dp/B0G5YMQ24M?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=9c933f4130a63a9d878c08acf626835e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Purina Tidy Cats Cat Litter" loading="lazy" src="images/cat-litter-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Pet Supplies</span></div>
+<h3>Purina Tidy Cats Cat Litter</h3>
+<p>An unscented clumping cat litter made for multi-cat homes with low-dust performance and odor control.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.3/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Useful for clumping and odor-control routines</li>
+<li>Unscented option can suit sensitive households</li>
+<li>Helpful addition to the cat-focused side of the section</li>
+<li>Not the strongest-rated product in the group</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Purina-Tidy-Cats-Performance-Unscented/dp/B0G27CQ28L?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=aa7d88a35554c82d4a6cde3d12e1923d&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Nutrish Rachael Ray Dry Dog Food Puppy" loading="lazy" src="images/puppy-food-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Pet Supplies</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>Nutrish Puppy Food</h3>
+<p>A dry puppy food formula designed for growing dogs with chicken as the main protein source.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked by puppy owners for taste and easy acceptance</li>
+<li>Small kibble size is helpful for young or small dogs</li>
+<li>Frequently mentioned as good everyday puppy food</li>
+<li>Some shoppers may want to compare price by bag size</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Nutrish-Rachael-Puppy-Chicken-Recipe/dp/B0FWQ164CW?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=3166a82f9df03f852a7905f65a2f076b&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Simple Modern Stainless Steel Pet Water Bowl" loading="lazy" src="images/simple-modern-pet-water-bowl-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Pet Supplies</span>
+</div>
+<h3>Simple Modern Stainless Steel Pet Water Bowl</h3>
+<p>A reusable insulated stainless steel pet bowl with a no-slip base for dogs and cats at home.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.70/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for sturdy stainless steel quality</li><li>No-slip base helps reduce sliding and spills</li><li>Modern look fits cleaner home setups</li><li>Hand-wash guidance should be checked before buying</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Simple-Modern-Stainless-Insulated-Collection/dp/B0C76CJP9D?th=1&amp;ascsubtag=srctok-21ecaa38e916fcd1&amp;btn_ref=srctok-21ecaa38e916fcd1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=22e55f2173ab4dc700a3865a493929ff&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div></div>
+<div class="info-card">
+<h2>Why These Pet Picks?</h2>
+<p>
           This page brings together practical pet supplies with clear everyday use cases, including
           litter cleanup, furniture hair removal, dog comfort, cat litter management, and puppy feeding.
         </p>
-        <p>
+<p>
           Product details, prices, ratings, and availability can change on Amazon. Always check the final
           Amazon product page before making a purchase.
         </p>
-      </div>
-
-      <div class="disclosure">
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-
-    <div class="footer-links legal-footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
