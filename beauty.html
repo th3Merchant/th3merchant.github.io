@@ -1,26 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Beauty & Personal Care Picks | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/beauty.html" />
-  <meta
-    name="description"
-    content="Browse curated Amazon beauty and personal care picks including skincare towels, body wash, shower tools, nail glue, sunscreen, and wellness products with quick feedback summaries."
-  />
-
-  <meta property="og:title" content="Beauty & Personal Care Picks | Merchant" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon beauty and personal care picks with quick feedback snapshots and useful product highlights."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/beauty.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beauty &amp; Personal Care Picks | Merchant</title>
+<link href="https://www.merchant.dedyn.io/beauty.html" rel="canonical"/>
+<meta content="Browse curated Amazon beauty, personal care, women-focused lifestyle, skincare, body care, wellness, organizer, and everyday self-care picks with quick feedback summaries." name="description"/>
+<meta content="Beauty &amp; Personal Care Picks | Merchant" property="og:title"/>
+<meta content="Browse curated Amazon beauty and women-focused personal care picks with quick feedback snapshots and useful product highlights." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/beauty.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -269,6 +261,50 @@
       padding: 5px 10px;
     }
 
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-row .badge {
+      margin-bottom: 0;
+    }
+
+    .customer-favorite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.1);
+      white-space: nowrap;
+    }
+
+    .cf-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fde68a);
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
+    }
+
     .product-card h3 {
       font-size: 20px;
       margin-bottom: 10px;
@@ -449,7 +485,51 @@
         max-width: 320px;
       }
 
-      .product-card h3 {
+  
+    .badge-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-row .badge {
+      margin-bottom: 0;
+    }
+
+    .customer-favorite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.1);
+      white-space: nowrap;
+    }
+
+    .cf-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fde68a);
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
+    }
+
+    .product-card h3 {
         min-height: auto;
       }
 
@@ -458,8 +538,7 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -475,226 +554,406 @@
 </script>
 </head>
 <body>
-
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
-
-      <form class="header-search" action="search.html" method="get">
-        <input
-          type="search"
-          name="q"
-          placeholder="Search products..."
-          aria-label="Search products"
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <nav class="nav-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="top-amazon-finds.html">Top Finds</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html" class="active-page">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Beauty & Personal Care Picks</h1>
-      <p>
-        Browse selected skincare, body care, shower, nail, sunscreen, and wellness products
-        with quick feedback snapshots.
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a class="active-page" href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Beauty &amp; Personal Care Picks</h1>
+<p>
+        Browse selected skincare, body care, shower, nail, sunscreen, wellness, organizer,
+        and everyday lifestyle products with quick feedback snapshots.
       </p>
-
-      <div class="hero-actions">
-        <a href="#beauty-products" class="btn btn-primary">View Beauty Products</a>
-        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="beauty-products">
-    <div class="container">
-      <h2 class="section-title">Selected Beauty Products</h2>
-      <p class="section-subtitle">
+<div class="hero-actions">
+<a class="btn btn-primary" href="#beauty-products">View Beauty Products</a>
+<a class="btn btn-secondary" href="index.html#categories">Browse All Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="beauty-products">
+<div class="container">
+<h2 class="section-title">Selected Beauty Products</h2>
+<p class="section-subtitle">
         Useful beauty and personal care picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
+<div class="products">
+<div class="product-card">
+<img alt="Clean Skin Club Clean Towels XL" loading="lazy" src="images/clean-towels-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>Clean Skin Club Clean Towels XL</h3>
+<p>Disposable face towels designed for a cleaner skincare routine, makeup removal, and daily face drying without reusing a regular bathroom towel.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for skincare and face-drying routines</li>
+<li>Soft feel and easy everyday use</li>
+<li>Helps avoid reusing damp bathroom towels</li>
+<li>Disposable format may not appeal to everyone</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Clean-Skin-Club-Biodegradable-Disposable/dp/B0812B1FMQ?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=da6106eb7b5571d85e065cc7b1fa34cb&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Dove Body Wash" loading="lazy" src="images/dove-body-wash-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>Dove Body Wash</h3>
+<p>A moisturizing antibacterial body wash with pump packaging designed for daily cleansing while helping protect skin from dryness.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for everyday comfort and skin feel</li>
+<li>Pump bottle adds convenience for daily use</li>
+<li>Familiar brand with broad personal-care appeal</li>
+<li>Body-wash preferences can vary by scent and formula</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Dove-Body-Wash-Care-Protect/dp/B09DDD6YGJ?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=023420baa20016630d1a142936e67b7e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Back Scrubber" loading="lazy" src="images/back-scrubber-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>Back Scrubber</h3>
+<p>A long-handle shower scrubber made for easier body cleansing and reaching the back more comfortably during showers.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for reach and daily shower convenience</li>
+<li>Useful long-handle design for back cleaning</li>
+<li>Easy to understand and practical for body care</li>
+<li>Brush firmness may feel different by preference</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Scrubber-Shower-Handle-Bristles-Exfoliator/dp/B0B1HK4WNC?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=909901733c9e1568433d0e103a4f4c6c&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="UNA GELLA Nail Glue Gel" loading="lazy" src="images/nail-glue-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>UNA GELLA Nail Glue Gel</h3>
+<p>A solid nail glue gel designed for press-on or nail-tip application with a cleaner, less runny format than traditional glue.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Useful for at-home nail application</li>
+<li>Solid format is easier to control</li>
+<li>Good niche pick for nail-care routines</li>
+<li>Best for shoppers already interested in nail products</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/UNA-GELLA-NAIL-TIPS-578/dp/B0B854YTCF?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d21de74b1378dd87dba94bb975143268&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Sun Bum Sunscreen Spray" loading="lazy" src="images/sun-bum-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span></div>
+<h3>Sun Bum Sunscreen Spray</h3>
+<p>A moisturizing sunscreen body spray designed for lightweight sun protection and easier application during outdoor use.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.65/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for convenient spray application</li>
+<li>Helpful seasonal and outdoor-care product</li>
+<li>Recognizable sunscreen brand feel</li>
+<li>Sunscreen preference is personal and seasonal</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLERK?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c3dff5447287b18f504241483c409b65&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="INEVIFIT Bluetooth Body Fat Scale" loading="lazy" src="images/inevifit-bluetooth-body-scale-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Beauty &amp; Personal Care</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>INEVIFIT Bluetooth Body Fat Scale</h3>
+<p>A Bluetooth smart scale that helps users track body weight and body-composition trends through a connected smartphone app.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for easy setup and app syncing</li>
+<li>Useful for personal wellness tracking routines</li>
+<li>Helps monitor weight and body-composition trends</li>
+<li>Personal tracking should not replace medical advice</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/INEVIFIT-Bluetooth-Accurate-Composition-Smartphone/dp/B07S7FWMC7?psc=1&amp;geniuslink=true&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=908b398c6fc4fb45f0d331418c521081&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/clean-towels-1.jpg" alt="Clean Skin Club Clean Towels XL">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Clean Skin Club Clean Towels XL</h3>
-            <p>Disposable face towels designed for a cleaner skincare routine, makeup removal, and daily face drying without reusing a regular bathroom towel.</p>
+<div class="product-card">
+<img alt="BAGGU Medium Nylon Crescent Bag" loading="lazy" src="images/baggu-medium-nylon-crescent-bag-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Lifestyle</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>BAGGU Medium Nylon Crescent Bag</h3>
+<p>A lightweight everyday crescent bag with a comfortable strap and practical room for daily essentials, travel, errands, and casual outfits.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for everyday carry and easy styling</li>
+<li>Useful size for daily essentials without feeling bulky</li>
+<li>Good fit for casual, travel, and lifestyle use</li>
+<li>Best for shoppers who want a soft lightweight bag</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0DJB9QN25?social_share=cm_sw_r_apin_dp_J4BBGC3RPMJ7D05ZMVGN&amp;titleSource=true&amp;ascsubtag=srctok-376db5d83e163f97&amp;btn_ref=srctok-376db5d83e163f97&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e057862bb624be210fdb6f78d1f342b7&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for skincare and face-drying routines</li>
-                <li>Soft feel and easy everyday use</li>
-                <li>Helps avoid reusing damp bathroom towels</li>
-                <li>Disposable format may not appeal to everyone</li>
-              </ul>
-            </div>
+<div class="product-card">
+<img alt="Summer Fridays Lip Butter Balm" loading="lazy" src="images/summer-fridays-lip-butter-balm-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Personal Care</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>Summer Fridays Lip Butter Balm</h3>
+<p>A conditioning lip balm and mask designed for smoother-feeling lips, daily moisture, shine, and simple on-the-go lip care.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.85/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for a smooth and comfortable lip feel</li>
+<li>Useful as both a daily balm and overnight lip mask</li>
+<li>Good fit for shoppers who like easy beauty essentials</li>
+<li>Shade and scent preference can vary by buyer</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B09FYHDW6P?social_share=cm_sw_r_apin_dp_FPEYB9YDJZAPZJVTEH54&amp;titleSource=true&amp;th=1&amp;ascsubtag=srctok-44ac7729ec9f91c7&amp;btn_ref=srctok-44ac7729ec9f91c7&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c37a703c80ba56d25c2eb9746c83be96&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Clean-Skin-Club-Biodegradable-Disposable/dp/B0812B1FMQ?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=da6106eb7b5571d85e065cc7b1fa34cb&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
+<div class="product-card">
+<img alt="Phomemo M08F Tattoo Stencil Printer" loading="lazy" src="images/phomemo-m08f-tattoo-stencil-printer-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Creative Care</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>Phomemo M08F Tattoo Stencil Printer</h3>
+<p>A wireless thermal stencil printer made for tattoo stencil transfers, creative studio workflows, and mobile design setups.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.85/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Strong niche pick for tattoo and stencil workflows</li>
+<li>Wireless format is useful for portable setups</li>
+<li>Good fit for artists, studios, and creative users</li>
+<li>Best for shoppers who already need stencil printing</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Phomemo-M08F-Wireless-Compatible-Smartphone/dp/B0BRMJ2MYW?t=undefined&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=479ef82b25799f58ecb8c2fddcc40e4f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/dove-body-wash-1.jpg" alt="Dove Body Wash">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Dove Body Wash</h3>
-            <p>A moisturizing antibacterial body wash with pump packaging designed for daily cleansing while helping protect skin from dryness.</p>
+<div class="product-card">
+<img alt="COMFIER Cordless Hand Massager" loading="lazy" src="images/comfier-cordless-hand-massager-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Wellness</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>COMFIER Cordless Hand Massager</h3>
+<p>A cordless hand massager with heat and compression features for relaxing tired hands during home, work, or self-care routines.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.80/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for hand comfort and relaxing routines</li>
+<li>Cordless format is convenient around the home</li>
+<li>Good fit for self-care and wellness-style shoppers</li>
+<li>Comfort needs can vary from person to person</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0DLKQWYJ3?social_share=cm_sw_r_apin_ct_2WX5T6QAHJ3YCH6CP6GK_7&amp;csmig=1&amp;th=1&amp;ascsubtag=srctok-1c8c2e52e2d77153&amp;btn_ref=srctok-1c8c2e52e2d77153&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=4bef8c4a1b451da670ff693cef0dfd38&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for everyday comfort and skin feel</li>
-                <li>Pump bottle adds convenience for daily use</li>
-                <li>Familiar brand with broad personal-care appeal</li>
-                <li>Body-wash preferences can vary by scent and formula</li>
-              </ul>
-            </div>
+<div class="product-card">
+<img alt="Boulphia Cologne Organizer" loading="lazy" src="images/boulphia-cologne-organizer-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Organization</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>Boulphia Cologne Organizer</h3>
+<p>A tiered countertop organizer with drawer storage for cologne, fragrance bottles, skincare, grooming items, and vanity essentials.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.80/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for making counters look more organized</li>
+<li>Useful for fragrances, grooming, and beauty products</li>
+<li>Drawer storage helps hide smaller daily essentials</li>
+<li>Best for shoppers with enough countertop space</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Boulphia-Cologne-Organizer-Men-Compartment/dp/B0C7C23SN1?crid=1B96M6X5M8H2A&amp;dib=eyJ2IjoiMSJ9.P62u5q2wi8tMOv-8atIZnjGvs8iLz7wgXqAkC_2yElCBgG-9kj7LMsTlNjK3yLgSKLTZfVI8bMU-bd5jITnlPzXIjeLlH1buP-qgNly-Y58apgkTV7MwegGzbcuRlx4mll50jELTYlIH3pOPTrqSwaY4mY8Um7cyBwGSscZUX9vUou_nbPB3pk1bi5PEFIGXw0zYvxv5iWAtXs-qCXmT8h43m5snaVAWdeu48xCZV09OFcQSWzgrzNwjIKClVft73y8Tyxdvv-gEml8JRrv1M3f-Bm3U74bgx6j3HT0Rx_g.aAi4SCiBxCEc3TglqBA8ok_pxq-xPJ6wlcdwyNlpcfI&amp;dib_tag=se&amp;keywords=cologne%2Borganizer&amp;qid=1760309098&amp;sprefix=cologne%2Borg%2Caps%2C147&amp;sr=8-55&amp;th=1&amp;ascsubtag=srctok-48e91d4f171683ad&amp;btn_ref=srctok-48e91d4f171683ad&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=1b85426f56aaee91e502af713b07d029&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Dove-Body-Wash-Care-Protect/dp/B09DDD6YGJ?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=023420baa20016630d1a142936e67b7e&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
+<div class="product-card">
+<img alt="Summer Fridays Jet Lag Essentials Set" loading="lazy" src="images/summer-fridays-jet-lag-essentials-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Skincare</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>Summer Fridays Jet Lag Essentials</h3>
+<p>A mini skincare set built around hydration-focused essentials for travel, gifting, and simple self-care routines.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.80/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked as a compact skincare gift set</li>
+<li>Good fit for travel bags and trial-size routines</li>
+<li>Hydration-focused products are easy to understand</li>
+<li>Best for shoppers interested in skincare sets</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0DY1WSW83?psc=1&amp;ascsubtag=srctok-6a1d5f5ba46109c1&amp;btn_ref=srctok-6a1d5f5ba46109c1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d2ba685cec74315d4aceb7f28c1a8fa9&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/back-scrubber-1.jpg" alt="Back Scrubber">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Back Scrubber</h3>
-            <p>A long-handle shower scrubber made for easier body cleansing and reaching the back more comfortably during showers.</p>
+<div class="product-card">
+<img alt="Salt &amp; Stone Body Wash" loading="lazy" src="images/salt-stone-body-wash-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Personal Care</span>
+</div>
+<h3>Salt &amp; Stone Body Wash</h3>
+<p>A premium body wash made for daily cleansing, a soft skin feel, and a more elevated shower routine.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.55/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for scent and shower experience</li>
+<li>Good fit for premium body-care routines</li>
+<li>Useful addition for shoppers comparing body wash picks</li>
+<li>Scent and formula preferences can vary</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/SALT-STONE-Antioxidant-Rich-Body-Wash/dp/B0C23Q2H61?crid=130G7CPZB1WVO&amp;dib=eyJ2IjoiMSJ9.nAddyd35JjEwPi79Q61G8sbhDG2T9sGk3aAI0NlJxYHM8m8pHoEYloM5C_zgvBz2TBN3emJ3F2TFTiZuh1bLbKMl2N65F9rzjEFOTjWcLgXYsnZAJ3iFbD5gnzTG6-B4R3ZB0uyw3r60vIytOug8ogIUgffDALQbj6B-grQcLLI75-OrUIHMaXfRRhO3ydjCEri2kyKOljBbd3AhD4NNYWnVTUlLP0M2pvxzwQ17OBLgNpf-4i_1DiocDejki_b93gYzj0b2fZIqXOgTiKBd_ZXPFoNxOQEZpS4obj5AkoU.HI8vGYNj_9W7oerG4xw72lzy2w3HUMt3IL2OKxu2X_A&amp;dib_tag=se&amp;keywords=salt%2Band%2Bstone%2Bbody%2Bwash&amp;qid=1760054794&amp;sprefix=salt%2Band%2Bsto%2Caps%2C161&amp;sr=8-6&amp;th=1&amp;ascsubtag=srctok-48e76fa0f3791901&amp;btn_ref=srctok-48e76fa0f3791901&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=3305653ae4b45bd5ce2dcea9a3c9f9dd&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for reach and daily shower convenience</li>
-                <li>Useful long-handle design for back cleaning</li>
-                <li>Easy to understand and practical for body care</li>
-                <li>Brush firmness may feel different by preference</li>
-              </ul>
-            </div>
+<div class="product-card">
+<img alt="Brooklinen Luxury Cotton Bath Robe" loading="lazy" src="images/brooklinen-luxury-bath-robe-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Comfort</span>
+</div>
+<h3>Brooklinen Luxury Cotton Bath Robe</h3>
+<p>A plush cotton bath robe made for post-shower comfort, slow mornings, lounging, and spa-style self-care at home.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.50/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for soft and cozy lounging comfort</li>
+<li>Good fit for self-care, gifting, and bath routines</li>
+<li>Practical for post-shower use or relaxed mornings</li>
+<li>Robe fit and thickness preferences can vary</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0GPJN3WVK?social_share=cm_sw_r_apin_ct_4FEQQ626E9H69C23D8ED_1&amp;csmig=1&amp;th=1&amp;ascsubtag=srctok-2145ec645acd322a&amp;btn_ref=srctok-2145ec645acd322a&amp;psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=f8a357abc3ade6d6a57b2e22f1810d6f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Scrubber-Shower-Handle-Bristles-Exfoliator/dp/B0B1HK4WNC?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=909901733c9e1568433d0e103a4f4c6c&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/nail-glue-1.jpg" alt="UNA GELLA Nail Glue Gel">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>UNA GELLA Nail Glue Gel</h3>
-            <p>A solid nail glue gel designed for press-on or nail-tip application with a cleaner, less runny format than traditional glue.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Useful for at-home nail application</li>
-                <li>Solid format is easier to control</li>
-                <li>Good niche pick for nail-care routines</li>
-                <li>Best for shoppers already interested in nail products</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/UNA-GELLA-NAIL-TIPS-578/dp/B0B854YTCF?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d21de74b1378dd87dba94bb975143268&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/sun-bum-1.jpg" alt="Sun Bum Sunscreen Spray">
-          <div class="product-content">
-            <span class="badge">Beauty & Personal Care</span>
-            <h3>Sun Bum Sunscreen Spray</h3>
-            <p>A moisturizing sunscreen body spray designed for lightweight sun protection and easier application during outdoor use.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.65/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for convenient spray application</li>
-                <li>Helpful seasonal and outdoor-care product</li>
-                <li>Recognizable sunscreen brand feel</li>
-                <li>Sunscreen preference is personal and seasonal</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLERK?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c3dff5447287b18f504241483c409b65&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/inevifit-bluetooth-body-scale-1.jpg" alt="INEVIFIT Bluetooth Body Fat Scale">
-          <div class="product-content">
-            <span class="badge">Beauty &amp; Personal Care</span>
-            <h3>INEVIFIT Bluetooth Body Fat Scale</h3>
-            <p>A Bluetooth smart scale that helps users track body weight and body-composition trends through a connected smartphone app.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for easy setup and app syncing</li>
-                <li>Useful for personal wellness tracking routines</li>
-                <li>Helps monitor weight and body-composition trends</li>
-                <li>Personal tracking should not replace medical advice</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/INEVIFIT-Bluetooth-Accurate-Composition-Smartphone/dp/B07S7FWMC7?psc=1&amp;geniuslink=true&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=908b398c6fc4fb45f0d331418c521081&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <h2>Why These Beauty Picks?</h2>
-        <p>
-          This page brings together beauty and personal care products with clear everyday use cases,
-          including skincare hygiene, body cleansing, shower convenience, nail application, sun care, and personal wellness tracking.
+<div class="product-card">
+<img alt="Delamu Bathroom and Makeup Organizer" loading="lazy" src="images/delamu-bathroom-makeup-organizer-1.jpg"/>
+<div class="product-content">
+<div class="badge-row">
+<span class="badge">Beauty &amp; Organization</span>
+<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+</div>
+<h3>Delamu Bathroom / Makeup Organizer</h3>
+<p>A two-tier countertop organizer with drawer storage for makeup, skincare, bathroom items, and daily vanity essentials.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for tidy bathroom and vanity storage</li>
+<li>Drawer design helps hide small daily items</li>
+<li>Good fit for makeup, skincare, and personal-care products</li>
+<li>Best for shoppers wanting a cleaner countertop setup</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Delamu-Organizer-Multi-Purpose-Countertop-Organizers/dp/B0CS3N64M9?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=ba241c59652398695f1eb5634760ee2e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+</div>
+<div class="info-card">
+<h2>Why These Beauty Picks?</h2>
+<p>
+          This page brings together beauty, personal care, wellness, and women-focused lifestyle products with clear everyday use cases,
+          including skincare hygiene, body cleansing, lip care, shower convenience, nail application, sun care, personal wellness tracking,
+          organizers, comfort, and everyday carry.
         </p>
-        <p>
+<p>
           Product details, prices, ratings, and availability can change on Amazon. Always check the final
           Amazon product page before making a purchase.
         </p>
-      </div>
-
-      <div class="disclosure">
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-
-    <div class="footer-links legal-footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
