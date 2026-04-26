@@ -1,26 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home &amp; Kitchen Picks | Merchant</title>
+<link href="https://www.merchant.dedyn.io/home-kitchen.html" rel="canonical"/>
+<meta content="Browse curated Amazon home and kitchen picks including cooking, cleaning, storage, drinkware, charging, organization, and smart home products with quick feedback summaries." name="description"/>
+<meta content="Home &amp; Kitchen Picks | Merchant" property="og:title"/>
+<meta content="Browse curated Amazon home and kitchen picks with quick feedback snapshots and useful product highlights." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/home-kitchen.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
 
-  <title>Home & Kitchen Picks | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/home-kitchen.html" />
-  <meta
-    name="description"
-    content="Browse curated Amazon home and kitchen picks including multi-cookers, grill cleaners, food storage containers, tumblers, and oil sprayers with quick review summaries."
-  />
-
-  <meta property="og:title" content="Home & Kitchen Picks | Merchant" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon home and kitchen picks with quick review-style summaries and useful product highlights."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/home-kitchen.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -59,10 +52,9 @@
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
-      gap: 20px;
+      padding: 16px 0;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -71,12 +63,61 @@
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .header-search input::placeholder {
+      color: #6b7280;
+    }
+
+    .header-search button {
+      border: 0;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
@@ -87,6 +128,13 @@
 
     .nav-links a:hover {
       color: #fbbf24;
+    }
+
+    .nav-links a.active-page {
+      color: #fbbf24;
+      font-weight: 800;
+      border-bottom: 2px solid #fbbf24;
+      padding-bottom: 4px;
     }
 
     .hero {
@@ -236,9 +284,18 @@
       margin-bottom: 14px;
     }
 
-    .review-score {
+    .review-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .merchant-score {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       color: #111827;
       margin-bottom: 8px;
     }
@@ -298,29 +355,6 @@
       margin-bottom: 12px;
     }
 
-    .section-links {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .section-links a {
-      background: #0f172a;
-      color: white;
-      padding: 9px 13px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .section-links a:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-
     .disclosure {
       margin-top: 34px;
       background: #fff7ed;
@@ -350,19 +384,21 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      max-width: 980px;
+      max-width: 1180px;
       margin: 12px auto 0;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       font-family: Arial, sans-serif;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-links a.active-page {
       color: #fde68a;
     }
 
@@ -373,10 +409,29 @@
 
       .nav {
         justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
       }
 
       .nav-links {
+        order: 3;
         justify-content: center;
+        gap: 12px;
       }
 
       .products {
@@ -396,16 +451,15 @@
         padding: 22px 18px;
       }
     }
+
   </style>
-
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Home & Kitchen Picks | Merchant",
   "url": "https://www.merchant.dedyn.io/home-kitchen.html",
-  "description": "Browse curated Amazon home and kitchen picks with quick review-style summaries and useful product highlights.",
+  "description": "Browse curated Amazon home and kitchen picks with quick feedback snapshots and useful product highlights.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Merchant",
@@ -415,377 +469,319 @@
 </script>
 </head>
 <body>
-
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
-
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="sports-outdoors.html">Sports</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Home & Kitchen Picks</h1>
-      <p>
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a class="active-page" href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Home &amp; Kitchen Picks</h1>
+<p>
         Browse selected home and kitchen products for cooking, cleaning, food storage,
-        drinkware, and everyday kitchen convenience.
+        drinkware, charging, organization, and everyday kitchen convenience with quick feedback snapshots.
       </p>
-
-      <div class="hero-actions">
-        <a href="#home-products" class="btn btn-primary">View Home Products</a>
-        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="home-products">
-    <div class="container">
-      <h2 class="section-title">Selected Home & Kitchen Products</h2>
-      <p class="section-subtitle">
-        Useful home and kitchen picks with short descriptions, review-style summaries, and quick highlights.
+<div class="hero-actions">
+<a class="btn btn-primary" href="#home-products">View Home Products</a>
+<a class="btn btn-secondary" href="index.html#categories">Browse All Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="home-products">
+<div class="container">
+<h2 class="section-title">Selected Home &amp; Kitchen Products</h2>
+<p class="section-subtitle">
+        Useful home and kitchen picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
+<div class="products">
+<div class="product-card">
+<img alt="Instant Pot Duo Mini" loading="lazy" src="images/instant-pot-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Instant Pot Duo Mini</h3>
+<p>A compact multi-cooker that combines pressure cooking, slow cooking, steaming, rice cooking, and more in one smaller format.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.9/5</div>
 
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/instant-pot-1.jpg" alt="Instant Pot Duo Mini">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>Instant Pot Duo Mini</h3>
-            <p>A compact multi-cooker that combines pressure cooking, slow cooking, steaming, rice cooking, and more in one smaller format.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Great size for small kitchens and everyday use</li>
+<li>Easy and convenient for quick meals</li>
+<li>Popular for versatility and multi-use cooking</li>
+<li>Best for smaller households more than large batch cooking</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Instant-Pot-Duo-Mini-Programmable/dp/B06Y1YD5W7?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=42b282b635556ada98691f20d410a708&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Scrub Daddy BBQ Daddy Grill Cleaner" loading="lazy" src="images/bbq-cleaner-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Scrub Daddy BBQ Daddy Grill Cleaner</h3>
+<p>A grill-cleaning kit designed to make barbecue cleanup easier with a temperature-controlled scrubbing approach.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.8/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.9/5 from 20 verified reviews</div>
-              <p class="review-summary">Widely praised for convenience, compact size, and making everyday cooking easier without taking much counter space.</p>
-              <ul class="review-highlights">
-                <li>Great size for small kitchens and everyday use</li>
-                <li>Easy and convenient for quick meals</li>
-                <li>Popular for versatility and multi-use cooking</li>
-                <li>Best for smaller households more than large batch cooking</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Highly liked for effective grill cleaning</li>
+<li>Easy to handle and practical to use</li>
+<li>Good option for frequent grill users</li>
+<li>Most useful for people who actually grill regularly</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Scrub-Daddy-BBQ-Cleaner-Temperature-Controlled/dp/B0D5PFLYLP?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=04b5dee1eb16c3b190178c46bca9de1f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Food Storage Containers" loading="lazy" src="images/food-containers-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>5 PCS Food Storage Containers</h3>
+<p>Fridge-friendly storage containers with removable colanders designed to help keep produce organized and easier to rinse and store.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.7/5</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Instant-Pot-Duo-Mini-Programmable/dp/B06Y1YD5W7?th=1&linkCode=ll2&tag=themerchant00-20&linkId=42b282b635556ada98691f20d410a708&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Useful for organizing produce neatly</li>
+<li>Colander design adds everyday convenience</li>
+<li>Good option for fridge storage and meal prep</li>
+<li>Size may feel smaller than expected for some buyers</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Containers-Removable-Leakproof-Dishwasher-Microwave/dp/B0DRJ32K54?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=67b76bee7f4b35fdfda70feb8ea2f221&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="BrüMate Era Flip 40oz Tumbler" loading="lazy" src="images/brumate-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>BrüMate Era Flip 40oz Tumbler</h3>
+<p>An insulated tumbler with a covered straw lid made for daily hydration, travel, and longer cold retention throughout the day.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.6/5</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/bbq-cleaner-1.jpg" alt="Scrub Daddy BBQ Daddy Grill Cleaner">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>Scrub Daddy BBQ Daddy Grill Cleaner</h3>
-            <p>A grill-cleaning kit designed to make barbecue cleanup easier with a temperature-controlled scrubbing approach.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Keeps drinks cold for long periods</li>
+<li>Covered straw feels cleaner and more practical</li>
+<li>Popular for travel and daily carry use</li>
+<li>Some buyers mention the price is high, and one review reported leaking</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Br%C3%BCMate-Leakproof-Hygienic-Insulated-Stainless/dp/B0GKR3D7SZ?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=925c4197e42e1e03be5423d8e098b69d&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="2-in-1 Oil Sprayer" loading="lazy" src="images/oil-sprayer-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>2-in-1 Oil Sprayer</h3>
+<p>A kitchen oil bottle and sprayer combo designed for cooking, air fryer use, salad prep, and more controlled oil application.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.6/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Strong customer feedback around cleaning performance, easy handling, and making grill cleanup much less annoying.</p>
-              <ul class="review-highlights">
-                <li>Highly liked for effective grill cleaning</li>
-                <li>Easy to handle and practical to use</li>
-                <li>Good option for frequent grill users</li>
-                <li>Most useful for people who actually grill regularly</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Handy for air fryer and everyday cooking</li>
+<li>Helps control oil use more easily</li>
+<li>Useful bottle-and-sprayer combo design</li>
+<li>Some buyers mention spray performance can vary</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/YARRAMATE-Sprayer-Stickers-Food-Grade-Dispenser/dp/B0DJXPTRW6?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=bbecb4463e3ba317e7c5c57bb77d8e2e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="KPON Foldable 3-in-1 Wireless Charger" loading="lazy" src="images/foldable-3-in-1-wireless-charger-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>KPON Foldable 3-in-1 Wireless Charger</h3>
+<p>A compact foldable charging station for compatible phone, watch, and earbuds setups at home, work, or travel.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.85/5</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Scrub-Daddy-BBQ-Cleaner-Temperature-Controlled/dp/B0D5PFLYLP?th=1&linkCode=ll2&tag=themerchant00-20&linkId=04b5dee1eb16c3b190178c46bca9de1f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Foldable design is useful for travel and nightstands</li>
+<li>Helps keep multiple devices organized in one place</li>
+<li>Good fit for Apple-style charging setups</li>
+<li>Best for compatible MagSafe-style devices</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/KPON-Charging-Foldable-Magnetic-Wireless/dp/B0FMYCRBQ9?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=35d09531a153c96674dda3cbe38dd4fb&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Portable Mini Air Conditioner Cooling Fan" loading="lazy" src="images/portable-mini-air-conditioner-fan-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Portable Mini Air Conditioner / Cooling Fan</h3>
+<p>A small portable cooling fan for desks, bedrooms, dorm rooms, and personal cooling zones.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.8/5</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/food-containers-1.jpg" alt="Food Storage Containers">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>5 PCS Food Storage Containers</h3>
-            <p>Fridge-friendly storage containers with removable colanders designed to help keep produce organized and easier to rinse and store.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Useful for desks, bedrooms, and small personal spaces</li>
+<li>Compact design makes it easy to move around</li>
+<li>Good option for light personal cooling</li>
+<li>Not meant to replace a full-size air conditioner</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/acondicionado-temporizador-ventilador-refrigeraci%C3%B3n-dormitorio/dp/B0GL1G22QY?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=0677f87641ad6e6d7b6f5865639557a0&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="INCLY Pegboard Accessories Organizer Kit" loading="lazy" src="images/pegboard-accessories-organizer-kit-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>INCLY Pegboard Accessories Organizer Kit</h3>
+<p>A wall organization kit for tools, garage items, craft supplies, and small household accessories.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.7/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.7/5 from 20 verified reviews</div>
-              <p class="review-summary">Often liked for organization, convenience, and helping fruits or vegetables stay separated and easier to manage in the fridge.</p>
-              <ul class="review-highlights">
-                <li>Useful for organizing produce neatly</li>
-                <li>Colander design adds everyday convenience</li>
-                <li>Good option for fridge storage and meal prep</li>
-                <li>Size may feel smaller than expected for some buyers</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Good for garage, workshop, and utility-room organization</li>
+<li>Helps move tools and accessories off counters</li>
+<li>Flexible layout for different storage needs</li>
+<li>Best when paired with a compatible pegboard setup</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0DP3JMP14?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=32089ed200f27243a4477a72afb67e05&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Bluevua RO100ROPOT Countertop Water Filter" loading="lazy" src="images/bluevua-countertop-water-filter-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Bluevua RO100ROPOT Countertop Water Filter</h3>
+<p>A countertop reverse-osmosis water filtration system designed for homes that want filtered water without under-sink installation.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.65/5</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Containers-Removable-Leakproof-Dishwasher-Microwave/dp/B0DRJ32K54?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=67b76bee7f4b35fdfda70feb8ea2f221&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Countertop design avoids under-sink installation</li>
+<li>Good fit for apartments, kitchens, and offices</li>
+<li>Useful for people who want a dedicated filtration station</li>
+<li>Check filter replacement details on Amazon before buying</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Bluevua-RO100ROPOT-Countertop-Purification-Filtration/dp/B09KRDK677?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=b0228571d9fdf6cd21f4af6c27c4c5e7&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Mckay Wall-Mounted Can Crusher" loading="lazy" src="images/wall-mounted-can-crusher-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Mckay Wall-Mounted Can Crusher</h3>
+<p>A wall-mounted can crusher for reducing empty aluminum cans before recycling or trash storage.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.65/5</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/brumate-1.jpg" alt="BrüMate Era Flip 40oz Tumbler">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>BrüMate Era Flip 40oz Tumbler</h3>
-            <p>An insulated tumbler with a covered straw lid made for daily hydration, travel, and longer cold retention throughout the day.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Helps reduce can volume for recycling</li>
+<li>Wall-mounted design saves counter and bin space</li>
+<li>Useful for garages, kitchens, and utility areas</li>
+<li>Works best when mounted securely</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B07X3PTXJW?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=f30cf8c9dca61427042839cf8185e1e8&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Magnetic Fidget Pen" loading="lazy" src="images/magnetic-fidget-pen-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Magnetic Fidget Pen</h3>
+<p>A desk-friendly magnetic pen that doubles as a small fidget toy and creative desktop accessory.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.65/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.6/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently praised for cold retention, leak-resistant design, and practical everyday use at home, work, or on the go.</p>
-              <ul class="review-highlights">
-                <li>Keeps drinks cold for long periods</li>
-                <li>Covered straw feels cleaner and more practical</li>
-                <li>Popular for travel and daily carry use</li>
-                <li>Some buyers mention the price is high, and one review reported leaking</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Fun desk accessory for work or study spaces</li>
+<li>Works as both a pen and a fidget item</li>
+<li>Good small gift idea</li>
+<li>More of a novelty pick than an essential tool</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0C96LSL58?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e2ffd44abad1a2b1cf311cacbe2cbee9&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="REVSQUARED Touchless Hand Dryer" loading="lazy" src="images/touchless-hand-dryer-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>REVSQUARED Touchless Hand Dryer</h3>
+<p>A touchless wall-mounted hand dryer for bathrooms, utility spaces, or higher-traffic home setups.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.55/5</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Br%C3%BCMate-Leakproof-Hygienic-Insulated-Stainless/dp/B0GKR3D7SZ?th=1&linkCode=ll2&tag=themerchant00-20&linkId=925c4197e42e1e03be5423d8e098b69d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Touchless design is convenient for bathroom use</li>
+<li>Useful for reducing paper towel use</li>
+<li>Better fit for permanent bathroom setups</li>
+<li>Requires wall installation and access to power</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/REVSQUARED-Hand-Dryer-Commercial-Bathrooms/dp/B0CP8HK65F?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d6ccbbb46c25c83b584ba688bd40ab1f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Chamberlain Smart Garage Door Opener" loading="lazy" src="images/chamberlain-smart-garage-door-opener-1.jpg"/>
+<div class="product-content">
+<span class="badge">Home &amp; Kitchen</span>
+<h3>Chamberlain Smart Garage Door Opener</h3>
+<p>A smart garage door opener with smartphone control and built-in video features for a more connected home entry setup.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.4/5</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/oil-sprayer-1.jpg" alt="2-in-1 Oil Sprayer">
-          <div class="product-content">
-            <span class="badge">Home & Kitchen</span>
-            <h3>2-in-1 Oil Sprayer</h3>
-            <p>A kitchen oil bottle and sprayer combo designed for cooking, air fryer use, salad prep, and more controlled oil application.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Smartphone-controlled garage access</li>
+<li>Good fit for smart-home garage upgrades</li>
+<li>Useful for monitoring an important home entry point</li>
+<li>Installation is more complex than plug-and-play products</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Chamberlain-B6753T-Lighting-myQ-Smartphone-Controlled-Ultra/dp/B09B2T2XVD?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=dfa3b39f613817fba0d0e1c3b68e0303&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div> </div>
 
-            <div class="review-box">
-              <div class="review-score">4.6/5 from 20 verified reviews</div>
-              <p class="review-summary">Often appreciated for convenience, better oil control, and making cooking or air-fryer prep feel cleaner and more efficient.</p>
-              <ul class="review-highlights">
-                <li>Handy for air fryer and everyday cooking</li>
-                <li>Helps control oil use more easily</li>
-                <li>Useful bottle-and-sprayer combo design</li>
-                <li>Some buyers mention spray performance can vary</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/YARRAMATE-Sprayer-Stickers-Food-Grade-Dispenser/dp/B0DJXPTRW6?th=1&linkCode=ll2&tag=themerchant00-20&linkId=bbecb4463e3ba317e7c5c57bb77d8e2e&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-
-        <div class="product-card">
-          <img loading="lazy" src="images/foldable-3-in-1-wireless-charger-1.jpg" alt="KPON Foldable 3-in-1 Wireless Charger">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>KPON Foldable 3-in-1 Wireless Charger</h3>
-            <p>A compact foldable charging station for compatible phone, watch, and earbuds setups at home, work, or travel.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.85/5 from 20 verified reviews</div>
-              <p class="review-summary">Strong feedback around compact design, convenient travel use, and reducing cable clutter for multi-device charging.</p>
-              <ul class="review-highlights">
-                <li>Foldable design is useful for travel and nightstands</li>
-                <li>Helps keep multiple devices organized in one place</li>
-                <li>Good fit for Apple-style charging setups</li>
-                <li>Best for compatible MagSafe-style devices</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/KPON-Charging-Foldable-Magnetic-Wireless/dp/B0FMYCRBQ9?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=35d09531a153c96674dda3cbe38dd4fb&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/portable-mini-air-conditioner-fan-1.jpg" alt="Portable Mini Air Conditioner Cooling Fan">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>Portable Mini Air Conditioner / Cooling Fan</h3>
-            <p>A small portable cooling fan for desks, bedrooms, dorm rooms, and personal cooling zones.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Customers like the compact size, simple controls, and personal cooling comfort for small spaces.</p>
-              <ul class="review-highlights">
-                <li>Useful for desks, bedrooms, and small personal spaces</li>
-                <li>Compact design makes it easy to move around</li>
-                <li>Good option for light personal cooling</li>
-                <li>Not meant to replace a full-size air conditioner</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/acondicionado-temporizador-ventilador-refrigeraci%C3%B3n-dormitorio/dp/B0GL1G22QY?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=0677f87641ad6e6d7b6f5865639557a0&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/pegboard-accessories-organizer-kit-1.jpg" alt="INCLY Pegboard Accessories Organizer Kit">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>INCLY Pegboard Accessories Organizer Kit</h3>
-            <p>A wall organization kit for tools, garage items, craft supplies, and small household accessories.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.7/5 from 20 verified reviews</div>
-              <p class="review-summary">Frequently appreciated for improving tool storage, garage organization, and keeping small items easier to see.</p>
-              <ul class="review-highlights">
-                <li>Good for garage, workshop, and utility-room organization</li>
-                <li>Helps move tools and accessories off counters</li>
-                <li>Flexible layout for different storage needs</li>
-                <li>Best when paired with a compatible pegboard setup</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DP3JMP14?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=32089ed200f27243a4477a72afb67e05&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/bluevua-countertop-water-filter-1.jpg" alt="Bluevua RO100ROPOT Countertop Water Filter">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>Bluevua RO100ROPOT Countertop Water Filter</h3>
-            <p>A countertop reverse-osmosis water filtration system designed for homes that want filtered water without under-sink installation.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.65/5 from 20 verified reviews</div>
-              <p class="review-summary">Reviewers often like the countertop convenience, clean setup, and easy access to filtered drinking water.</p>
-              <ul class="review-highlights">
-                <li>Countertop design avoids under-sink installation</li>
-                <li>Good fit for apartments, kitchens, and offices</li>
-                <li>Useful for people who want a dedicated filtration station</li>
-                <li>Check filter replacement details on Amazon before buying</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Bluevua-RO100ROPOT-Countertop-Purification-Filtration/dp/B09KRDK677?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=b0228571d9fdf6cd21f4af6c27c4c5e7&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/wall-mounted-can-crusher-1.jpg" alt="Mckay Wall-Mounted Can Crusher">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>Mckay Wall-Mounted Can Crusher</h3>
-            <p>A wall-mounted can crusher for reducing empty aluminum cans before recycling or trash storage.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.65/5 from 20 verified reviews</div>
-              <p class="review-summary">Customers like the simple use, space-saving recycling help, and sturdy feel for everyday can crushing.</p>
-              <ul class="review-highlights">
-                <li>Helps reduce can volume for recycling</li>
-                <li>Wall-mounted design saves counter and bin space</li>
-                <li>Useful for garages, kitchens, and utility areas</li>
-                <li>Works best when mounted securely</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B07X3PTXJW?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=f30cf8c9dca61427042839cf8185e1e8&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/magnetic-fidget-pen-1.jpg" alt="Magnetic Fidget Pen">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>Magnetic Fidget Pen</h3>
-            <p>A desk-friendly magnetic pen that doubles as a small fidget toy and creative desktop accessory.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.65/5 from 20 verified reviews</div>
-              <p class="review-summary">Often liked as a fun desk item, small gift, and satisfying fidget tool that still works as a pen.</p>
-              <ul class="review-highlights">
-                <li>Fun desk accessory for work or study spaces</li>
-                <li>Works as both a pen and a fidget item</li>
-                <li>Good small gift idea</li>
-                <li>More of a novelty pick than an essential tool</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0C96LSL58?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e2ffd44abad1a2b1cf311cacbe2cbee9&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/touchless-hand-dryer-1.jpg" alt="REVSQUARED Touchless Hand Dryer">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>REVSQUARED Touchless Hand Dryer</h3>
-            <p>A touchless wall-mounted hand dryer for bathrooms, utility spaces, or higher-traffic home setups.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.55/5 from 20 verified reviews</div>
-              <p class="review-summary">Feedback points to strong drying performance and a useful hands-free setup, especially for bathroom upgrades.</p>
-              <ul class="review-highlights">
-                <li>Touchless design is convenient for bathroom use</li>
-                <li>Useful for reducing paper towel use</li>
-                <li>Better fit for permanent bathroom setups</li>
-                <li>Requires wall installation and access to power</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/REVSQUARED-Hand-Dryer-Commercial-Bathrooms/dp/B0CP8HK65F?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d6ccbbb46c25c83b584ba688bd40ab1f&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/chamberlain-smart-garage-door-opener-1.jpg" alt="Chamberlain Smart Garage Door Opener">
-          <div class="product-content">
-            <span class="badge">Home &amp; Kitchen</span>
-            <h3>Chamberlain Smart Garage Door Opener</h3>
-            <p>A smart garage door opener with smartphone control and built-in video features for a more connected home entry setup.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.4/5 from 20 verified reviews</div>
-              <p class="review-summary">Reviewers like the smart-home convenience and garage access control, though installation is more involved than small gadgets.</p>
-              <ul class="review-highlights">
-                <li>Smartphone-controlled garage access</li>
-                <li>Good fit for smart-home garage upgrades</li>
-                <li>Useful for monitoring an important home entry point</li>
-                <li>Installation is more complex than plug-and-play products</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Chamberlain-B6753T-Lighting-myQ-Smartphone-Controlled-Ultra/dp/B09B2T2XVD?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=dfa3b39f613817fba0d0e1c3b68e0303&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>      </div>
-
-      <div class="section-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet Supplies</a>
-        <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
-      </div>
-
-      <div class="info-card">
-        <h2>Why These Home & Kitchen Picks?</h2>
-        <p>
+<div class="info-card">
+<h2>Why These Home &amp; Kitchen Picks?</h2>
+<p>
           This page brings together practical home and kitchen products with clear everyday use cases,
-          including compact cooking, grill cleaning, fridge organization, hydration, and oil control.
+          including compact cooking, grill cleaning, fridge organization, hydration, oil control, charging,
+          organization, filtration, recycling, and smart-home convenience.
         </p>
-        <p>
+<p>
           Product details, prices, ratings, and availability can change on Amazon. Always check the final
           Amazon product page before making a purchase.
         </p>
-      </div>
-
-      <div class="disclosure">
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet Supplies</a>
-      <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
-      <a href="about.html">About</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
