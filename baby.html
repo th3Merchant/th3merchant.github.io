@@ -1,26 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Baby Picks | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/baby.html" />
-  <meta
-    name="description"
-    content="Browse curated Amazon baby picks including baby care, feeding, nursery essentials, outdoor play, and baby car monitoring products with quick feedback summaries."
-  />
-
-  <meta property="og:title" content="Baby Picks | Merchant" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon baby picks with quick feedback snapshots and useful product highlights."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/baby.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baby Picks | Merchant</title>
+<link href="https://www.merchant.dedyn.io/baby.html" rel="canonical"/>
+<meta content="Browse curated Amazon baby picks including baby care, feeding, nursery essentials, outdoor play, and baby car monitoring products with quick feedback summaries." name="description"/>
+<meta content="Baby Picks | Merchant" property="og:title"/>
+<meta content="Browse curated Amazon baby picks with quick feedback snapshots and useful product highlights." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/baby.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -269,6 +261,51 @@
       padding: 5px 10px;
     }
 
+
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-row .badge {
+      margin-bottom: 0;
+    }
+
+    .customer-favorite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.1);
+      white-space: nowrap;
+    }
+
+    .cf-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fde68a);
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
+    }
+
     .product-card h3 {
       font-size: 20px;
       margin-bottom: 10px;
@@ -458,8 +495,7 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -475,203 +511,171 @@
 </script>
 </head>
 <body>
-
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
-
-      <form class="header-search" action="search.html" method="get">
-        <input
-          type="search"
-          name="q"
-          placeholder="Search products..."
-          aria-label="Search products"
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <nav class="nav-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="top-amazon-finds.html">Top Finds</a>
-        <a href="baby.html" class="active-page">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Baby Picks</h1>
-      <p>
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a class="active-page" href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Baby Picks</h1>
+<p>
         Browse selected baby care, feeding, nursery, outdoor play, and car-monitoring products
         with quick feedback snapshots.
       </p>
-
-      <div class="hero-actions">
-        <a href="#baby-products" class="btn btn-primary">View Baby Products</a>
-        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="baby-products">
-    <div class="container">
-      <h2 class="section-title">Selected Baby Products</h2>
-      <p class="section-subtitle">
+<div class="hero-actions">
+<a class="btn btn-primary" href="#baby-products">View Baby Products</a>
+<a class="btn btn-secondary" href="index.html#categories">Browse All Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="baby-products">
+<div class="container">
+<h2 class="section-title">Selected Baby Products</h2>
+<p class="section-subtitle">
         Useful baby picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
-
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/grownsy-aspirator-1.jpg" alt="GROWNSY Electric Baby Nasal Aspirator">
-          <div class="product-content">
-            <span class="badge">Baby</span>
-            <h3>GROWNSY Electric Baby Nasal Aspirator</h3>
-            <p>An electric nasal aspirator designed to help parents clear baby congestion more easily during colds, allergies, or stuffy-nose days.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.9/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for suction performance and simple use</li>
-                <li>Helpful for congestion and stuffy-nose care</li>
-                <li>Useful during everyday baby-care routines</li>
-                <li>Some buyers may want to check durability expectations</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=6596f6a851d1edf32a950f08090c5b40&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/crib-mattress-1.jpg" alt="GUNTAIL Baby Crib Sheets">
-          <div class="product-content">
-            <span class="badge">Baby</span>
-            <h3>GUNTAIL Baby Crib Sheets</h3>
-            <p>Soft fitted crib sheets made for standard crib and toddler mattresses, with a simple everyday design for nursery use.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for softness and nursery comfort</li>
-                <li>Good fit for standard crib mattress sizing</li>
-                <li>Practical everyday nursery essential</li>
-                <li>Best understood as crib sheets, not a crib mattress</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=cfcd06d1919ce90488d81b82d176ccc2&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/dr-browns-cup-1.jpg" alt="Dr. Brown's Milestones Baby's First Straw Cup">
-          <div class="product-content">
-            <span class="badge">Baby</span>
-            <h3>Dr. Brown’s Milestones Straw Cup</h3>
-            <p>A weighted-straw training cup designed to help babies transition from bottles to straw drinking with easier sipping from different angles.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.75/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Good first straw cup for baby transitions</li>
-                <li>Weighted straw helps with drinking from different angles</li>
-                <li>Easy for small hands to hold</li>
-                <li>Some buyers may want to check leak expectations</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=756db1302dabb59659b6436b63e68586&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/little-tikes-swing-1.jpg" alt="Little Tikes Snug 'n Secure Swing">
-          <div class="product-content">
-            <span class="badge">Baby</span>
-            <h3>Little Tikes Snug ’n Secure Swing</h3>
-            <p>A classic toddler and baby swing designed for outdoor play, secure seating, and simple backyard fun.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.7/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for simple outdoor play value</li>
-                <li>Recognizable Little Tikes product with broad family appeal</li>
-                <li>Good visual variety for the Baby section</li>
-                <li>Some buyers may want to check buckle and setup details</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e299574ce76ba7187ec9c9b3b3ab4d17&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/baby-monitor-1.jpg" alt="OTTOCAST Cabin Care Baby Car Camera">
-          <div class="product-content">
-            <span class="badge">Baby</span>
-            <h3>OTTOCAST Baby Car Camera</h3>
-            <p>An in-car baby camera designed to help parents monitor a rear-facing child through the car display without adding a separate screen.</p>
-
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.2/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Helpful for checking a baby in the back seat</li>
-                <li>Uses the car display instead of an extra monitor</li>
-                <li>Good product variety for the Baby section</li>
-                <li>Check car compatibility before buying</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=a40fdb77eeecb31fca8528eaf451a80e&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <h2>Why These Baby Picks?</h2>
-        <p>
+<div class="products">
+<div class="product-card">
+<img alt="GROWNSY Electric Baby Nasal Aspirator" loading="lazy" src="images/grownsy-aspirator-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Baby</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>GROWNSY Electric Baby Nasal Aspirator</h3>
+<p>An electric nasal aspirator designed to help parents clear baby congestion more easily during colds, allergies, or stuffy-nose days.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.9/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for suction performance and simple use</li>
+<li>Helpful for congestion and stuffy-nose care</li>
+<li>Useful during everyday baby-care routines</li>
+<li>Some buyers may want to check durability expectations</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=6596f6a851d1edf32a950f08090c5b40&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="GUNTAIL Baby Crib Sheets" loading="lazy" src="images/crib-mattress-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Baby</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>GUNTAIL Baby Crib Sheets</h3>
+<p>Soft fitted crib sheets made for standard crib and toddler mattresses, with a simple everyday design for nursery use.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for softness and nursery comfort</li>
+<li>Good fit for standard crib mattress sizing</li>
+<li>Practical everyday nursery essential</li>
+<li>Best understood as crib sheets, not a crib mattress</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=cfcd06d1919ce90488d81b82d176ccc2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Dr. Brown's Milestones Baby's First Straw Cup" loading="lazy" src="images/dr-browns-cup-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Baby</span></div>
+<h3>Dr. Brown’s Milestones Straw Cup</h3>
+<p>A weighted-straw training cup designed to help babies transition from bottles to straw drinking with easier sipping from different angles.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.75/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Good first straw cup for baby transitions</li>
+<li>Weighted straw helps with drinking from different angles</li>
+<li>Easy for small hands to hold</li>
+<li>Some buyers may want to check leak expectations</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=756db1302dabb59659b6436b63e68586&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Little Tikes Snug 'n Secure Swing" loading="lazy" src="images/little-tikes-swing-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Baby</span></div>
+<h3>Little Tikes Snug ’n Secure Swing</h3>
+<p>A classic toddler and baby swing designed for outdoor play, secure seating, and simple backyard fun.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.7/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for simple outdoor play value</li>
+<li>Recognizable Little Tikes product with broad family appeal</li>
+<li>Good visual variety for the Baby section</li>
+<li>Some buyers may want to check buckle and setup details</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e299574ce76ba7187ec9c9b3b3ab4d17&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="OTTOCAST Cabin Care Baby Car Camera" loading="lazy" src="images/baby-monitor-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Baby</span></div>
+<h3>OTTOCAST Baby Car Camera</h3>
+<p>An in-car baby camera designed to help parents monitor a rear-facing child through the car display without adding a separate screen.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.2/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Helpful for checking a baby in the back seat</li>
+<li>Uses the car display instead of an extra monitor</li>
+<li>Good product variety for the Baby section</li>
+<li>Check car compatibility before buying</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=a40fdb77eeecb31fca8528eaf451a80e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+</div>
+<div class="info-card">
+<h2>Why These Baby Picks?</h2>
+<p>
           This page brings together baby products with clear everyday use cases, including congestion care,
           nursery bedding, feeding transitions, outdoor play, and in-car baby monitoring.
         </p>
-        <p>
+<p>
           Product details, prices, ratings, and availability can change on Amazon. Always check the final
           Amazon product page before making a purchase.
         </p>
-      </div>
-
-      <div class="disclosure">
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-
-    <div class="footer-links legal-footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
