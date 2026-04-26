@@ -1,19 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Merchant | Amazon Best Sellers & Categories</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/" />
-  <meta name="description" content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." />
-  <meta property="og:title" content="Merchant | Curated Amazon Picks by Category" />
-  <meta property="og:description" content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Merchant | Amazon Best Sellers &amp; Categories</title>
+<link href="https://www.merchant.dedyn.io/" rel="canonical"/>
+<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." name="description"/>
+<meta content="Merchant | Curated Amazon Picks by Category" property="og:title"/>
+<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: Arial, sans-serif; background: #f3f6fb; color: #1f2937; line-height: 1.6; }
@@ -250,6 +249,51 @@
       font-size: 12px;
       font-weight: 700;
       padding: 5px 10px;
+    }
+
+
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-row .badge {
+      margin-bottom: 0;
+    }
+
+    .customer-favorite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18), inset 0 0 12px rgba(251, 191, 36, 0.1);
+      white-space: nowrap;
+    }
+
+    .cf-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fde68a);
+      color: #111827;
+      font-size: 12px;
+      line-height: 1;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
     }
 
     .product-card h3 {
@@ -565,8 +609,7 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -581,311 +624,278 @@
 }
   </script>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo logo-home-active">Merchant</a>
-
-      <form class="header-search" action="search.html" method="get">
-        <input
-          type="search"
-          name="q"
-          placeholder="Search products..."
-          aria-label="Search products"
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <nav class="nav-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="top-amazon-finds.html">Top Finds</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Best Amazon Picks in One Place</h1>
-      <p>
+<header>
+<div class="container nav">
+<a class="logo logo-home-active" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Best Amazon Picks in One Place</h1>
+<p>
         Browse our best sellers, check quick feedback summaries, and explore products
         by familiar Amazon categories.
       </p>
-
-      <div class="hero-actions">
-        <a href="best-sellers.html" class="btn btn-primary">Shop Best Sellers</a>
-        <a href="#categories" class="btn btn-secondary">Browse Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="best-sellers">
-    <div class="container">
-      <h2 class="section-title">Best Sellers</h2>
-      <p class="section-subtitle">
+<div class="hero-actions">
+<a class="btn btn-primary" href="best-sellers.html">Shop Best Sellers</a>
+<a class="btn btn-secondary" href="#categories">Browse Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="best-sellers">
+<div class="container">
+<h2 class="section-title">Best Sellers</h2>
+<p class="section-subtitle">
         Our current best-selling picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
-
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/tero-1.jpg" alt="TERRO Ant Killer Bait Stations">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>TERRO Ant Killer Bait Stations</h3>
-            <p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.9/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for quick and simple use</li>
-                <li>Frequently mentioned as useful for indoor ant issues</li>
-                <li>Good fit for everyday home pest control needs</li>
-                <li>Some buyers may need patience depending on the issue</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=C1VN56CTS5APCYT8PXQE&pd_rd_wg=tZmWm&pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&pd_rd_i=B00E4GACB8&th=1&linkCode=ll2&tag=themerchant00-20&linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/olanly-1.jpg" alt="OLANLY Bathroom Rug 30x20">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>OLANLY Bathroom Rug 30x20</h3>
-            <p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for a soft and comfortable feel</li>
-                <li>Frequently chosen for everyday bathroom use</li>
-                <li>Good fit for buyers wanting absorbent bath mats</li>
-                <li>Some buyers may need to check floor grip expectations</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=R5JX149A3GEJGGDRZDV5&pd_rd_wg=3GwEb&pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&pd_rd_i=B0CFGYFCYL&th=1&linkCode=ll2&tag=themerchant00-20&linkId=74c5c32f7b93f933bda90ad7fd90e8d3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/queen-sheet-1.jpg" alt="Queen Size 4 Piece Sheet Set">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>Queen Size 4 Piece Sheet Set</h3>
-            <p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for softness and everyday comfort</li>
-                <li>Frequently mentioned as good value bedding</li>
-                <li>Useful fit for many queen-size bedroom setups</li>
-                <li>Some buyers may want to check fabric thickness expectations</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=VCE240F1DNE0ZW4JA9QH&pd_rd_wg=HLIa1&pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&pd_rd_i=B01M16WBW1&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/bissell-1.jpg" alt="BISSELL Little Green Cleaner">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>BISSELL Little Green Cleaner</h3>
-            <p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.7/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for targeted spot cleaning</li>
-                <li>Frequently useful for upholstery and small messes</li>
-                <li>Good fit for homes with kids, pets, or frequent spills</li>
-                <li>Some buyers may prefer a larger tank for bigger jobs</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=7P678DZF5CTX8RJ2NQ3N&pd_rd_wg=IaB2U&pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&pd_rd_i=B0016HF5GK&th=1&linkCode=ll2&tag=themerchant00-20&linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/dreo-fan-1.jpg" alt="DREO Tower Fan">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>DREO Tower Fan</h3>
-            <p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for strong everyday airflow</li>
-                <li>Frequently mentioned as quiet at normal settings</li>
-                <li>Good fit for bedrooms, living rooms, and home offices</li>
-                <li>Some buyers may notice more sound at higher speeds</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&pd_rd_wg=YyHdS&pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&pd_rd_i=B09MKPDJRT&th=1&linkCode=ll2&tag=themerchant00-20&linkId=4671c9acd604fabd4a99d8914c7a2bdd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/minlu-65w-gan-usb-c-charger-1.jpg" alt="MINLU 65W GaN USB-C Charger Block">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>MINLU 65W GaN USB-C Charger Block</h3>
-            <p>A compact 3-port GaN fast charger made for USB-C phones, tablets, and everyday desk or travel charging setups.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 4.55/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often liked for compact everyday charging</li>
-                <li>Frequently useful for phones, tablets, and USB-C setups</li>
-                <li>Good fit for travel bags, desks, and nightstands</li>
-                <li>Charging speed can depend on cable and device support</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&linkCode=ll2&tag=themerchant00-20&linkId=387a36e59eb7949289890038ccd8e322&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/wireless-earbuds-touch-screen-case-1.jpg" alt="THREE PEACHES Wireless Earbuds with Touch Screen Case">
-          <div class="product-content">
-            <span class="badge">Best Seller</span>
-            <h3>THREE PEACHES Wireless Earbuds</h3>
-            <p>Bluetooth earbuds with a touch-screen charging case for quick controls, battery visibility, and everyday listening.</p>
-            <div class="review-box">
-              <div class="review-label">Customer Feedback Snapshot</div>
-              <div class="merchant-score">Merchant Pick Score: 3.95/5</div>
-              <p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
-              <ul class="review-highlights">
-                <li>Often noticed for the touch-screen case design</li>
-                <li>Useful for casual music, calls, and daily listening</li>
-                <li>Good product variety for shoppers browsing audio picks</li>
-                <li>Feedback can be more mixed than stronger Best Seller picks</li>
-              </ul>
-            </div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&linkCode=ll2&tag=themerchant00-20&linkId=80e0d8e98c4e763b6a0f5f2356607dea&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-links">
-        <a href="best-sellers.html">View Full Best Sellers Page</a>
-      </div>
-
-      <div class="disclosure">
+<div class="products">
+<div class="product-card">
+<img alt="TERRO Ant Killer Bait Stations" loading="lazy" src="images/tero-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>TERRO Ant Killer Bait Stations</h3>
+<p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.9/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for quick and simple use</li>
+<li>Frequently mentioned as useful for indoor ant issues</li>
+<li>Good fit for everyday home pest control needs</li>
+<li>Some buyers may need patience depending on the issue</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/TERRO-T300B-2-Pack-Liquid-Baits/dp/B00E4GACB8?pd_rd_w=Kh29k&amp;content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&amp;pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&amp;pf_rd_r=C1VN56CTS5APCYT8PXQE&amp;pd_rd_wg=tZmWm&amp;pd_rd_r=d7f4f43a-7327-4d9f-9365-7b722f9dcfca&amp;pd_rd_i=B00E4GACB8&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=dd8f13f124d2a50ba3a7e3839f4e06a6&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="OLANLY Bathroom Rug 30x20" loading="lazy" src="images/olanly-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>OLANLY Bathroom Rug 30x20</h3>
+<p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for a soft and comfortable feel</li>
+<li>Frequently chosen for everyday bathroom use</li>
+<li>Good fit for buyers wanting absorbent bath mats</li>
+<li>Some buyers may need to check floor grip expectations</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/OLANLY-Bathroom-Absorbent-Chenille-Non-Slip/dp/B0CFGYFCYL?pd_rd_w=wEXvC&amp;content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&amp;pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&amp;pf_rd_r=R5JX149A3GEJGGDRZDV5&amp;pd_rd_wg=3GwEb&amp;pd_rd_r=dae00370-570c-4574-ade8-c7193df576ff&amp;pd_rd_i=B0CFGYFCYL&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=74c5c32f7b93f933bda90ad7fd90e8d3&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Queen Size 4 Piece Sheet Set" loading="lazy" src="images/queen-sheet-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>Queen Size 4 Piece Sheet Set</h3>
+<p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for softness and everyday comfort</li>
+<li>Frequently mentioned as good value bedding</li>
+<li>Useful fit for many queen-size bedroom setups</li>
+<li>Some buyers may want to check fabric thickness expectations</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Queen-Size-Piece-Sheet-Set/dp/B01M16WBW1?pd_rd_w=RNn8Y&amp;content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&amp;pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&amp;pf_rd_r=VCE240F1DNE0ZW4JA9QH&amp;pd_rd_wg=HLIa1&amp;pd_rd_r=3270bd4f-e6a1-43ca-9c7e-569eb1baad3d&amp;pd_rd_i=B01M16WBW1&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=4ae064e7185a1be89b0e6c9e3b4efbb2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="BISSELL Little Green Cleaner" loading="lazy" src="images/bissell-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span></div>
+<h3>BISSELL Little Green Cleaner</h3>
+<p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.7/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for targeted spot cleaning</li>
+<li>Frequently useful for upholstery and small messes</li>
+<li>Good fit for homes with kids, pets, or frequent spills</li>
+<li>Some buyers may prefer a larger tank for bigger jobs</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Bissell-Multi-Purpose-Portable-Upholstery-1400B/dp/B0016HF5GK?pd_rd_w=qChp1&amp;content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&amp;pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&amp;pf_rd_r=7P678DZF5CTX8RJ2NQ3N&amp;pd_rd_wg=IaB2U&amp;pd_rd_r=74044c78-bec2-4db8-8ddc-833ab2d41a90&amp;pd_rd_i=B0016HF5GK&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e0392aa8c3d8b216e2da7e01cf42c4ab&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="DREO Tower Fan" loading="lazy" src="images/dreo-fan-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<h3>DREO Tower Fan</h3>
+<p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for strong everyday airflow</li>
+<li>Frequently mentioned as quiet at normal settings</li>
+<li>Good fit for bedrooms, living rooms, and home offices</li>
+<li>Some buyers may notice more sound at higher speeds</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Dreo-Velocity-Oscillating-Bladeless-DR-HTF007/dp/B09MKPDJRT?pd_rd_w=jrjZ2&amp;content-id=amzn1.sym.781fe6e1-9487-4a74-b81e-5a879e5ec273%3Aamzn1.symc.c3d5766d-b606-46b8-ab07-1d9d1da0638a&amp;pf_rd_p=781fe6e1-9487-4a74-b81e-5a879e5ec273&amp;pf_rd_r=SZYW3DQ7SRKT0G8JW6Y4&amp;pd_rd_wg=YyHdS&amp;pd_rd_r=623bf356-5ef3-4b68-9f89-716f4b297d35&amp;pd_rd_i=B09MKPDJRT&amp;th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=4671c9acd604fabd4a99d8914c7a2bdd&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="MINLU 65W GaN USB-C Charger Block" loading="lazy" src="images/minlu-65w-gan-usb-c-charger-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span></div>
+<h3>MINLU 65W GaN USB-C Charger Block</h3>
+<p>A compact 3-port GaN fast charger made for USB-C phones, tablets, and everyday desk or travel charging setups.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 4.55/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often liked for compact everyday charging</li>
+<li>Frequently useful for phones, tablets, and USB-C setups</li>
+<li>Good fit for travel bags, desks, and nightstands</li>
+<li>Charging speed can depend on cable and device support</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0F146SJGT?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=387a36e59eb7949289890038ccd8e322&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="THREE PEACHES Wireless Earbuds with Touch Screen Case" loading="lazy" src="images/wireless-earbuds-touch-screen-case-1.jpg"/>
+<div class="product-content">
+<div class="badge-row"><span class="badge">Best Seller</span></div>
+<h3>THREE PEACHES Wireless Earbuds</h3>
+<p>Bluetooth earbuds with a touch-screen charging case for quick controls, battery visibility, and everyday listening.</p>
+<div class="review-box">
+<div class="review-label">Customer Feedback Snapshot</div>
+<div class="merchant-score">Merchant Pick Score: 3.95/5</div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Often noticed for the touch-screen case design</li>
+<li>Useful for casual music, calls, and daily listening</li>
+<li>Good product variety for shoppers browsing audio picks</li>
+<li>Feedback can be more mixed than stronger Best Seller picks</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0DB89P9M4?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=80e0d8e98c4e763b6a0f5f2356607dea&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+</div>
+<div class="section-links">
+<a href="best-sellers.html">View Full Best Sellers Page</a>
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="categories">
-    <div class="container">
-      <h2 class="section-title">Shop by Category</h2>
-      <p class="section-subtitle">
+</div>
+</section>
+<section class="section" id="categories">
+<div class="container">
+<h2 class="section-title">Shop by Category</h2>
+<p class="section-subtitle">
         Explore familiar Amazon categories in a cleaner and more modern layout.
       </p>
-
-      <div class="categories-wrap">
-        <div class="category-grid">
-          <div class="category-card">
-            <div class="category-icon">🔥</div>
-            <h3>Top Amazon Finds</h3>
-            <p>Clever, useful, and problem-solving Amazon finds you probably didn’t know you needed.</p>
-            <a class="category-btn" href="top-amazon-finds.html">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">👶</div>
-            <h3>Baby</h3>
-            <p>Nursery, feeding, daily baby essentials, and family-friendly must-haves.</p>
-            <a class="category-btn" href="baby.html">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">✨</div>
-            <h3>Beauty & Personal Care</h3>
-            <p>Skincare, body care, nail products, and everyday beauty essentials.</p>
-            <a class="category-btn" href="beauty.html">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🐾</div>
-            <h3>Pet Supplies</h3>
-            <p>Helpful pet products, cleanup tools, comfort picks, and daily pet essentials.</p>
-            <a class="category-btn" href="pet-supplies.html">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🏠</div>
-            <h3>Home & Kitchen</h3>
-            <p>Comfort, storage, kitchen picks, drinkware, and practical home essentials.</p>
-            <a class="category-btn" href="home-kitchen.html">Explore</a>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🏃</div>
-            <h3>Sports & Outdoors</h3>
-            <p>Fitness gear, active lifestyle picks, and outdoor-use products.</p>
-            <a class="category-btn" href="sports-outdoors.html">Explore</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="how-we-pick">
-    <div class="container">
-      <h2 class="section-title">How We Pick Products</h2>
-      <p class="section-subtitle">
+<div class="categories-wrap">
+<div class="category-grid">
+<div class="category-card">
+<div class="category-icon">🔥</div>
+<h3>Top Amazon Finds</h3>
+<p>Clever, useful, and problem-solving Amazon finds you probably didn’t know you needed.</p>
+<a class="category-btn" href="top-amazon-finds.html">Explore</a>
+</div>
+<div class="category-card">
+<div class="category-icon">👶</div>
+<h3>Baby</h3>
+<p>Nursery, feeding, daily baby essentials, and family-friendly must-haves.</p>
+<a class="category-btn" href="baby.html">Explore</a>
+</div>
+<div class="category-card">
+<div class="category-icon">✨</div>
+<h3>Beauty &amp; Personal Care</h3>
+<p>Skincare, body care, nail products, and everyday beauty essentials.</p>
+<a class="category-btn" href="beauty.html">Explore</a>
+</div>
+<div class="category-card">
+<div class="category-icon">🐾</div>
+<h3>Pet Supplies</h3>
+<p>Helpful pet products, cleanup tools, comfort picks, and daily pet essentials.</p>
+<a class="category-btn" href="pet-supplies.html">Explore</a>
+</div>
+<div class="category-card">
+<div class="category-icon">🏠</div>
+<h3>Home &amp; Kitchen</h3>
+<p>Comfort, storage, kitchen picks, drinkware, and practical home essentials.</p>
+<a class="category-btn" href="home-kitchen.html">Explore</a>
+</div>
+<div class="category-card">
+<div class="category-icon">🏃</div>
+<h3>Sports &amp; Outdoors</h3>
+<p>Fitness gear, active lifestyle picks, and outdoor-use products.</p>
+<a class="category-btn" href="sports-outdoors.html">Explore</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="how-we-pick">
+<div class="container">
+<h2 class="section-title">How We Pick Products</h2>
+<p class="section-subtitle">
         A simple look at how Merchant keeps product sections useful, clear, and easy to browse.
       </p>
-
-      <div class="trust-card">
-        <p>
+<div class="trust-card">
+<p>
           Merchant focuses on simple, useful Amazon picks that are easy to understand at a glance.
           Products are selected based on category fit, practical everyday use, customer-feedback patterns,
           and overall shopping appeal.
         </p>
-        <p>
+<p>
           Each section is designed to stay clear and helpful, with short product descriptions and quick
           feedback-style summaries so visitors can compare products faster before checking the final details
           on Amazon.
         </p>
-
-        <div class="trust-points">
-          <div class="trust-point">Clear product purpose</div>
-          <div class="trust-point">Useful category fit</div>
-          <div class="trust-point">Customer-feedback patterns</div>
-          <div class="trust-point">Everyday shopping appeal</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-
-    <div class="footer-links legal-footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
+<div class="trust-points">
+<div class="trust-point">Clear product purpose</div>
+<div class="trust-point">Useful category fit</div>
+<div class="trust-point">Customer-feedback patterns</div>
+<div class="trust-point">Everyday shopping appeal</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
