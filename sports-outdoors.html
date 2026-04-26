@@ -1,26 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sports &amp; Outdoors Picks | Merchant</title>
+<link href="https://www.merchant.dedyn.io/sports-outdoors.html" rel="canonical"/>
+<meta content="Browse curated Amazon sports and outdoors picks including resistance bands, vibration plates, fitness tools, speakers, multitools, rangefinders, and bike inflators with quick feedback summaries." name="description"/>
+<meta content="Sports &amp; Outdoors Picks | Merchant" property="og:title"/>
+<meta content="Browse curated Amazon sports and outdoors picks with quick feedback snapshots and useful product highlights." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/sports-outdoors.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
 
-  <title>Sports & Outdoors Picks | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/sports-outdoors.html" />
-  <meta
-    name="description"
-    content="Browse curated Amazon sports and outdoors picks including resistance bands, vibration plates, forearm trainers, exercise balls, and adjustable weight benches with quick review summaries."
-  />
-
-  <meta property="og:title" content="Sports & Outdoors Picks | Merchant" />
-  <meta
-    property="og:description"
-    content="Browse curated Amazon sports and outdoors picks with quick review-style summaries and useful product highlights."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/sports-outdoors.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -59,10 +52,9 @@
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
-      gap: 20px;
+      padding: 16px 0;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -71,12 +63,61 @@
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      flex: 1 1 280px;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 999px;
+      padding: 4px;
+      margin-left: auto;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .header-search input::placeholder {
+      color: #6b7280;
+    }
+
+    .header-search button {
+      border: 0;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-search button:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
@@ -87,6 +128,13 @@
 
     .nav-links a:hover {
       color: #fbbf24;
+    }
+
+    .nav-links a.active-page {
+      color: #fbbf24;
+      font-weight: 800;
+      border-bottom: 2px solid #fbbf24;
+      padding-bottom: 4px;
     }
 
     .hero {
@@ -236,9 +284,18 @@
       margin-bottom: 14px;
     }
 
-    .review-score {
+    .review-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .merchant-score {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       color: #111827;
       margin-bottom: 8px;
     }
@@ -298,29 +355,6 @@
       margin-bottom: 12px;
     }
 
-    .section-links {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .section-links a {
-      background: #0f172a;
-      color: white;
-      padding: 9px 13px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .section-links a:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-
     .disclosure {
       margin-top: 34px;
       background: #fff7ed;
@@ -350,19 +384,21 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      max-width: 980px;
+      max-width: 1180px;
       margin: 12px auto 0;
     }
 
     .footer-links a {
       color: #fbbf24;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       font-family: Arial, sans-serif;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-links a.active-page {
       color: #fde68a;
     }
 
@@ -373,10 +409,29 @@
 
       .nav {
         justify-content: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-search {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .header-search button {
+        padding: 10px 14px;
       }
 
       .nav-links {
+        order: 3;
         justify-content: center;
+        gap: 12px;
       }
 
       .products {
@@ -396,15 +451,15 @@
         padding: 22px 18px;
       }
     }
-  </style>
 
-  <script type="application/ld+json">
+  </style>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Sports & Outdoors Picks | Merchant",
   "url": "https://www.merchant.dedyn.io/sports-outdoors.html",
-  "description": "Browse curated Amazon sports and outdoors picks with quick review-style summaries and useful product highlights.",
+  "description": "Browse curated Amazon sports and outdoors picks with quick feedback snapshots and useful product highlights.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Merchant",
@@ -414,268 +469,228 @@
 </script>
 </head>
 <body>
-
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
-
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Sports & Outdoors Picks</h1>
-      <p>
-        Browse selected fitness and home workout products including resistance bands,
-        vibration plates, forearm trainers, exercise balls, and adjustable benches.
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a class="active-page" href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Sports &amp; Outdoors Picks</h1>
+<p>
+        Browse selected fitness and outdoor products including resistance bands,
+        vibration plates, forearm trainers, exercise balls, benches, speakers, multitools, and bike accessories with quick feedback snapshots.
       </p>
-
-      <div class="hero-actions">
-        <a href="#sports-products" class="btn btn-primary">View Sports Products</a>
-        <a href="index.html#categories" class="btn btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="sports-products">
-    <div class="container">
-      <h2 class="section-title">Selected Sports & Outdoors Products</h2>
-      <p class="section-subtitle">
-        Useful fitness picks with short descriptions, review-style summaries, and quick highlights.
+<div class="hero-actions">
+<a class="btn btn-primary" href="#sports-products">View Sports Products</a>
+<a class="btn btn-secondary" href="index.html#categories">Browse All Categories</a>
+</div>
+</div>
+</section>
+<section class="section" id="sports-products">
+<div class="container">
+<h2 class="section-title">Selected Sports &amp; Outdoors Products</h2>
+<p class="section-subtitle">
+        Useful fitness and outdoor picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
       </p>
+<div class="products">
+<div class="product-card">
+<img alt="WHATAFIT Resistance Bands" loading="lazy" src="images/resistance-bands-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>WHATAFIT Resistance Bands</h3>
+<p>A full resistance-band set for home workouts, strength training, and versatile exercise routines.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.85/5</div>
 
-      <div class="products">
-        <div class="product-card">
-          <img loading="lazy" src="images/resistance-bands-1.jpg" alt="WHATAFIT Resistance Bands">
-          <div class="product-content">
-            <span class="badge">Sports & Outdoors</span>
-            <h3>WHATAFIT Resistance Bands</h3>
-            <p>A full resistance-band set for home workouts, strength training, and versatile exercise routines.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Best-rated sports product in your uploaded review files</li>
+<li>Very flexible for different exercises</li>
+<li>Strong verified-purchase support</li>
+<li>Resistance-band training still depends on user consistency and form</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/WHATAFIT-Baseball-Resistance-Bands%EF%BC%8CResistance-Equipment/dp/B0F6XSBSZY?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=fcae4880f0330ef1c5a27868c8540642&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Vibration Plate Exercise Machine" loading="lazy" src="images/vibration-plate-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>Vibration Plate Exercise Machine</h3>
+<p>A compact vibration plate designed for at-home movement, light exercise, and easy routine support.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.85/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.85/5 from 20 verified reviews</div>
-              <p class="review-summary">Strongly liked for versatility, good overall workout value, and being an easy home-fitness option for a wide range of users.</p>
-              <ul class="review-highlights">
-                <li>Best-rated sports product in your uploaded review files</li>
-                <li>Very flexible for different exercises</li>
-                <li>Strong verified-purchase support</li>
-                <li>Resistance-band training still depends on user consistency and form</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Tied for top average score in your files</li>
+<li>Distinct product that helps diversify the section</li>
+<li>Strong satisfaction across the uploaded reviews</li>
+<li>More lifestyle-oriented than traditional strength equipment</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Viamotion-Vibration-Exercise-Vibrating-Lymphatic/dp/B0GF1V3CC4?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=b0018e82c502145869a2492faf3b825a&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Yes4All Wrist and Forearm Blaster" loading="lazy" src="images/wrist-roller-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>Yes4All Wrist &amp; Forearm Blaster</h3>
+<p>A focused training tool designed to build grip, forearm strength, and wrist endurance.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.8/5</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/WHATAFIT-Baseball-Resistance-Bands%EF%BC%8CResistance-Equipment/dp/B0F6XSBSZY?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fcae4880f0330ef1c5a27868c8540642&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Strong verified-purchase backing in your files</li>
+<li>Very clear niche strength-training product</li>
+<li>Useful for grip and forearm work</li>
+<li>More specialized than general fitness products</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/Yes4All-wrist-roller-forearm-blaster/dp/B00HGPLEX4?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=02203073cf90813e5a3942c8e43e1a0d&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="APEXUP Exercise Ball" loading="lazy" src="images/exercise-ball-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>APEXUP Exercise Ball</h3>
+<p>A stability ball made for stretching, balance work, mobility, and core-focused exercise.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.75/5</div>
 
-        <div class="product-card">
-          <img loading="lazy" src="images/vibration-plate-1.jpg" alt="Vibration Plate Exercise Machine">
-          <div class="product-content">
-            <span class="badge">Sports & Outdoors</span>
-            <h3>Vibration Plate Exercise Machine</h3>
-            <p>A compact vibration plate designed for at-home movement, light exercise, and easy routine support.</p>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Good general-use fitness tool</li>
+<li>Helps diversify the section beyond strength tools</li>
+<li>Useful for stretching and balance routines</li>
+<li>Less visually premium than some of the other picks</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/APEXUP-Exercise-Stability-Fitness-Physical/dp/B0D7CWB8DX?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=fdbc87fa00374c487028bc3ec8414c48&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="NICEPEOPLE Adjustable Weight Bench" loading="lazy" src="images/weight-bench-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>NICEPEOPLE Adjustable Weight Bench</h3>
+<p>A foldable adjustable bench made for home-gym routines and compact workout spaces.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.55/5</div>
 
-            <div class="review-box">
-              <div class="review-score">4.85/5 from 20 reviews</div>
-              <p class="review-summary">Frequently appreciated for convenience, ease of use, and making home exercise feel more approachable for everyday users.</p>
-              <ul class="review-highlights">
-                <li>Tied for top average score in your files</li>
-                <li>Distinct product that helps diversify the section</li>
-                <li>Strong satisfaction across the uploaded reviews</li>
-                <li>More lifestyle-oriented than traditional strength equipment</li>
-              </ul>
-            </div>
+<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<ul class="review-highlights">
+<li>Useful product for home-gym setups</li>
+<li>Good category fit and visual variety</li>
+<li>Still a solid inclusion for section completeness</li>
+<li>Weakest average score among the sports products you selected</li>
+</ul>
+</div>
+<a class="amazon-btn" href="https://www.amazon.com/NICEPEOPLE-Foldable-Backrests-Capacity-Adjustable/dp/B0CTMKNWF7?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=d6e3fb7631e868ba41b5bd3859372a73&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="WUBEN G5 Rechargeable EDC Flashlight" loading="lazy" src="images/wuben-g5-rechargeable-flashlight-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>WUBEN G5 Rechargeable EDC Flashlight</h3>
+<p>A compact rechargeable EDC flashlight for outdoor use, emergency kits, travel bags, and everyday carry.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.65/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Strong pick for EDC and outdoor use</li><li>Compact enough for bags, pockets, and emergency kits</li><li>Rechargeable design avoids disposable batteries</li><li>Small flashlight format may not replace a full-size torch</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0CFF83CWW?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=20be9ea8997ba32741269dc165d6aeee&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="AYL Mini Plug-in Portable Speaker" loading="lazy" src="images/ayl-mini-portable-speaker-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>AYL Mini Plug-in Portable Speaker</h3>
+<p>A small plug-in speaker for simple portable audio with phones, tablets, laptops, and compatible 3.5mm devices.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.65/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Portable and easy to pack</li><li>Good simple option for casual audio use</li><li>Useful for travel, outdoor breaks, or backup sound</li><li>Not meant to compete with larger premium speakers</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B007OYAVLI?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c86039945ff6bffaf82df36e05f24cf9&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Ultimate Ears WONDERBOOM Bluetooth Speaker" loading="lazy" src="images/ultimate-ears-wonderboom-speaker-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>Ultimate Ears WONDERBOOM Bluetooth Speaker</h3>
+<p>A portable waterproof Bluetooth speaker made for outdoor listening, travel, beach days, and casual gatherings.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.45/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Good fit for outdoor and travel use</li><li>Portable waterproof speaker design</li><li>Recognizable brand with broad appeal</li><li>Some buyers may prefer newer or larger speaker models</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/Ultimate-Ears-WONDERBOOM-Waterproof-Bluetooth/dp/B06XH3PWSF?th=1&amp;geniuslink=true&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=7df1025101209e8bf5f3b4cafe7184e4&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="Gerber Dime Mini Multitool" loading="lazy" src="images/gerber-dime-mini-multitool-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>Gerber Dime Mini Multitool</h3>
+<p>A compact 12-in-1 mini multitool with pliers and everyday utility features for bags, pockets, camping, and quick fixes.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.45/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Compact everyday-carry format</li><li>Useful for camping, travel, and quick fixes</li><li>Good visual fit for Sports &amp; Outdoors</li><li>Mini size means it is best for lighter tasks</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B006M9NIDO?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=93e5d1eee50d200bffc7003db84be4cc&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="MILESEEY GenePro G1 Golf Rangefinder" loading="lazy" src="images/mileseey-genepro-g1-golf-rangefinder-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>MILESEEY GenePro G1 Golf Rangefinder</h3>
+<p>A touchscreen GPS golf rangefinder designed to help golfers measure distances, plan shots, and navigate courses more confidently.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.35/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Best fit for golfers and course use</li><li>Touchscreen and GPS-style functionality add value</li><li>Helps diversify the section beyond general fitness gear</li><li>More niche than the other sports picks</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/dp/B0F4XQ8RN9?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c3a8c52fb9535c0482e85fb40239cd42&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<img alt="CYCPLUS Electric Air Compressor Portable Inflator" loading="lazy" src="images/cycplus-portable-bike-tire-inflator-1.jpg"/>
+<div class="product-content">
+<span class="badge">Sports &amp; Outdoors</span>
+<h3>CYCPLUS Electric Air Compressor Portable Inflator</h3>
+<p>A portable tire inflator for bikes and outdoor travel setups, useful for keeping tires topped up without a full-size pump.</p>
+<div class="review-box"><div class="review-label">Customer Feedback Snapshot</div><div class="merchant-score">Merchant Pick Score: 4.25/5</div><p class="review-summary">A quick overview of what shoppers commonly expressed.</p><ul class="review-highlights"><li>Useful for bikes, travel, and emergency inflation</li><li>Portable alternative to a larger pump</li><li>Good fit for Sports &amp; Outdoors</li><li>Ranked lower because the review sample was more mixed</li></ul></div>
+<a class="amazon-btn" href="https://www.amazon.com/CYCPLUS-Electric-Compressor-Portable-Inflator/dp/B0D95QPRL1?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=85bc95c09b019ebf9329b261fff96ca0&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a>
+</div>
+</div>
+</div>
 
-            <a class="amazon-btn" href="https://www.amazon.com/Viamotion-Vibration-Exercise-Vibrating-Lymphatic/dp/B0GF1V3CC4?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=b0018e82c502145869a2492faf3b825a&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/wrist-roller-1.jpg" alt="Yes4All Wrist and Forearm Blaster">
-          <div class="product-content">
-            <span class="badge">Sports & Outdoors</span>
-            <h3>Yes4All Wrist & Forearm Blaster</h3>
-            <p>A focused training tool designed to build grip, forearm strength, and wrist endurance.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.8/5 from 20 verified reviews</div>
-              <p class="review-summary">Often praised by users who want a more targeted forearm and grip-strength tool for focused training sessions.</p>
-              <ul class="review-highlights">
-                <li>Strong verified-purchase backing in your files</li>
-                <li>Very clear niche strength-training product</li>
-                <li>Useful for grip and forearm work</li>
-                <li>More specialized than general fitness products</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/Yes4All-wrist-roller-forearm-blaster/dp/B00HGPLEX4?th=1&linkCode=ll2&tag=themerchant00-20&linkId=02203073cf90813e5a3942c8e43e1a0d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/exercise-ball-1.jpg" alt="APEXUP Exercise Ball">
-          <div class="product-content">
-            <span class="badge">Sports & Outdoors</span>
-            <h3>APEXUP Exercise Ball</h3>
-            <p>A stability ball made for stretching, balance work, mobility, and core-focused exercise.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.75/5 from 20 reviews</div>
-              <p class="review-summary">A broadly useful fitness product that helps round out the section with a more flexible, all-purpose training option.</p>
-              <ul class="review-highlights">
-                <li>Good general-use fitness tool</li>
-                <li>Helps diversify the section beyond strength tools</li>
-                <li>Useful for stretching and balance routines</li>
-                <li>Less visually premium than some of the other picks</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/APEXUP-Exercise-Stability-Fitness-Physical/dp/B0D7CWB8DX?th=1&linkCode=ll2&tag=themerchant00-20&linkId=fdbc87fa00374c487028bc3ec8414c48&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/weight-bench-1.jpg" alt="NICEPEOPLE Adjustable Weight Bench">
-          <div class="product-content">
-            <span class="badge">Sports & Outdoors</span>
-            <h3>NICEPEOPLE Adjustable Weight Bench</h3>
-            <p>A foldable adjustable bench made for home-gym routines and compact workout spaces.</p>
-
-            <div class="review-box">
-              <div class="review-score">4.55/5 from 20 reviews</div>
-              <p class="review-summary">A practical home-gym addition that still fits the section well, even though it ranked lowest of the five sports products in your files.</p>
-              <ul class="review-highlights">
-                <li>Useful product for home-gym setups</li>
-                <li>Good category fit and visual variety</li>
-                <li>Still a solid inclusion for section completeness</li>
-                <li>Weakest average score among the sports products you selected</li>
-              </ul>
-            </div>
-
-            <a class="amazon-btn" href="https://www.amazon.com/NICEPEOPLE-Foldable-Backrests-Capacity-Adjustable/dp/B0CTMKNWF7?psc=1&linkCode=ll2&tag=themerchant00-20&linkId=d6e3fb7631e868ba41b5bd3859372a73&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-
-        <div class="product-card">
-          <img loading="lazy" src="images/wuben-g5-rechargeable-flashlight-1.jpg" alt="WUBEN G5 Rechargeable EDC Flashlight">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>WUBEN G5 Rechargeable EDC Flashlight</h3>
-            <p>A compact rechargeable EDC flashlight for outdoor use, emergency kits, travel bags, and everyday carry.</p>
-            <div class="review-box"><div class="review-score">4.65/5 from 20 reviews</div><p class="review-summary">Well-liked for its compact size, bright output, rechargeable design, and usefulness as a small everyday-carry light.</p><ul class="review-highlights"><li>Strong pick for EDC and outdoor use</li><li>Compact enough for bags, pockets, and emergency kits</li><li>Rechargeable design avoids disposable batteries</li><li>Small flashlight format may not replace a full-size torch</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0CFF83CWW?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=20be9ea8997ba32741269dc165d6aeee&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/ayl-mini-portable-speaker-1.jpg" alt="AYL Mini Plug-in Portable Speaker">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>AYL Mini Plug-in Portable Speaker</h3>
-            <p>A small plug-in speaker for simple portable audio with phones, tablets, laptops, and compatible 3.5mm devices.</p>
-            <div class="review-box"><div class="review-score">4.65/5 from 20 reviews</div><p class="review-summary">Praised as a small, simple speaker that is easy to carry and useful when a device needs louder basic sound.</p><ul class="review-highlights"><li>Portable and easy to pack</li><li>Good simple option for casual audio use</li><li>Useful for travel, outdoor breaks, or backup sound</li><li>Not meant to compete with larger premium speakers</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B007OYAVLI?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c86039945ff6bffaf82df36e05f24cf9&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/ultimate-ears-wonderboom-speaker-1.jpg" alt="Ultimate Ears WONDERBOOM Bluetooth Speaker">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>Ultimate Ears WONDERBOOM Bluetooth Speaker</h3>
-            <p>A portable waterproof Bluetooth speaker made for outdoor listening, travel, beach days, and casual gatherings.</p>
-            <div class="review-box"><div class="review-score">4.45/5 from 20 reviews</div><p class="review-summary">A strong outdoor audio pick, often liked for portability, water resistance, and easy everyday Bluetooth listening.</p><ul class="review-highlights"><li>Good fit for outdoor and travel use</li><li>Portable waterproof speaker design</li><li>Recognizable brand with broad appeal</li><li>Some buyers may prefer newer or larger speaker models</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/Ultimate-Ears-WONDERBOOM-Waterproof-Bluetooth/dp/B06XH3PWSF?th=1&amp;geniuslink=true&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=7df1025101209e8bf5f3b4cafe7184e4&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/gerber-dime-mini-multitool-1.jpg" alt="Gerber Dime Mini Multitool">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>Gerber Dime Mini Multitool</h3>
-            <p>A compact 12-in-1 mini multitool with pliers and everyday utility features for bags, pockets, camping, and quick fixes.</p>
-            <div class="review-box"><div class="review-score">4.45/5 from 20 reviews</div><p class="review-summary">A practical EDC-style tool that reviewers often value for portability, usefulness, and having multiple tools in a small size.</p><ul class="review-highlights"><li>Compact everyday-carry format</li><li>Useful for camping, travel, and quick fixes</li><li>Good visual fit for Sports &amp; Outdoors</li><li>Mini size means it is best for lighter tasks</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B006M9NIDO?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=93e5d1eee50d200bffc7003db84be4cc&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/mileseey-genepro-g1-golf-rangefinder-1.jpg" alt="MILESEEY GenePro G1 Golf Rangefinder">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>MILESEEY GenePro G1 Golf Rangefinder</h3>
-            <p>A touchscreen GPS golf rangefinder designed to help golfers measure distances, plan shots, and navigate courses more confidently.</p>
-            <div class="review-box"><div class="review-score">4.35/5 from 20 reviews</div><p class="review-summary">A more specialized sports pick, appreciated for golf-focused distance features and smart course support.</p><ul class="review-highlights"><li>Best fit for golfers and course use</li><li>Touchscreen and GPS-style functionality add value</li><li>Helps diversify the section beyond general fitness gear</li><li>More niche than the other sports picks</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/dp/B0F4XQ8RN9?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=c3a8c52fb9535c0482e85fb40239cd42&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img loading="lazy" src="images/cycplus-portable-bike-tire-inflator-1.jpg" alt="CYCPLUS Electric Air Compressor Portable Inflator">
-          <div class="product-content">
-            <span class="badge">Sports &amp; Outdoors</span>
-            <h3>CYCPLUS Electric Air Compressor Portable Inflator</h3>
-            <p>A portable tire inflator for bikes and outdoor travel setups, useful for keeping tires topped up without a full-size pump.</p>
-            <div class="review-box"><div class="review-score">4.25/5 from 20 reviews</div><p class="review-summary">A useful cycling and outdoor tool with strong practical value, though feedback is a little more mixed than the top sports picks.</p><ul class="review-highlights"><li>Useful for bikes, travel, and emergency inflation</li><li>Portable alternative to a larger pump</li><li>Good fit for Sports &amp; Outdoors</li><li>Ranked lower because the review sample was more mixed</li></ul></div>
-            <a class="amazon-btn" href="https://www.amazon.com/CYCPLUS-Electric-Compressor-Portable-Inflator/dp/B0D95QPRL1?&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=85bc95c09b019ebf9329b261fff96ca0&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-links">
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet Supplies</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      </div>
-
-      <div class="info-card">
-        <h2>Why These Sports Picks?</h2>
-        <p>
-          This page brings together home-fitness products with clear use cases, including resistance training,
-          light movement support, grip and forearm training, balance work, and compact home-gym setups.
+<div class="info-card">
+<h2>Why These Sports Picks?</h2>
+<p>
+          This page brings together fitness and outdoor products with clear use cases, including resistance training,
+          light movement support, grip and forearm training, balance work, compact home-gym setups,
+          outdoor audio, everyday carry tools, golf support, and cycling accessories.
         </p>
-        <p>
+<p>
           Product details, prices, ratings, and availability can change on Amazon. Always check the final
           Amazon product page before making a purchase.
         </p>
-      </div>
-
-      <div class="disclosure">
+</div>
+<div class="disclosure">
         As an Amazon Associate, Merchant earns from qualifying purchases.
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet Supplies</a>
-      <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
-      <a href="about.html">About</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
+</div>
+</section>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links legal-footer-links">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
 </body>
 </html>
