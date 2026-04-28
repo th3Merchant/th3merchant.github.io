@@ -1,19 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Search Products | Merchant</title>
-  <link rel="canonical" href="https://www.merchant.dedyn.io/search.html" />
-  <meta name="description" content="Search Merchant product picks across Top Finds, Best Sellers, Beauty, Home & Kitchen, and Sports & Outdoors." />
-  <meta property="og:title" content="Search Products | Merchant" />
-  <meta property="og:description" content="Search Merchant product picks across all available categories." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.merchant.dedyn.io/search.html" />
-  <meta name="twitter:card" content="summary" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Products | Merchant</title>
+<link href="https://www.merchant.dedyn.io/search.html" rel="canonical"/>
+<meta content="Search Merchant product picks across Best Sellers, Top Finds, Baby, Beauty, Pet, Home &amp; Kitchen, and Sports &amp; Outdoors." name="description"/>
+<meta content="Search Products | Merchant" property="og:title"/>
+<meta content="Search Merchant product picks across all available categories." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.merchant.dedyn.io/search.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -348,72 +347,54 @@
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">Merchant</a>
+<form action="search.html" class="header-search" method="get">
+<input aria-label="Search products" autocomplete="off" id="searchInput" name="q" placeholder="Search products..." type="search"/>
+<button type="submit">Search</button>
+</form>
+<nav class="nav-links">
 
-      <form class="header-search" action="search.html" method="get">
-        <input
-          id="searchInput"
-          type="search"
-          name="q"
-          placeholder="Search products..."
-          aria-label="Search products"
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="best-sellers.html">Best Sellers</a>
-        <a href="top-amazon-finds.html">Top Finds</a>
-        <a href="baby.html">Baby</a>
-        <a href="beauty.html">Beauty</a>
-        <a href="pet-supplies.html">Pet</a>
-        <a href="home-kitchen.html">Home &amp; Kitchen</a>
-        <a href="sports-outdoors.html">Sports</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Search Merchant Products</h1>
-      <p>Type a product name, category, or keyword in the search bar above.</p>
-    </div>
-  </section>
-
-  <main class="section">
-    <div class="container">
-      <p class="results-meta" id="resultsMeta"></p>
-
-      <div class="products" id="searchResults"></div>
-
-      <div class="empty-state" id="emptyState" style="display:none;">
-        <h2>No products found</h2>
-        <p>Try a broader keyword like “kitchen”, “charger”, “fan”, “speaker”, “smart”, or “sports”.</p>
-      </div>
-
-      <div class="disclosure">As an Amazon Associate, Merchant earns from qualifying purchases.</div>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 Merchant. All rights reserved.</p>
-    <p>This website contains affiliate links.</p>
-    <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
-
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-
-  <script>
+<a href="best-sellers.html">Best Sellers</a>
+<a href="top-amazon-finds.html">Top Finds</a>
+<a href="baby.html">Baby</a>
+<a href="beauty.html">Beauty</a>
+<a href="pet-supplies.html">Pet</a>
+<a href="home-kitchen.html">Home &amp; Kitchen</a>
+<a href="sports-outdoors.html">Sports</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Search Merchant Products</h1>
+<p>Type a product name, category, or keyword in the search bar above.</p>
+</div>
+</section>
+<main class="section">
+<div class="container">
+<p class="results-meta" id="resultsMeta"></p>
+<div class="products" id="searchResults"></div>
+<div class="empty-state" id="emptyState" style="display:none;">
+<h2>No products found</h2>
+<p>Try a broader keyword like “kitchen”, “charger”, “fan”, “speaker”, “smart”, or “sports”.</p>
+</div>
+<div class="disclosure">As an Amazon Associate, Merchant earns from qualifying purchases.</div>
+</div>
+</main>
+<footer>
+<p>© 2026 Merchant. All rights reserved.</p>
+<p>This website contains affiliate links.</p>
+<p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<div class="footer-links">
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Use</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</footer>
+<script>
     const products = [
       { name: "EZ Outlet Electrical Outlet Extender", category: "Top Finds", image: "images/ez-outlet-extender-1.jpg", page: "top-amazon-finds.html", keywords: "outlet extender power usb c ac bedroom couch desk electricity cable hidden useful gadget" },
       { name: "DEZIN 2L Electric Hot Pot / Mini Cooker", category: "Top Finds", image: "images/portable-electric-hot-pot-1.jpg", page: "top-amazon-finds.html", keywords: "electric hot pot mini cooker dorm office noodles kitchen portable travel food" },
