@@ -15,6 +15,11 @@
     <loc>https://www.merchant.dedyn.io/top-amazon-finds.html</loc>
     <priority>0.85</priority>
   </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/search.html</loc>
+    <priority>0.50</priority>
+  </url>
   
   <url>
     <loc>https://www.merchant.dedyn.io/baby.html</loc>
