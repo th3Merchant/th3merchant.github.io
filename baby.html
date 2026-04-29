@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -514,7 +515,18 @@ box-shadow:0 0 24px rgba(251,191,36,.85);
         padding: 22px 18px;
       }
     }
-  </style>
+  
+.logo-home-active{
+color:#fbbf24;
+text-shadow:0 0 18px rgba(251,191,36,.75);
+transition:.2s;
+}
+.logo-home-active:hover{
+color:#fde68a;
+transform:translateY(-1px);
+}
+
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -538,7 +550,7 @@ box-shadow:0 0 24px rgba(251,191,36,.85);
 <header>
 <div class="container nav">
 <div class="nav-left">
-<a class="logo" href="index.html">Merchant</a>
+<a class="logo logo-home-active" href="index.html">Merchant</a>
 <div class="blog-cta">
 <a href="blog.html">Merchant Blog</a>
 </div>
