@@ -86,7 +86,7 @@ header {
 
 .hero h1 {
   color: #f8fafc;
-  text-shadow: 0 0 18px rgba(251, 191, 36, 0.55), 0 0 34px rgba(245, 158, 11, 0.25);
+  text-shadow: 0 0 18px rgba(251, 191, 36, 0.65), 0 0 36px rgba(245, 158, 11, 0.32);
 }
 
 .header-search {
@@ -238,127 +238,199 @@ header {
   font-size: 15px;
 }
 
-.blog-grid {
+.blog-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 28px;
+  align-items: start;
 }
 
-.blog-card {
+.featured-story,
+.article-card,
+.sidebar-panel,
+.editor-strip {
   background: white;
   border: 1px solid #e5e7eb;
-  border-radius: 22px;
-  overflow: hidden;
+  border-radius: 8px;
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.featured-story {
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.featured-image,
+.article-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  background: #e5e7eb;
+}
+
+.featured-image {
+  height: 360px;
+}
+
+.featured-content {
+  padding: 30px;
+}
+
+.article-tag {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 10px;
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-meta {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.featured-story h2 {
+  color: #0f172a;
+  font-size: 36px;
+  line-height: 1.14;
+  margin-bottom: 12px;
+}
+
+.featured-story p,
+.article-card p,
+.editor-strip p {
+  color: #475569;
+}
+
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: #111827;
+  font-weight: 800;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 2px;
+  margin-top: 16px;
+  transition: 0.2s ease;
+}
+
+.read-link:hover {
+  color: #b45309;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.article-card {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+.article-image {
+  height: 190px;
 }
 
-.blog-image {
-  min-height: 155px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  color: #fbbf24;
-  font-size: 44px;
-  font-weight: 900;
-}
-
-.blog-content {
+.article-content {
   padding: 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.blog-badge {
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: 12px;
-  background: #fef3c7;
-  color: #92400e;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 800;
-  padding: 5px 10px;
-}
-
-.blog-card h2 {
-  font-size: 21px;
+.article-card h2 {
   color: #111827;
+  font-size: 22px;
+  line-height: 1.24;
   margin-bottom: 10px;
-  line-height: 1.25;
 }
 
-.blog-card p {
-  color: #475569;
+.article-card p {
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
-.blog-list {
-  padding-left: 18px;
-  color: #475569;
-  font-size: 14px;
-  margin-bottom: 18px;
+.blog-sidebar {
+  display: grid;
+  gap: 20px;
 }
 
-.blog-list li {
-  margin-bottom: 6px;
+.sidebar-panel {
+  padding: 22px;
 }
 
-.read-btn {
-  display: block;
-  text-align: center;
-  background: #ff9900;
+.sidebar-panel h2 {
+  color: #0f172a;
+  font-size: 21px;
+  margin-bottom: 14px;
+}
+
+.headline-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.headline-list a {
   color: #111827;
   font-weight: 800;
-  padding: 12px 14px;
-  border-radius: 12px;
-  margin-top: auto;
-  transition: 0.2s ease;
+  line-height: 1.35;
 }
 
-.read-btn:hover {
-  background: #ffad1f;
-  transform: translateY(-1px);
+.headline-list a:hover {
+  color: #b45309;
 }
 
-.info-card {
-  max-width: 900px;
-  margin: 44px auto 0;
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 22px;
-  padding: 28px;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+.headline-list span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 3px;
 }
 
-.info-card h2 {
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic-tags a {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 11px;
+}
+
+.editor-strip {
+  margin-top: 28px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.editor-strip h2 {
   color: #0f172a;
-  font-size: 26px;
-  margin-bottom: 12px;
-}
-
-.info-card p {
-  color: #475569;
-  font-size: 15px;
-  margin-bottom: 12px;
+  font-size: 24px;
+  margin-bottom: 6px;
 }
 
 .internal-links {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
 }
 
 .internal-links a {
@@ -421,7 +493,11 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  .blog-grid {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -458,11 +534,24 @@ footer p {
     gap: 12px;
   }
 
-  .blog-grid {
+  .article-grid {
     grid-template-columns: 1fr;
   }
 
-  .info-card {
+  .featured-image {
+    height: 240px;
+  }
+
+  .featured-content {
+    padding: 22px;
+  }
+
+  .featured-story h2 {
+    font-size: 28px;
+  }
+
+  .editor-strip {
+    grid-template-columns: 1fr;
     padding: 22px 18px;
   }
 }
@@ -502,7 +591,6 @@ footer p {
       <a href="pet-supplies.html">Pet</a>
       <a href="home-kitchen.html">Home &amp; Kitchen</a>
       <a href="sports-outdoors.html">Sports</a>
-      <a class="active-page" href="blog.html">Blog</a>
     </nav>
   </div>
 </header>
@@ -513,133 +601,126 @@ footer p {
   <div class="container">
     <h1>Merchant Blog</h1>
     <p>
-      Simple buying guides, practical product ideas, and useful Amazon finds organized for real everyday needs.
+      Practical shopping stories, product ideas, and clear buying guides for real everyday needs.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#latest-guides">Read Buying Guides</a>
-      <a class="btn btn-secondary" href="top-amazon-finds.html">Explore Top Finds</a>
+      <a class="btn btn-primary" href="#latest-articles">Read Latest Articles</a>
+      <a class="btn btn-secondary" href="#top-headlines">Browse Headlines</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="latest-guides">
+<section class="section" id="latest-articles">
   <div class="container">
-    <h2 class="section-title">Latest Buying Guides</h2>
+    <h2 class="section-title">Latest Articles</h2>
     <p class="section-subtitle">
-      Start here if you want useful product ideas by lifestyle, room, category, or everyday problem.
+      Fresh buying guides, practical shopping ideas, and useful product stories from Merchant.
     </p>
 
-    <div class="blog-grid">
+    <div class="blog-layout">
+      <div class="blog-feed">
+        <article class="featured-story" id="guide-worth-buying">
+          <img class="featured-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Desk with laptop and shopping notes"/>
+          <div class="featured-content">
+            <span class="article-tag">Featured Guide</span>
+            <div class="article-meta">April 30, 2026 • Merchant Editors</div>
+            <h2>How to Pick Amazon Finds That Are Actually Worth Buying</h2>
+            <p>
+              A practical checklist for choosing products by usefulness, reviews, durability, price, and whether they solve a real daily problem.
+            </p>
+            <a class="read-link" href="top-amazon-finds.html">Read the guide</a>
+          </div>
+        </article>
 
-      <article class="blog-card">
-        <div class="blog-image">🏠</div>
-        <div class="blog-content">
-          <span class="blog-badge">Small Space Finds</span>
-          <h2>Best Amazon Finds for Small Apartments</h2>
-          <p>
-            Smart storage, compact appliances, space-saving tools, and useful upgrades for smaller rooms.
-          </p>
-          <ul class="blog-list">
-            <li>Space-saving home products</li>
-            <li>Compact kitchen picks</li>
-            <li>Simple organization ideas</li>
-          </ul>
-          <a class="read-btn" href="home-kitchen.html">Explore Home &amp; Kitchen Finds</a>
+        <div class="article-grid">
+          <article class="article-card" id="small-home-upgrades">
+            <img class="article-image" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Organized home storage shelves"/>
+            <div class="article-content">
+              <span class="article-tag">Home &amp; Kitchen</span>
+              <div class="article-meta">April 28, 2026</div>
+              <h2>Small Home Upgrades That Make Daily Life Easier</h2>
+              <p>Storage, cleaning, kitchen, and comfort finds that help a room work better without feeling crowded.</p>
+              <a class="read-link" href="home-kitchen.html">Read more</a>
+            </div>
+          </article>
+
+          <article class="article-card" id="beauty-essentials">
+            <img class="article-image" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Beauty products arranged on a counter"/>
+            <div class="article-content">
+              <span class="article-tag">Beauty</span>
+              <div class="article-meta">April 25, 2026</div>
+              <h2>Beauty Essentials That Earn Their Shelf Space</h2>
+              <p>A simple way to think about daily skincare, hair tools, and personal care products before buying more.</p>
+              <a class="read-link" href="beauty.html">Read more</a>
+            </div>
+          </article>
+
+          <article class="article-card" id="pet-routines">
+            <img class="article-image" src="https://images.unsplash.com/photo-1586015555751-63c29b8cd2eb?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Pet care items near a sofa"/>
+            <div class="article-content">
+              <span class="article-tag">Pet Care</span>
+              <div class="article-meta">April 22, 2026</div>
+              <h2>Helpful Pet Products for Cleaner, Easier Routines</h2>
+              <p>Feeding, grooming, travel, and cleanup ideas for dog and cat owners who want practical wins.</p>
+              <a class="read-link" href="pet-supplies.html">Read more</a>
+            </div>
+          </article>
+
+          <article class="article-card" id="fitness-routine">
+            <img class="article-image" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Fitness gear on a training mat"/>
+            <div class="article-content">
+              <span class="article-tag">Sports</span>
+              <div class="article-meta">April 19, 2026</div>
+              <h2>Fitness Finds for a More Consistent Routine</h2>
+              <p>Simple gear and accessories that make workouts easier to start, track, and repeat.</p>
+              <a class="read-link" href="sports-outdoors.html">Read more</a>
+            </div>
+          </article>
         </div>
-      </article>
+      </div>
 
-      <article class="blog-card">
-        <div class="blog-image">🍼</div>
-        <div class="blog-content">
-          <span class="blog-badge">Baby Guide</span>
-          <h2>Best Baby Products Parents Actually Use</h2>
-          <p>
-            Practical baby essentials selected for daily routines, feeding, cleaning, bath time, and convenience.
-          </p>
-          <ul class="blog-list">
-            <li>Parent-friendly daily-use picks</li>
-            <li>Helpful feeding and care products</li>
-            <li>Baby items with strong practical value</li>
+      <aside class="blog-sidebar" id="top-headlines">
+        <section class="sidebar-panel">
+          <h2>Top Headlines</h2>
+          <ul class="headline-list">
+            <li><a href="best-sellers.html">Best sellers worth checking before your next order<span>Buying advice</span></a></li>
+            <li><a href="baby.html">Baby products parents keep using every week<span>Parenting guide</span></a></li>
+            <li><a href="search.html">How to compare similar product listings faster<span>Shopping tips</span></a></li>
+            <li><a href="top-amazon-finds.html">New top finds to watch this month<span>Editor's picks</span></a></li>
           </ul>
-          <a class="read-btn" href="baby.html">Explore Baby Finds</a>
-        </div>
-      </article>
+        </section>
 
-      <article class="blog-card">
-        <div class="blog-image">🐾</div>
-        <div class="blog-content">
-          <span class="blog-badge">Pet Guide</span>
-          <h2>Best Pet Products for Dog and Cat Owners</h2>
-          <p>
-            Useful pet products for feeding, grooming, cleaning, comfort, and making everyday pet care easier.
-          </p>
-          <ul class="blog-list">
-            <li>Smart pet care products</li>
-            <li>Cleaning and grooming help</li>
-            <li>Useful finds for pet owners</li>
+        <section class="sidebar-panel">
+          <h2>Topics</h2>
+          <div class="topic-tags">
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="top-amazon-finds.html">Top Finds</a>
+            <a href="baby.html">Baby</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="pet-supplies.html">Pet</a>
+            <a href="home-kitchen.html">Home</a>
+            <a href="sports-outdoors.html">Sports</a>
+          </div>
+        </section>
+
+        <section class="sidebar-panel">
+          <h2>Quick Reads</h2>
+          <ul class="headline-list">
+            <li><a href="#guide-worth-buying">How to Pick Amazon Finds That Are Actually Worth Buying<span>Featured guide • Shopping checklist</span></a></li>
+            <li><a href="#small-home-upgrades">Small Home Upgrades That Make Daily Life Easier<span>Home &amp; Kitchen • Practical ideas</span></a></li>
+            <li><a href="#beauty-essentials">Beauty Essentials That Earn Their Shelf Space<span>Beauty • Daily routines</span></a></li>
+            <li><a href="#pet-routines">Helpful Pet Products for Cleaner, Easier Routines<span>Pet Care • Home comfort</span></a></li>
+            <li><a href="#fitness-routine">Fitness Finds for a More Consistent Routine<span>Sports • Simple habits</span></a></li>
           </ul>
-          <a class="read-btn" href="pet-supplies.html">Explore Pet Finds</a>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image">🍳</div>
-        <div class="blog-content">
-          <span class="blog-badge">Kitchen Guide</span>
-          <h2>Best Kitchen Gadgets That Save Time</h2>
-          <p>
-            Practical kitchen tools that help with prep, storage, cleanup, cooking, and small daily routines.
-          </p>
-          <ul class="blog-list">
-            <li>Useful cooking helpers</li>
-            <li>Kitchen storage upgrades</li>
-            <li>Simple tools that save effort</li>
-          </ul>
-          <a class="read-btn" href="top-amazon-finds.html#kitchen-finds">Explore Kitchen Finds</a>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image">⭐</div>
-        <div class="blog-content">
-          <span class="blog-badge">Best Value</span>
-          <h2>Best Home Products Under $50</h2>
-          <p>
-            Affordable and useful products that can improve cleaning, storage, comfort, and everyday home tasks.
-          </p>
-          <ul class="blog-list">
-            <li>Budget-friendly home upgrades</li>
-            <li>Useful cleaning products</li>
-            <li>Simple finds with clear value</li>
-          </ul>
-          <a class="read-btn" href="best-sellers.html">Explore Best Sellers</a>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image">🔎</div>
-        <div class="blog-content">
-          <span class="blog-badge">Top Finds</span>
-          <h2>How to Find Useful Amazon Products Faster</h2>
-          <p>
-            A simple way to browse products by problem, room, category, and real everyday use instead of endless scrolling.
-          </p>
-          <ul class="blog-list">
-            <li>Browse by category</li>
-            <li>Use search for faster discovery</li>
-            <li>Compare practical product picks</li>
-          </ul>
-          <a class="read-btn" href="search.html">Search Merchant Products</a>
-        </div>
-      </article>
-
+        </section>
+      </aside>
     </div>
 
-    <div class="info-card">
-      <h2>Browse Merchant by Category</h2>
-      <p>
-        Merchant organizes product picks by category so shoppers can move quickly from ideas to useful finds.
-      </p>
+    <div class="editor-strip">
+      <div>
+        <h2>Browse Merchant by Category</h2>
+        <p>Explore related Merchant sections after reading the latest guides.</p>
+      </div>
       <div class="internal-links">
         <a href="best-sellers.html">Best Sellers</a>
         <a href="top-amazon-finds.html">Top Finds</a>
