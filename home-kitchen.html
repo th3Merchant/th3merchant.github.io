@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -64,6 +65,58 @@
       font-weight: 800;
       letter-spacing: 0.5px;
       flex-shrink: 0;
+    }
+
+
+    .nav-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo-home-active {
+      color: #fbbf24;
+      text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+      transition: 0.2s ease;
+    }
+
+    .logo-home-active:hover {
+      color: #fde68a;
+      transform: translateY(-1px);
+    }
+
+    .blog-cta {
+      margin-top: 6px;
+    }
+
+    .blog-cta a {
+      display: inline-block;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
+      transition: 0.2s ease;
+      animation: blogGlow 3s ease-in-out infinite;
+    }
+
+    .blog-cta a:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+      box-shadow: 0 0 24px rgba(251, 191, 36, 0.85);
+    }
+
+    @keyframes blogGlow {
+      0%, 100% {
+        box-shadow: 0 0 12px rgba(245, 158, 11, 0.28);
+      }
+
+      50% {
+        box-shadow: 0 0 24px rgba(251, 191, 36, 0.75);
+      }
     }
 
     .header-search {
@@ -461,6 +514,16 @@
         text-align: center;
       }
 
+
+      .nav-left {
+        width: 100%;
+      }
+
+      .nav-left .logo {
+        width: auto;
+        text-align: center;
+      }
+
       .header-search {
         order: 2;
         width: 100%;
@@ -563,7 +626,12 @@
 <body>
 <header>
 <div class="container nav">
-<a class="logo" href="index.html">Merchant</a>
+<div class="nav-left">
+<a class="logo logo-home-active" href="index.html">Merchant</a>
+<div class="blog-cta">
+<a href="blog.html">Merchant Blog</a>
+</div>
+</div>
 <form action="search.html" class="header-search" method="get">
 <input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
 <button type="submit">Search</button>
