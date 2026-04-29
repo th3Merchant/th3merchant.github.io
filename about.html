@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,39 +50,25 @@
     }
 
     .logo {
-      color: white;
+      color: #fbbf24;
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+      transition: 0.2s ease;
     }
-    .blog-cta {
-  width: 100%;
-  margin-top: -8px;
-  order: 2;
-}
 
-.blog-cta a {
-  display: inline-block;
-  background: #f59e0b;
-  color: #111827;
-  font-weight: 900;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 13px;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
-  transition: 0.2s ease;
-}
+    .logo:hover {
+      color: #fde68a;
+      transform: translateY(-1px);
+    }
+    
 
-.blog-cta a:hover {
-  background: #fbbf24;
-  transform: translateY(-1px);
-  box-shadow: 0 0 22px rgba(251, 191, 36, 0.75);
-}
 
-.blog-cta a.active-blog {
-  background: #fbbf24;
-  box-shadow: 0 0 22px rgba(251, 191, 36, 0.75);
-}
+
+
+
+
     
     .nav-links {
       margin-left: auto;
@@ -252,16 +239,12 @@
    <a href="index.html" class="logo">Merchant</a>
 
 <nav class="nav-links">
-  <a href="index.html">Home</a>
+  
   <a href="terms.html">Terms</a>
   <a href="privacy.html">Privacy</a>
+  <a href="contact.html">Contact</a>
 </nav>
-
-<div class="blog-cta">
-  <a href="blog.html">Merchant Blog</a>
-</div>
-      
-  </header>
+</header>
   <main>
   <section class="hero">
     <div class="container">
@@ -323,9 +306,10 @@
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
     <div class="footer-links">
-      <a href="index.html">Home</a>
+      
       <a href="terms.html">Terms of Use</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
     </div>
   </footer>
 
