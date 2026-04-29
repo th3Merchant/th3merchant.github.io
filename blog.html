@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +70,23 @@ header {
   font-weight: 800;
   letter-spacing: 0.5px;
   flex-shrink: 0;
+}
+
+
+.logo-home-active {
+  color: #fbbf24;
+  text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+  transition: 0.2s ease;
+}
+
+.logo-home-active:hover {
+  color: #fde68a;
+  transform: translateY(-1px);
+}
+
+.hero h1 {
+  color: #f8fafc;
+  text-shadow: 0 0 18px rgba(251, 191, 36, 0.55), 0 0 34px rgba(245, 158, 11, 0.25);
 }
 
 .header-search {
@@ -469,7 +487,7 @@ footer p {
 <body>
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html">Merchant</a>
+    <a class="logo logo-home-active" href="index.html">Merchant</a>
 
     <form action="search.html" class="header-search" method="get">
       <input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
