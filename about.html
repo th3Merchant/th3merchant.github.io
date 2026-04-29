@@ -55,9 +55,9 @@
       letter-spacing: 0.5px;
     }
     .blog-cta {
-  margin-top: 0;
-  margin-left: 14px;
-  flex-shrink: 0;
+  width: 100%;
+  margin-top: -8px;
+  order: 2;
 }
 
 .blog-cta a {
@@ -84,6 +84,7 @@
 }
     
     .nav-links {
+      margin-left: auto;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
@@ -248,18 +249,18 @@
 
   <header>
     <div class="container nav">
-      <a href="index.html" class="logo">Merchant</a>
+   <a href="index.html" class="logo">Merchant</a>
 
-      <div class="blog-cta">
+<nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="terms.html">Terms</a>
+  <a href="privacy.html">Privacy</a>
+</nav>
+
+<div class="blog-cta">
   <a href="blog.html">Merchant Blog</a>
 </div>
       
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </div>
   </header>
   <main>
   <section class="hero">
