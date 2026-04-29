@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -57,7 +58,26 @@
       flex-wrap: wrap;
     }
 
-    .logo {
+    
+.nav-left{display:flex;flex-direction:column;align-items:center}
+.blog-cta{margin-top:6px}
+.blog-cta a{
+display:inline-block;
+background:#f59e0b;color:#111827;font-weight:900;
+padding:6px 14px;border-radius:999px;font-size:12px;
+box-shadow:0 0 14px rgba(245,158,11,.35);
+animation:blogGlow 3s ease-in-out infinite;transition:.2s;
+}
+.blog-cta a:hover{
+background:#fbbf24;transform:translateY(-1px);
+box-shadow:0 0 24px rgba(251,191,36,.85);
+}
+@keyframes blogGlow{
+0%,100%{box-shadow:0 0 12px rgba(245,158,11,.28)}
+50%{box-shadow:0 0 24px rgba(251,191,36,.75)}
+}
+
+.logo {
       color: white;
       font-size: 28px;
       font-weight: 800;
@@ -517,7 +537,12 @@
 <body>
 <header>
 <div class="container nav">
+<div class="nav-left">
 <a class="logo" href="index.html">Merchant</a>
+<div class="blog-cta">
+<a href="blog.html">Merchant Blog</a>
+</div>
+</div>
 <form action="search.html" class="header-search" method="get">
 <input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
 <button type="submit">Search</button>
