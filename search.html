@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -58,11 +59,18 @@
     }
 
     .logo {
-      color: white;
+      color: #fbbf24;
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
       flex-shrink: 0;
+      text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+      transition: 0.2s ease;
+    }
+
+    .logo:hover {
+      color: #fde68a;
+      transform: translateY(-1px);
     }
 
     .header-search {
@@ -386,7 +394,6 @@
 <h2>No products found</h2>
 <p>Try a broader keyword like “kitchen”, “charger”, “fan”, “speaker”, “smart”, or “sports”.</p>
 </div>
-<div class="disclosure">As an Amazon Associate, Merchant earns from qualifying purchases.</div>
 </div>
 </main>
 </main>   
@@ -2522,7 +2529,7 @@
 
       resultsMeta.textContent = query
         ? `${list.length} result${list.length === 1 ? '' : 's'} for “${query}”`
-        : 'Start typing to search Merchant products.';
+        : '';
 
       list.forEach(product => {
         const card = document.createElement('article');
