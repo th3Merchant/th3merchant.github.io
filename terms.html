@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,16 +48,62 @@
     }
 
     .logo {
-      color: white;
+      color: #fbbf24;
       font-size: 28px;
       font-weight: 800;
       letter-spacing: 0.5px;
+      text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+      transition: 0.2s ease;
     }
 
-    .back-link {
-      color: #fbbf24;
-      font-weight: 700;
+    .logo:hover {
+      color: #fde68a;
+      transform: translateY(-1px);
+    }
+
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
       font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 22px;
+      background: #ff9900;
+      color: #111827;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: 0.2s ease;
+    }
+
+    .home-btn:hover {
+      background: #ffad1f;
+      transform: translateY(-1px);
+    }
+
+    .disclosure {
+      margin-top: 24px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 13px;
     }
 
     .hero {
@@ -184,8 +231,13 @@
   <header>
     <div class="container nav">
       <a href="index.html" class="logo">Merchant</a>
-      <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
+
+<nav class="nav-links">
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</div>
   </header>
   </main>
   <section class="hero">
@@ -304,6 +356,12 @@
           Last updated: April 2026
         </div>
 
+        <div class="disclosure">
+          As an Amazon Associate, Merchant earns from qualifying purchases.
+        </div>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+
       </div>
     </div>
   </main>
@@ -314,9 +372,9 @@
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+<a href="about.html">About</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
     </div>
   </footer>
 
