@@ -65,10 +65,12 @@
     <loc>https://www.merchant.dedyn.io/privacy.html</loc>
     <priority>0.30</priority>
   </url>
+  
   <url>
     <loc>https://www.merchant.dedyn.io/blog.html</loc>
     <priority>0.70</priority>
   </url>
+  
   <url>
   <loc>https://www.merchant.dedyn.io/skincare-dull-skin-fix.html</loc>
   <priority>0.80</priority>
@@ -77,6 +79,30 @@
 <url>
   <loc>https://www.merchant.dedyn.io/dog-shedding-clean-home.html</loc>
   <priority>0.80</priority>
+</url>
+
+  <url>
+  <loc>https://www.merchant.dedyn.io/aquaphor-healing-balm-stick.html</loc>
+  <lastmod>2026-05-02</lastmod>
+  <priority>0.70</priority>
+</url>
+
+<url>
+  <loc>https://www.merchant.dedyn.io/mystozer-magnetic-spice-rack.html</loc>
+  <lastmod>2026-05-02</lastmod>
+  <priority>0.70</priority>
+</url>
+
+<url>
+  <loc>https://www.merchant.dedyn.io/inevifit-bluetooth-body-fat-scale.html</loc>
+  <lastmod>2026-05-02</lastmod>
+  <priority>0.70</priority>
+</url>
+
+<url>
+  <loc>https://www.merchant.dedyn.io/clean-towels-xl.html</loc>
+  <lastmod>2026-05-02</lastmod>
+  <priority>0.70</priority>
 </url>
   
 </urlset>
