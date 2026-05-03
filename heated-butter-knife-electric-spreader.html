@@ -481,7 +481,52 @@
       padding:28px 16px;
       font-size:13px;
     }
-@media(max-width:900px){
+
+
+    @keyframes ratingMoveReal{
+      0%,100%{
+        top:34px;
+        box-shadow:0 18px 40px rgba(50,28,14,.18);
+      }
+      50%{
+        top:18px;
+        box-shadow:0 28px 55px rgba(243,107,33,.28);
+      }
+    }
+
+    @keyframes featureMoveReal{
+      0%,100%{
+        bottom:42px;
+        box-shadow:0 18px 40px rgba(50,28,14,.18);
+        letter-spacing:.7px;
+      }
+      50%{
+        bottom:60px;
+        box-shadow:0 28px 55px rgba(243,107,33,.30);
+        letter-spacing:1.6px;
+      }
+    }
+
+    @keyframes badgeGlow{
+      0%,100%{filter:brightness(1)}
+      50%{filter:brightness(1.08)}
+    }
+
+    .rating-float{
+      animation:ratingMoveReal 2.8s ease-in-out infinite, badgeGlow 2.8s ease-in-out infinite !important;
+    }
+
+    .feature-float{
+      animation:featureMoveReal 2.6s ease-in-out infinite, badgeGlow 2.6s ease-in-out infinite !important;
+    }
+
+    @media(max-width:900px){
+      .rating-float,.feature-float{
+        animation:none !important;
+      }
+    }
+
+    @media(max-width:900px){
       .hero-inner,.two-col{grid-template-columns:1fr}
       .stats-inner,.result-grid,.reviews{grid-template-columns:1fr 1fr}
       .hero-card{transform:none}
@@ -601,7 +646,7 @@
       <div class="section-label">What it can handle</div>
       <h2>Not just butter.</h2>
       <p class="lead">
-        The value is not only the butter. It is smoother spreading whenever a cold or thick spread makes breakfast harder than it should be.
+        Use the warm spreader for more breakfast favorites when you want a smoother, cleaner finish.
       </p>
       <div class="result-grid">
         <div class="result-card"><strong>Butter</strong><p>For toast, bread, waffles, pancakes, and quick breakfast plates.</p></div>
