@@ -20,7 +20,7 @@
     <loc>https://www.merchant.dedyn.io/search.html</loc>
     <priority>0.50</priority>
   </url>
-  
+
   <url>
     <loc>https://www.merchant.dedyn.io/baby.html</loc>
     <priority>0.80</priority>
@@ -65,49 +65,84 @@
     <loc>https://www.merchant.dedyn.io/privacy.html</loc>
     <priority>0.30</priority>
   </url>
-  
+
   <url>
     <loc>https://www.merchant.dedyn.io/blog.html</loc>
     <priority>0.70</priority>
   </url>
-  
-  <url>
-  <loc>https://www.merchant.dedyn.io/skincare-dull-skin-fix.html</loc>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://www.merchant.dedyn.io/dog-shedding-clean-home.html</loc>
-  <priority>0.80</priority>
-</url>
 
   <url>
-  <loc>https://www.merchant.dedyn.io/aquaphor-healing-balm-stick.html</loc>
-  <lastmod>2026-05-02</lastmod>
-  <priority>0.70</priority>
-</url>
+    <loc>https://www.merchant.dedyn.io/skincare-dull-skin-fix.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-<url>
-  <loc>https://www.merchant.dedyn.io/mystozer-magnetic-spice-rack.html</loc>
-  <lastmod>2026-05-02</lastmod>
-  <priority>0.70</priority>
-</url>
+  <url>
+    <loc>https://www.merchant.dedyn.io/dog-shedding-clean-home.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-<url>
-  <loc>https://www.merchant.dedyn.io/inevifit-bluetooth-body-fat-scale.html</loc>
-  <lastmod>2026-05-02</lastmod>
-  <priority>0.70</priority>
-</url>
+  <url>
+    <loc>https://www.merchant.dedyn.io/aquaphor-healing-balm-stick.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.70</priority>
+  </url>
 
-<url>
-  <loc>https://www.merchant.dedyn.io/clean-towels-xl.html</loc>
-  <lastmod>2026-05-02</lastmod>
-  <priority>0.70</priority>
-</url>
+  <url>
+    <loc>https://www.merchant.dedyn.io/mystozer-magnetic-spice-rack.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.70</priority>
+  </url>
 
-<url>
+  <url>
+    <loc>https://www.merchant.dedyn.io/inevifit-bluetooth-body-fat-scale.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/clean-towels-xl.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/divoom-times-gate.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/elite-gourmet-electric-egg-cooker.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/heated-butter-knife-electric-spreader.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/loreal-lumi-glotion.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/anker-nano-landing.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/eastmount-twister-landing.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.merchant.dedyn.io/chuckit-sport-launcher-landing.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
     <loc>https://www.merchant.dedyn.io/no-time-for-gym-arm-exerciser.html</loc>
     <priority>0.65</priority>
-</url>
-  
+  </url>
+
 </urlset>
