@@ -282,37 +282,7 @@
   }
   .pinterest-btn:hover { transform:translateY(-2px); background:#ff193a; }
   footer { background:#050d08; color:rgba(255,255,255,.38); padding:28px 5%; text-align:center; font-size:12px; line-height:2; }
-
-  .btn-blog {
-    background:linear-gradient(90deg, rgba(255,224,138,.96), rgba(112,196,31,.78));
-    color:#101b13;
-    border-color:rgba(255,239,178,.7);
-    box-shadow:0 0 18px rgba(255,209,102,.22);
-  }
-  .hero .btn-amazon,
-  .cta-final .btn-amazon {
-    min-width:210px;
-    padding:15px 26px;
-    font-size:15px;
-  }
-  .hero .cta-buttons {
-    margin-top:4px;
-  }
-  .cta-final .cta-buttons {
-    gap:14px;
-  }
-  .pinterest-follow {
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    align-items:center;
-  }
-  .pinterest-follow strong,
-  .pinterest-follow span {
-    width:100%;
-  }
-
-  @media(max-width:1100px){ .reviews-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:1100px){ .reviews-grid{grid-template-columns:repeat(2,1fr);} }
   @media(max-width:900px){
     .hero{ grid-template-columns:1fr; text-align:center; }
     .hero-text{ padding:48px 5% 24px; }
@@ -347,6 +317,84 @@
     .level-row{align-items:flex-start; flex-direction:column;}
     .level-bar{width:100%;}
   }
+
+  /* FINAL GOLD EQUAL CTA BUTTONS — no glow until hover */
+  .hero .cta-buttons,
+  .cta-final .cta-buttons {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    flex-wrap:nowrap !important;
+    margin-top:8px !important;
+    width:100% !important;
+    max-width:620px !important;
+  }
+  .cta-final .cta-buttons {
+    justify-content:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .hero .cta-buttons a,
+  .cta-final .cta-buttons a,
+  .hero .cta-buttons .btn,
+  .cta-final .cta-buttons .btn {
+    box-sizing:border-box !important;
+    width:180px !important;
+    min-width:180px !important;
+    max-width:180px !important;
+    height:56px !important;
+    padding:0 12px !important;
+    border-radius:999px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    text-decoration:none !important;
+    font-size:14px !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+    letter-spacing:.05px !important;
+    color:#111 !important;
+    background:linear-gradient(135deg,#ff9900 0%,#ffb12a 48%,#ffd166 100%) !important;
+    border:1px solid rgba(255,225,138,.85) !important;
+    box-shadow:none !important;
+    text-shadow:none !important;
+    backdrop-filter:none !important;
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease !important;
+  }
+  .hero .cta-buttons a:hover,
+  .cta-final .cta-buttons a:hover,
+  .hero .cta-buttons .btn:hover,
+  .cta-final .cta-buttons .btn:hover {
+    transform:translateY(-2px) !important;
+    filter:brightness(1.08) !important;
+    box-shadow:
+      0 14px 34px rgba(255,153,0,.38),
+      0 0 30px rgba(255,209,102,.42) !important;
+  }
+  @media(max-width:700px){
+    .hero .cta-buttons,
+    .cta-final .cta-buttons {
+      justify-content:center !important;
+      flex-wrap:wrap !important;
+      gap:10px !important;
+      max-width:390px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+    .hero .cta-buttons a,
+    .cta-final .cta-buttons a,
+    .hero .cta-buttons .btn,
+    .cta-final .cta-buttons .btn {
+      width:100% !important;
+      max-width:320px !important;
+      min-width:0 !important;
+      height:56px !important;
+    }
+  }
+
 </style>
 <script type="application/ld+json">
 {
@@ -377,11 +425,11 @@
       <div class="hero-stat"><span class="stat-val">4 modes</span><span class="stat-label">steady, flicker, flash, fade</span></div>
       <div class="hero-stat"><span class="stat-val">IP65</span><span class="stat-label">built for outdoor weather</span></div>
     </div>
-    <div class="cta-buttons">
-      <a class="btn btn-amazon" href="https://amzn.to/48OVhdO" rel="nofollow sponsored noopener" target="_blank">Check Amazon Price</a>
-      <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
-      <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
-    </div>
+            <div class="cta-buttons">
+        <a class="btn btn-amazon" href="https://amzn.to/48OVhdO" rel="nofollow sponsored noopener" target="_blank">Check Amazon Price</a>
+        <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
+        <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
+      </div>
   </div>
   <div class="hero-image">
     <div class="hero-img-wrap">
