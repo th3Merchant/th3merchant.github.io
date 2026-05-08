@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title> Merchant Blog | Problem-Solving Buying Guides for Beauty, Pets, Home & Baby</title>
+<title>Merchant Blog | Premium Problem-Solving Buying Guides</title>
 <link href="https://www.merchant.dedyn.io/blog.html" rel="canonical"/>
 
-<meta name="description" content="Read Merchant buying guides built around real problems like dull skin, dog shedding, home clutter, baby routines, kitchen shortcuts, and useful Amazon finds worth buying."/>
-<meta property="og:title" content="Merchant Blog | Problem-Solving Buying Guides"/>
-<meta property="og:description" content="Practical Merchant guides for skincare, pets, home organization, baby routines, kitchen shortcuts, and useful product ideas."/>
+<meta name="description" content="Read Merchant buying guides built around real problems: dry skin, dog shedding, baby routines, small home clutter, kitchen mess, and compact home fitness ideas."/>
+<meta property="og:title" content="Merchant Blog | Premium Problem-Solving Buying Guides"/>
+<meta property="og:description" content="Premium Merchant guides for beauty, pets, home, baby, kitchen, fitness, and useful product ideas."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.merchant.dedyn.io/blog.html"/>
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,769 +19,471 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f3f6fb;
-  color: #1f2937;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-}
-
-header {
-  background: rgba(17, 24, 39, 0.95);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  padding: 16px 0;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  color: white;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  flex-shrink: 0;
-}
-
-
-.logo-home-active {
-  color: #fbbf24;
-  text-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
-  transition: 0.2s ease;
-}
-
-.logo-home-active:hover {
-  color: #fde68a;
-  transform: translateY(-1px);
-}
-
-.hero h1 {
-  color: #f8fafc;
-  text-shadow: 0 0 18px rgba(251, 191, 36, 0.65), 0 0 36px rgba(245, 158, 11, 0.32);
-}
-
-.header-search {
-  flex: 1 1 280px;
-  max-width: 430px;
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 999px;
-  padding: 4px;
-  margin-left: auto;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-}
-
-.header-search input {
-  flex: 1;
-  min-width: 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  padding: 10px 14px;
-  font-size: 14px;
-  color: #111827;
-}
-
-.header-search input::placeholder {
-  color: #6b7280;
-}
-
-.header-search button {
-  border: 0;
-  background: #f59e0b;
-  color: #111827;
-  font-weight: 800;
-  padding: 10px 16px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  white-space: nowrap;
-}
-
-.header-search button:hover {
-  background: #fbbf24;
-  transform: translateY(-1px);
-}
-
-.nav-links {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nav-links a {
-  color: #d1d5db;
-  font-size: 14px;
-  transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #fbbf24;
-}
-
-.nav-links a.active-page {
-  color: #fbbf24;
-  font-weight: 800;
-  border-bottom: 2px solid #fbbf24;
-  padding-bottom: 4px;
-}
-
-.hero {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  padding: 76px 0 56px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 14px;
-  line-height: 1.15;
-}
-
-.hero p {
-  max-width: 780px;
-  margin: 0 auto 24px;
-  color: #cbd5e1;
-  font-size: 17px;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 22px;
-  border-radius: 12px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.btn-primary {
-  background: #f59e0b;
-  color: #111827;
-  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.25);
-}
-
-.btn-primary:hover {
-  background: #fbbf24;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.section {
-  padding: 68px 0;
-}
-
-.section:nth-of-type(even) {
-  background: #eaf2fb;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 34px;
-  color: #0f172a;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 38px;
-  color: #334155;
-  font-size: 15px;
-}
-
-.blog-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: 28px;
-  align-items: start;
-}
-
-.featured-story,
-.article-card,
-.sidebar-panel,
-.editor-strip {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-}
-
-.featured-story {
-  overflow: hidden;
-  margin-bottom: 26px;
-}
-
-.featured-image,
-.article-image {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-  background: #e5e7eb;
-}
-
-.featured-image {
-  height: 360px;
-}
-
-.featured-content {
-  padding: 30px;
-}
-
-.article-tag {
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: 10px;
-  color: #b45309;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.article-meta {
-  color: #64748b;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.featured-story h2 {
-  color: #0f172a;
-  font-size: 36px;
-  line-height: 1.14;
-  margin-bottom: 12px;
-}
-
-.featured-story p,
-.article-card p,
-.editor-strip p {
-  color: #475569;
-}
-
-.read-link {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  color: #111827;
-  font-weight: 800;
-  border-bottom: 2px solid #f59e0b;
-  padding-bottom: 2px;
-  margin-top: 16px;
-  transition: 0.2s ease;
-}
-
-.read-link:hover {
-  color: #b45309;
-}
-
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.article-card {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.article-image {
-  height: 190px;
-}
-
-.article-content {
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.article-card h2 {
-  color: #111827;
-  font-size: 22px;
-  line-height: 1.24;
-  margin-bottom: 10px;
-}
-
-.article-card p {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.blog-sidebar {
-  display: grid;
-  gap: 20px;
-}
-
-.sidebar-panel {
-  padding: 22px;
-}
-
-.sidebar-panel h2 {
-  color: #0f172a;
-  font-size: 21px;
-  margin-bottom: 14px;
-}
-
-.headline-list {
-  list-style: none;
-  display: grid;
-  gap: 14px;
-}
-
-.headline-list a {
-  color: #111827;
-  font-weight: 800;
-  line-height: 1.35;
-}
-
-.headline-list a:hover {
-  color: #b45309;
-}
-
-.headline-list span {
-  display: block;
-  color: #64748b;
-  font-size: 12px;
-  font-weight: 400;
-  margin-top: 3px;
-}
-
-.topic-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.topic-tags a {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  color: #334155;
-  font-size: 13px;
-  font-weight: 800;
-  padding: 7px 11px;
-}
-
-.editor-strip {
-  margin-top: 28px;
-  padding: 24px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: center;
-}
-
-.editor-strip h2 {
-  color: #0f172a;
-  font-size: 24px;
-  margin-bottom: 6px;
-}
-
-.internal-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.internal-links a {
-  background: #111827;
-  color: #fbbf24;
-  border-radius: 999px;
-  padding: 9px 13px;
-  font-size: 13px;
-  font-weight: 800;
-  transition: 0.2s ease;
-}
-
-.internal-links a:hover {
-  background: #f59e0b;
-  color: #111827;
-}
-
-
-.blog-eyebrow {
-  display: inline-block;
-  color: #fbbf24;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.magazine-hero h1 {
-  font-size: clamp(46px, 5.8vw, 72px);
-  letter-spacing: -1.2px;
-  margin-bottom: 14px;
-}
-
-.magazine-hero p {
-  max-width: 820px;
-  font-size: 18px;
-}
-
-.magazine-section {
-  background: #edf4fb;
-}
-
-.hero-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 26px;
-  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
-  margin-bottom: 34px;
-}
-
-.hero-feature-image {
-  min-height: 440px;
-  background: #e5e7eb;
-}
-
-.hero-feature-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-feature-content {
-  padding: 42px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-feature-content h2 {
-  color: #0f172a;
-  font-size: clamp(34px, 4vw, 48px);
-  line-height: 1.08;
-  letter-spacing: -0.7px;
-  margin-bottom: 16px;
-}
-
-.hero-feature-content p {
-  color: #475569;
-  font-size: 17px;
-  margin-bottom: 18px;
-}
-
-.feature-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 6px 0 24px;
-}
-
-.feature-meta-row span {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #334155;
-  border-radius: 999px;
-  padding: 8px 11px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.magazine-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: 28px;
-  align-items: start;
-}
-
-.section-heading-left {
-  margin-bottom: 24px;
-}
-
-.section-heading-left h2 {
-  color: #0f172a;
-  font-size: 34px;
-  line-height: 1.14;
-  margin-bottom: 10px;
-}
-
-.section-heading-left p {
-  color: #475569;
-  max-width: 760px;
-}
-
-.editorial-feed {
-  display: grid;
-  gap: 22px;
-}
-
-.editorial-row {
-  display: grid;
-  grid-template-columns: 255px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
-}
-
-.editorial-row img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-}
-
-.editorial-row h3 {
-  color: #0f172a;
-  font-size: 26px;
-  line-height: 1.16;
-  margin-bottom: 9px;
-}
-
-.editorial-row p {
-  color: #475569;
-  font-size: 15px;
-}
-
-.magazine-sidebar {
-  display: grid;
-  gap: 20px;
-  position: sticky;
-  top: 145px;
-}
-
-.premium-sidebar-panel {
-  border-radius: 20px;
-  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
-}
-
-.premium-sidebar-panel p {
-  color: #475569;
-  font-size: 14px;
-  margin-bottom: 14px;
-}
-
-.sidebar-button {
-  display: inline-block;
-  background: #111827;
-  color: #fbbf24;
-  font-weight: 900;
-  border-radius: 999px;
-  padding: 10px 14px;
-}
-
-.editorial-promise {
-  margin-top: 34px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 20px;
-  align-items: center;
-  background: #111827;
-  color: #ffffff;
-  border-radius: 26px;
-  padding: 34px;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
-}
-
-.editorial-promise h2 {
-  color: #f8fafc;
-  font-size: 32px;
-  line-height: 1.15;
-  margin-bottom: 10px;
-}
-
-.editorial-promise p {
-  color: #cbd5e1;
-}
-
-@media (max-width: 980px) {
-  .hero-feature,
-  .magazine-layout,
-  .editorial-promise {
-    grid-template-columns: 1fr;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Manrope",Arial,sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(251,191,36,.12),transparent 30%),
+    radial-gradient(circle at 88% 6%,rgba(56,189,248,.10),transparent 34%),
+    linear-gradient(180deg,#07111f 0%,#0b1220 42%,#101827 100%);
+  color:#d8e5f3;
+  line-height:1.65;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:0 auto}
+
+header{
+  background:rgba(17,24,39,.96);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(251,191,36,.14);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  padding:16px 0;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.logo{
+  color:#fbbf24;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:.3px;
+  flex-shrink:0;
+  text-shadow:0 0 18px rgba(251,191,36,.55);
+  transition:.2s ease;
+}
+.logo:hover{color:#fde68a;transform:translateY(-1px)}
+
+.header-search{
+  flex:1 1 280px;
+  max-width:430px;
+  display:flex;
+  align-items:center;
+  background:rgba(255,247,237,.96);
+  border-radius:999px;
+  padding:4px;
+  margin-left:auto;
+  box-shadow:0 10px 22px rgba(0,0,0,.24);
+}
+.header-search input{
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  padding:10px 14px;
+  font-size:14px;
+  color:#111827;
+}
+.header-search input::placeholder{color:#6b7280}
+.header-search button{
+  border:0;
+  background:linear-gradient(135deg,#f59e0b,#fbbf24);
+  color:#111827;
+  font-weight:900;
+  padding:10px 16px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:.2s ease;
+  white-space:nowrap;
+}
+.header-search button:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(245,158,11,.25)}
+
+.nav-links{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.nav-links a{
+  color:#d1d5db;
+  font-size:14px;
+  font-weight:700;
+  transition:.2s ease;
+}
+.nav-links a:hover,.nav-links a.active-page{
+  color:#fbbf24;
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 74% 20%,rgba(251,191,36,.20),transparent 32%),
+    linear-gradient(135deg,#0f172a 0%,#152238 52%,#263445 100%);
+  color:white;
+  padding:82px 0 64px;
+  text-align:center;
+  overflow:hidden;
+}
+.blog-eyebrow{
+  display:inline-block;
+  color:#fbbf24;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(48px,6vw,82px);
+  line-height:.96;
+  letter-spacing:-1.3px;
+  margin-bottom:16px;
+  color:#fff7ed;
+  text-shadow:0 0 22px rgba(251,191,36,.32);
+}
+.hero p{
+  max-width:850px;
+  margin:0 auto 26px;
+  color:#dbe5ef;
+  font-size:18px;
+}
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:999px;
+  font-weight:900;
+  transition:.2s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#f59e0b,#fbbf24);
+  color:#111827;
+  box-shadow:0 14px 28px rgba(245,158,11,.25);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(245,158,11,.34)}
+.btn-secondary{
+  color:white;
+  border:1px solid rgba(255,255,255,.24);
+}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+
+.section{padding:68px 0}
+.magazine-section{
+  background:
+    radial-gradient(circle at 10% 0%,rgba(251,191,36,.08),transparent 28%),
+    linear-gradient(180deg,rgba(15,23,42,.96),rgba(15,23,42,.90));
+}
+
+.hero-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,rgba(30,41,59,.94),rgba(15,23,42,.96));
+  border:1px solid rgba(251,191,36,.20);
+  border-radius:32px;
+  box-shadow:0 24px 70px rgba(0,0,0,.30);
+  margin-bottom:36px;
+}
+.hero-feature-image{
+  min-height:470px;
+  background:
+    radial-gradient(circle at center,rgba(226,232,240,.12),rgba(15,23,42,.30));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:34px;
+}
+.hero-feature-image img{
+  width:100%;
+  height:420px;
+  object-fit:contain;
+  filter:drop-shadow(0 26px 44px rgba(0,0,0,.35));
+}
+.hero-feature-content{
+  padding:clamp(30px,4vw,50px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.article-tag{
+  display:inline-block;
+  width:fit-content;
+  margin-bottom:12px;
+  color:#fbbf24;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.hero-feature-content h2{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff7ed;
+  font-size:clamp(38px,4.3vw,58px);
+  line-height:1.02;
+  letter-spacing:-.8px;
+  margin-bottom:18px;
+}
+.hero-feature-content p{
+  color:#cbd5e1;
+  font-size:17px;
+  margin-bottom:18px;
+}
+.feature-meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:8px 0 24px;
+}
+.feature-meta-row span{
+  background:rgba(148,163,184,.12);
+  border:1px solid rgba(226,232,240,.12);
+  color:#cbd5e1;
+  border-radius:999px;
+  padding:8px 11px;
+  font-size:12px;
+  font-weight:900;
+}
+
+.magazine-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:28px;
+  align-items:start;
+}
+.section-heading-left{
+  margin-bottom:24px;
+}
+.section-heading-left h2{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff7ed;
+  font-size:clamp(34px,4vw,50px);
+  line-height:1.06;
+  margin-bottom:10px;
+}
+.section-heading-left p{
+  color:#cbd5e1;
+  max-width:760px;
+}
+.editorial-feed{
+  display:grid;
+  gap:22px;
+}
+.editorial-row{
+  display:grid;
+  grid-template-columns:255px minmax(0,1fr);
+  gap:24px;
+  align-items:center;
+  background:
+    linear-gradient(145deg,rgba(30,41,59,.88),rgba(15,23,42,.96));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:26px;
+  padding:18px;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+  transition:.22s ease;
+}
+.editorial-row:hover{
+  transform:translateY(-3px);
+  border-color:rgba(251,191,36,.36);
+  box-shadow:0 22px 52px rgba(0,0,0,.30);
+}
+.editorial-row img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+  background:#111827;
+}
+.editorial-row.product-cover img{
+  object-fit:contain;
+  padding:18px;
+  background:radial-gradient(circle at center,rgba(226,232,240,.12),rgba(15,23,42,.35));
+}
+.editorial-row h3{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff7ed;
+  font-size:clamp(26px,2.6vw,34px);
+  line-height:1.1;
+  margin-bottom:10px;
+}
+.editorial-row p{
+  color:#cbd5e1;
+  font-size:15px;
+}
+.read-link{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  color:#fbbf24;
+  font-weight:900;
+  border-bottom:2px solid #f59e0b;
+  padding-bottom:2px;
+  margin-top:16px;
+  transition:.2s ease;
+}
+.read-link:hover{color:#fde68a}
+
+.magazine-sidebar{
+  display:grid;
+  gap:20px;
+  position:sticky;
+  top:145px;
+}
+.sidebar-panel{
+  background:linear-gradient(145deg,rgba(30,41,59,.94),rgba(15,23,42,.94));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+.sidebar-panel h2{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff7ed;
+  font-size:25px;
+  line-height:1.12;
+  margin-bottom:14px;
+}
+.sidebar-panel p{
+  color:#cbd5e1;
+  font-size:14px;
+  margin-bottom:14px;
+}
+.sidebar-button{
+  display:inline-block;
+  background:linear-gradient(135deg,#f59e0b,#fbbf24);
+  color:#111827;
+  font-weight:900;
+  border-radius:999px;
+  padding:10px 14px;
+}
+.headline-list{
+  list-style:none;
+  display:grid;
+  gap:14px;
+}
+.headline-list a{
+  color:#e5edf7;
+  font-weight:900;
+  line-height:1.35;
+}
+.headline-list a:hover{color:#fbbf24}
+.headline-list span{
+  display:block;
+  color:#94a3b8;
+  font-size:12px;
+  font-weight:500;
+  margin-top:3px;
+}
+.topic-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.topic-tags a{
+  background:rgba(148,163,184,.10);
+  border:1px solid rgba(226,232,240,.12);
+  border-radius:999px;
+  color:#cbd5e1;
+  font-size:13px;
+  font-weight:900;
+  padding:7px 11px;
+}
+.topic-tags a:hover{
+  color:#fbbf24;
+  border-color:rgba(251,191,36,.30);
+}
+
+.trending-strip{
+  margin-top:34px;
+  background:
+    radial-gradient(circle at 86% 20%,rgba(251,191,36,.20),transparent 34%),
+    linear-gradient(135deg,rgba(251,191,36,.14),rgba(59,130,246,.10)),
+    #111827;
+  color:#ffffff;
+  border:1px solid rgba(251,191,36,.24);
+  border-radius:30px;
+  padding:34px;
+  box-shadow:0 20px 60px rgba(0,0,0,.26);
+}
+.trending-strip h2{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff7ed;
+  font-size:clamp(32px,3.3vw,48px);
+  line-height:1.08;
+  margin-bottom:10px;
+}
+.trending-strip p{color:#dbe5ef;max-width:780px}
+.trending-tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.trending-tags span{
+  color:#111827;
+  background:#fbbf24;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+  font-weight:900;
+}
+
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:28px 20px;
+  margin-top:20px;
+}
+footer p{margin:6px 0;font-size:14px}
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  max-width:980px;
+  margin:12px auto 0;
+}
+.footer-links a{
+  color:#fbbf24;
+  font-size:14px;
+  font-weight:700;
+  transition:.2s ease;
+}
+.footer-links a:hover{color:#fde68a}
+
+@media(max-width:980px){
+  .hero-feature,.magazine-layout{grid-template-columns:1fr}
+  .magazine-sidebar{position:static}
+}
+@media(max-width:720px){
+  .editorial-row{grid-template-columns:1fr}
+  .hero-feature-image{min-height:300px}
+  .hero-feature-image img{height:300px}
+  .hero-feature-content{padding:26px}
+  .trending-strip{padding:24px}
+}
+@media(max-width:640px){
+  .hero h1{font-size:40px}
+  .nav{justify-content:center;gap:14px}
+  .logo{width:100%;text-align:center}
+  .header-search{
+    order:2;
+    width:100%;
+    max-width:100%;
+    margin-left:0;
   }
-
-  .magazine-sidebar {
-    position: static;
-  }
-}
-
-@media (max-width: 720px) {
-  .editorial-row {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-feature-image {
-    min-height: 300px;
-  }
-
-  .hero-feature-content {
-    padding: 26px;
-  }
-
-  .editorial-promise {
-    padding: 24px;
-  }
-}
-
-
-.disclosure {
-  margin-top: 34px;
-  background: #fff7ed;
-  border: 1px solid #fdba74;
-  color: #9a3412;
-  padding: 14px 18px;
-  border-radius: 12px;
-  font-size: 13px;
-  text-align: center;
-}
-
-footer {
-  background: #111827;
-  color: #d1d5db;
-  text-align: center;
-  padding: 28px 20px;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  max-width: 980px;
-  margin: 12px auto 0;
-}
-
-.footer-links a {
-  color: #fbbf24;
-  font-size: 14px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #fde68a;
-}
-
-@media (max-width: 900px) {
-  .blog-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .article-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .nav {
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
-
-  .header-search {
-    order: 2;
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .header-search button {
-    padding: 10px 14px;
-  }
-
-  .nav-links {
-    order: 3;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .article-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-image {
-    height: 240px;
-  }
-
-  .featured-content {
-    padding: 22px;
-  }
-
-  .featured-story h2 {
-    font-size: 28px;
-  }
-
-  .editor-strip {
-    grid-template-columns: 1fr;
-    padding: 22px 18px;
-  }
+  .header-search button{padding:10px 14px}
+  .nav-links{order:3;justify-content:center;gap:12px}
 }
 </style>
 
@@ -791,7 +493,7 @@ footer p {
   "@type": "Blog",
   "name": "Merchant Blog",
   "url": "https://www.merchant.dedyn.io/blog.html",
-  "description": "Helpful buying guides and practical Amazon product ideas from Merchant.",
+  "description": "Premium problem-solving buying guides and practical product ideas from Merchant.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Merchant",
@@ -823,19 +525,17 @@ footer p {
   </div>
 </header>
 
-
-
 <main>
-
 <section class="hero magazine-hero">
   <div class="container">
+    <span class="blog-eyebrow">Merchant Editorial</span>
     <h1>The Merchant Blog</h1>
     <p>
-      Premium buying guides for real everyday problems — skincare, pet care, home organization,
-      baby routines, kitchen shortcuts, and more useful finds worth your time!
+      Premium problem-solving guides for real everyday needs — beauty routines, pet care,
+      home organization, baby routines, kitchen fixes, compact fitness tools, and useful finds worth your time.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="skincare-dull-skin-fix.html">Read Featured Guide</a>
+      <a class="btn btn-primary" href="dry-skin-barrier-fix.html">Read Featured Guide</a>
       <a class="btn btn-secondary" href="#editorial-guides">Explore Guides</a>
     </div>
   </div>
@@ -845,56 +545,79 @@ footer p {
   <div class="container">
 
     <article class="hero-feature">
-      <a class="hero-feature-image" href="skincare-dull-skin-fix.html" aria-label="Read skincare guide">
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=85" alt="Luxury skincare products on a soft bathroom counter" loading="lazy">
+      <a class="hero-feature-image" href="dry-skin-barrier-fix.html" aria-label="Read dry skin barrier guide">
+        <img src="images/laroche-cicaplast-blog-1.webp" alt="Barrier skincare product for dry skin guide" loading="lazy">
       </a>
       <div class="hero-feature-content">
-        <span class="article-tag">Featured Skincare Guide</span>
-        <h2>Why Your Skin Looks Dull — And How to Fix It Without Overbuying Products</h2>
+        <span class="article-tag">Featured Beauty Guide</span>
+        <h2>Dry Skin Keeps Coming Back? Fix the Barrier Before Buying More</h2>
         <p>
-          Tired-looking skin is not always about needing more products. Sometimes the real issue is dehydration,
-          over-cleansing, dead skin buildup, or a damaged skin barrier. This guide explains the symptoms clearly,
-          then shows a simple routine and product types that actually make sense.
+          Dry skin is not always about needing a heavier cream. This guide explains the barrier-first routine:
+          hydrate, repair, seal weak spots, and choose the product texture that fits the real problem.
         </p>
         <div class="feature-meta-row">
           <span>Beauty & Personal Care</span>
-          <span>Problem → Routine → Products</span>
+          <span>Barrier Routine</span>
           <span>Live Guide</span>
         </div>
-        <a class="btn btn-primary" href="skincare-dull-skin-fix.html">Read the Guide</a>
+        <a class="btn btn-primary" href="dry-skin-barrier-fix.html">Read the Guide</a>
       </div>
     </article>
 
     <div class="magazine-layout">
       <section class="editorial-feed">
         <div class="section-heading-left">
-          <span class="article-tag">Latest Problem-Solving Guides</span>
-          <h2>Fresh Guides for Everyday Problems</h2>
+          <span class="article-tag">Problem-Solving Guides</span>
+          <h2>Fresh guides with stronger angles, cleaner links, and no fake “planned” clutter.</h2>
           <p>
-            Simple, practical guides that start with the issue, explain what is really happening, 
-            and point you toward products that actually fit the solution.
+            Each guide starts with the real problem, explains what is happening, and points the reader toward
+            product ideas that fit the solution.
           </p>
         </div>
 
-        <article class="editorial-row">
-          <img src="images/east-mount-twister-arm-exerciser-hero.webp" alt="EAST MOUNT Twister Arm Exerciser for compact home strength training" loading="lazy">
+        <article class="editorial-row product-cover">
+          <img src="images/aquaphor-balm-stick-blog-1.webp" alt="Aquaphor Balm Stick for dry skin barrier support" loading="lazy">
           <div>
-            <span class="article-tag">Sports & Fitness • Planned</span>
+            <span class="article-tag">Beauty • Barrier Guide</span>
+            <h3>Dry Skin Keeps Coming Back? Fix the Barrier Before Buying More</h3>
+            <p>
+              A premium skincare guide for dry, tight, flaky, or uncomfortable skin, with four products organized by hydration, repair, and protection.
+            </p>
+            <a class="read-link" href="dry-skin-barrier-fix.html">Read dry skin guide</a>
+          </div>
+        </article>
+
+        <article class="editorial-row">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Luxury skincare products on a soft bathroom counter" loading="lazy">
+          <div>
+            <span class="article-tag">Beauty • Skin Routine</span>
+            <h3>Why Your Skin Looks Dull — And How to Fix It Without Overbuying Products</h3>
+            <p>
+              A practical guide for tired-looking skin, routine mistakes, hydration, cleaner habits, and barrier support.
+            </p>
+            <a class="read-link" href="skincare-dull-skin-fix.html">Read dull skin guide</a>
+          </div>
+        </article>
+
+        <article class="editorial-row product-cover">
+          <img src="images/eastmount-twister-blog-1.webp" alt="EAST MOUNT Twister Arm Exerciser for compact home strength training" loading="lazy">
+          <div>
+            <span class="article-tag">Fitness • Home Gym</span>
             <h3>No Time for the Gym? This Compact Arm Exerciser Brings Strength Training Home</h3>
             <p>
-              A practical guide for building chest, shoulders, arms, grip, and upper-body strength at home with a compact resistance tool that does not need a full gym setup.
+              A practical guide for building chest, shoulders, arms, grip, and upper-body strength at home without a full gym setup.
             </p>
-            <a class="read-link" href="no-time-for-gym-arm-exerciser.html">Coming next</a>
+            <a class="read-link" href="no-time-for-gym-arm-exerciser.html">Read home gym guide</a>
           </div>
         </article>
 
         <article class="editorial-row">
           <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=900&q=85" alt="Dog sitting near grooming supplies" loading="lazy">
           <div>
-            <span class="article-tag">Pet Care • Live Guide</span>
+            <span class="article-tag">Pet Care • Shedding Routine</span>
             <h3>Dog Hair Everywhere? Build a Cleaner Grooming Routine at Home</h3>
             <p>
-              A practical guide for shedding, grooming tools, bath routines, and small habits that help keep your home cleaner without fighting the same mess every day.
+              A guide for shedding, grooming tools, bath routines, and small habits that help keep your home cleaner.
             </p>
             <a class="read-link" href="dog-shedding-clean-home.html">Read pet guide</a>
           </div>
@@ -903,86 +626,63 @@ footer p {
         <article class="editorial-row">
           <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=900&q=85" alt="Organized home shelves and storage baskets" loading="lazy">
           <div>
-            <span class="article-tag">Home Organization • Planned</span>
-            <h3>Small Home Feels Messy? Fix the Storage Problems First</h3>
+            <span class="article-tag">Home • Small Space Fix</span>
+            <h3>Small Home Feels Cluttered? Fix the Storage Pressure Points First</h3>
             <p>
-              Storage products work best when they solve a specific pressure point: entryway shoes, bathroom clutter, kitchen counters, cleaning supplies, or tight corners.
+              Storage products work best when they solve a specific pressure point: counters, entryways, bathrooms, shelves, or tight corners.
             </p>
-            <a class="read-link" href="small-home-storage.html">Coming next</a>
+            <a class="read-link" href="small-home-feels-cluttered.html">Read home guide</a>
           </div>
         </article>
 
         <article class="editorial-row">
           <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=85" alt="Baby care items on a soft bed" loading="lazy">
           <div>
-            <span class="article-tag">Baby • Planned</span>
+            <span class="article-tag">Baby • Daily Routine</span>
             <h3>Baby Routine Feels Hard? Products That Make Repeated Moments Easier</h3>
             <p>
-              Feeding, changing, bathing, travel, and safety are repeated all day. The right products should make those moments calmer, faster, and easier to repeat.
+              Feeding, changing, bathing, travel, and safety are repeated all day. The right products should make those moments calmer and easier.
             </p>
-            <a class="read-link" href="baby-routine-made-easier.html"">Coming next</a>
+            <a class="read-link" href="baby-routine-made-easier.html">Read baby guide</a>
           </div>
         </article>
 
         <article class="editorial-row">
           <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85" alt="Modern kitchen counter with cooking tools" loading="lazy">
           <div>
-            <span class="article-tag">Kitchen • Planned</span>
-            <h3>Cooking Takes Too Much Time? Kitchen Tools That Actually Help</h3>
+            <span class="article-tag">Kitchen • Mess Fix</span>
+            <h3>Your Kitchen Feels Messy? Fix the Daily Friction Points First</h3>
             <p>
-              The best kitchen products are not novelty gadgets. They help with prep, storage, cooking, cleanup, or small mistakes that waste time every week.
+              A useful kitchen guide for prep, storage, cleanup, counter clutter, and products that solve repeated kitchen problems.
             </p>
-            <a class="read-link" href="kitchen-products-save-time.html">Coming next</a>
-          </div>
-        </article>
-
-        <article class="editorial-row">
-          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=85" alt="Skincare products on a clean bathroom counter" loading="lazy">
-          <div>
-            <span class="article-tag">Beauty • Planned</span>
-            <h3>Dry Skin That Keeps Coming Back? Fix the Barrier Before Buying More</h3>
-            <p>
-              Dry skin is not always about needing a heavier cream. This future guide will focus on barrier damage, over-cleansing, and simple hydration steps that last.
-            </p>
-            <a class="read-link" href="dry-skin-barrier-fix.html">Coming next</a>
-          </div>
-        </article>
-
-        <article class="editorial-row">
-          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85" alt="Two dogs sitting together at home" loading="lazy">
-          <div>
-            <span class="article-tag">Pet Care • Planned</span>
-            <h3>Why Your House Still Smells Like Dog — Even After Cleaning</h3>
-            <p>
-              A future guide for odor control, washable areas, grooming habits, bath tools, and the pet products that help a home feel fresher.
-            </p>
-            <a class="read-link" href="dog-smell-clean-home.html">Coming next</a>
+            <a class="read-link" href="kitchen-feels-messy.html">Read kitchen guide</a>
           </div>
         </article>
       </section>
 
       <aside class="magazine-sidebar">
-        <section class="sidebar-panel premium-sidebar-panel">
+        <section class="sidebar-panel">
           <h2>Start Here</h2>
           <p>
-            New to Merchant guides? Start with the featured skincare guide, then explore pet care and home problems based on what you want to fix first.
+            Start with the strongest live guide: dry skin and barrier support. Then move through beauty, pet care, home, baby, kitchen, and fitness guides.
           </p>
-          <a class="sidebar-button" href="skincare-dull-skin-fix.html">Read Featured Guide</a>
+          <a class="sidebar-button" href="dry-skin-barrier-fix.html">Read Featured Guide</a>
         </section>
 
-        <section class="sidebar-panel premium-sidebar-panel">
+        <section class="sidebar-panel">
           <h2>Popular Problems</h2>
           <ul class="headline-list">
-            <li><a href="skincare-dull-skin-fix.html">Skin looks dull or tired<span>Beauty • Live guide</span></a></li>
-            <li><a href="dog-shedding-clean-home.html">Dog hair keeps coming back<span>Pet Care • Live guide</span></a></li>
-            <li><a href="no-time-for-gym-arm-exerciser.html">No time for the gym?<span>Sports & Fitness • Planned</span></a></li>
-            <li><a href="small-home-storage.html">Small home feels cluttered<span>Home • Planned</span></a></li>
-            <li><a href="baby-routine-made-easier.html"">baby-routine-made-easier<span>Baby • Planned</span></a></li>
-            <li><a href="dog-smell-clean-home.html">House still smells like dog<span>Pet Care • Planned</span></a></li>
+            <li><a href="dry-skin-barrier-fix.html">Dry skin keeps coming back<span>Beauty • Barrier guide</span></a></li>
+            <li><a href="skincare-dull-skin-fix.html">Skin looks dull or tired<span>Beauty • Skin routine</span></a></li>
+            <li><a href="dog-shedding-clean-home.html">Dog hair keeps coming back<span>Pet Care • Shedding routine</span></a></li>
+            <li><a href="no-time-for-gym-arm-exerciser.html">No time for the gym?<span>Fitness • Home gym</span></a></li>
+            <li><a href="small-home-feels-cluttered.html">Small home feels cluttered<span>Home • Storage pressure points</span></a></li>
+            <li><a href="baby-routine-made-easier.html">Baby routine feels hard<span>Baby • Daily routine</span></a></li>
+            <li><a href="kitchen-feels-messy.html">Kitchen feels messy<span>Kitchen • Daily friction fix</span></a></li>
           </ul>
         </section>
 
-        <section class="sidebar-panel premium-sidebar-panel">
+        <section class="sidebar-panel">
           <h2>Shop Categories</h2>
           <div class="topic-tags">
             <a href="best-sellers.html">Best Sellers</a>
@@ -997,24 +697,25 @@ footer p {
       </aside>
     </div>
 
-    <section class="editorial-promise">
-      <div>
-        <span class="article-tag">Merchant Editorial Standard</span>
-        <h2>Problem first. Clear explanation. Smart product direction.</h2>
-        <p>
-          Merchant Blog is designed to feel useful before it sells anything. The reader should leave with a clearer understanding
-          of the problem, a simple plan, and product ideas that fit the solution.
-        </p>
+    <section class="trending-strip">
+      <span class="article-tag">Next Merchant Direction</span>
+      <h2>Seasonal and trending product pages can live outside the main categories.</h2>
+      <p>
+        Not every product needs to enter the main site structure. Some products are better as landing-only Pinterest funnels:
+        seasonal, viral, practical, visual, and easy to test.
+      </p>
+      <div class="trending-tags">
+        <span>Summer Finds</span>
+        <span>Travel Helpers</span>
+        <span>Home Hacks</span>
+        <span>Fitness Tools</span>
+        <span>Pet Seasonals</span>
       </div>
-      <a class="btn btn-primary" href="top-amazon-finds.html">Explore Top Finds</a>
     </section>
 
   </div>
 </section>
-
 </main>
-
-
 
 <footer>
   <p>© 2026 Merchant. All rights reserved.</p>
