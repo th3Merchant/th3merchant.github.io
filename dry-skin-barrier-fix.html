@@ -30,859 +30,549 @@
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Manrope", Arial, sans-serif;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Manrope",Arial,sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(251, 191, 36, 0.10), transparent 34%),
-    radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.12), transparent 30%),
-    #0b1220;
-  color: #e5edf7;
-  line-height: 1.7;
+    radial-gradient(circle at top left,rgba(251,191,36,.12),transparent 30%),
+    radial-gradient(circle at 90% 8%,rgba(56,189,248,.10),transparent 34%),
+    linear-gradient(180deg,#07111f 0%,#0b1220 38%,#101827 100%);
+  color:#d8e5f3;
+  line-height:1.75;
 }
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:0 auto}
 
-a {
-  color: inherit;
-  text-decoration: none;
+.site-header{
+  background:rgba(17,24,39,.96);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(251,191,36,.14);
 }
-
-img {
-  max-width: 100%;
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+.logo{
+  color:#fbbf24;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:.3px;
+  text-shadow:0 0 18px rgba(251,191,36,.48);
 }
+.article-nav-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.article-nav-links a{color:#d1d5db;font-size:14px;font-weight:800;transition:.2s ease}
+.article-nav-links a:first-child,.article-nav-links a:hover{color:#fbbf24}
 
-.container {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-}
-
-.site-header {
-  background: rgba(17, 24, 39, 0.96);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(251, 191, 36, 0.14);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 16px 0;
-}
-
-.logo {
-  color: #fbbf24;
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 0.3px;
-  text-shadow: 0 0 18px rgba(251, 191, 36, 0.48);
-}
-
-.article-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.article-nav-links a {
-  color: #d1d5db;
-  font-size: 14px;
-  font-weight: 800;
-  transition: 0.2s ease;
-}
-
-.article-nav-links a:first-child,
-.article-nav-links a:hover {
-  color: #fbbf24;
-}
-
-.hero {
+.hero{
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(21, 34, 56, 0.96) 52%, rgba(38, 52, 69, 0.95) 100%),
-    radial-gradient(circle at 75% 20%, rgba(251, 191, 36, 0.18), transparent 34%);
-  color: #fff;
-  padding: 76px 0 62px;
-  overflow: hidden;
+    radial-gradient(circle at 76% 22%,rgba(251,191,36,.22),transparent 30%),
+    linear-gradient(135deg,#0f172a 0%,#152238 52%,#263445 100%);
+  color:#fff;
+  padding:76px 0 62px;
+  overflow:hidden;
 }
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
-  gap: 34px;
-  align-items: center;
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:34px;align-items:center}
+.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;color:#cbd5e1;font-size:13px;margin-bottom:16px}
+.breadcrumbs a{color:#fbbf24;font-weight:800}
+.hero-tag{
+  display:inline-block;
+  color:#111827;
+  background:linear-gradient(135deg,#fbbf24,#f97316);
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+  box-shadow:0 0 28px rgba(251,191,36,.22);
 }
-
-.breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  color: #cbd5e1;
-  font-size: 13px;
-  margin-bottom: 16px;
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(42px,5vw,72px);
+  line-height:.98;
+  letter-spacing:-1px;
+  margin-bottom:14px;
+  color:#fff7ed;
+  text-shadow:0 0 20px rgba(251,191,36,.24);
 }
-
-.breadcrumbs a {
-  color: #fbbf24;
-  font-weight: 800;
+.hero-subtitle{
+  color:#fbbf24!important;
+  font-size:clamp(20px,2vw,28px)!important;
+  font-weight:900;
+  max-width:760px;
+  margin-bottom:14px!important;
 }
-
-.hero-tag {
-  display: inline-block;
-  color: #111827;
-  background: linear-gradient(135deg, #fbbf24, #f97316);
-  border-radius: 999px;
-  padding: 8px 12px;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  box-shadow: 0 0 28px rgba(251, 191, 36, 0.22);
+.hero p{color:#dbe5ef;font-size:18px;max-width:790px;margin-bottom:22px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:13px 18px;
+  border-radius:999px;
+  font-weight:900;
+  transition:.2s ease;
 }
-
-.hero h1 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(42px, 5vw, 72px);
-  line-height: 0.98;
-  letter-spacing: -1px;
-  margin-bottom: 14px;
-  color: #f8fafc;
-  text-shadow: 0 0 20px rgba(251, 191, 36, 0.22);
+.btn-primary{
+  background:linear-gradient(135deg,#f59e0b,#fbbf24);
+  color:#111827;
+  box-shadow:0 14px 28px rgba(245,158,11,.25);
 }
-
-.hero-subtitle {
-  color: #fbbf24 !important;
-  font-size: clamp(20px, 2vw, 28px) !important;
-  font-weight: 900;
-  max-width: 760px;
-  margin-bottom: 14px !important;
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(245,158,11,.34)}
+.btn-secondary{border:1px solid rgba(255,255,255,.24);color:#fff}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+.hero-card{
+  background:linear-gradient(145deg,rgba(15,23,42,.92),rgba(30,41,59,.94));
+  color:#e5edf7;
+  border:1px solid rgba(251,191,36,.20);
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 24px 70px rgba(0,0,0,.35);
+  overflow:hidden;
+  position:relative;
 }
-
-.hero p {
-  color: #dbe5ef;
-  font-size: 18px;
-  max-width: 790px;
-  margin-bottom: 22px;
+.hero-card:before{
+  content:"";
+  position:absolute;
+  width:210px;height:210px;
+  right:-90px;top:-90px;
+  background:radial-gradient(circle,rgba(251,191,36,.30),transparent 66%);
 }
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+.hero-card h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:30px;
+  line-height:1.1;
+  margin-bottom:16px;
+  position:relative;
+  color:#fff7ed;
 }
-
-.btn {
-  display: inline-block;
-  padding: 13px 18px;
-  border-radius: 999px;
-  font-weight: 900;
-  transition: 0.2s ease;
+.hero-card ul{list-style:none;display:grid;gap:10px;position:relative}
+.hero-card li{
+  background:rgba(148,163,184,.10);
+  border:1px solid rgba(226,232,240,.12);
+  border-radius:16px;
+  padding:13px 14px;
+  color:#cbd5e1;
+  font-size:14px;
 }
+.hero-card strong{color:#fbbf24}
 
-.btn-primary {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  color: #111827;
-  box-shadow: 0 14px 28px rgba(245, 158, 11, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(245, 158, 11, 0.34);
-}
-
-.btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: #fff;
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.hero-card {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.94));
-  color: #e5edf7;
-  border: 1px solid rgba(251, 191, 36, 0.20);
-  border-radius: 24px;
-  padding: 26px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-card::before {
-  content: "";
-  position: absolute;
-  inset: -80px -70px auto auto;
-  width: 190px;
-  height: 190px;
-  background: radial-gradient(circle, rgba(251, 191, 36, 0.28), transparent 65%);
-}
-
-.hero-card h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 28px;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.hero-card ul {
-  list-style: none;
-  display: grid;
-  gap: 10px;
-  position: relative;
-}
-
-.hero-card li {
-  background: rgba(148, 163, 184, 0.10);
-  border: 1px solid rgba(226, 232, 240, 0.12);
-  border-radius: 16px;
-  padding: 13px 14px;
-  color: #cbd5e1;
-  font-size: 14px;
-}
-
-.hero-card strong {
-  color: #fbbf24;
-}
-
-.article-section {
-  padding: 58px 0;
-}
-
-.article-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 310px;
-  gap: 28px;
-  align-items: start;
-}
-
-.premium-article {
+.article-section{padding:58px 0}
+.article-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:28px;align-items:start}
+.article-main{
   background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.88)),
-    radial-gradient(circle at 15% 0%, rgba(251, 191, 36, 0.12), transparent 28%);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 28px;
-  padding: clamp(24px, 4vw, 46px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-  overflow: hidden;
+    radial-gradient(circle at 8% 0%,rgba(251,191,36,.11),transparent 30%),
+    linear-gradient(180deg,rgba(15,23,42,.96),rgba(15,23,42,.90));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 24px 70px rgba(0,0,0,.30);
 }
-
-.article-topline {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
+.article-inner{padding:clamp(24px,4vw,52px)}
+.article-topline{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.article-tag{
+  display:inline-block;
+  width:fit-content;
+  color:#fbbf24;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
 }
-
-.article-tag {
-  display: inline-block;
-  width: fit-content;
-  color: #fbbf24;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.article-meta{color:#94a3b8;font-size:13px}
+.article-main h2,.article-main h3,.article-main h4{color:#fff7ed}
+.article-main h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(38px,4.6vw,64px);
+  line-height:1.02;
+  letter-spacing:-.9px;
+  margin-bottom:22px;
 }
-
-.article-meta {
-  color: #94a3b8;
-  font-size: 13px;
+.gradient-title{
+  background:linear-gradient(135deg,#fff7ed 0%,#fbbf24 54%,#fb923c 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
 }
-
-.premium-article h2,
-.premium-article h3,
-.premium-article h4 {
-  color: #f8fafc;
+.article-main h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(30px,3.2vw,46px);
+  line-height:1.08;
+  letter-spacing:-.5px;
+  margin:48px 0 16px;
 }
-
-.premium-article h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(36px, 4.3vw, 58px);
-  line-height: 1.02;
-  letter-spacing: -0.8px;
-  margin-bottom: 20px;
+.article-main h4{
+  font-size:21px;
+  line-height:1.25;
+  margin-bottom:8px;
 }
-
-.gradient-title {
-  background: linear-gradient(135deg, #fff7ed, #fbbf24 55%, #fb923c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
+.article-main p{
+  color:#cbd5e1;
+  font-size:17px;
+  margin-bottom:16px;
 }
-
-.premium-article h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(28px, 3vw, 42px);
-  line-height: 1.08;
-  margin: 44px 0 14px;
+.article-lead{
+  font-size:21px!important;
+  color:#eaf2ff!important;
 }
-
-.premium-article h4 {
-  font-size: 20px;
-  line-height: 1.25;
-  margin-bottom: 8px;
-}
-
-.premium-article p {
-  color: #cbd5e1;
-  font-size: 17px;
-  margin-bottom: 16px;
-}
-
-.article-lead {
-  font-size: 20px !important;
-  color: #e5edf7 !important;
-}
-
-.editorial-callout {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.13), rgba(59, 130, 246, 0.08));
-  border: 1px solid rgba(251, 191, 36, 0.22);
-  border-left: 5px solid #f59e0b;
-  border-radius: 22px;
-  padding: 22px;
-  margin: 28px 0;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-}
-
-.editorial-callout h3 {
-  margin-top: 0;
-  font-size: 26px;
-}
-
-.editorial-callout ul {
-  padding-left: 20px;
-  color: #cbd5e1;
-}
-
-.editorial-callout li {
-  margin-bottom: 8px;
-}
-
-.routine-steps {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 15px;
-  margin: 28px 0;
-}
-
-.routine-steps div {
-  background: linear-gradient(145deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.96));
-  color: #fff;
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 20px;
-  padding: 20px;
-  transition: 0.2s ease;
-}
-
-.routine-steps div:hover {
-  transform: translateY(-3px);
-  border-color: rgba(251, 191, 36, 0.38);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
-}
-
-.routine-steps span {
-  display: block;
-  color: #fbbf24;
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.routine-steps strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.routine-steps p {
-  color: #cbd5e1;
-  font-size: 14px;
-  margin: 0;
-}
-
-.top-picks-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 15px;
-  margin: 24px 0 10px;
-}
-
-.pick-card {
-  background: rgba(30, 41, 59, 0.78);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 20px;
-  padding: 14px;
-  transition: 0.2s ease;
-}
-
-.pick-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(251, 191, 36, 0.38);
-}
-
-.pick-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  background: linear-gradient(145deg, rgba(226, 232, 240, 0.08), rgba(15, 23, 42, 0.28));
-  border-radius: 16px;
-  padding: 10px;
-  margin-bottom: 12px;
-}
-
-.pick-card span {
-  display: inline-block;
-  color: #fbbf24;
-  font-size: 12px;
-  font-weight: 900;
-  margin-bottom: 6px;
-}
-
-.pick-card h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.pick-card p {
-  font-size: 14px;
-  color: #b8c4d4;
-  margin-bottom: 0;
-}
-
-.product-feature {
-  margin: 34px 0;
+.warm-text{color:#fde68a!important}
+.blue-text{color:#bfdbfe!important}
+.gold-word{color:#fbbf24;font-weight:900}
+.editorial-quote{
+  margin:32px 0;
+  padding:30px;
+  border-radius:28px;
   background:
-    linear-gradient(145deg, rgba(30, 41, 59, 0.94), rgba(15, 23, 42, 0.96)),
-    radial-gradient(circle at 90% 10%, rgba(251, 191, 36, 0.13), transparent 28%);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 28px;
-  padding: clamp(18px, 3vw, 28px);
-  box-shadow: 0 20px 55px rgba(0,0,0,0.22);
+    linear-gradient(135deg,rgba(251,191,36,.16),rgba(59,130,246,.09)),
+    rgba(30,41,59,.68);
+  border:1px solid rgba(251,191,36,.22);
+  position:relative;
 }
-
-.product-feature-inner {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 0.58fr);
-  gap: 26px;
-  align-items: center;
+.editorial-quote p{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(28px,3vw,42px);
+  line-height:1.08;
+  color:#fff7ed!important;
+  margin:0;
 }
-
-.product-media {
-  display: grid;
-  gap: 12px;
+.editorial-callout{
+  background:linear-gradient(135deg,rgba(251,191,36,.13),rgba(59,130,246,.08));
+  border:1px solid rgba(251,191,36,.22);
+  border-left:5px solid #f59e0b;
+  border-radius:24px;
+  padding:24px;
+  margin:30px 0;
 }
+.editorial-callout h3{margin-top:0;font-size:28px}
+.editorial-callout ul{padding-left:20px;color:#cbd5e1}
+.editorial-callout li{margin-bottom:8px}
 
-.product-main-image {
-  background: linear-gradient(145deg, rgba(226, 232, 240, 0.09), rgba(15, 23, 42, 0.22));
-  border: 1px solid rgba(226, 232, 240, 0.12);
-  border-radius: 24px;
-  padding: 16px;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.routine-steps{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+  margin:30px 0;
 }
-
-.product-main-image img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  display: block;
+.routine-steps div{
+  background:linear-gradient(145deg,rgba(30,41,59,.96),rgba(15,23,42,.96));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:22px;
+  padding:22px;
+  transition:.2s ease;
 }
-
-.product-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.routine-steps div:hover{
+  transform:translateY(-3px);
+  border-color:rgba(251,191,36,.38);
+  box-shadow:0 18px 38px rgba(0,0,0,.26);
 }
+.routine-steps span{display:block;color:#fbbf24;font-size:12px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.routine-steps strong{display:block;font-size:19px;color:#f8fafc;margin-bottom:8px}
+.routine-steps p{font-size:14px;color:#b8c4d4;margin:0}
 
-.product-gallery img {
-  height: 120px;
-  width: 100%;
-  object-fit: contain;
-  background: rgba(15, 23, 42, 0.42);
-  border: 1px solid rgba(226, 232, 240, 0.10);
-  border-radius: 18px;
-  padding: 10px;
+.product-jump-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  margin:26px 0 4px;
 }
-
-.product-label-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+.product-jump{
+  background:linear-gradient(145deg,rgba(30,41,59,.88),rgba(15,23,42,.96));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:24px;
+  overflow:hidden;
+  transition:.22s ease;
 }
-
-.product-label,
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  border-radius: 999px;
-  padding: 7px 10px;
-  font-size: 12px;
-  font-weight: 900;
+.product-jump:hover{
+  transform:translateY(-4px);
+  border-color:rgba(251,191,36,.36);
+  box-shadow:0 18px 40px rgba(0,0,0,.28);
 }
-
-.product-label {
-  background: rgba(251, 191, 36, 0.14);
-  border: 1px solid rgba(251, 191, 36, 0.26);
-  color: #fbbf24;
+.product-jump img{
+  width:100%;
+  height:210px;
+  object-fit:contain;
+  padding:16px;
+  background:radial-gradient(circle at center,rgba(226,232,240,.13),rgba(15,23,42,.25));
 }
+.product-jump div{padding:16px}
+.product-jump span{display:block;color:#fbbf24;font-size:12px;font-weight:900;margin-bottom:7px}
+.product-jump strong{display:block;color:#f8fafc;font-size:16px;line-height:1.25;margin-bottom:7px}
+.product-jump p{font-size:13px;color:#b8c4d4;margin:0}
 
-.rating-pill {
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(147, 197, 253, 0.18);
-  color: #bfdbfe;
+.product-editorial{
+  border-top:1px solid rgba(148,163,184,.16);
+  padding:64px clamp(22px,4vw,52px);
+  position:relative;
+  overflow:hidden;
 }
-
-.product-feature h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
+.product-editorial:nth-of-type(even){
+  background:linear-gradient(135deg,rgba(30,41,59,.34),rgba(15,23,42,.18));
 }
-
-.product-feature p {
-  color: #cbd5e1;
+.product-editorial:before{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  right:-150px;top:60px;
+  background:radial-gradient(circle,rgba(251,191,36,.10),transparent 68%);
+  pointer-events:none;
 }
-
-.feature-list {
-  display: grid;
-  gap: 10px;
-  margin: 18px 0;
+.product-label-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.product-label,.rating-pill{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:12px;
+  font-weight:900;
 }
-
-.feature-list div {
-  background: rgba(15, 23, 42, 0.48);
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 16px;
-  padding: 13px 14px;
+.product-label{
+  color:#111827;
+  background:linear-gradient(135deg,#fbbf24,#fb923c);
 }
-
-.feature-list strong {
-  color: #fbbf24;
-  display: block;
-  margin-bottom: 4px;
+.rating-pill{
+  color:#bfdbfe;
+  background:rgba(59,130,246,.12);
+  border:1px solid rgba(147,197,253,.18);
 }
-
-.feature-list span {
-  color: #cbd5e1;
-  font-size: 14px;
+.product-title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(38px,4vw,60px);
+  line-height:1;
+  letter-spacing:-.8px;
+  color:#fff7ed;
+  max-width:850px;
+  margin-bottom:16px;
 }
-
-.review-note {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(251, 191, 36, 0.08));
-  border: 1px solid rgba(147, 197, 253, 0.18);
-  border-radius: 18px;
-  padding: 15px;
-  margin: 16px 0;
+.product-kicker{
+  color:#fde68a!important;
+  font-size:20px!important;
+  font-weight:800;
 }
-
-.review-note strong {
-  color: #fbbf24;
-}
-
-.merchant-product-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  color: #111827;
-  font-weight: 900;
-  padding: 13px 18px;
-  border-radius: 999px;
-  margin-top: 4px;
-  transition: 0.2s ease;
-  box-shadow: 0 12px 24px rgba(245, 158, 11, 0.20);
-}
-
-.merchant-product-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(245, 158, 11, 0.31);
-}
-
-.compare-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 22px 0;
-}
-
-.compare-card {
-  background: rgba(30, 41, 59, 0.78);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 20px;
-  padding: 18px;
-}
-
-.compare-card strong {
-  color: #fbbf24;
-}
-
-.compare-card p {
-  margin-bottom: 0;
-  font-size: 15px;
-}
-
-.routine-panel {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.routine-panel article {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.82));
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 22px;
-  padding: 20px;
-}
-
-.routine-panel h4 {
-  color: #fbbf24;
-  margin-bottom: 12px;
-}
-
-.routine-panel ol {
-  padding-left: 20px;
-  color: #cbd5e1;
-}
-
-.routine-panel li {
-  margin-bottom: 8px;
-}
-
-.faq-block {
-  margin-top: 42px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.faq-item {
-  background: rgba(30, 41, 59, 0.72);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  border-radius: 18px;
-  padding: 18px;
-  margin-bottom: 12px;
-}
-
-.faq-item p {
-  margin-bottom: 0;
-}
-
-.final-article-cta {
-  margin-top: 36px;
+.editorial-visual-wide{
+  margin:28px 0 34px;
+  min-height:430px;
+  border-radius:32px;
+  overflow:hidden;
   background:
-    linear-gradient(135deg, rgba(251, 191, 36, 0.16), rgba(59, 130, 246, 0.12)),
+    radial-gradient(circle at 50% 35%,rgba(226,232,240,.14),transparent 42%),
+    linear-gradient(145deg,rgba(15,23,42,.28),rgba(30,41,59,.88));
+  border:1px solid rgba(226,232,240,.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+.editorial-visual-wide img{
+  max-height:420px;
+  width:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 28px 44px rgba(0,0,0,.34));
+}
+.product-story-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.56fr) minmax(260px,.44fr);
+  gap:30px;
+  align-items:start;
+  margin:34px 0;
+}
+.product-copy-block{
+  background:rgba(15,23,42,.42);
+  border:1px solid rgba(148,163,184,.15);
+  border-radius:26px;
+  padding:24px;
+}
+.product-copy-block h4{
+  color:#fbbf24;
+  font-size:14px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.product-copy-block p:last-child{margin-bottom:0}
+.side-visual-stack{
+  display:grid;
+  gap:16px;
+}
+.side-visual-stack img{
+  height:250px;
+  width:100%;
+  object-fit:contain;
+  background:linear-gradient(145deg,rgba(226,232,240,.09),rgba(15,23,42,.28));
+  border:1px solid rgba(226,232,240,.10);
+  border-radius:24px;
+  padding:18px;
+}
+.benefit-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin:28px 0;
+}
+.benefit-strip div{
+  background:linear-gradient(145deg,rgba(30,41,59,.82),rgba(15,23,42,.82));
+  border:1px solid rgba(148,163,184,.16);
+  border-radius:20px;
+  padding:18px;
+}
+.benefit-strip strong{
+  display:block;
+  color:#fbbf24;
+  margin-bottom:6px;
+}
+.benefit-strip span{
+  display:block;
+  color:#cbd5e1;
+  font-size:14px;
+}
+.routine-placement{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:28px 0;
+}
+.routine-placement article{
+  background:linear-gradient(135deg,rgba(251,191,36,.10),rgba(59,130,246,.08));
+  border:1px solid rgba(251,191,36,.18);
+  border-radius:22px;
+  padding:20px;
+}
+.routine-placement h4{
+  color:#fde68a;
+  margin-bottom:10px;
+}
+.routine-placement ol{
+  padding-left:20px;
+  color:#cbd5e1;
+}
+.routine-placement li{margin-bottom:8px}
+.merchant-product-btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#f59e0b,#fbbf24);
+  color:#111827;
+  font-weight:900;
+  padding:14px 20px;
+  border-radius:999px;
+  margin-top:8px;
+  transition:.2s ease;
+  box-shadow:0 12px 24px rgba(245,158,11,.20);
+}
+.merchant-product-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 34px rgba(245,158,11,.31);
+}
+.compare-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin:24px 0;
+}
+.compare-card{
+  background:rgba(30,41,59,.78);
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:22px;
+  padding:20px;
+}
+.compare-card strong{color:#fbbf24}
+.compare-card p{font-size:15px;margin:0}
+.final-article-cta{
+  margin-top:42px;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(251,191,36,.22),transparent 34%),
+    linear-gradient(135deg,rgba(251,191,36,.16),rgba(59,130,246,.12)),
     #111827;
-  color: #fff;
-  border: 1px solid rgba(251, 191, 36, 0.24);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.26);
+  color:#fff;
+  border:1px solid rgba(251,191,36,.24);
+  border-radius:30px;
+  padding:32px;
+  box-shadow:0 20px 60px rgba(0,0,0,.26);
 }
-
-.final-article-cta h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(30px, 3vw, 44px);
-  color: #f8fafc;
-  margin-top: 0;
+.final-article-cta h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(32px,3vw,46px);
+  color:#fff7ed;
+  margin-bottom:12px;
 }
-
-.final-article-cta p {
-  color: #dbe5ef;
+.final-article-cta p{color:#dbe5ef}
+.article-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.read-link{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  color:#fbbf24;
+  font-weight:900;
+  border-bottom:2px solid #f59e0b;
+  padding-bottom:2px;
+  margin-top:10px;
+  transition:.2s ease;
 }
+.read-link:hover{color:#fde68a}
 
-.article-cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+.sidebar{display:grid;gap:18px;position:sticky;top:100px}
+.sidebar-panel{
+  background:linear-gradient(145deg,rgba(30,41,59,.94),rgba(15,23,42,.94));
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
 }
-
-.read-link {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  color: #fbbf24;
-  font-weight: 900;
-  border-bottom: 2px solid #f59e0b;
-  padding-bottom: 2px;
-  margin-top: 10px;
-  transition: 0.2s ease;
+.sidebar-panel h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.15;
+  color:#fff7ed;
+  margin-bottom:13px;
 }
-
-.read-link:hover {
-  color: #fde68a;
+.toc{list-style:none;display:grid;gap:10px}
+.toc a{color:#cbd5e1;font-weight:800;font-size:14px}
+.toc a:hover{color:#fbbf24}
+.topic-tags{display:flex;flex-wrap:wrap;gap:8px}
+.topic-tags a{
+  background:rgba(148,163,184,.10);
+  border:1px solid rgba(226,232,240,.12);
+  color:#cbd5e1;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:13px;
+  font-weight:800;
 }
+.topic-tags a:hover{color:#fbbf24;border-color:rgba(251,191,36,.30)}
 
-.sidebar {
-  display: grid;
-  gap: 18px;
-  position: sticky;
-  top: 100px;
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:28px 20px;
+  margin-top:20px;
 }
+footer p{margin:6px 0;font-size:14px}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 14px;max-width:980px;margin:12px auto 0}
+.footer-links a{color:#fbbf24;font-size:14px;font-weight:700;transition:.2s ease}
+.footer-links a:hover{color:#fde68a}
 
-.sidebar-panel {
-  background: linear-gradient(145deg, rgba(30, 41, 59, 0.94), rgba(15, 23, 42, 0.94));
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 22px;
-  padding: 20px;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+@media(max-width:1060px){
+  .product-jump-grid,.routine-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-
-.sidebar-panel h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 24px;
-  line-height: 1.15;
-  color: #f8fafc;
-  margin-bottom: 13px;
+@media(max-width:980px){
+  .hero-inner,.article-shell,.product-story-grid{grid-template-columns:1fr}
+  .sidebar{position:static}
 }
-
-.toc {
-  list-style: none;
-  display: grid;
-  gap: 10px;
+@media(max-width:760px){
+  .benefit-strip,.routine-placement,.compare-grid,.product-jump-grid,.routine-steps{grid-template-columns:1fr}
+  .editorial-visual-wide{min-height:300px}
+  .editorial-visual-wide img{max-height:300px}
 }
-
-.toc a {
-  color: #cbd5e1;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.toc a:hover {
-  color: #fbbf24;
-}
-
-.topic-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.topic-tags a {
-  background: rgba(148, 163, 184, 0.10);
-  border: 1px solid rgba(226, 232, 240, 0.12);
-  color: #cbd5e1;
-  border-radius: 999px;
-  padding: 7px 10px;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.topic-tags a:hover {
-  color: #fbbf24;
-  border-color: rgba(251, 191, 36, 0.30);
-}
-
-footer {
-  background: #111827;
-  color: #d1d5db;
-  text-align: center;
-  padding: 28px 20px;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  max-width: 980px;
-  margin: 12px auto 0;
-}
-
-.footer-links a {
-  color: #fbbf24;
-  font-size: 14px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #fde68a;
-}
-
-@media (max-width: 1060px) {
-  .top-picks-grid,
-  .routine-steps {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 980px) {
-  .hero-inner,
-  .article-shell,
-  .product-feature-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: static;
-  }
-}
-
-@media (max-width: 700px) {
-  .compare-grid,
-  .routine-panel,
-  .top-picks-grid,
-  .routine-steps {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .nav {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
-
-  .article-nav-links {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero {
-    padding: 56px 0 46px;
-  }
-
-  .premium-article {
-    border-radius: 22px;
-  }
-
-  .product-main-image {
-    min-height: 230px;
-  }
-
-  .product-main-image img {
-    height: 220px;
-  }
+@media(max-width:640px){
+  .nav{justify-content:center;text-align:center}
+  .logo{width:100%;text-align:center}
+  .article-nav-links{justify-content:center;width:100%}
+  .hero{padding:56px 0 46px}
+  .article-main{border-radius:24px}
+  .product-editorial{padding:48px 18px}
+  .side-visual-stack img{height:220px}
 }
 </style>
 </head>
@@ -915,7 +605,6 @@ footer p {
         <a class="btn btn-secondary" href="beauty.html">Browse Beauty Picks</a>
       </div>
     </div>
-
     <aside class="hero-card" aria-label="Article summary">
       <h2>What this guide helps with</h2>
       <ul>
@@ -929,342 +618,320 @@ footer p {
 
 <section class="article-section">
   <div class="container article-shell">
-    <article class="premium-article article-main" id="routine-fix">
-      <div class="article-topline">
-        <span class="article-tag">Dry Skin Problem Guide</span>
-        <span class="article-meta">Updated for 2026 • Merchant Editors</span>
+    <article class="article-main" id="routine-fix">
+
+      <div class="article-inner">
+        <div class="article-topline">
+          <span class="article-tag">Dry Skin Problem Guide</span>
+          <span class="article-meta">Updated for 2026 • Merchant Editors</span>
+        </div>
+
+        <h2 class="gradient-title">Your skin is not asking for more products. It is asking for a better routine.</h2>
+        <p class="article-lead">You moisturize. Your skin feels better for a little while. Then the tightness comes back like nothing happened.</p>
+        <p>That usually means the problem is not simply “dry skin.” The deeper issue may be that your skin barrier is not holding moisture well enough. When the barrier is stressed, water escapes faster, products can sting more easily, and dry patches keep returning in the same areas.</p>
+        <p>This guide is built around one idea: <span class="gold-word">hydrate, repair, then protect</span>. Not every product needs to go everywhere. Each one should have a clear job.</p>
+
+        <div class="editorial-quote">
+          <p>“Dry skin usually does not need a louder routine. It needs a calmer one that helps moisture stay.”</p>
+        </div>
+
+        <div class="editorial-callout">
+          <h3>Signs your barrier needs support</h3>
+          <ul>
+            <li>Your skin feels tight soon after washing.</li>
+            <li>Moisturizer helps, but not for long.</li>
+            <li>Dry patches keep returning around the same areas.</li>
+            <li>Your skin looks rough, dull, or flaky even when you moisturize.</li>
+            <li>Some products suddenly sting or feel uncomfortable.</li>
+          </ul>
+        </div>
+
+        <h3 id="barrier">The barrier-first framework</h3>
+        <p>Your skin barrier is the outer layer that helps keep moisture in and irritants out. When it is balanced, skin feels smoother and more comfortable. When it is stressed, moisture leaves faster and your routine starts feeling like it is not working.</p>
+
+        <div class="routine-steps" id="routine">
+          <div><span>Step 1</span><strong>Hydrate</strong><p>Use comfortable moisture where skin feels tight or dehydrated.</p></div>
+          <div><span>Step 2</span><strong>Repair</strong><p>Use barrier-friendly creams when skin feels rough, stressed, or irritated.</p></div>
+          <div><span>Step 3</span><strong>Seal</strong><p>Protect weak spots so moisture does not escape too fast.</p></div>
+          <div><span>Step 4</span><strong>Simplify</strong><p>Pause harsh steps while the skin calms down.</p></div>
+        </div>
+
+        <h3 id="top-picks">The 4 product roles in this routine</h3>
+        <p>These are not four random moisturizers. Each product plays a different role inside the routine, which is why the page works better as a guide than as a simple shopping list.</p>
+
+        <div class="product-jump-grid">
+          <a class="product-jump" href="#aquaphor">
+            <img src="images/aquaphor-balm-stick-article-1.webp" alt="Aquaphor Healing Balm Stick"/>
+            <div><span>Targeted Seal • 4.95</span><strong>Aquaphor Healing Balm Stick</strong><p>For dry spots that need portable protection.</p></div>
+          </a>
+          <a class="product-jump" href="#laroche">
+            <img src="images/laroche-cicaplast-article-1.webp" alt="La Roche-Posay Cicaplast Balm B5"/>
+            <div><span>Barrier Balm • 4.7</span><strong>La Roche-Posay Cicaplast Balm B5</strong><p>For irritated skin that needs a richer balm.</p></div>
+          </a>
+          <a class="product-jump" href="#vanicream">
+            <img src="images/vanicream-sensitive-skin-article-1.webp" alt="Vanicream Moisturizing Skin Cream"/>
+            <div><span>Sensitive Skin • 4.7</span><strong>Vanicream Moisturizing Skin Cream</strong><p>For dry, reactive, itchy, or cracked skin.</p></div>
+          </a>
+          <a class="product-jump" href="#neutrogena">
+            <img src="images/neutrogena-water-cream-article-1.webp" alt="Neutrogena Hydro Boost Water Cream"/>
+            <div><span>Daily Hydration • 4.7</span><strong>Neutrogena Hydro Boost Water Cream</strong><p>For hydration without a heavy feel.</p></div>
+          </a>
+        </div>
       </div>
 
-      <h2 class="gradient-title">Why Your Skin Feels Dry Again So Quickly</h2>
-      <p class="article-lead">You moisturize. Your skin feels better for an hour. Then the tightness comes back like nothing happened.</p>
-      <p>That is why dry skin can feel so frustrating. The problem is not always that you need “more moisturizer.” A lot of the time, your skin barrier is struggling to hold onto the moisture you already gave it.</p>
-      <p>When the barrier is stressed, water escapes faster, products can sting more easily, and dry patches keep returning in the same places. The fix is not a complicated 12-step routine. It is a calmer routine that hydrates, repairs, and protects.</p>
-
-      <div class="editorial-callout">
-        <h3>Signs your barrier needs support</h3>
-        <ul>
-          <li>Your skin feels tight soon after washing.</li>
-          <li>Moisturizer helps, but not for long.</li>
-          <li>Dry patches keep returning around the same areas.</li>
-          <li>Your skin looks rough, dull, or flaky even when you moisturize.</li>
-          <li>Some products suddenly sting or feel uncomfortable.</li>
-        </ul>
-      </div>
-
-      <h3 id="barrier">The barrier-first way to think about dry skin</h3>
-      <p>Your skin barrier is the outer layer that helps keep good things in and irritating things out. When it is balanced, skin feels smoother and more comfortable. When it is stressed, moisture leaves faster and your skin starts acting sensitive, rough, or flaky.</p>
-      <p>That is why the smartest dry skin routine usually has four jobs: hydrate the skin, repair the barrier, seal weak spots, and avoid anything too harsh while the skin calms down.</p>
-
-      <div class="routine-steps" id="routine">
-        <div>
-          <span>Step 1</span>
-          <strong>Hydrate</strong>
-          <p>Use lightweight moisture where skin feels dehydrated or tight.</p>
+      <section class="product-editorial" id="aquaphor">
+        <div class="product-label-row">
+          <span class="product-label">Anchor Product</span>
+          <span class="rating-pill">Rating: 4.95</span>
         </div>
-        <div>
-          <span>Step 2</span>
-          <strong>Repair</strong>
-          <p>Bring in barrier-friendly creams when skin feels irritated or rough.</p>
+        <h2 class="product-title">Aquaphor Healing Balm Stick</h2>
+        <p class="product-kicker">The easy “carry it with you” fix for dry spots that keep coming back.</p>
+
+        <div class="editorial-visual-wide">
+          <img src="images/aquaphor-balm-stick-article-1.webp" alt="Aquaphor Healing Balm Stick main article visual"/>
         </div>
-        <div>
-          <span>Step 3</span>
-          <strong>Seal</strong>
-          <p>Protect cracked or extra-dry spots so moisture does not escape fast.</p>
-        </div>
-        <div>
-          <span>Step 4</span>
-          <strong>Simplify</strong>
-          <p>Give your skin fewer chances to react while it gets comfortable again.</p>
-        </div>
-      </div>
 
-      <h3 id="top-picks">The 4 dry skin picks in this routine</h3>
-      <p>Each product below has a different job. The goal is not to use everything everywhere. The goal is to choose the right texture for the exact dry skin problem you are trying to fix.</p>
+        <p>Aquaphor Healing Balm Stick is not the product you use everywhere like a daily face cream. It is the product you keep close because dry skin does not always wait until nighttime. Lips, hands, cuticles, elbows, rough patches, and small irritated areas can start feeling tight during the day.</p>
+        <p>That is where a balm stick makes sense. It gives you a targeted protective layer without needing to dip your fingers into a jar or carry a messy ointment tube.</p>
 
-      <div class="top-picks-grid">
-        <a class="pick-card" href="#aquaphor">
-          <img src="images/aquaphor-balm-stick-article-1.webp" alt="Aquaphor Healing Balm Stick for dry skin barrier support"/>
-          <span>Anchor Pick • 4.95</span>
-          <h4>Aquaphor Healing Balm Stick</h4>
-          <p>For targeted dry spots, lips, hands, elbows, and areas that need portable protection.</p>
-        </a>
-
-        <a class="pick-card" href="#laroche">
-          <img src="images/laroche-cicaplast-article-1.webp" alt="La Roche-Posay Cicaplast Balm B5 for dry irritated skin"/>
-          <span>Barrier Balm • 4.7</span>
-          <h4>La Roche-Posay Cicaplast Balm B5</h4>
-          <p>For irritated, uncomfortable, barrier-stressed skin that needs a calming balm texture.</p>
-        </a>
-
-        <a class="pick-card" href="#vanicream">
-          <img src="images/vanicream-sensitive-skin-article-1.webp" alt="Vanicream Moisturizing Skin Cream for sensitive dry skin"/>
-          <span>Sensitive Skin • 4.7</span>
-          <h4>Vanicream Moisturizing Skin Cream</h4>
-          <p>For sensitive, itchy, cracked, or easily reactive dry skin that needs a simple cream.</p>
-        </a>
-
-        <a class="pick-card" href="#neutrogena">
-          <img src="images/neutrogena-water-cream-article-1.webp" alt="Neutrogena Hydro Boost Water Cream for dry skin hydration"/>
-          <span>Hydration Cream • 4.7</span>
-          <h4>Neutrogena Hydro Boost Water Cream</h4>
-          <p>For normal to extra-dry skin that wants hydration without a heavy greasy feel.</p>
-        </a>
-      </div>
-
-      <section class="product-feature" id="aquaphor">
-        <div class="product-feature-inner">
-          <div class="product-media">
-            <div class="product-main-image">
-              <img src="images/aquaphor-balm-stick-article-1.webp" alt="Aquaphor Healing Balm Stick product image"/>
-            </div>
-            <div class="product-gallery">
-              <img src="images/aquaphor-balm-stick-article-2.webp" alt="Aquaphor balm stick texture and packaging"/>
-              <img src="images/aquaphor-balm-stick-article-3.webp" alt="Aquaphor Healing Balm Stick for targeted dry spots"/>
-            </div>
+        <div class="product-story-grid">
+          <div class="product-copy-block">
+            <h4>Why it fits the barrier routine</h4>
+            <p>Dry spots often come back because moisture leaves those areas too quickly. A targeted balm is useful because it helps create a protective layer over the weak spot after hydration or moisturizer.</p>
+            <p>This is especially useful when the skin is not dry everywhere, but a few areas keep cracking, flaking, or feeling uncomfortable.</p>
           </div>
-
-          <div>
-            <div class="product-label-row">
-              <span class="product-label">Anchor Product</span>
-              <span class="rating-pill">Rating: 4.95</span>
-            </div>
-            <h3>Aquaphor Healing Balm Stick</h3>
-            <p>This is the practical pick for dry skin that shows up in specific places: around the lips, hands, cuticles, elbows, heels, or small rough patches that need protection during the day.</p>
-            <p>Its biggest advantage is convenience. A balm stick is easier to carry, easier to apply without mess, and easier to use repeatedly before dry spots turn painful or cracked.</p>
-
-            <div class="feature-list">
-              <div>
-                <strong>Problem it solves</strong>
-                <span>Targeted dryness that keeps coming back in small areas.</span>
-              </div>
-              <div>
-                <strong>How to use it</strong>
-                <span>Swipe a thin layer over dry spots after moisturizer or whenever the area feels tight.</span>
-              </div>
-              <div>
-                <strong>Best for</strong>
-                <span>Lips, hands, elbows, travel bags, work bags, and quick daytime protection.</span>
-              </div>
-            </div>
-
-            <div class="review-note">
-              <p><strong>Merchant take:</strong> This is the most useful “keep it with you” product in the routine. It does not replace a face cream, but it is excellent for sealing and protecting the dry spots that need extra help.</p>
-            </div>
-
-            <a class="merchant-product-btn" href="https://www.amazon.com/dp/B08KH86JX5?tag=themerchant00-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">Check Aquaphor Balm Stick on Amazon</a>
+          <div class="side-visual-stack">
+            <img src="images/aquaphor-balm-stick-article-2.webp" alt="Aquaphor Balm Stick secondary visual"/>
+            <img src="images/aquaphor-balm-stick-article-3.webp" alt="Aquaphor Balm Stick texture visual"/>
           </div>
         </div>
+
+        <div class="benefit-strip">
+          <div><strong>Best problem</strong><span>Small dry patches, lips, hands, cuticles, elbows, travel dryness.</span></div>
+          <div><strong>Best timing</strong><span>After moisturizer or whenever a dry spot starts feeling tight.</span></div>
+          <div><strong>Best user</strong><span>Someone who wants barrier support without carrying a messy product.</span></div>
+        </div>
+
+        <div class="routine-placement">
+          <article>
+            <h4>How to use it in the morning</h4>
+            <ol>
+              <li>Apply your normal moisturizer first.</li>
+              <li>Swipe the balm only on the weak dry spots.</li>
+              <li>Reapply during the day when lips, hands, or patches feel tight.</li>
+            </ol>
+          </article>
+          <article>
+            <h4>How to use it at night</h4>
+            <ol>
+              <li>Use your cream or barrier balm first.</li>
+              <li>Add the stick over stubborn dry spots.</li>
+              <li>Let it work as the final protective layer.</li>
+            </ol>
+          </article>
+        </div>
+
+        <p class="blue-text"><strong>Merchant take:</strong> This is the most practical product in the routine because it solves the “I need something right now” problem. It is not the richest full-face cream, but it is the easiest targeted protection step.</p>
+        <a class="merchant-product-btn" href="https://www.amazon.com/dp/B08KH86JX5?tag=themerchant00-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">Check Aquaphor Balm Stick on Amazon</a>
       </section>
 
-      <section class="product-feature" id="laroche">
-        <div class="product-feature-inner">
-          <div class="product-media">
-            <div class="product-main-image">
-              <img src="images/laroche-cicaplast-article-1.webp" alt="La Roche-Posay Cicaplast Balm B5 product image"/>
-            </div>
-            <div class="product-gallery">
-              <img src="images/laroche-cicaplast-article-2.webp" alt="La Roche-Posay Cicaplast Balm B5 cream packaging"/>
-              <img src="images/laroche-cicaplast-article-3.webp" alt="Cicaplast Balm B5 for dry irritated skin"/>
-            </div>
+      <section class="product-editorial" id="laroche">
+        <div class="product-label-row">
+          <span class="product-label">Barrier Balm</span>
+          <span class="rating-pill">Rating: 4.7</span>
+        </div>
+        <h2 class="product-title">La Roche-Posay Cicaplast Balm B5</h2>
+        <p class="product-kicker">The richer comfort layer for skin that feels stressed, irritated, or overworked.</p>
+
+        <div class="editorial-visual-wide">
+          <img src="images/laroche-cicaplast-article-1.webp" alt="La Roche-Posay Cicaplast Balm B5 main visual"/>
+        </div>
+
+        <p>Some dry skin does not just feel dry. It feels annoyed. Tight. Sensitive. Sometimes a little rough or uncomfortable. That is the situation where a richer balm-style product makes more sense than another lightweight moisturizer.</p>
+        <p>La Roche-Posay Cicaplast Balm B5 fits the repair-and-comfort part of the routine. It is the product you consider when the skin needs a calmer layer and a more cushioned feel.</p>
+
+        <div class="product-story-grid">
+          <div class="product-copy-block">
+            <h4>Why it fits the barrier routine</h4>
+            <p>The full product positioning includes Centella Asiatica, shea butter, and panthenol, which makes it a better match for dry, irritated, barrier-stressed skin than a simple watery moisturizer.</p>
+            <p>Use this when your skin feels like it needs comfort first. Not glow. Not exfoliation. Not another active. Comfort.</p>
           </div>
-
-          <div>
-            <div class="product-label-row">
-              <span class="product-label">Barrier Balm</span>
-              <span class="rating-pill">Rating: 4.7</span>
-            </div>
-            <h3>La Roche-Posay Cicaplast Balm B5</h3>
-            <p>This is the balm-style option for skin that feels uncomfortable, stressed, irritated, or overworked. It is the product you consider when your skin needs a calmer, more cushioned layer instead of a lightweight moisturizer.</p>
-            <p>With Centella Asiatica, shea butter, and panthenol in the product positioning, it fits the “repair and comfort” part of a dry skin routine.</p>
-
-            <div class="feature-list">
-              <div>
-                <strong>Problem it solves</strong>
-                <span>Dryness that feels irritated, sensitive, or barrier-stressed.</span>
-              </div>
-              <div>
-                <strong>How to use it</strong>
-                <span>Apply a thin layer to dry or irritated areas after cleansing, especially at night.</span>
-              </div>
-              <div>
-                <strong>Best for</strong>
-                <span>Face, body, hands, dry patches, and anyone who wants a richer balm feel.</span>
-              </div>
-            </div>
-
-            <div class="review-note">
-              <p><strong>Review-style highlight:</strong> This is the “calm it down” pick. It makes sense when dry skin feels more irritated than simply dehydrated.</p>
-            </div>
-
-            <a class="merchant-product-btn" href="https://amzn.to/4uxbkFr" target="_blank" rel="nofollow sponsored noopener">Check Cicaplast Balm B5 on Amazon</a>
+          <div class="side-visual-stack">
+            <img src="images/laroche-cicaplast-article-2.webp" alt="La Roche-Posay Cicaplast Balm B5 secondary image"/>
+            <img src="images/laroche-cicaplast-article-3.webp" alt="La Roche-Posay Cicaplast Balm B5 article image"/>
           </div>
         </div>
+
+        <div class="benefit-strip">
+          <div><strong>Best problem</strong><span>Dryness that feels irritated, stressed, or uncomfortable.</span></div>
+          <div><strong>Best timing</strong><span>At night or whenever skin needs a calmer, richer layer.</span></div>
+          <div><strong>Best user</strong><span>Someone whose skin feels over-cleansed, over-treated, or barrier-stressed.</span></div>
+        </div>
+
+        <div class="routine-placement">
+          <article>
+            <h4>How to use it in the morning</h4>
+            <ol>
+              <li>Use a thin layer on areas that feel dry or irritated.</li>
+              <li>Keep it lighter if you apply makeup after.</li>
+              <li>Follow with sunscreen if going outside.</li>
+            </ol>
+          </article>
+          <article>
+            <h4>How to use it at night</h4>
+            <ol>
+              <li>Cleanse gently with lukewarm water.</li>
+              <li>Apply Cicaplast where skin feels stressed.</li>
+              <li>Use a balm stick only on tiny cracked spots if needed.</li>
+            </ol>
+          </article>
+        </div>
+
+        <p class="warm-text"><strong>Merchant take:</strong> This is the “calm it down” product. It makes sense when your dry skin feels irritated, not just thirsty.</p>
+        <a class="merchant-product-btn" href="https://amzn.to/4uxbkFr" target="_blank" rel="nofollow sponsored noopener">Check Cicaplast Balm B5 on Amazon</a>
       </section>
 
-      <section class="product-feature" id="vanicream">
-        <div class="product-feature-inner">
-          <div class="product-media">
-            <div class="product-main-image">
-              <img src="images/vanicream-sensitive-skin-article-1.webp" alt="Vanicream Moisturizing Skin Cream product image"/>
-            </div>
-            <div class="product-gallery">
-              <img src="images/vanicream-sensitive-skin-article-2.webp" alt="Vanicream cream for sensitive dry skin"/>
-              <img src="images/vanicream-sensitive-skin-article-3.webp" alt="Vanicream Moisturizing Skin Cream for cracked itchy skin"/>
-            </div>
+      <section class="product-editorial" id="vanicream">
+        <div class="product-label-row">
+          <span class="product-label">Sensitive Skin Cream</span>
+          <span class="rating-pill">Rating: 4.7</span>
+        </div>
+        <h2 class="product-title">Vanicream Moisturizing Skin Cream</h2>
+        <p class="product-kicker">The dependable cream for dry skin that reacts easily and does not want drama.</p>
+
+        <div class="editorial-visual-wide">
+          <img src="images/vanicream-sensitive-skin-article-1.webp" alt="Vanicream Moisturizing Skin Cream main visual"/>
+        </div>
+
+        <p>Vanicream is not the flashy product in the lineup. That is exactly why it belongs here. When dry skin is red, itchy, cracked, reactive, or easily irritated, the routine usually needs fewer chances to go wrong.</p>
+        <p>This is the kind of cream that fits a simple, repeatable routine. Apply it. Repeat it. Let the skin feel supported without turning skincare into a science project.</p>
+
+        <div class="product-story-grid">
+          <div class="product-copy-block">
+            <h4>Why it fits the barrier routine</h4>
+            <p>Dry sensitive skin often gets worse when the routine becomes too complicated. Vanicream fits the “steady support” role because it is built around comfort and consistency.</p>
+            <p>It makes sense for people who do not want fragrance-heavy, trend-heavy, or overly complicated skincare while their skin is already unhappy.</p>
           </div>
-
-          <div>
-            <div class="product-label-row">
-              <span class="product-label">Sensitive Skin Cream</span>
-              <span class="rating-pill">Rating: 4.7</span>
-            </div>
-            <h3>Vanicream Moisturizing Skin Cream</h3>
-            <p>Vanicream is the simple, steady option for dry skin that does not like drama. If your skin gets red, itchy, cracked, or easily annoyed by fragranced products, this is the kind of cream that fits a calmer routine.</p>
-            <p>It is especially useful when the goal is consistency: apply, repeat, and let the skin feel supported without making the routine complicated.</p>
-
-            <div class="feature-list">
-              <div>
-                <strong>Problem it solves</strong>
-                <span>Dry, sensitive, red, cracked, or itchy skin that needs a simple moisturizer.</span>
-              </div>
-              <div>
-                <strong>How to use it</strong>
-                <span>Use after washing, after showering, or whenever skin feels dry and tight.</span>
-              </div>
-              <div>
-                <strong>Best for</strong>
-                <span>Sensitive skin routines, body dryness, hands, and everyday barrier support.</span>
-              </div>
-            </div>
-
-            <div class="review-note">
-              <p><strong>Review-style highlight:</strong> This is the dependable pick. Not flashy, not complicated — just a strong fit for people who want fewer irritation risks.</p>
-            </div>
-
-            <a class="merchant-product-btn" href="https://amzn.to/4nk6lpl" target="_blank" rel="nofollow sponsored noopener">Check Vanicream on Amazon</a>
+          <div class="side-visual-stack">
+            <img src="images/vanicream-sensitive-skin-article-2.webp" alt="Vanicream sensitive skin secondary visual"/>
+            <img src="images/vanicream-sensitive-skin-article-3.webp" alt="Vanicream article image"/>
           </div>
         </div>
+
+        <div class="benefit-strip">
+          <div><strong>Best problem</strong><span>Dry, sensitive, itchy, cracked, or easily reactive skin.</span></div>
+          <div><strong>Best timing</strong><span>After washing, after showering, and before dryness turns uncomfortable.</span></div>
+          <div><strong>Best user</strong><span>Someone who wants a reliable cream without a luxury-fragrance feel.</span></div>
+        </div>
+
+        <div class="routine-placement">
+          <article>
+            <h4>How to use it in the morning</h4>
+            <ol>
+              <li>Apply to dry areas after cleansing or rinsing.</li>
+              <li>Use more on hands, body, or rough areas.</li>
+              <li>Layer sunscreen over facial use when needed.</li>
+            </ol>
+          </article>
+          <article>
+            <h4>How to use it at night</h4>
+            <ol>
+              <li>Apply a comfortable layer after cleansing.</li>
+              <li>Use consistently on repeat dry areas.</li>
+              <li>Seal tiny stubborn spots with a balm stick if needed.</li>
+            </ol>
+          </article>
+        </div>
+
+        <p class="blue-text"><strong>Merchant take:</strong> This is the dependable option. It is not trying to be glamorous. It is trying to be useful for skin that needs consistency.</p>
+        <a class="merchant-product-btn" href="https://amzn.to/4nk6lpl" target="_blank" rel="nofollow sponsored noopener">Check Vanicream on Amazon</a>
       </section>
 
-      <section class="product-feature" id="neutrogena">
-        <div class="product-feature-inner">
-          <div class="product-media">
-            <div class="product-main-image">
-              <img src="images/neutrogena-water-cream-article-1.webp" alt="Neutrogena Hydro Boost Water Cream product image"/>
-            </div>
-            <div class="product-gallery">
-              <img src="images/neutrogena-water-cream-article-2.webp" alt="Neutrogena Hydro Boost Water Cream 72 hour hydration"/>
-              <img src="images/neutrogena-water-cream-article-3.webp" alt="Neutrogena Hydro Boost Water Cream for normal extra dry skin"/>
-            </div>
+      <section class="product-editorial" id="neutrogena">
+        <div class="product-label-row">
+          <span class="product-label">Daily Hydration Cream</span>
+          <span class="rating-pill">Rating: 4.7</span>
+        </div>
+        <h2 class="product-title">Neutrogena Hydro Boost Water Cream</h2>
+        <p class="product-kicker">The lighter daily hydration step for skin that feels tight but hates heavy creams.</p>
+
+        <div class="editorial-visual-wide">
+          <img src="images/neutrogena-water-cream-article-1.webp" alt="Neutrogena Hydro Boost Water Cream main visual"/>
+        </div>
+
+        <p>Not every dry skin routine needs to feel thick and heavy. Some people need hydration, but they hate the greasy feeling that comes with richer creams. That is where a water-cream texture can make the routine easier to repeat.</p>
+        <p>Neutrogena Hydro Boost Water Cream fits the hydrate-first role. It makes sense when the skin feels tight, dehydrated, or flat, but you still want a smoother everyday texture.</p>
+
+        <div class="product-story-grid">
+          <div class="product-copy-block">
+            <h4>Why it fits the barrier routine</h4>
+            <p>Hydration is not the same as sealing. This product belongs earlier in the routine because it helps the skin feel more hydrated before you decide whether certain spots need a richer cream or balm.</p>
+            <p>Use it when your face feels thirsty, but save the heavier protection for areas that truly need it.</p>
           </div>
-
-          <div>
-            <div class="product-label-row">
-              <span class="product-label">Hydration Cream</span>
-              <span class="rating-pill">Rating: 4.7</span>
-            </div>
-            <h3>Neutrogena Hydro Boost Water Cream</h3>
-            <p>This is the hydration-focused option for skin that wants moisture but does not want a heavy, greasy finish. It fits the “hydrate first” part of the routine, especially when skin feels tight or dehydrated.</p>
-            <p>It makes the most sense for normal to extra-dry skin that needs a smoother daily cream texture before adding heavier protection only where needed.</p>
-
-            <div class="feature-list">
-              <div>
-                <strong>Problem it solves</strong>
-                <span>Dehydrated-feeling dryness, tightness, and skin that wants daily moisture.</span>
-              </div>
-              <div>
-                <strong>How to use it</strong>
-                <span>Apply after cleansing, then use a balm or heavier cream only on extra-dry areas.</span>
-              </div>
-              <div>
-                <strong>Best for</strong>
-                <span>Daily face hydration, normal to extra-dry skin, and lighter routine layering.</span>
-              </div>
-            </div>
-
-            <div class="review-note">
-              <p><strong>Review-style highlight:</strong> This is the lighter hydration pick. Choose it when your skin feels thirsty but you dislike thick creams all over the face.</p>
-            </div>
-
-            <a class="merchant-product-btn" href="https://amzn.to/4cWwebc" target="_blank" rel="nofollow sponsored noopener">Check Neutrogena Water Cream on Amazon</a>
+          <div class="side-visual-stack">
+            <img src="images/neutrogena-water-cream-article-2.webp" alt="Neutrogena Hydro Boost Water Cream secondary visual"/>
+            <img src="images/neutrogena-water-cream-article-3.webp" alt="Neutrogena Hydro Boost article image"/>
           </div>
         </div>
+
+        <div class="benefit-strip">
+          <div><strong>Best problem</strong><span>Dehydrated-feeling dryness, tightness, or flat-looking skin.</span></div>
+          <div><strong>Best timing</strong><span>Daily after cleansing, before heavier targeted protection.</span></div>
+          <div><strong>Best user</strong><span>Someone who wants hydration without a heavy cream feeling.</span></div>
+        </div>
+
+        <div class="routine-placement">
+          <article>
+            <h4>How to use it in the morning</h4>
+            <ol>
+              <li>Apply after cleansing or rinsing.</li>
+              <li>Let it settle before sunscreen or makeup.</li>
+              <li>Add balm only to areas that still feel dry.</li>
+            </ol>
+          </article>
+          <article>
+            <h4>How to use it at night</h4>
+            <ol>
+              <li>Apply after a gentle cleanse.</li>
+              <li>Use a richer balm or cream over dry patches only if needed.</li>
+              <li>Keep the routine simple and repeatable.</li>
+            </ol>
+          </article>
+        </div>
+
+        <p class="warm-text"><strong>Merchant take:</strong> This is the lighter hydration product in the lineup. It is useful when dry skin feels dehydrated, but you do not want a heavy layer all over the face.</p>
+        <a class="merchant-product-btn" href="https://amzn.to/4cWwebc" target="_blank" rel="nofollow sponsored noopener">Check Neutrogena Water Cream on Amazon</a>
       </section>
 
-      <h3 id="choose">How to choose between the 4</h3>
-      <p>You do not need all four products to fix dry skin. Choose based on what your skin is actually doing.</p>
+      <div class="article-inner">
+        <h3 id="choose">How to choose the right one</h3>
+        <p>You do not need all four products. The point is to match the product to the dryness pattern.</p>
 
-      <div class="compare-grid">
-        <div class="compare-card">
-          <p><strong>Choose Aquaphor Balm Stick</strong> if your problem is small dry spots, lips, hands, or areas that need quick protection during the day.</p>
-        </div>
-        <div class="compare-card">
-          <p><strong>Choose Cicaplast Balm B5</strong> if your skin feels irritated, uncomfortable, or barrier-stressed and needs a richer balm.</p>
-        </div>
-        <div class="compare-card">
-          <p><strong>Choose Vanicream</strong> if your skin is sensitive, itchy, cracked, or easily reacts to complicated formulas.</p>
-        </div>
-        <div class="compare-card">
-          <p><strong>Choose Neutrogena Water Cream</strong> if your skin feels dehydrated and tight but you prefer a lighter daily cream.</p>
-        </div>
-      </div>
-
-      <h3 id="routine-example">Simple AM / PM routine example</h3>
-      <p>Keep it simple for at least a few days. The goal is to make your skin feel calmer, not overwhelm it.</p>
-
-      <div class="routine-panel">
-        <article>
-          <h4>Morning</h4>
-          <ol>
-            <li>Cleanse gently or rinse with lukewarm water.</li>
-            <li>Apply a hydration cream if your face feels tight.</li>
-            <li>Use a small amount of balm on dry spots only.</li>
-            <li>Finish with sunscreen if you are going outside.</li>
-          </ol>
-        </article>
-
-        <article>
-          <h4>Night</h4>
-          <ol>
-            <li>Cleanse without scrubbing or hot water.</li>
-            <li>Apply your main moisturizer or barrier balm.</li>
-            <li>Seal cracked or rough areas with a balm stick.</li>
-            <li>Pause harsh exfoliants if your skin feels irritated.</li>
-          </ol>
-        </article>
-      </div>
-
-      <section class="faq-block" id="faq">
-        <h3>FAQ</h3>
-
-        <div class="faq-item">
-          <h4>Is dry skin always a moisturizer problem?</h4>
-          <p>No. Dry skin can come from weather, hot water, over-cleansing, harsh actives, or a stressed barrier that loses moisture too quickly.</p>
+        <div class="compare-grid">
+          <div class="compare-card"><p><strong>Aquaphor Balm Stick:</strong> choose it for tiny dry spots, lips, hands, cuticles, travel, and reapplying during the day.</p></div>
+          <div class="compare-card"><p><strong>Cicaplast Balm B5:</strong> choose it when dryness feels irritated, stressed, or uncomfortable.</p></div>
+          <div class="compare-card"><p><strong>Vanicream:</strong> choose it when skin is sensitive, itchy, cracked, or easily reactive.</p></div>
+          <div class="compare-card"><p><strong>Neutrogena Water Cream:</strong> choose it when you want daily hydration without a heavy finish.</p></div>
         </div>
 
-        <div class="faq-item">
-          <h4>Should I exfoliate flaky dry skin?</h4>
-          <p>Be careful. If your skin is irritated or stinging, exfoliating can make things worse. Calm the barrier first, then decide later.</p>
-        </div>
+        <section id="faq">
+          <h3>FAQ</h3>
+          <div class="compare-grid">
+            <div class="compare-card"><p><strong>Is dry skin always a moisturizer problem?</strong><br>No. It can be weather, hot water, over-cleansing, harsh actives, or a stressed barrier that loses moisture too fast.</p></div>
+            <div class="compare-card"><p><strong>Should I exfoliate flaky dry skin?</strong><br>Be careful. If your skin is irritated or stinging, exfoliating can make things worse. Calm the barrier first.</p></div>
+            <div class="compare-card"><p><strong>Which product is best for cracked spots?</strong><br>For small cracked spots, Aquaphor Balm Stick is the easiest targeted option. For larger sensitive areas, Vanicream or Cicaplast may make more sense.</p></div>
+            <div class="compare-card"><p><strong>What is the smartest first step?</strong><br>Simplify the routine. Stop anything that leaves your skin tight or stinging, then add hydration, repair, and protection where needed.</p></div>
+          </div>
+        </section>
 
-        <div class="faq-item">
-          <h4>Which product is best for cracked spots?</h4>
-          <p>For small cracked or rough spots, the Aquaphor Balm Stick is the easiest targeted option. For larger sensitive areas, Vanicream or Cicaplast may make more sense.</p>
-        </div>
-
-        <div class="faq-item">
-          <h4>What is the smartest first step?</h4>
-          <p>Simplify the routine. Stop anything that leaves your skin tight or stinging, then add hydration, barrier support, and protection where needed.</p>
-        </div>
-      </section>
-
-      <div class="final-article-cta">
-        <h3>Help your skin hold moisture again.</h3>
-        <p>Dry skin usually improves when the routine becomes calmer: hydrate first, repair the barrier, and protect the weak spots that keep drying out.</p>
-        <div class="article-cta-row">
-          <a class="read-link" href="#top-picks">Review the 4 picks</a>
-          <a class="read-link" href="blog.html">Back to Merchant Blog</a>
-          <a class="read-link" href="beauty.html">Browse Beauty Picks</a>
+        <div class="final-article-cta">
+          <h3>Help your skin hold moisture again.</h3>
+          <p>Dry skin usually improves when the routine becomes calmer: hydrate first, repair the barrier, and protect the weak spots that keep drying out.</p>
+          <div class="article-cta-row">
+            <a class="read-link" href="#top-picks">Review the 4 picks</a>
+            <a class="read-link" href="blog.html">Back to Merchant Blog</a>
+            <a class="read-link" href="beauty.html">Browse Beauty Picks</a>
+          </div>
         </div>
       </div>
     </article>
@@ -1276,9 +943,12 @@ footer p {
           <li><a href="#routine-fix">Main problem</a></li>
           <li><a href="#barrier">Barrier basics</a></li>
           <li><a href="#routine">Routine framework</a></li>
-          <li><a href="#top-picks">Top picks</a></li>
+          <li><a href="#top-picks">Product roles</a></li>
+          <li><a href="#aquaphor">Aquaphor Balm Stick</a></li>
+          <li><a href="#laroche">Cicaplast Balm B5</a></li>
+          <li><a href="#vanicream">Vanicream</a></li>
+          <li><a href="#neutrogena">Neutrogena</a></li>
           <li><a href="#choose">How to choose</a></li>
-          <li><a href="#routine-example">AM / PM routine</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </section>
