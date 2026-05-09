@@ -404,7 +404,6 @@
 
 
 
-
   /* Plant pots landing polish */
   body { background:linear-gradient(180deg,#f5f1e8 0%,#fbfff5 48%,#edf7e7 100%) !important; }
   nav { background:rgba(16,40,24,.96) !important; border-bottom:1px solid rgba(215,184,137,.38) !important; }
@@ -437,15 +436,16 @@
   .levels-img img,
   .specs-img img,
   .cta-final-img img {
-    width:100% !important;
-    height:auto !important;
     aspect-ratio:auto !important;
+    height:auto !important;
     max-height:none !important;
+    width:auto !important;
+    max-width:calc(100% - 40px) !important;
+    margin:20px auto !important;
+    display:block !important;
     object-fit:contain !important;
     object-position:center !important;
     background:#fbfff5 !important;
-    display:block !important;
-    margin:0 auto !important;
   }
   .section-img,
   .levels-img,
@@ -528,46 +528,59 @@
     .hero .cta-buttons .btn,
     .cta-final .cta-buttons .btn { width:100% !important; max-width:320px !important; min-width:0 !important; }
   }
-  /* FINAL QRRICA FIX — full image display, no side cropping */
-  .two-col,
-  .levels-grid,
-  .specs-grid {
-    min-width:0 !important;
-  }
 
+
+  /* QRRICA FINAL SAFE OVERRIDES */
+  .hero-img-wrap,
   .section-img,
   .levels-img,
   .specs-img,
-  .hero-img-wrap,
   .cta-final-img {
-    min-width:0 !important;
-    width:100% !important;
-    max-width:100% !important;
-    overflow:hidden !important;
     background:#fbfff5 !important;
-    padding:0 !important;
-    border:0 !important;
+    overflow:visible !important;
+    padding:18px !important;
+    border-radius:20px !important;
   }
 
+  .hero-img-wrap img,
   .section-img img,
   .levels-img img,
   .specs-img img,
-  .hero-img-wrap img,
   .cta-final-img img {
     display:block !important;
     width:100% !important;
     max-width:100% !important;
     height:auto !important;
     max-height:none !important;
-    min-width:0 !important;
     aspect-ratio:auto !important;
     object-fit:contain !important;
     object-position:center center !important;
     margin:0 auto !important;
+    transform:none !important;
     background:#fbfff5 !important;
+    border-radius:14px !important;
   }
 
-  @media(max-width:1050px){
+  .reviews .section-h2 {
+    font-size:clamp(28px,3vw,42px) !important;
+    line-height:1.05 !important;
+    white-space:nowrap !important;
+  }
+
+  @media(max-width:700px){
+    .hero-img-wrap,
+    .section-img,
+    .levels-img,
+    .specs-img,
+    .cta-final-img {
+      padding:12px !important;
+    }
+
+    .reviews .section-h2 {
+      font-size:28px !important;
+      white-space:normal !important;
+    }
+
     .hero .cta-buttons,
     .cta-final .cta-buttons {
       grid-template-columns:1fr !important;
@@ -730,7 +743,7 @@ pintrk('page');
 
 <section class="reviews">
   <div class="section-tag">Real buyer feedback</div>
-  <h2 class="section-h2">What Buyers<br>are saying</h2>
+  <h2 class="section-h2">What buyers are saying</h2>
   <div class="reviews-grid">
     
         <div class="review-card">
