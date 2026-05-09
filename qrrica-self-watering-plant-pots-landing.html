@@ -528,29 +528,41 @@
     .hero .cta-buttons .btn,
     .cta-final .cta-buttons .btn { width:100% !important; max-width:320px !important; min-width:0 !important; }
   }
+  /* FINAL QRRICA FIX — full image display, no side cropping */
+  .two-col,
+  .levels-grid,
+  .specs-grid {
+    min-width:0 !important;
+  }
 
-  /* Final QRRICA image + CTA safety */
   .section-img,
   .levels-img,
   .specs-img,
+  .hero-img-wrap,
   .cta-final-img {
+    min-width:0 !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
     background:#fbfff5 !important;
     padding:0 !important;
     border:0 !important;
-    overflow:hidden !important;
   }
 
-  .hero-img-wrap img,
   .section-img img,
   .levels-img img,
   .specs-img img,
+  .hero-img-wrap img,
   .cta-final-img img {
+    display:block !important;
     width:100% !important;
+    max-width:100% !important;
     height:auto !important;
+    max-height:none !important;
+    min-width:0 !important;
     aspect-ratio:auto !important;
     object-fit:contain !important;
-    object-position:center !important;
-    display:block !important;
+    object-position:center center !important;
     margin:0 auto !important;
     background:#fbfff5 !important;
   }
