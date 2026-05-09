@@ -435,24 +435,29 @@
     .hero .cta-buttons .btn,
     .cta-final .cta-buttons .btn { width:100% !important; max-width:320px !important; min-width:0 !important; }
   }
-
-  /* Remove image frame / letterbox spacing around section images */
-  .section-img,
-  .levels-img,
-  .specs-img {
-    background:transparent !important;
-    padding:0 !important;
-    border:0 !important;
-  }
+  /* Correct product-image handling: show full source images without cropping */
+  .hero-img-wrap img,
   .section-img img,
   .levels-img img,
-  .specs-img img {
-    width:100% !important;
-    height:100% !important;
-    object-fit:cover !important;
+  .specs-img img,
+  .cta-final-img img {
+    aspect-ratio:auto !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
     object-position:center !important;
-    background:transparent !important;
+    background:#fffdf4 !important;
     display:block !important;
+  }
+
+  .section-img,
+  .levels-img,
+  .specs-img,
+  .cta-final-img {
+    background:#fffdf4 !important;
+    padding:0 !important;
+    border:0 !important;
+    overflow:hidden !important;
   }
 
 </style>
