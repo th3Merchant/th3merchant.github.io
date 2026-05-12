@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitvae Upgraded Toothbrush Holder 2.0 - Smart Sensing & Wall-Mount Hygiene | Merchant</title>
+<meta name="description" content="A focused landing page for the Bitvae Upgraded Toothbrush Holder 2.0. Featuring infrared sensing technology and space-saving wall-mount design.">
+<link rel="canonical" href="https://www.merchant.dedyn.io/bitvae-toothbrush-holder-landing.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800;900&family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:#2f6f9f;
+    --red-light:#6a82ec;
+    --gold:#d8b56d;
+    --leaf:#9fb7c9;
+    --black:#f5f9fc;
+    --dark:#07131d;
+    --charcoal:#0d2233;
+    --gray:#b9c9d6;
+    --light:#10283a;
+    --white:#0b1c2b;
+    --cream:#07131d;
+    --glow:#84c7f5;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Nunito',sans-serif; background:var(--cream); color:#f5f9fc; overflow-x:hidden; line-height:1.6; }
+  a { text-decoration:none; }
+
+  /* NAVIGATION & LOGO GLOW - EXACT REPLICA */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:rgba(5, 16, 25, 0.97); backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(142, 200, 238, 0.32);
+    padding:0 5%; height:64px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-brand { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
+  .nav-logo {
+    font-family:'Baloo 2',cursive; font-size:20px; font-weight:800; color:white;
+    text-shadow: 0 0 8px rgba(255,255,255,.9), 0 0 20px rgba(132, 199, 245, .72), 0 0 34px rgba(47, 111, 159, .55);
+    filter:drop-shadow(0 0 10px rgba(132, 199, 245, .42));
+    animation:merchantGlow 2.7s ease-in-out infinite;
+  }
+  .nav-logo span { color:#8ec8ee !important; }
+  @keyframes merchantGlow { 0%,100% { filter:brightness(1); } 50% { filter:brightness(1.28); } }
+
+  .blog-mini-btn {
+    padding:4px 14px; border-radius:999px; background:linear-gradient(90deg,#fff0bd 0%,#d8b56d 45%,#8ec8ee 130%);
+    color:#101b13 !important; font-size:11px; font-weight:900; text-transform:uppercase;
+    animation:blogGlow 3s ease-in-out infinite;
+  }
+  @keyframes blogGlow { 0%,100% { filter:brightness(1); } 50% { filter:brightness(1.32); } }
+
+  /* HERO & BUTTON OVERRIDES */
+  .hero { min-height:92vh; padding-top:64px; display:grid; grid-template-columns:1fr 1fr; align-items:center; background:linear-gradient(140deg,#061019 0%,#0b2438 50%,#07131d 100%); position:relative; overflow:hidden; }
+  .hero-h1 { font-family:'Baloo 2',cursive; font-size:clamp(42px,5.2vw,72px); font-weight:900; color:white; line-height:1.06; }
+  .hero-h1 .accent { color:#8ec8ee; }
+  
+  .hero .cta-buttons, .cta-final .cta-buttons { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:14px !important; width:100% !important; max-width:620px !important; margin-top:24px !important; }
+  .hero .cta-buttons a, .cta-final .cta-buttons a {
+    width:100% !important; height:58px !important; border-radius:999px !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; font-weight:900 !important; color:#06131d !important;
+    background:linear-gradient(135deg,#d8b56d 0%,#ffe2a2 50%,#8ec8ee 130%) !important; transition: transform .22s ease !important;
+    border: 1px solid rgba(255,235,185,.85) !important;
+  }
+  .hero .cta-buttons a:hover { transform:translateY(-2px) !important; box-shadow:0 12px 32px rgba(216,181,109,.32), 0 0 30px rgba(132, 199, 245, .36) !important; }
+
+  /* HERO IMAGE & FLYING SIGNS */
+  .hero-image { padding:60px 8% 60px 4%; display:flex; align-items:center; justify-content:center; }
+  .hero-img-wrap { position:relative; width:100%; max-width:650px; background:#10283a; border-radius:20px; padding:12px; box-shadow:0 24px 74px rgba(0,0,0,.42); overflow:hidden; }
+  .hero-img-wrap img { width:100%; border-radius:14px; display:block; object-fit:contain; }
+
+  .float-card {
+    position:absolute; background:rgba(6,19,29,.92); border:1px solid rgba(142,200,238,.32);
+    backdrop-filter:blur(12px); border-radius:14px; padding:14px 18px;
+    box-shadow:0 8px 32px rgba(0,0,0,.5); display:flex; align-items:center; gap:12px;
+    animation: floatUpDown 4s ease-in-out infinite; z-index:10;
+  }
+  .float-card.fc1 { top:8%; left:-28px; }
+  .float-card.fc2 { bottom:12%; right:-28px; animation-delay: 2s; }
+  .fc-icon { font-size:24px; color:rgba(255,255,255,.32); font-weight:800; }
+  .fc-val { font-family:'Baloo 2',cursive; font-size:20px; font-weight:800; color:#ffe2a2; white-space:nowrap; }
+  .fc-label { font-size:11px; color:rgba(255,255,255,.58); white-space:nowrap; }
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* STRIP */
+  .proof-strip { background:linear-gradient(90deg,#07131d,#2f6f9f,#10283a); padding:18px 5%; display:flex; align-items:center; justify-content:center; gap:34px; flex-wrap:wrap; }
+  .proof-item { color:white; font-size:14px; font-weight:900; }
+
+  /* SECTIONS CORE */
+  section { padding:90px 5%; background:#0b1c2b; }
+  section:nth-of-type(even), .levels { background:#10283a; }
+  .section-tag { font-size:11px; font-weight:900; letter-spacing:3px; color:#8ec8ee; text-transform:uppercase; margin-bottom:12px; }
+  .section-h2 { font-family:'Baloo 2',cursive; font-size:clamp(30px,4vw,50px); font-weight:900; line-height:1.1; margin-bottom:14px; color:#f5f9fc; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; margin-top:56px; }
+  .two-col.rev { direction:rtl; }
+  .two-col.rev > * { direction:ltr; }
+  .section-img { background:#10283a; padding:12px; border-radius:20px; box-shadow:0 24px 74px rgba(0,0,0,.42); }
+  .section-img img { width:100%; border-radius:14px; object-fit:contain; }
+
+  /* LEVELS */
+  .level-row { display:flex; align-items:center; gap:16px; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.09); border-radius:12px; padding:16px 20px; margin-bottom:12px; }
+  .level-badge { min-width:98px; background:#2f6f9f; color:white; font-family:'Baloo 2',cursive; font-size:15px; font-weight:900; border-radius:8px; text-align:center; }
+  .level-fill { height:100%; background:linear-gradient(90deg,#2f6f9f,#d8b56d); border-radius:3px; }
+  .level-bar { flex:1; height:6px; background:rgba(255,255,255,.1); border-radius:3px; overflow:hidden; }
+
+  /* BENTO GRIDS (MUSCLES & SPECS) */
+  .muscle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:52px; }
+  .muscle-card { background:#10283a; border-radius:18px; padding:26px 20px; text-align:center; border:1px solid rgba(142,200,238,.12); position:relative; }
+  .muscle-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#2f6f9f,#d8b56d); }
+
+  /* REVIEWS GRID */
+  .reviews-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:42px; }
+  .review-card { background:#10283a; border-radius:20px; padding:25px; border:1px solid rgba(142,200,238,.12); padding-top:34px !important; position:relative; }
+  .review-card::before { content:''; position:absolute; top:18px; left:24px; right:24px; height:2px; background:linear-gradient(90deg,#2f6f9f,#d8b56d); opacity:.55; }
+  .rating { color:#d8b56d; font-size:18px; margin-bottom:9px; }
+
+  /* FOOTER & PINTEREST CENTERING (SEQUENTIAL ALIGNMENT FIX) */
+  footer { background:#061019; color:rgba(255,255,255,.38); padding:28px 5%; text-align:center; font-size:12px; }
+  .pinterest-follow {
+    max-width:760px; margin:0 auto 22px !important; /* CENTERED */
+    padding:24px; border-radius:18px;
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;
+  }
+  .pinterest-btn { padding:12px 22px; border-radius:999px; background:#ff6b6b; color:white; font-size:13px; font-weight:900; }
+
+  @media(max-width:900px){
+    .hero, .two-col, .muscle-grid, .reviews-grid { grid-template-columns:1fr !important; }
+    .hero-text { text-align:center; }
+    .hero .cta-buttons { grid-template-columns:1fr !important; max-width:320px !important; margin:24px auto !important; }
+    .float-card { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <a class="nav-logo" href="https://www.merchant.dedyn.io">The<span>Merchant</span></a>
+    <a class="blog-mini-btn" href="https://www.merchant.dedyn.io/blog.html">Merchant Blog</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Smart Infrared Sanitization</div>
+    <h1 class="hero-h1">Automated hygiene <span class="accent">for your daily brush.</span></h1>
+    <p class="hero-sub">The Bitvae 2.0 uses intelligent infrared sensing and an automated door to protect your toothbrushes from moisture and bathroom contaminants.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="stat-val">1200mAh</span><span class="stat-label">Battery Capacity</span></div>
+      <div class="hero-stat"><span class="stat-val">Type-C</span><span class="stat-label">Fast Charging</span></div>
+      <div class="hero-stat"><span class="stat-val">5 Slots</span><span class="stat-label">Family Size</span></div>
+    </div>
+    
+    <div class="cta-buttons">
+      <a class="btn btn-amazon amazon-track" href="https://amzn.to/49jovle" rel="nofollow sponsored noopener" target="_blank">Shop on Amazon</a>
+      <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html">Read the Blog</a>
+      <a class="btn btn-site" href="https://www.merchant.dedyn.io">Visit Site</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-wrap">
+      <img src="bitvae-toothbrush-holder-landing-hero.webp" alt="Bitvae Upgraded Toothbrush Holder 2.0 Main View" loading="lazy">
+      <div class="float-card fc1"><span class="fc-icon">✦</span><div><div class="fc-val">Infrared Sensing</div><div class="fc-label">Automated Door</div></div></div>
+      <div class="float-card fc2"><span class="fc-icon">✔</span><div><div class="fc-val">UV Clean</div><div class="fc-label">3-Hour Smart Cycle</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div>Smart Sensing</div><span style="color:rgba(255,255,255,.3)">/</span>
+  <div>Built-in Fan</div><span style="color:rgba(255,255,255,.3)">/</span>
+  <div>No-Drill Mount</div>
+</div>
+
+<section>
+  <div class="section-tag">The Problem</div>
+  <h2 class="section-h2">Countertops are for clutter, not your health.</h2>
+  <p class="section-sub">Leaving toothbrushes in open cups exposes them to humidity and microscopic particles. Bitvae 2.0 moves the routine to the wall.</p>
+  <div class="two-col">
+    <div class="section-img"><img src="bitvae-toothbrush-holder-landing-problem.webp" alt="Sanitary Storage View" loading="lazy"></div>
+    <div class="features-list">
+      <div class="feature-item"><div class="feature-icon">1</div><div><h3 class="feature-title">Clear the Sink</h3><p class="feature-desc">Utilizes high-strength adhesive to clear up counter space, securely mounting to tile or mirrors without drilling.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">2</div><div><h3 class="feature-title">Intelligent Door</h3><p class="feature-desc">The automated cover opens only when sensing a user, keeping brush heads shielded.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">3</div><div><h3 class="feature-title">Universal Capacity</h3><p class="feature-desc">Five dedicated slots fit almost all electric and manual toothbrush brands.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-tag">Why it works</div>
+  <h2 class="section-h2">Active drying and UV protection.</h2>
+  <p class="section-sub">Unlike passive holders, the Bitvae 2.0 actively manages the environment of your brush heads with integrated technology.</p>
+  <div class="two-col rev">
+    <div class="section-img"><img src="bitvae-toothbrush-holder-landing-internal.webp" alt="Internal Technology View" loading="lazy"></div>
+    <div class="features-list">
+      <div class="feature-item"><div class="feature-icon">+</div><div><h3 class="feature-title">Integrated Fan</h3><p class="feature-desc">The built-in fan helps dry bristles after use, preventing stagnant moisture.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">~</div><div><h3 class="feature-title">Automatic Cycles</h3><p class="feature-desc">The system turns on automatically every few hours to ensure brushes stay sanitized.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="levels">
+  <div class="section-tag">Feature Proof</div>
+  <h2 class="section-h2">Hardware built for daily hygiene.</h2>
+  <div class="levels-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:52px;">
+    <div class="section-img"><img src="bitvae-toothbrush-holder-landing-features.webp" alt="Hardware Component Breakdown" loading="lazy"></div>
+    <div class="levels-list">
+      <div class="level-row"><div class="level-badge">Power</div><div><div class="level-label">1200mAh Lithium Battery</div><div class="level-desc">Reliable long-term operation on one charge.</div></div><div class="level-bar"><div class="level-fill" style="width:96%"></div></div></div>
+      <div class="level-row"><div class="level-badge">Sensor</div><div><div class="level-label">Infrared Motion Control</div><div class="level-desc">Smart detection for hands-free automation.</div></div><div class="level-bar"><div class="level-fill" style="width:94%"></div></div></div>
+      <div class="level-row"><div class="level-badge">Slots</div><div><div class="level-label">5-Brush Full Capacity</div><div class="level-desc">Enough space for the entire household.</div></div><div class="level-bar"><div class="level-fill" style="width:90%"></div></div></div>
+      <div class="level-row"><div class="level-badge">Install</div><div><div class="level-label">Strong 3M-Style Adhesive</div><div class="level-desc">Sticks firm to tile and glass without budging.</div></div><div class="level-bar"><div class="level-fill" style="width:92%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-tag">Home Use</div>
+  <h2 class="section-h2">Set it and forget it.</h2>
+  <p class="section-sub">Once mounted and charged, the Bitvae 2.0 works in the background to maintain your family's oral care equipment.</p>
+  <div class="two-col">
+    <div class="section-img"><img src="bitvae-toothbrush-holder-landing-smart-cycle.webp" alt="Sanitary Smart Cycle View" loading="lazy"></div>
+    <div class="features-list">
+      <div class="feature-item"><div class="feature-icon">1</div><div><h3 class="feature-title">Type-C Recharge</h3><p class="feature-desc">Simply plug in any Type-C cable. The rechargeable design saves you from proprietary battery costs.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">2</div><div><h3 class="feature-title">Automated Shield</h3><p class="feature-desc">The cover remains closed during sanitization, protecting heads from bathroom particles.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">3</div><div><h3 class="feature-title">Family Compatibility</h3><p class="feature-desc">Five dedicated slots organize and protect multiple electric or manual brushes.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="muscles">
+  <div class="section-tag">Buyer Reasons</div>
+  <h2 class="section-h2">Why shoppers save this find.</h2>
+  <div class="muscle-grid">
+    <div class="muscle-card"><h3>Elite Organization</h3><p>Clearing the sink of multiple cups and brushes is the #1 benefit.</p></div>
+    <div class="muscle-card"><h3>Kid-Friendly Tech</h3><p>The automated door makes children more excited about oral hygiene.</p></div>
+    <div class="muscle-card"><h3>Firm Hold</h3><p>The high-viscosity adhesive backing stays firm for months, even on tiles.</p></div>
+    <div class="muscle-card"><h3>True Sanitization</h3><p>Active UV and fan cycles solve the moisture problem cheap holders ignore.</p></div>
+    <div class="muscle-card"><h3>Fast Charging</h3><p>Type-C fast charging ensures faster power cycles with universal cables.</p></div>
+    <div class="muscle-card"><h3>giftable Design</h3><p>Highly rated as a thoughtful housewarming gift for families.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-tag">Know before you buy</div>
+  <h2 class="section-h2">Check the tech specs.</h2>
+  <div class="specs-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:42px; align-items:center; margin-top:52px;">
+    <div class="section-img"><img src="bitvae-toothbrush-holder-landing-specs.webp" alt="Hardware Component Breakdown" loading="lazy"></div>
+    <div class="specs-list" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div class="spec-card"><div class="spec-val">1200mAh</div><strong>Lithium Power</strong><p>Long battery life between charges.</p></div>
+      <div class="spec-card"><div class="spec-val">Infrared</div><strong>Sensor</strong><p>Hands-free automated door activation.</p></div>
+      <div class="spec-card"><div class="spec-val">Built-in Fan</div><strong>bristle Drying</strong><p>Active ventilation prevents stagnant moisture.</p></div>
+      <div class="spec-card"><div class="spec-val">5 Slots</div><strong>Family Capacity</strong><p>Accommodates up to 5 brushes comfortably.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" style="text-align:center;">
+  <h2 class="section-h2">Upgrade your bathroom's smart hygiene today.</h2>
+  <p class="section-sub" style="margin:0 auto 30px;">Check battery specs, color options, and latest buyer notes on the Amazon listing.</p>
+  <div class="cta-final-img" style="max-width:320px; margin:0 auto 32px; border-radius:20px; box-shadow:0 24px 80px rgba(0,0,0,.7);">
+    <img src="bitvae-toothbrush-holder-landing-cta.webp" alt="Bitvae 2.0" style="width:100%; border-radius:20px;">
+  </div>
+    <div class="cta-buttons" style="margin:0 auto !important;">
+      <a class="btn btn-amazon amazon-track" href="https://amzn.to/49jovle" rel="nofollow sponsored noopener" target="_blank">Buy on Amazon</a>
+      <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html">Read the Blog</a>
+      <a class="btn btn-site" href="https://www.merchant.dedyn.io">Visit Site</a>
+    </div>
+</section>
+
+<section class="reviews">
+  <div class="section-tag">Authentic Feedback</div>
+  <h2 class="section-h2" style="color:white;">Real experiences.</h2>
+  <div class="reviews-grid">
+        <div class="review-card">
+          <div class="rating">★★★★★ 5.0</div>
+          <h3>Great product. Well designed and built.</h3>
+          <p>"The automated door is great and something I didn’t know it had. I love the idea that it turns on every 3 hours to sanitize the brushes."</p>
+          <div style="margin-top:12px;"><strong>Carlos</strong><span style="color:rgba(255,255,255,.5)"> - Verified Buyer</span></div>
+        </div>
+        <div class="review-card">
+          <div class="rating">★★★★★ 5.0</div>
+          <h3>Great Product</h3>
+          <p>"Arrived charged and ready for installation. Cleared so much space on my sink."</p>
+          <div style="margin-top:12px;"><strong>4REW1974</strong><span style="color:rgba(255,255,255,.5)"> - Verified Buyer</span></div>
+        </div>
+        <div class="review-card">
+          <div class="rating">★★★★★ 5.0</div>
+          <h3>Convenient</h3>
+          <p>"Safe way to store toothbrushes. It keeps them clean and sanitized. sticks firm to tile."</p>
+          <div style="margin-top:12px;"><strong>Amazon Customer</strong><span style="color:rgba(255,255,255,.5)"> - Verified Buyer</span></div>
+        </div>
+        <div class="review-card">
+          <div class="rating">★★★★★ 5.0</div>
+          <h3>Game changer</h3>
+          <p>"Protects our toothbrushes from any particles in the bathroom. built-in fan is a great touch."</p>
+          <div style="margin-top:12px;"><strong>Customer12</strong><span style="color:rgba(255,255,255,.5)"> - Verified Buyer</span></div>
+        </div>
+  </div>
+</section>
+
+<footer>
+  <div class="pinterest-follow">
+    <strong>Follow Merchant on Pinterest</strong><br>
+    <span>Save smart home and hygiene finds for later.</span><br>
+    <a href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" class="pinterest-btn">Follow us on Pinterest</a>
+  </div>
+  As an affiliate, Merchant may earn from qualifying purchases at no extra cost to you.
+</footer>
+
+<script>
+  document.querySelectorAll('.amazon-track').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof pintrk === 'function') {
+        pintrk('track', 'lead', { lead_type: 'amazon_outbound_click' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
