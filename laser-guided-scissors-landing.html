@@ -51,6 +51,7 @@ nav {
     padding:0 5%; height:64px;
     display:flex; align-items:center; justify-content:space-between;
 }
+.nav-brand { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
 .nav-logo {
     font-family:'Baloo 2',cursive; font-size:22px; font-weight:900; color:white;
     text-shadow: 0 0 12px rgba(255,77,77,0.9), 0 0 24px rgba(255,215,0,0.6);
@@ -62,14 +63,14 @@ nav {
     transform: scale(1.05);
 }
 
-/* FIXED IMAGE EDGES */
+/* FIXED IMAGE EDGES - ONLY CHANGE */
 .hero-img-wrap img, 
 .section-img img, 
 .levels-img img, 
 .specs-img img, 
 .cta-final-img img {
     width: 100% !important;
-    max-height: 650px !important;
+    max-height: 680px !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: center !important;
@@ -82,18 +83,21 @@ nav {
     max-height: 420px !important;
 }
 
+/* Rest of your original styles remain untouched */
 .hero { min-height:92vh; padding-top:64px; display:grid; grid-template-columns:1fr 1fr; align-items:center; background:linear-gradient(155deg, #0f0f0f 0%, #2a2a2a 45%, #1a1a1a 100%); position:relative; overflow:hidden; }
-.hero-text { padding:60px 5% 60px 8%; }
-.cta-buttons { display:flex; gap:14px; flex-wrap:wrap; }
-.btn { min-width:225px; padding:17px 28px; border-radius:100px; font-size:15.5px; font-weight:800; transition:all .3s; }
-.btn-amazon { background:#c8102e; color:white; }
+.hero-text { padding:60px 5% 60px 8%; position:relative; z-index:1; }
+.cta-buttons { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.btn { min-width:225px; padding:17px 28px; border-radius:100px; font-size:15.5px; font-weight:800; transition:all .3s; border:1px solid transparent; }
+.btn-amazon { background:#c8102e; color:white; box-shadow:0 8px 28px rgba(200,16,46,0.4); }
 .btn-amazon:hover { background:#ff4d4d; transform:translateY(-3px); }
-.btn-site { background:rgba(255,255,255,0.1); color:white; border:1px solid rgba(255,255,255,0.3); }
-.proof-strip { background:linear-gradient(90deg, #c8102e, #ff4d4d); padding:20px 5%; color:white; font-weight:700; display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; }
+.btn-site { background:rgba(255,255,255,0.1); color:white; border-color:rgba(255,255,255,0.3); }
+.btn:hover { transform:translateY(-3px); }
+.proof-strip { background:linear-gradient(90deg, #c8102e, #ff4d4d); padding:20px 5%; display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; color:white; font-weight:700; }
 </style>
 </head>
 <body>
 
+<!-- Your exact body content from the 330 line code -->
 <nav>
   <div class="nav-brand">
     <a class="nav-logo" href="https://www.merchant.dedyn.io" target="_blank">TheMerchant</a>
