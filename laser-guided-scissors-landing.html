@@ -41,27 +41,33 @@ nav {
     padding:0 5%; height:64px;
     display:flex; align-items:center; justify-content:space-between;
 }
-.nav-brand { display:flex; align-items:center; gap:20px; }
+.nav-brand { display:flex; align-items:center; gap:20px; width:100%; }
 .nav-logo {
     font-family:'Baloo 2',cursive; font-size:22px; font-weight:900; color:white;
     text-shadow:0 0 12px rgba(255,77,77,.9), 0 0 24px rgba(255,215,0,.6);
     transition: all 0.4s ease;
 }
-.nav-logo:hover {
-    text-shadow:0 0 20px #ff4d4d, 0 0 40px #ff4d4d, 0 0 60px #ffd700;
-    color:#ffd700;
-    transform:scale(1.05);
-}
+.nav-logo:hover { text-shadow:0 0 20px #ff4d4d, 0 0 40px #ff4d4d, 0 0 60px #ffd700; color:#ffd700; transform:scale(1.05); }
+
 .blog-btn {
+    margin-left:auto; 
     padding:8px 22px; border-radius:999px; background:#c8102e; color:white;
     font-size:13px; font-weight:900; letter-spacing:1px; text-transform:uppercase;
     box-shadow:0 0 15px rgba(200,16,46,.6);
     transition:all .3s ease;
+    animation: blogJump 2s infinite ease-in-out;
 }
 .blog-btn:hover {
     transform:translateY(-3px) scale(1.08);
-    box-shadow:0 0 25px rgba(200,16,46,.9);
+    box-shadow:0 0 25px rgba(200,16,46,.9), 0 0 35px #ff4d4d;
+    animation: blogJump 0.6s ease;
 }
+
+@keyframes blogJump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
 .hero { min-height:92vh; padding-top:64px; display:grid; grid-template-columns:1fr 1fr; align-items:center; background:linear-gradient(155deg, #0f0f0f 0%, #2a2a2a 45%, #1a1a1a 100%); position:relative; overflow:hidden; }
 .hero-text { padding:60px 5% 60px 8%; position:relative; z-index:1; }
 .hero-eyebrow { display:inline-flex; align-items:center; background:rgba(255,77,77,.14); border:1px solid rgba(255,77,77,.35); color:#ffd700; font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:7px 18px; border-radius:100px; margin-bottom:28px; }
@@ -110,8 +116,23 @@ section { padding:90px 5%; }
 .pinterest-btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 22px; border-radius:999px; background:#c8102e; color:white; font-size:13px; font-weight:900; transition:.25s; }
 footer { background:#0f0f0f; color:rgba(255,255,255,.38); padding:28px 5%; text-align:center; font-size:12px; line-height:2; }
 
-/* ONLY THE BUTTON FIXES */
-.cta-final .cta-buttons { margin-left:auto !important; margin-right:auto !important; justify-content:center !important; }
+/* التعديلات الـ 4 اللي طلبتها بس */
+.problem-section { background:#0f0f0f !important; }
+.problem-section * { color:#ff4d4d !important; }
+.how-it-works-section { background:var(--light) !important; }
+.specs-img img { max-height:480px !important; margin:0 auto !important; background:transparent !important; box-shadow:none !important; }
+.spec-card * { color:#c8102e !important; }
+.premium-features .level-label, .premium-features .level-desc { color:#c8102e !important; }
+.cta-final .section-h2 { color:#c8102e !important; }
+.cta-final .section-sub, .cta-final .cta-buttons { 
+    margin-left:auto !important; 
+    margin-right:auto !important; 
+    text-align:center !important;
+}
+.cta-final .cta-buttons {
+    justify-content: center !important;
+    margin-top: 35px !important;
+}
 </style>
 <!-- Pinterest Tag -->
 <script>
@@ -157,7 +178,7 @@ pintrk('load', '2614017476340'); pintrk('page');
   <div class="proof-item"><span class="pn">30Cr13</span> Stainless Blade</div>
 </div>
 
-<section>
+<section class="problem-section">
   <div class="section-tag">The Problem</div>
   <h2 class="section-h2">Crooked cuts ruin your projects.</h2>
   <p class="section-sub">Freehand cutting leads to uneven edges, wasted fabric, and frustrating restarts. The laser-guided solution changes everything.</p>
@@ -171,7 +192,7 @@ pintrk('load', '2614017476340'); pintrk('page');
   </div>
 </section>
 
-<section>
+<section class="how-it-works-section">
   <div class="section-tag">How It Works</div>
   <h2 class="section-h2">Laser precision at your fingertips.</h2>
   <p class="section-sub">Mark your line → Align red laser → Cut perfectly straight. Simple, fast, and accurate.</p>
@@ -185,7 +206,7 @@ pintrk('load', '2614017476340'); pintrk('page');
   </div>
 </section>
 
-<section class="levels">
+<section class="levels premium-features">
   <div class="section-tag">Premium Features</div>
   <h2 class="section-h2">Built for serious crafters.</h2>
   <p class="section-sub">Real hardware designed for precision cutting.</p>
