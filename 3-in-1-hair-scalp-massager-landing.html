@@ -1160,7 +1160,7 @@ pintrk('page');
     </div>
     
     <div class="cta-buttons">
-      <a class="btn btn-amazon amazon-track" href="https://amzn.to/48RW7GH" rel="nofollow sponsored noopener" target="_blank">Buy it on Amazon</a>
+      <a class="btn btn-amazon amazon-track" href="https://amzn.to/48RW7GH" rel="nofollow sponsored noopener noreferrer" target="_blank">Buy it on Amazon</a>
       <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
       <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
     </div>
@@ -1256,7 +1256,7 @@ pintrk('page');
   <div class="cta-final-img"><img src="images/scalp-massager-landing-closeup.jpg" alt="close up of 3 in 1 hair scalp massager with red light mode" loading="lazy"></div>
   
     <div class="cta-buttons">
-      <a class="btn btn-amazon amazon-track" href="https://amzn.to/48RW7GH" rel="nofollow sponsored noopener" target="_blank">Buy it on Amazon</a>
+      <a class="btn btn-amazon amazon-track" href="https://amzn.to/48RW7GH" rel="nofollow sponsored noopener noreferrer" target="_blank">Buy it on Amazon</a>
       <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
       <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
     </div>
@@ -1319,15 +1319,16 @@ pintrk('page');
 </footer>
 
 <script>
-  document.querySelectorAll('.amazon-track').forEach(function(link) {
-    link.addEventListener('click', function() {
-      if (typeof pintrk === 'function') {
-        pintrk('track', 'lead', {
-          lead_type: 'amazon_outbound_click'
-        });
-      }
-    });
+document.querySelectorAll('.amazon-track').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (typeof pintrk === 'function') {
+      pintrk('track', 'Lead', {
+        lead_type: 'amazon_outbound_click'
+      });
+    }
   });
+});
 </script>
+  
 </body>
 </html>
