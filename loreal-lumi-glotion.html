@@ -435,25 +435,40 @@ pintrk('page');
 .footer-pinterest-check {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 14px;
-  padding: 10px 18px;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 20px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.86);
-  font-size: 12px;
+  background: #e60023;
+  color: #ffffff !important;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.3px;
   text-decoration: none;
+  border: none;
+  box-shadow: 0 6px 18px rgba(230, 0, 35, 0.25);
   transition: all 0.22s ease;
 }
 
 .footer-pinterest-check:hover {
-  color: #ffffff;
-  background: var(--rose);
-  border-color: var(--rose);
+  background: #c4001d;
+  color: #ffffff !important;
   transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(230, 0, 35, 0.35);
+}
+
+.footer-pinterest-check .pin-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #e60023;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  flex-shrink: 0;
 }
   
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -721,11 +736,13 @@ pintrk('page');
   </p>
 
   <a class="footer-pinterest-check pinterest-track"
-     href="https://pl.pinterest.com/m3rchantm3rchant/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Pinterest Check
+   href="https://pl.pinterest.com/m3rchantm3rchant/"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="pin-icon">P</span>
+  <span>Follow us on Pinterest</span>
   </a>
+  
 </footer>
 <script>
 document.addEventListener('click', function(e) {
