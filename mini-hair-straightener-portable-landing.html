@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Hair Straightener Portable 2026 Cordless Curling Iron Small Flat Steam Hair Straightener Brush | Merchant</title>
+<title>Mini Hair Straightener Brush | Portable Cordless Touch-Up Styling Guide</title>
 <meta name="description" content="A product-focused landing page about a portable cordless mini hair straightener brush for quick frizz touch-ups, travel styling, charging guidance, and real buyer notes.">
 <link rel="canonical" href="https://www.merchant.dedyn.io/mini-hair-straightener-portable-landing.html">
-<meta property="og:title" content="Mini Hair Straightener Portable 2026 Cordless Curling Iron Small Flat Steam Hair Straightener Brush">
+<meta property="og:title" content="Mini Hair Straightener Brush | Portable Cordless Touch-Up Styling Guide">
 <meta property="og:description" content="A compact cordless styling brush for fast frizz touch-ups, travel bags, desks, and quick polish before you head out.">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://www.merchant.dedyn.io/mini-hair-straightener-portable-landing.html">
 <meta property="og:image" content="images/mini-hair-straightener-landing-hero-product.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -83,6 +83,26 @@
       0 0 38px rgba(255,153,0,.58),
       0 0 54px rgba(245,154,177,.32);
   }
+  .nav-amazon {
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    padding:10px 18px; border-radius:999px;
+    background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%);
+    color:#101820; font-size:13px; font-weight:900;
+    border:1px solid rgba(255,209,140,.86);
+    box-shadow:
+      0 0 18px rgba(255,153,0,.28),
+      0 10px 28px rgba(255,153,0,.20);
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    white-space:nowrap;
+  }
+  .nav-amazon i { font-size:18px; color:#101820; line-height:1; }
+  .nav-amazon:hover {
+    transform:translateY(-2px);
+    filter:brightness(1.07);
+    box-shadow:
+      0 0 30px rgba(255,153,0,.52),
+      0 14px 38px rgba(255,153,0,.28);
+  }
   @keyframes merchantGlow {
     0%,100% { filter:brightness(1); }
     50% { filter:brightness(1.28); }
@@ -134,7 +154,16 @@
     min-width:165px; padding:14px 22px; border-radius:100px;
     font-size:14px; font-weight:800; transition:.25s; border:1px solid transparent;
   }
-  .btn-amazon { background:#e60023; color:#111; box-shadow:0 8px 32px rgba(255,153,0,.32); }
+  .btn-amazon {
+    background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%) !important;
+    color:#101820 !important;
+    border:1px solid rgba(255,209,140,.86) !important;
+    box-shadow:
+      0 0 20px rgba(255,153,0,.30),
+      0 14px 40px rgba(255,153,0,.26) !important;
+    gap:11px !important;
+  }
+  .btn-amazon i{font-size:22px;color:#101820;line-height:1;}
   .btn-site { background:rgba(255,255,255,.09); color:white; border-color:rgba(255,255,255,.22); }
   .btn:hover { transform:translateY(-2px); }
   .hero-image { padding:60px 8% 60px 4%; position:relative; display:flex; align-items:center; justify-content:center; }
@@ -146,8 +175,8 @@
     box-shadow:0 8px 32px rgba(0,0,0,.5); display:flex; align-items:center; gap:12px;
     animation:float 3.5s ease-in-out infinite; white-space:nowrap;
   }
-  .float-card.fc1 { top:8%; left:-28px; animation-delay:0s; }
-  .float-card.fc2 { bottom:12%; right:-28px; animation-delay:1.8s; }
+  .float-card.fc1 { top:-92px; left:18px; animation-delay:0s; }
+  .float-card.fc2 { bottom:-92px; right:18px; animation-delay:1.8s; }
   .float-card .fc-icon { font-size:24px; color:rgba(255,255,255,.32); font-weight:800; }
   .float-card .fc-val { font-family:'Playfair Display',serif; font-size:20px; font-weight:800; color:var(--gold); line-height:1; }
   .float-card .fc-label { font-size:11px; color:rgba(255,255,255,.58); margin-top:2px; }
@@ -339,10 +368,10 @@
     margin-left:auto !important;
     margin-right:auto !important;
   }
-  .hero .cta-buttons a,
-  .cta-final .cta-buttons a,
-  .hero .cta-buttons .btn,
-  .cta-final .cta-buttons .btn {
+  .hero .cta-buttons a:not(.btn-amazon),
+  .cta-final .cta-buttons a:not(.btn-amazon),
+  .hero .cta-buttons .btn:not(.btn-amazon),
+  .cta-final .cta-buttons .btn:not(.btn-amazon) {
     box-sizing:border-box !important;
     width:180px !important;
     min-width:180px !important;
@@ -368,10 +397,10 @@
     backdrop-filter:none !important;
     transition:transform .22s ease, box-shadow .22s ease, filter .22s ease !important;
   }
-  .hero .cta-buttons a:hover,
-  .cta-final .cta-buttons a:hover,
-  .hero .cta-buttons .btn:hover,
-  .cta-final .cta-buttons .btn:hover {
+  .hero .cta-buttons a:not(.btn-amazon):hover,
+  .cta-final .cta-buttons a:not(.btn-amazon):hover,
+  .hero .cta-buttons .btn:not(.btn-amazon):hover,
+  .cta-final .cta-buttons .btn:not(.btn-amazon):hover {
     transform:translateY(-2px) !important;
     filter:brightness(1.08) !important;
     box-shadow:
@@ -452,14 +481,74 @@
     .stat-label { font-size:9px !important; white-space:normal !important; }
   }
 
+
+  .hero .cta-buttons .btn-amazon,
+  .cta-final .cta-buttons .btn-amazon {
+    width:210px !important;
+    min-width:210px !important;
+    max-width:210px !important;
+    height:56px !important;
+    padding:0 18px !important;
+    border-radius:999px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+    text-decoration:none !important;
+    font-size:14px !important;
+    font-weight:900 !important;
+    color:#101820 !important;
+    background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%) !important;
+    border:1px solid rgba(255,209,140,.86) !important;
+    box-shadow:
+      0 0 20px rgba(255,153,0,.30),
+      0 14px 40px rgba(255,153,0,.26) !important;
+    gap:10px !important;
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease !important;
+  }
+  .hero .cta-buttons .btn-amazon:hover,
+  .cta-final .cta-buttons .btn-amazon:hover {
+    transform:translateY(-3px) !important;
+    filter:brightness(1.07) !important;
+    box-shadow:
+      0 0 36px rgba(255,153,0,.56),
+      0 0 26px rgba(255,209,140,.26),
+      0 18px 56px rgba(255,153,0,.34) !important;
+  }
+
+
+  /* Flying-card rule: cards sit outside the image frame, never over image content */
+  @media (min-width: 901px) {
+    .hero-visual .float-card.fc1 {
+      top:-92px !important;
+      bottom:auto !important;
+    }
+    .hero-visual .float-card.fc2 {
+      bottom:-92px !important;
+      top:auto !important;
+    }
+  }
+
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Mini Hair Straightener Portable 2026 Cordless Curling Iron Small Flat Steam Hair Straightener Brush",
-  "description": "A product-focused landing page about a portable cordless mini hair straightener brush for quick frizz touch-ups, travel styling, charging guidance, and real buyer notes.",
-  "url": "https://www.merchant.dedyn.io/mini-hair-straightener-portable-landing.html"
+  "@type": "Article",
+  "headline": "Mini Hair Straightener Brush: Portable Cordless Touch-Up Styling Guide",
+  "description": "A buyer-focused guide to a portable cordless mini hair straightener brush for quick frizz touch-ups, travel styling, charging guidance, and practical buying notes.",
+  "image": "https://www.merchant.dedyn.io/images/mini-hair-straightener-landing-hero-product.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "Merchant"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Merchant"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.merchant.dedyn.io/mini-hair-straightener-portable-landing.html"
+  }
 }
 </script>
 <!-- Pinterest Tag -->
@@ -477,14 +566,15 @@ pintrk('page');
     src="https://ct.pinterest.com/v3/?event=init&amp;tid=2614017476340&amp;noscript=1" />
 </noscript>
 <!-- end Pinterest Tag -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 <nav>
-  <div class="nav-brand">
-    <a class="nav-logo" href="https://www.merchant.dedyn.io">The<span>Merchant</span></a>
-    <a class="blog-mini-btn" href="https://www.merchant.dedyn.io/blog.html">Merchant Blog</a>
-  </div>
-  <div class="nav-note">Portable beauty find</div>
+  <a class="nav-logo" href="https://www.merchant.dedyn.io"><span>Merchant</span></a>
+  <a class="nav-amazon amazon-track" href="https://amzn.to/4uEGVVP" rel="nofollow sponsored noopener noreferrer" target="_blank">
+    <i class="fab fa-amazon" aria-hidden="true"></i>
+    Amazon
+  </a>
 </nav>
 
 <section class="hero">
@@ -498,9 +588,8 @@ pintrk('page');
       <div class="hero-stat"><span class="stat-val">Mini</span><span class="stat-label">purse, desk, gym bag friendly</span></div>
     </div>
     <div class="cta-buttons">
-      <a class="btn btn-amazon" href="https://amzn.to/4uEGVVP" rel="nofollow sponsored noopener" target="_blank">Buy it on Amazon</a>
-      <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
-      <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
+      <a class="btn btn-amazon amazon-track" href="https://amzn.to/4uEGVVP" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
+      <a class="btn btn-site" href="#before-buying">Check Before Buying</a>
     </div>
   </div>
   <div class="hero-image">
@@ -577,7 +666,7 @@ pintrk('page');
   </div>
 </section>
 
-<section class="specs">
+<section class="specs" id="before-buying">
   <div class="section-tag">Know before you buy</div>
   <h2 class="section-h2">Charge it first.<br>Use it for touch-ups.</h2>
   <p class="section-sub">This is a heated cordless beauty tool, not a full-size salon iron. Check the live Amazon listing for current runtime, charging time, heat settings, and safety instructions.</p>
@@ -597,72 +686,60 @@ pintrk('page');
   <p class="section-sub">Check current price, charging details, color options, and latest buyer notes before ordering.</p>
   <div class="cta-final-img"><img src="images/mini-hair-straightener-landing-2-in-1-style.webp" alt="Mini hair straightener brush for straightening and curling small hair sections"></div>
   <div class="cta-buttons">
-    <a class="btn btn-amazon" href="https://amzn.to/4uEGVVP" rel="nofollow sponsored noopener" target="_blank">Buy it on Amazon</a>
-    <a class="btn btn-blog" href="https://www.merchant.dedyn.io/blog.html" rel="noopener" target="_blank">Read the Blog</a>
-    <a class="btn btn-site" href="https://www.merchant.dedyn.io" rel="noopener" target="_blank">Visit our site</a>
+    <a class="btn btn-amazon amazon-track" href="https://amzn.to/4uEGVVP" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
+    <a class="btn btn-site" href="https://www.merchant.dedyn.io/beauty.html" rel="noopener">More Beauty Picks</a>
   </div>
 </section>
 
 <section class="reviews">
-  <div class="section-tag">Real buyer feedback</div>
-  <h2 class="section-h2">What buyers<br>are saying</h2>
+  <div class="section-tag">Buyer reasons</div>
+  <h2 class="section-h2">Why shoppers may like it</h2>
+  <p class="section-sub">No copied Amazon reviews, no ratings, and no Verified Purchase wording — just practical buying angles based on the product use case.</p>
   <div class="reviews-grid">
-    
-        <div class="review-card">
-          <div class="rating">★★★★☆ <span>4.9</span></div>
-          <h3 class="review-title">Best for Fast Touch Ups!</h3>
-          <p class="review-text">"I keep this in my desk at work for humid days. It is small enough to hide in a drawer and great for quick touch-ups."</p>
-          <div class="reviewer">
-            <div class="reviewer-av">A</div>
-            <div>
-              <div class="reviewer-name">Ajay</div>
-              <div class="reviewer-badge">Verified Purchase</div>
-              <div class="reviewer-source">Reviewed in the United States - Apr 3, 2026</div>
-            </div>
-          </div>
+    <div class="review-card">
+      <h3 class="review-title">Fast touch-up use</h3>
+      <p class="review-text">Useful for flyaways, bangs, face-framing layers, and small sections when a full-size styling tool feels like too much.</p>
+      <div class="reviewer">
+        <div class="reviewer-av">1</div>
+        <div>
+          <div class="reviewer-name">Small-section styling</div>
+          <div class="reviewer-badge">Best for quick polish</div>
         </div>
-
-        <div class="review-card">
-          <div class="rating">★★★★☆ <span>4.8</span></div>
-          <h3 class="review-title">Everyone should have this gadget</h3>
-          <p class="review-text">"It has a cover for storing or travel, is easy to use, and the small size is perfect to throw in your purse for touch-ups."</p>
-          <div class="reviewer">
-            <div class="reviewer-av">L</div>
-            <div>
-              <div class="reviewer-name">Leftylee</div>
-              <div class="reviewer-badge">Verified Purchase</div>
-              <div class="reviewer-source">Reviewed in the United States - Mar 29, 2026</div>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <h3 class="review-title">Portable beauty setup</h3>
+      <p class="review-text">The mini body makes it easier to keep in a desk drawer, purse, gym bag, or travel kit compared with a full-size iron.</p>
+      <div class="reviewer">
+        <div class="reviewer-av">2</div>
+        <div>
+          <div class="reviewer-name">Bag-friendly format</div>
+          <div class="reviewer-badge">Check charging details first</div>
         </div>
-
-        <div class="review-card">
-          <div class="rating">★★★★☆ <span>4.7</span></div>
-          <h3 class="review-title">A game changer</h3>
-          <p class="review-text">"I never thought I would find a handheld portable flatiron for my hair. Good product, great price."</p>
-          <div class="reviewer">
-            <div class="reviewer-av">S</div>
-            <div>
-              <div class="reviewer-name">Sansation</div>
-              <div class="reviewer-badge">Verified Purchase</div>
-              <div class="reviewer-source">Reviewed in the United States - Apr 24, 2026</div>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <h3 class="review-title">Cordless convenience</h3>
+      <p class="review-text">A rechargeable setup can be convenient for quick fixes after charging, but buyers should verify runtime and heat settings on the live listing.</p>
+      <div class="reviewer">
+        <div class="reviewer-av">3</div>
+        <div>
+          <div class="reviewer-name">Rechargeable use</div>
+          <div class="reviewer-badge">Verify current specs on Amazon</div>
         </div>
-
-        <div class="review-card">
-          <div class="rating">★★★★☆ <span>4.6</span></div>
-          <h3 class="review-title">Great for on the go</h3>
-          <p class="review-text">"Great for smoothing frizz and making hair shine. Gives hair a soft and flowing texture."</p>
-          <div class="reviewer">
-            <div class="reviewer-av">M</div>
-            <div>
-              <div class="reviewer-name">Mar</div>
-              <div class="reviewer-badge">Verified Purchase</div>
-              <div class="reviewer-source">Reviewed in the United States - Apr 3, 2026</div>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <h3 class="review-title">Practical gift angle</h3>
+      <p class="review-text">A small beauty tool can work well as a practical gift for commuters, travelers, students, and anyone who fights frizz during the day.</p>
+      <div class="reviewer">
+        <div class="reviewer-av">4</div>
+        <div>
+          <div class="reviewer-name">Everyday beauty find</div>
+          <div class="reviewer-badge">Portable and easy to understand</div>
         </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -676,12 +753,12 @@ pintrk('page');
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var amazonButtons = document.querySelectorAll('a.amazon-btn, a.btn-amazon');
+  var amazonButtons = document.querySelectorAll('a.amazon-track, a.btn-amazon');
 
   amazonButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       if (typeof pintrk === 'function') {
-        pintrk('track', 'lead', {
+        pintrk('track', 'Lead', {
           lead_type: 'amazon_outbound_click'
         });
       }
