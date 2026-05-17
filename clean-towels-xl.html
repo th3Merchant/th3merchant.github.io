@@ -293,7 +293,7 @@
 
     .hero {
       position: relative;
-      padding: 136px 24px 84px;
+      padding: 136px 24px 128px;
       color: #ffffff;
       background:
         radial-gradient(circle at 82% 14%, rgba(97, 220, 229, 0.18), transparent 32%),
@@ -441,6 +441,7 @@
       position: relative;
       max-width: 650px;
       margin-left: auto;
+      margin-bottom: 94px;
       overflow: visible;
     }
 
@@ -490,13 +491,14 @@
     }
 
     .float-card.fc1 {
-      top: 20px;
-      left: -46px;
+      top: calc(100% + 18px);
+      left: 0;
     }
 
     .float-card.fc2 {
-      right: -46px;
-      bottom: 20px;
+      top: calc(100% + 18px);
+      right: 0;
+      bottom: auto;
       animation-delay: 1.8s;
     }
 
