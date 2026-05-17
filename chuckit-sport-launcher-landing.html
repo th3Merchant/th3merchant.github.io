@@ -92,6 +92,28 @@
     padding:10px 22px; border-radius:100px; text-decoration:none; transition:.2s;
   }
   .nav-btn:hover { background:var(--blue-light); transform:translateY(-1px); box-shadow:0 4px 16px rgba(21,101,192,.3); }
+  .nav-amazon {
+    background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%) !important;
+    color:#101820 !important;
+    border:1px solid rgba(255,209,140,.86);
+    box-shadow:
+      0 0 18px rgba(255,153,0,.26),
+      0 10px 26px rgba(255,153,0,.18) !important;
+    font-weight:900;
+  }
+  .nav-amazon i{
+    font-size:18px;
+    color:#101820;
+    line-height:1;
+  }
+  .nav-amazon:hover{
+    background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%) !important;
+    transform:translateY(-2px);
+    filter:brightness(1.06);
+    box-shadow:
+      0 0 28px rgba(255,153,0,.48),
+      0 14px 34px rgba(255,153,0,.26) !important;
+  }
 
   /* ── HERO ── */
   .hero {
@@ -413,7 +435,10 @@ pintrk('page');
 <!-- ── NAV ── -->
 <nav>
   <a href="https://www.merchant.dedyn.io/pet-supplies.html" class="nav-logo"><span>Merchant</span></a>
-  <a href="https://www.merchant.dedyn.io/pet-supplies.html" class="nav-btn">🐾 Explore Pet Supplies →</a>
+  <a href="https://www.amazon.com/Chuckit-Launcher-Thrower-Assorted-Colors/dp/B00280MUIA?crid=3O6NJSMPHT7MF&dchild=1&keywords=chuck%2Bit%2Bball%2Blauncher&qid=1600850374&s=pet-supplies&sprefix=Chuck%2Bit%2Cpets%2C216&sr=1-5&th=1&geniuslink=true&linkCode=ll2&tag=themerchant00-20&linkId=15910b2b303126a7cb24b02a94728bb1&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener noreferrer" class="nav-btn nav-amazon amazon-track">
+    <i class="fab fa-amazon" aria-hidden="true"></i>
+    Amazon
+  </a>
 </nav>
 
 <!-- ── HERO ── -->
@@ -435,7 +460,7 @@ pintrk('page');
     <!-- HERO: Pet Supplies Website button ONLY -->
     <div class="hero-btn-group fade-up">
       <a href="https://www.merchant.dedyn.io/pet-supplies.html" class="btn-primary">
-        🐾 Check Our Pet Collection <span class="arrow">→</span>
+        🐾 Browse Pet Collection <span class="arrow">→</span>
       </a>
     </div>
   </div>
