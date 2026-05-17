@@ -56,11 +56,25 @@
     }
     .brand{
       font-weight:900;
-      letter-spacing:-.4px;
+      letter-spacing:-.8px;
       color:var(--ink);
-      font-size:20px;
+      font-size:22px;
+      text-shadow:
+        0 0 8px rgba(255,255,255,.7),
+        0 0 18px rgba(243,107,33,.28);
+      transition:transform .22s ease,text-shadow .22s ease,filter .22s ease;
     }
-    .brand span{color:var(--orange)}
+    .brand span{
+      color:var(--orange);
+      text-shadow:
+        0 0 8px rgba(255,255,255,.75),
+        0 0 18px rgba(243,107,33,.42),
+        0 0 34px rgba(255,138,42,.26);
+    }
+    .brand:hover{
+      transform:translateY(-1px) scale(1.025);
+      filter:drop-shadow(0 0 12px rgba(243,107,33,.34));
+    }
     .nav-actions{display:flex;gap:10px;align-items:center}
     .nav-pill{
       border-radius:999px;
@@ -146,6 +160,28 @@
       background:linear-gradient(135deg,var(--orange),var(--orange-2));
       color:white;
       box-shadow:0 16px 34px rgba(243,107,33,.28);
+    }
+    .btn.amazon{
+      background:linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd18c 100%);
+      color:#101820;
+      border:1px solid rgba(255,209,140,.86);
+      box-shadow:
+        0 0 20px rgba(255,153,0,.30),
+        0 14px 34px rgba(255,153,0,.22);
+      gap:11px;
+    }
+    .btn.amazon i{
+      font-size:22px;
+      color:#101820;
+      line-height:1;
+    }
+    .btn.amazon:hover{
+      transform:translateY(-3px);
+      filter:brightness(1.07);
+      box-shadow:
+        0 0 34px rgba(255,153,0,.56),
+        0 0 26px rgba(255,209,140,.24),
+        0 16px 44px rgba(255,153,0,.30);
     }
     .btn.light{
       background:#fff;
@@ -555,11 +591,11 @@
   "image": "https://www.merchant.dedyn.io/images/heated-butter-knife-instant-heating.webp",
   "author": {
     "@type": "Organization",
-    "name": "The Merchant"
+    "name": "Merchant"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "The Merchant"
+    "name": "Merchant"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -585,12 +621,13 @@ pintrk('page');
 </noscript>
 <!-- end Pinterest Tag -->
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
   <header class="topbar">
     <div class="nav">
-      <a class="brand" href="https://www.merchant.dedyn.io/">The <span>Merchant</span></a>
+      <a class="brand" href="https://www.merchant.dedyn.io/"><span>Merchant</span></a>
       <div class="nav-actions">
         <a class="nav-pill light" href="https://www.merchant.dedyn.io/">Merchant Home</a>
         <a class="nav-pill" href="https://www.merchant.dedyn.io/blog.html">Visit our Blog</a>
@@ -820,7 +857,7 @@ pintrk('page');
       <div class="final-product">
         <img src="images/heated-butter-knife-morning-toast.webp" alt="Heated butter knife spreading butter on toast">
       </div>
-      <a class="btn orange amazon-track" href="https://www.amazon.com/dp/B0FSZ8Q4RK?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+      <a class="btn amazon amazon-track" href="https://www.amazon.com/dp/B0FSZ8Q4RK?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
       <div class="hero-tags" style="justify-content:center;margin-top:24px;">
         <span>Instant heating</span>
         <span>Type-C input</span>
