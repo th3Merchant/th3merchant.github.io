@@ -383,7 +383,10 @@ box-shadow:0 0 24px rgba(251,191,36,.85);
     }
 
     .amazon-btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
       text-align: center;
       background: #ff9900;
       color: #111827;
@@ -392,6 +395,11 @@ box-shadow:0 0 24px rgba(251,191,36,.85);
       border-radius: 12px;
       margin-top: auto;
       transition: 0.2s ease;
+    }
+
+    .amazon-btn i {
+      font-size: 18px;
+      line-height: 1;
     }
 
     .amazon-btn:hover {
@@ -444,6 +452,29 @@ box-shadow:0 0 24px rgba(251,191,36,.85);
       margin: 6px 0;
       font-size: 14px;
     }
+
+    .footer-pinterest-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #e60023;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+      transition: 0.2s ease;
+      box-shadow: 0 0 18px rgba(230, 0, 35, 0.25);
+    }
+
+    .footer-pinterest-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 26px rgba(230, 0, 35, 0.42);
+      color: #ffffff;
+    }
+
 
     .footer-links {
       display: flex;
@@ -551,6 +582,7 @@ transform:translateY(-1px);
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 <header>
@@ -620,7 +652,7 @@ transform:translateY(-1px);
 <li>Always follow the product instructions and age guidance</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07ZDKLBJ3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07ZDKLBJ3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Clear Outlet Covers 50 Pack" loading="lazy" src="images/clear-outlet-covers-50-pack-1.webp"/>
@@ -640,7 +672,7 @@ transform:translateY(-1px);
 <li>Best used as one part of a broader safety setup</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B077Y5LHHF?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B077Y5LHHF?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Doona Car Seat and Stroller" loading="lazy" src="images/doona-car-seat-stroller-1.webp"/>
@@ -660,7 +692,7 @@ transform:translateY(-1px);
 <li>Parents should confirm fit, age, and installation guidance</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07HML1BT5?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07HML1BT5?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Dreambaby Duck Baby Bath Thermometer" loading="lazy" src="images/dreambaby-duck-bath-thermometer-1.webp"/>
@@ -680,7 +712,7 @@ transform:translateY(-1px);
 <li>A simple tool for more informed bath prep</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00AIRTNVW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00AIRTNVW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Hiccapop OmniBoost Travel Booster Seat" loading="lazy" src="images/hiccapop-omniboost-booster-seat-1.webp"/>
@@ -700,7 +732,7 @@ transform:translateY(-1px);
 <li>Best used according to the seat and strap instructions</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B078K1W9B3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B078K1W9B3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="ME.FAN Silicone Baby Bibs" loading="lazy" src="images/mefan-silicone-baby-bibs-1.webp"/>
@@ -720,7 +752,7 @@ transform:translateY(-1px);
 <li>Useful everyday pick for feeding routines</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0925W9KZK?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0925W9KZK?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="NutriBullet Baby Food-Making System" loading="lazy" src="images/nutribullet-baby-food-maker-1.webp"/>
@@ -740,7 +772,7 @@ transform:translateY(-1px);
 <li>Cleaning and storage needs should be considered</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B086DFCS7Y?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B086DFCS7Y?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="OXO Tot Perfect Pull Wipes Dispenser" loading="lazy" src="images/oxo-tot-wipes-dispenser-1.webp"/>
@@ -760,7 +792,7 @@ transform:translateY(-1px);
 <li>Simple everyday upgrade for diaper routines</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0067GKGFU?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0067GKGFU?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="VTech Sit-to-Stand Learning Walker" loading="lazy" src="images/vtech-sit-to-stand-walker-1.webp"/>
@@ -780,7 +812,7 @@ transform:translateY(-1px);
 <li>Use should match the child's stage and supervision needs</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07CRSXMW8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07CRSXMW8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="WeeSprout Suction Plates" loading="lazy" src="images/weesprout-suction-plates-1.webp"/>
@@ -800,7 +832,7 @@ transform:translateY(-1px);
 <li>Good daily feeding pick for babies and toddlers</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08LXH8ZL9?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08LXH8ZL9?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="GROWNSY Electric Baby Nasal Aspirator" loading="lazy" src="images/grownsy-aspirator-1.webp"/>
@@ -818,7 +850,7 @@ transform:translateY(-1px);
 <li>Some buyers may want to check durability expectations</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=6596f6a851d1edf32a950f08090c5b40&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/GROWNSY-Aspirator-Electric-Automatic-Powerful/dp/B0GLGTYDHH?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=6596f6a851d1edf32a950f08090c5b40&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="GROWNSY Bottle Sterilizer and Dryer" loading="lazy" src="images/grownsy-bottle-sterilizer-dryer-1.webp"/>
@@ -838,7 +870,7 @@ transform:translateY(-1px);
 <li>Useful for parents managing daily bottle cleaning</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B09HH7HSGV?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B09HH7HSGV?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Konssy Muslin Baby Lounger Cover" loading="lazy" src="images/konssy-baby-lounger-cover-1.webp"/>
@@ -858,7 +890,7 @@ transform:translateY(-1px);
 <li>Cover fit should be checked before buying</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0CJ553V2H?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0CJ553V2H?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Lictin Baby Healthcare and Grooming Kit" loading="lazy" src="images/lictin-baby-grooming-kit-1.webp"/>
@@ -878,7 +910,7 @@ transform:translateY(-1px);
 <li>Best used gently and with age-appropriate attachments</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0C4KCPTP3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0C4KCPTP3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Lily Miles Baby Diaper Caddy Organizer" loading="lazy" src="images/lily-miles-diaper-caddy-1.webp"/>
@@ -898,7 +930,7 @@ transform:translateY(-1px);
 <li>Good baby shower style product</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0734LPFJR?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0734LPFJR?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Pamo Babe 4-in-1 Playard" loading="lazy" src="images/pamo-babe-playard-1.webp"/>
@@ -918,7 +950,7 @@ transform:translateY(-1px);
 <li>Parents should follow all setup and sleep-use guidance</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B09K3NCNPW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B09K3NCNPW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="PopYum Insulated Kids Cups" loading="lazy" src="images/popyum-kids-cups-1.webp"/>
@@ -938,7 +970,7 @@ transform:translateY(-1px);
 <li>Good fit for daycare, travel, and home use</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BZ3BZ94B?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BZ3BZ94B?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="ICOPUCA Shopping Cart Cover" loading="lazy" src="images/icopuca-shopping-cart-cover-1.webp"/>
@@ -958,7 +990,7 @@ transform:translateY(-1px);
 <li>Useful for parents who frequently shop or dine out</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07W4W3VRZ?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07W4W3VRZ?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="oogiebear Baby Nose Cleaner" loading="lazy" src="images/oogiebear-nose-cleaner-1.webp"/>
@@ -978,7 +1010,7 @@ transform:translateY(-1px);
 <li>Use gently and according to product instructions</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00GXTTPKI?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00GXTTPKI?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Momcozy Universal Stroller Organizer" loading="lazy" src="images/momcozy-stroller-organizer-1.webp"/>
@@ -998,7 +1030,7 @@ transform:translateY(-1px);
 <li>Attachment fit should be checked with your stroller</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07JMZYJVW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07JMZYJVW?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="OXO Tot Space Saving Drying Rack" loading="lazy" src="images/oxo-tot-drying-rack-1.webp"/>
@@ -1018,7 +1050,7 @@ transform:translateY(-1px);
 <li>Good fit for kitchens with limited space</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B079K783F9?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B079K783F9?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="GUNTAIL Baby Crib Sheets" loading="lazy" src="images/crib-mattress-1.webp"/>
@@ -1036,7 +1068,7 @@ transform:translateY(-1px);
 <li>Best understood as crib sheets, not a crib mattress</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=cfcd06d1919ce90488d81b82d176ccc2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/GUNTAIL-Standard-Mattress-Microfiber-52x28x8in/dp/B0CP169Z94?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=cfcd06d1919ce90488d81b82d176ccc2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Dr. Talbots Paci-Med Baby Medicine Dispenser" loading="lazy" src="images/dr-talbots-paci-med-1.webp"/>
@@ -1056,7 +1088,7 @@ transform:translateY(-1px);
 <li>Always follow dosage guidance from a healthcare professional</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BXTVF8Y8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BXTVF8Y8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Haakaa Baby Fruit Food Feeder Combo" loading="lazy" src="images/haakaa-fruit-feeder-combo-1.webp"/>
@@ -1076,7 +1108,7 @@ transform:translateY(-1px);
 <li>Use should match age and feeding readiness</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B095GZS1C1?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B095GZS1C1?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Onco Baby Car Mirror" loading="lazy" src="images/onco-baby-car-mirror-1.webp"/>
@@ -1096,7 +1128,7 @@ transform:translateY(-1px);
 <li>Install securely and follow manufacturer guidance</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B01FCMV5RM?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B01FCMV5RM?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Tushbaby Hip Seat Carrier" loading="lazy" src="images/tushbaby-hip-seat-carrier-1.webp"/>
@@ -1116,7 +1148,7 @@ transform:translateY(-1px);
 <li>Fit and carrying guidance should be checked before use</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07R4C4VFX?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07R4C4VFX?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Dr. Brown's Milestones Baby's First Straw Cup" loading="lazy" src="images/dr-browns-cup-1.webp"/>
@@ -1134,7 +1166,7 @@ transform:translateY(-1px);
 <li>Some buyers may want to check leak expectations</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=756db1302dabb59659b6436b63e68586&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/Dr-Browns-Milestones-Training-Weighted/dp/B0C54CYDS3?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=756db1302dabb59659b6436b63e68586&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="NCVI Baby Formula Dispenser" loading="lazy" src="images/ncvi-formula-dispenser-1.webp"/>
@@ -1154,7 +1186,7 @@ transform:translateY(-1px);
 <li>Cleaning and sealing should be checked before use</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BPM6TM6Y?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BPM6TM6Y?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="PBnJ Baby SippyPal Holder" loading="lazy" src="images/pbnj-sippypal-holder-1.webp"/>
@@ -1174,7 +1206,7 @@ transform:translateY(-1px);
 <li>Good small accessory for toddler routines</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08Z3PNTT3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08Z3PNTT3?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Little Tikes Snug 'n Secure Swing" loading="lazy" src="images/little-tikes-swing-1.webp"/>
@@ -1192,7 +1224,7 @@ transform:translateY(-1px);
 <li>Some buyers may want to check buckle and setup details</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e299574ce76ba7187ec9c9b3b3ab4d17&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/Little-Tikes-Snug-Secure-Swing/dp/B01DGIKD68?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=e299574ce76ba7187ec9c9b3b3ab4d17&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Silicone Baby Spoons 2-Pack" loading="lazy" src="images/silicone-baby-spoons-2pack-1.webp"/>
@@ -1212,7 +1244,7 @@ transform:translateY(-1px);
 <li>Best for age-appropriate feeding stages</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08FFQWPP7?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08FFQWPP7?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Baby Bath Brush and Cradle Cap Brush" loading="lazy" src="images/baby-bath-brush-cradle-cap-1.webp"/>
@@ -1232,7 +1264,7 @@ transform:translateY(-1px);
 <li>Use softly and avoid irritated areas</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08MX3C188?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B08MX3C188?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="SmartNoggin NogginStik Rattle" loading="lazy" src="images/smartnoggin-nogginstik-rattle-1.webp"/>
@@ -1252,7 +1284,7 @@ transform:translateY(-1px);
 <li>Play should be supervised and age-appropriate</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00BOQXWGS?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00BOQXWGS?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Baby Crib Mobile and Projector" loading="lazy" src="images/crib-mobile-projector-1.webp"/>
@@ -1272,7 +1304,7 @@ transform:translateY(-1px);
 <li>Follow crib attachment and safety instructions carefully</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B076L7HJM8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B076L7HJM8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Munchkin Secure Grip Changing Pad" loading="lazy" src="images/munchkin-secure-grip-changing-pad-1.webp"/>
@@ -1292,7 +1324,7 @@ transform:translateY(-1px);
 <li>Always keep one hand on baby during changes</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00O64QJOC?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B00O64QJOC?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Onasti Foldable Step Stool" loading="lazy" src="images/onasti-step-stool-1.webp"/>
@@ -1312,7 +1344,7 @@ transform:translateY(-1px);
 <li>Supervision and surface stability still matter</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BFWGX523?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BFWGX523?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="TOHIBEE Bath Toys" loading="lazy" src="images/tohibee-bath-toys-turtles-1.webp"/>
@@ -1332,7 +1364,7 @@ transform:translateY(-1px);
 <li>Toy preferences and cleaning routines can vary</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B086YKVHJR?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B086YKVHJR?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Hiaksedt Baby Playpen" loading="lazy" src="images/hiaksedt-baby-playpen-1.webp"/>
@@ -1352,7 +1384,7 @@ transform:translateY(-1px);
 <li>Setup and supervision are still important</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BVLX15R2?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BVLX15R2?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Munchkin Sparrow Travel Stroller" loading="lazy" src="images/munchkin-sparrow-stroller-1.webp"/>
@@ -1372,7 +1404,7 @@ transform:translateY(-1px);
 <li>Age, weight, and comfort needs should be checked</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BF6X9TFN?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BF6X9TFN?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Munchkin Faucet Extender" loading="lazy" src="images/munchkin-faucet-extender-1.webp"/>
@@ -1392,7 +1424,7 @@ transform:translateY(-1px);
 <li>Fit depends on faucet shape</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07MB5PTNG?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B07MB5PTNG?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Summer Pop N Sit Booster Chair" loading="lazy" src="images/summer-pop-n-sit-booster-chair-1.webp"/>
@@ -1412,7 +1444,7 @@ transform:translateY(-1px);
 <li>Use should match child size and product guidance</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B01AZC36Z8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B01AZC36Z8?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Dr. Brown's Silicone Finger Toothbrush" loading="lazy" src="images/dr-browns-finger-toothbrush-1.webp"/>
@@ -1432,7 +1464,7 @@ transform:translateY(-1px);
 <li>Follow age guidance and gentle brushing recommendations</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BS1Q3CLX?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BS1Q3CLX?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="Lovvie and Joy Tummy Time Mat" loading="lazy" src="images/lovvie-joy-tummy-time-mat-1.webp"/>
@@ -1452,7 +1484,7 @@ transform:translateY(-1px);
 <li>Best checked against your baby’s stage, space, and routine</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BQJ6Q2X7?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/dp/B0BQJ6Q2X7?tag=themerchant00-20&amp;linkCode=ll2&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div><div class="product-card">
 <img alt="OTTOCAST Cabin Care Baby Car Camera" loading="lazy" src="images/baby-monitor-1.webp"/>
@@ -1470,7 +1502,7 @@ transform:translateY(-1px);
 <li>Check car compatibility before buying</li>
 </ul>
 </div>
-<a class="amazon-btn amazon-track" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=a40fdb77eeecb31fca8528eaf451a80e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">View on Amazon</a>
+<a class="amazon-btn amazon-track" href="https://www.amazon.com/OTTOCAST-CarPlay-No-Glow-150%C2%B0Wide-Android/dp/B0GTP1B53J?psc=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=a40fdb77eeecb31fca8528eaf451a80e&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
 </div>
 </div></div>
 <div class="info-card">
@@ -1485,9 +1517,6 @@ transform:translateY(-1px);
           Amazon product page before making a purchase.
         </p>
 </div>
-<div class="disclosure">
-        As an Amazon Associate, Merchant earns from qualifying purchases.
-      </div>
 </div>
 </section>
 </main>
@@ -1495,6 +1524,7 @@ transform:translateY(-1px);
 <p>© 2026 Merchant. All rights reserved.</p>
 <p>This website contains affiliate links.</p>
 <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
+<a class="footer-pinterest-btn" href="https://www.pinterest.com/merchantfinds/" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest" aria-hidden="true"></i> Follow Merchant on Pinterest</a>
 <div class="footer-links legal-footer-links">
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
