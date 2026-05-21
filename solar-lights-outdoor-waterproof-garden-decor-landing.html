@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="p:domain_verify" content="dd0917ca76b9ae7601af3e381e252beb" />
 
   <title>Solar Lights Outdoor Waterproof | Firefly Garden Decor Lights</title>
   <meta name="description" content="A buyer-focused guide to solar lights outdoor waterproof for garden decor: 4-pack firefly-style lights with 32 LEDs, solar charging, 4 lighting modes, IP65 weather resistance, and warm glow for yards, pathways, patios, and flower beds." />
@@ -14,7 +15,7 @@
   <meta property="og:description" content="Warm firefly-style solar garden lights for patios, pathways, flower beds, yards, and outdoor decor — with 4 lighting modes and IP65 outdoor design." />
   <meta property="og:url" content="https://www.merchant.dedyn.io/solar-lights-outdoor-waterproof-garden-decor-landing.html" />
   <meta property="og:image" content="https://www.merchant.dedyn.io/images/solar-lights-outdoor-garden-modes-landing.webp" />
-  <meta property="og:site_name" content="The Merchant" />
+  <meta property="og:site_name" content="Merchant" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Solar Firefly Garden Lights | Outdoor Waterproof Decor" />
@@ -37,6 +38,16 @@
   </noscript>
   <!-- End Pinterest Tag -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30F9C00FC5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30F9C00FC5');
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,11 +57,12 @@
     "image": "https://www.merchant.dedyn.io/images/solar-lights-outdoor-garden-modes-landing.webp",
     "author": {
       "@type": "Organization",
-      "name": "The Merchant"
+      "name": "Merchant"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "The Merchant"
+      "name": "Merchant",
+      "url": "https://www.merchant.dedyn.io/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -58,6 +70,11 @@
     }
   }
   </script>
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -470,22 +487,7 @@
       bottom: 22px;
       animation-delay: 1.8s;
     }
-
-    .fc-icon {
-      width: 38px;
-      height: 38px;
-      min-width: 38px;
-      border-radius: 12px;
-      background: rgba(255, 209, 102, 0.14);
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .fc-val {
+.fc-val {
       font-size: 15px;
       font-weight: 900;
       color: var(--gold);
@@ -923,6 +925,101 @@
       color: rgba(255, 255, 255, 0.46);
     }
 
+
+    /* Landing nav rule: Merchant Blog at far right; Amazon only in hero/final CTA */
+    .merchant-blog-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 209, 102, 0.34);
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 0 18px rgba(255, 209, 102, 0.16);
+      transition: 0.22s ease;
+    }
+
+    .merchant-blog-link:hover {
+      transform: translateY(-2px);
+      color: var(--gold) !important;
+      border-color: rgba(255, 209, 102, 0.60);
+      box-shadow: 0 0 28px rgba(255, 209, 102, 0.28);
+    }
+
+    /* Merchant standard Amazon CTA */
+    .btn-amazon {
+      color: #111827 !important;
+      background: linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd184 100%) !important;
+      border-color: rgba(255, 209, 132, 0.96) !important;
+      box-shadow:
+        0 0 22px rgba(255, 153, 0, 0.38),
+        0 14px 40px rgba(255, 153, 0, 0.24) !important;
+      gap: 11px;
+    }
+
+    .btn-amazon i {
+      color: #111827 !important;
+    }
+
+    .btn-amazon:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+      box-shadow:
+        0 0 36px rgba(255, 153, 0, 0.62),
+        0 18px 52px rgba(255, 153, 0, 0.32) !important;
+    }
+
+    /* Merchant flying-card rule: fixed text-only cards completely outside product image frame */
+    .hero-media {
+      padding-top: 104px !important;
+      padding-bottom: 104px !important;
+      overflow: visible !important;
+    }
+
+    .hero-frame {
+      position: relative !important;
+      overflow: visible !important;
+    }
+
+    .float-card {
+      animation: none !important;
+      min-width: 210px !important;
+      max-width: 265px !important;
+      padding: 14px 18px !important;
+      gap: 0 !important;
+      text-align: left !important;
+      transform: none !important;
+    }
+
+    .float-card.fc1 {
+      top: auto !important;
+      bottom: calc(100% + 18px) !important;
+      left: 24px !important;
+      right: auto !important;
+    }
+
+    .float-card.fc2 {
+      bottom: auto !important;
+      top: calc(100% + 18px) !important;
+      right: 24px !important;
+      left: auto !important;
+    }
+
+    @media (max-width: 980px) {
+      .hero-media {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .float-card {
+        display: none !important;
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .split,
@@ -1051,22 +1148,9 @@
 
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="merchant-logo" href="https://www.merchant.dedyn.io" aria-label="The Merchant home">
-          The<span>Merchant</span>
-        </a>
-
+        <a class="merchant-logo" href="https://www.merchant.dedyn.io/" aria-label="Merchant home">Merchant</a>
         <nav class="nav-actions" aria-label="Main navigation">
-          <a class="nav-link" href="https://www.merchant.dedyn.io/blog.html">Blog</a>
-          <a class="nav-link" href="https://www.merchant.dedyn.io">More Finds</a>
-          <a
-            class="btn btn-amazon nav-amazon amazon-track"
-            href="https://amzn.to/4dduQkG"
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
-          >
-            <i class="fab fa-amazon" aria-hidden="true"></i>
-            Amazon
-          </a>
+          <a class="nav-link merchant-blog-link" href="https://www.merchant.dedyn.io/blog.html">Merchant Blog</a>
         </nav>
       </div>
     </header>
@@ -1089,7 +1173,7 @@
             </p>
 
             <p class="affiliate-note">
-              This is an editorial affiliate page. The product is sold on Amazon, not directly by The Merchant. Always check the live listing for current product details, setup instructions, runtime notes, weather guidance, price, and availability.
+              This is an editorial affiliate page. The product is sold on Amazon, not directly by Merchant. Always check the live listing for current product details, setup instructions, runtime notes, weather guidance, price, and availability.
             </p>
 
             <div class="stat-row" aria-label="Product quick facts">
@@ -1115,8 +1199,7 @@
                 rel="nofollow sponsored noopener noreferrer"
               >
                 <i class="fab fa-amazon" aria-hidden="true"></i>
-                View on Amazon
-              </a>
+                View on Amazon</a>
 
               <a class="btn btn-secondary" href="#before-buying">
                 Check Before Buying
@@ -1136,17 +1219,13 @@
                 />
               </div>
 
-              <div class="float-card fc1">
-                <div class="fc-icon">01</div>
-                <div>
+              <div class="float-card fc1"><div>
                   <div class="fc-val">No wiring</div>
                   <div class="fc-label">Stake it, charge it, let it glow</div>
                 </div>
               </div>
 
-              <div class="float-card fc2">
-                <div class="fc-icon">02</div>
-                <div>
+              <div class="float-card fc2"><div>
                   <div class="fc-val">Firefly effect</div>
                   <div class="fc-label">Flexible stems sway in the breeze</div>
                 </div>
@@ -1563,10 +1642,9 @@
               rel="nofollow sponsored noopener noreferrer"
             >
               <i class="fab fa-amazon" aria-hidden="true"></i>
-              View on Amazon
-            </a>
+              View on Amazon</a>
 
-            <a class="btn btn-secondary" href="https://www.merchant.dedyn.io">
+            <a class="btn btn-secondary" href="https://www.merchant.dedyn.io/">
               More Amazon Finds
             </a>
           </div>
@@ -1576,9 +1654,9 @@
 
     <footer>
       <div class="footer-inner">
-        <p>
-          As an affiliate site, The Merchant may earn from qualifying purchases at no extra cost to you.
-        </p>
+        <p>&copy; 2026 Merchant. All rights reserved.</p>
+        <p>This website contains affiliate links.</p>
+        <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
         <div class="footer-links">
           <a href="https://www.merchant.dedyn.io/about.html">About</a>
@@ -1595,30 +1673,34 @@
           href="https://pl.pinterest.com/m3rchantm3rchant/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow The Merchant on Pinterest"
+          aria-label="Follow Merchant on Pinterest"
         >
           <span class="pin-icon">P</span>
-          <span>Follow us on Pinterest</span>
+          <span>Follow Merchant on Pinterest</span>
         </a>
 
         <p class="small-print">
           Product details, pricing, lighting runtime, weather guidance, availability, and instructions may change. Always verify the latest information on Amazon before purchasing.
         </p>
-
-        <p class="small-print">
-          &copy; 2026 The Merchant. All rights reserved.
-        </p>
       </div>
     </footer>
   </div>
-
   <script>
   document.addEventListener('click', function(e) {
     var amazonLink = e.target.closest('a.amazon-track');
-    if (amazonLink && typeof pintrk === 'function') {
-      pintrk('track', 'Lead', {
-        lead_type: 'amazon_outbound_click'
-      });
+    if (amazonLink) {
+      if (typeof pintrk === 'function') {
+        pintrk('track', 'Lead', {
+          lead_type: 'amazon_outbound_click'
+        });
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'amazon_outbound_click', {
+          event_category: 'affiliate',
+          event_label: amazonLink.href
+        });
+      }
     }
 
     var pinterestLink = e.target.closest('a.pinterest-track');
