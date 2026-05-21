@@ -14,6 +14,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.merchant.dedyn.io/patella-band-landing.html" />
   <meta property="og:image" content="https://www.merchant.dedyn.io/images/patella-band-landing-9.webp" />
+  <meta property="og:site_name" content="Merchant" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="2PCS Silicone Patella Bands | Low-Profile Knee Support for Active Days" />
@@ -44,6 +45,16 @@
       src="https://ct.pinterest.com/v3/?event=init&tid=2614017476340&noscript=1" />
   </noscript>
   <!-- End Pinterest Tag -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30F9C00FC5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30F9C00FC5');
+  </script>
 
   <script type="application/ld+json">
   {
@@ -688,6 +699,93 @@
       font-size: 14px;
     }
 
+
+    /* Landing nav rule: Merchant Blog at far right; Amazon only in hero/final CTA */
+    .merchant-blog-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 122, 0, 0.34);
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 0 18px rgba(255, 122, 0, 0.18);
+      transition: 0.22s ease;
+    }
+
+    .merchant-blog-link:hover {
+      transform: translateY(-2px);
+      color: #ff9f1c !important;
+      border-color: rgba(255, 122, 0, 0.62);
+      box-shadow: 0 0 28px rgba(255, 122, 0, 0.32);
+    }
+
+    /* Merchant standard Amazon CTA */
+    .amazon-btn {
+      border-radius: 999px !important;
+      background: linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd184 100%) !important;
+      color: #111827 !important;
+      border: 1px solid rgba(255,209,132,.96) !important;
+      box-shadow: 0 0 22px rgba(255,153,0,.38), 0 14px 40px rgba(255,153,0,.24) !important;
+    }
+
+    .amazon-btn:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 0 36px rgba(255,153,0,.62), 0 18px 52px rgba(255,153,0,.32) !important;
+    }
+
+    /* Final flying-card fix: cards are siblings of image frame, so keep them inside reserved hero space */
+    .hero-media-wrap {
+      position: relative !important;
+      padding-top: 104px !important;
+      padding-bottom: 104px !important;
+      overflow: visible !important;
+    }
+
+    .hero-frame {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .float-card {
+      animation: none !important;
+      width: auto !important;
+      min-width: 210px !important;
+      max-width: 265px !important;
+      padding: 14px 18px !important;
+      text-align: left !important;
+      transform: none !important;
+    }
+
+    .float-card.top {
+      top: 0 !important;
+      bottom: auto !important;
+      left: 24px !important;
+      right: auto !important;
+    }
+
+    .float-card.bottom {
+      top: auto !important;
+      bottom: 0 !important;
+      right: 24px !important;
+      left: auto !important;
+    }
+
+    @media (max-width: 980px) {
+      .hero-media-wrap {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .float-card {
+        display: none !important;
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .feature-strip,
@@ -757,12 +855,8 @@
   <header>
     <div class="container nav">
       <a class="logo" href="https://www.merchant.dedyn.io/">Merchant</a>
-
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="https://www.merchant.dedyn.io/">Home</a>
-        <a href="sports-outdoors.html">Sports &amp; Outdoors</a>
-        <a href="#why">Why it helps</a>
-        <a href="#fit">Fit</a>
+        <a class="merchant-blog-link" href="https://www.merchant.dedyn.io/blog.html">Merchant Blog</a>
       </nav>
     </div>
   </header>
@@ -788,12 +882,7 @@
           <div class="cta-row">
             <a class="amazon-btn amazon-track" href="https://amzn.to/4uYJ5Qi" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <i class="fab fa-amazon" aria-hidden="true"></i>
-              View on Amazon
-            </a>
-            <a class="blog-btn" href="blog.html">
-              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-              Merchant Blog
-            </a>
+              View on Amazon</a>
           </div>
         </div>
 
@@ -804,7 +893,7 @@
           </div>
 
           <div class="hero-frame">
-            <img src="/images/patella-band-landing-9.webp" alt="2PCS black silicone patella bands shown with a knee, extra band colors, and a storage bag" fetchpriority="high" />
+            <img src="images/patella-band-landing-9.webp" alt="2PCS black silicone patella bands shown with a knee, extra band colors, and a storage bag" fetchpriority="high" />
           </div>
 
           <div class="float-card bottom">
@@ -861,7 +950,7 @@
         <div class="story-grid">
           <article class="story-card">
             <div class="story-image">
-              <img src="/images/patella-band-landing-1.webp" alt="Patella bands shown for cycling, hiking, basketball, and running activities" loading="lazy" />
+              <img src="images/patella-band-landing-1.webp" alt="Patella bands shown for cycling, hiking, basketball, and running activities" loading="lazy" />
             </div>
             <div class="story-copy">
               <h3>Built around active use cases</h3>
@@ -871,7 +960,7 @@
 
           <article class="story-card">
             <div class="story-image">
-              <img src="/images/patella-band-landing-2.webp" alt="Runners wearing patella bands with compression, cushioning, and protection callouts" loading="lazy" />
+              <img src="images/patella-band-landing-2.webp" alt="Runners wearing patella bands with compression, cushioning, and protection callouts" loading="lazy" />
             </div>
             <div class="story-copy">
               <h3>Support-focused design</h3>
@@ -881,7 +970,7 @@
 
           <article class="story-card">
             <div class="story-image">
-              <img src="/images/patella-band-landing-7.webp" alt="Comparison between knee bands and bulky knee braces" loading="lazy" />
+              <img src="images/patella-band-landing-7.webp" alt="Comparison between knee bands and bulky knee braces" loading="lazy" />
             </div>
             <div class="story-copy">
               <h3>Cleaner than bulky braces</h3>
@@ -896,7 +985,7 @@
       <div class="container">
         <div class="feature-strip">
           <div class="feature-media">
-            <img src="/images/patella-band-landing-3.webp" alt="Athlete sprinting with a patella band and active knee support graphics" loading="lazy" />
+            <img src="images/patella-band-landing-3.webp" alt="Athlete sprinting with a patella band and active knee support graphics" loading="lazy" />
           </div>
 
           <div>
@@ -931,17 +1020,6 @@
                   <p>Slip-on silicone design, easy to rinse, easy to pack, and less fussy than a full wrap brace.</p>
                 </div>
               </div>
-            </div>
-
-            <div class="cta-row" style="margin-top:26px;">
-              <a class="amazon-btn amazon-track" href="https://amzn.to/4uYJ5Qi" target="_blank" rel="nofollow sponsored noopener noreferrer">
-                <i class="fab fa-amazon" aria-hidden="true"></i>
-                Check it on Amazon
-              </a>
-              <a class="blog-btn" href="blog.html">
-                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-                Merchant Blog
-              </a>
             </div>
           </div>
         </div>
@@ -1013,12 +1091,7 @@
         <div class="cta-row">
           <a class="amazon-btn amazon-track" href="https://amzn.to/4uYJ5Qi" target="_blank" rel="nofollow sponsored noopener noreferrer">
             <i class="fab fa-amazon" aria-hidden="true"></i>
-            View on Amazon
-          </a>
-          <a class="blog-btn" href="blog.html">
-            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-            Merchant Blog
-          </a>
+            View on Amazon</a>
         </div>
       </div>
     </section>
@@ -1030,25 +1103,40 @@
     <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
     <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.merchant.dedyn.io/about.html">About</a>
+      <a href="https://www.merchant.dedyn.io/contact.html">Contact</a>
+      <a href="https://www.merchant.dedyn.io/terms.html">Terms of Use</a>
+      <a href="https://www.merchant.dedyn.io/privacy.html">Privacy Policy</a>
     </div>
 
     <div class="social-links">
-      <a href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" rel="noopener noreferrer" aria-label="Follow Merchant on Pinterest">
+      <a class="pinterest-track" href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" rel="noopener noreferrer" aria-label="Follow Merchant on Pinterest">
         Follow Merchant on Pinterest
       </a>
     </div>
   </footer>
-
   <script>
     document.addEventListener('click', function(e) {
       var amazonLink = e.target.closest('a.amazon-track');
-      if (amazonLink && typeof pintrk === 'function') {
+      if (amazonLink) {
+        if (typeof pintrk === 'function') {
+          pintrk('track', 'Lead', {
+            lead_type: 'amazon_outbound_click'
+          });
+        }
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'amazon_outbound_click', {
+            event_category: 'affiliate',
+            event_label: amazonLink.href
+          });
+        }
+      }
+
+      var pinterestLink = e.target.closest('a.pinterest-track');
+      if (pinterestLink && typeof pintrk === 'function') {
         pintrk('track', 'Lead', {
-          lead_type: 'amazon_outbound_click'
+          lead_type: 'pinterest_profile_click'
         });
       }
     });
