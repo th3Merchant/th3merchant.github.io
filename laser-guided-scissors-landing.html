@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="p:domain_verify" content="dd0917ca76b9ae7601af3e381e252beb" />
 
   <title>Laser Guided Sewing Scissors | Straight Cuts for Fabric, Paper & Crafts</title>
   <meta name="description" content="A buyer-focused guide to laser guided sewing scissors with a built-in red laser guide, ergonomic handle, stainless steel blade, and practical use cases for fabric, paper, crafts, gift wrapping, and home sewing." />
@@ -14,7 +15,7 @@
   <meta property="og:description" content="See how laser guided scissors can help with straighter cuts for sewing, fabric, paper crafts, gift wrapping, and DIY projects." />
   <meta property="og:url" content="https://www.merchant.dedyn.io/laser-guided-scissors-landing.html" />
   <meta property="og:image" content="https://www.merchant.dedyn.io/images/laser-guided-scissors-landing-01-hero.webp" />
-  <meta property="og:site_name" content="The Merchant" />
+  <meta property="og:site_name" content="Merchant" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Laser Guided Sewing Scissors for Straighter Cuts" />
@@ -37,6 +38,16 @@
   </noscript>
   <!-- End Pinterest Tag -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30F9C00FC5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30F9C00FC5');
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,11 +57,12 @@
     "image": "https://www.merchant.dedyn.io/images/laser-guided-scissors-landing-01-hero.webp",
     "author": {
       "@type": "Organization",
-      "name": "The Merchant"
+      "name": "Merchant"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "The Merchant"
+      "name": "Merchant",
+      "url": "https://www.merchant.dedyn.io/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -58,6 +70,11 @@
     }
   }
   </script>
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -207,29 +224,55 @@
       white-space: nowrap;
     }
 
+    /* Merchant standard Amazon CTA */
     .btn-amazon {
-      color: #0b0b0d;
-      background: linear-gradient(135deg, #ff1f2d 0%, #ff5a3d 48%, #ffd166 118%);
-      border-color: rgba(255, 209, 102, 0.86);
+      color: #111827;
+      background: linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd184 100%);
+      border-color: rgba(255, 209, 132, 0.96);
       box-shadow:
-        0 0 20px rgba(255, 31, 45, 0.32),
-        0 12px 34px rgba(255, 31, 45, 0.24);
+        0 0 22px rgba(255, 153, 0, 0.38),
+        0 14px 40px rgba(255, 153, 0, 0.24);
       gap: 11px;
     }
 
     .btn-amazon i {
       font-size: 22px;
-      color: #0b0b0d;
+      color: #111827;
       line-height: 1;
     }
 
     .btn-amazon:hover {
       transform: translateY(-3px);
-      filter: brightness(1.07);
+      filter: brightness(1.08);
       box-shadow:
-        0 0 34px rgba(255, 31, 45, 0.58),
-        0 0 26px rgba(255, 209, 102, 0.24),
-        0 16px 44px rgba(255, 31, 45, 0.32);
+        0 0 36px rgba(255, 153, 0, 0.62),
+        0 18px 52px rgba(255, 153, 0, 0.32);
+    }
+
+
+
+    /* Landing nav rule: Merchant Blog at far right; Amazon only in hero/final CTA */
+    .merchant-blog-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 209, 102, 0.30);
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 0 18px rgba(255, 31, 45, 0.16);
+      transition: 0.22s ease;
+    }
+
+    .merchant-blog-link:hover {
+      transform: translateY(-2px);
+      color: var(--gold) !important;
+      border-color: rgba(255, 209, 102, 0.58);
+      box-shadow: 0 0 28px rgba(255, 31, 45, 0.28);
     }
 
     .nav-amazon {
@@ -477,6 +520,40 @@
       font-size: 11px;
       font-weight: 700;
       margin-top: 2px;
+    }
+
+
+    /* Merchant rule: floating cards stay outside the image frame, never on product content */
+    .hero-media {
+      padding-top: 90px;
+      padding-bottom: 90px;
+      overflow: visible;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: visible;
+    }
+
+    .float-card.one {
+      left: 20px !important;
+      top: 18px !important;
+      right: auto !important;
+      bottom: auto !important;
+    }
+
+    .float-card.two {
+      right: 20px !important;
+      bottom: 18px !important;
+      left: auto !important;
+      top: auto !important;
+    }
+
+    @media (max-width: 980px) {
+      .hero-media {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
 
     .proof-strip {
@@ -964,23 +1041,9 @@
 
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="merchant-logo" href="https://www.merchant.dedyn.io" aria-label="The Merchant home">
-          The<span>Merchant</span>
-        </a>
+        <a class="merchant-logo" href="https://www.merchant.dedyn.io/" aria-label="Merchant home">Merchant</a>
 
-        <nav class="nav-actions" aria-label="Main navigation">
-          <a class="nav-link" href="https://www.merchant.dedyn.io/blog.html">Blog</a>
-          <a class="nav-link" href="https://www.merchant.dedyn.io">More Finds</a>
-          <a
-            class="btn btn-amazon nav-amazon amazon-track"
-            href="https://amzn.to/4tubi01"
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
-          >
-            <i class="fab fa-amazon" aria-hidden="true"></i>
-            Amazon
-          </a>
-        </nav>
+        <nav class="nav-actions" aria-label="Main navigation"><a class="nav-link merchant-blog-link" href="https://www.merchant.dedyn.io/blog.html">Merchant Blog</a></nav>
       </div>
     </header>
 
@@ -1002,7 +1065,7 @@
             </p>
 
             <p class="affiliate-note">
-              This is an editorial affiliate page. The product is sold on Amazon, not directly by The Merchant. Always check the live listing for current product details, price, availability, and included accessories.
+              This is an editorial affiliate page. The product is sold on Amazon, not directly by Merchant. Always check the live listing for current product details, price, availability, and included accessories.
             </p>
 
             <div class="stat-row" aria-label="Product quick facts">
@@ -1028,8 +1091,7 @@
                 rel="nofollow sponsored noopener noreferrer"
               >
                 <i class="fab fa-amazon" aria-hidden="true"></i>
-                View on Amazon
-              </a>
+                View on Amazon</a>
 
               <a class="btn btn-secondary" href="#how-it-works">
                 See How It Works
@@ -1412,10 +1474,9 @@
               rel="nofollow sponsored noopener noreferrer"
             >
               <i class="fab fa-amazon" aria-hidden="true"></i>
-              View on Amazon
-            </a>
+              View on Amazon</a>
 
-            <a class="btn btn-secondary" href="https://www.merchant.dedyn.io">
+            <a class="btn btn-secondary" href="https://www.merchant.dedyn.io/">
               More Amazon Finds
             </a>
           </div>
@@ -1425,9 +1486,9 @@
 
     <footer>
       <div class="footer-inner">
-        <p>
-          As an affiliate site, The Merchant may earn from qualifying purchases at no extra cost to you.
-        </p>
+        <p>&copy; 2026 Merchant. All rights reserved.</p>
+        <p>This website contains affiliate links.</p>
+        <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
 
         <div class="footer-links">
           <a href="https://www.merchant.dedyn.io/about.html">About</a>
@@ -1444,30 +1505,34 @@
           href="https://pl.pinterest.com/m3rchantm3rchant/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow The Merchant on Pinterest"
+          aria-label="Follow Merchant on Pinterest"
         >
           <span class="pin-icon">P</span>
-          <span>Follow us on Pinterest</span>
+          <span>Follow Merchant on Pinterest</span>
         </a>
 
         <p class="small-print">
           Product details, pricing, availability, and instructions may change. Always verify the latest information on Amazon before purchasing.
         </p>
-
-        <p class="small-print">
-          &copy; 2026 The Merchant. All rights reserved.
-        </p>
       </div>
     </footer>
   </div>
-
   <script>
   document.addEventListener('click', function(e) {
     var amazonLink = e.target.closest('a.amazon-track');
-    if (amazonLink && typeof pintrk === 'function') {
-      pintrk('track', 'Lead', {
-        lead_type: 'amazon_outbound_click'
-      });
+    if (amazonLink) {
+      if (typeof pintrk === 'function') {
+        pintrk('track', 'Lead', {
+          lead_type: 'amazon_outbound_click'
+        });
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'amazon_outbound_click', {
+          event_category: 'affiliate',
+          event_label: amazonLink.href
+        });
+      }
     }
 
     var pinterestLink = e.target.closest('a.pinterest-track');
