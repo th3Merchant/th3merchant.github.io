@@ -545,32 +545,46 @@ pintrk('page');
     box-shadow: 0 0 36px rgba(255,153,0,.62), 0 18px 52px rgba(255,153,0,.32);
   }
 
-  /* Merchant flying-card rule: fixed, unified, outside image content */
+
+  /* Merchant flying-card rule: cards must stay completely OUTSIDE the product image frame */
   .hero-image {
-    padding-top: 110px;
-    padding-bottom: 110px;
-    overflow: visible;
+    padding-top: 125px !important;
+    padding-bottom: 125px !important;
+    overflow: visible !important;
   }
+
   .hero-img-wrap {
-    overflow: visible;
+    position: relative !important;
+    overflow: visible !important;
   }
+
   .hero-float-badge {
     animation: none !important;
+    z-index: 4;
   }
+
   .hero-float-badge.b1 {
-    top: 20px !important;
+    top: auto !important;
+    bottom: calc(100% + 18px) !important;
     left: 18px !important;
     right: auto !important;
   }
+
   .hero-float-badge.b2 {
-    bottom: 20px !important;
+    bottom: auto !important;
+    top: calc(100% + 18px) !important;
     right: 18px !important;
     left: auto !important;
   }
+
   @media (max-width: 900px) {
     .hero-image {
-      padding-top: 20px;
-      padding-bottom: 48px;
+      padding-top: 20px !important;
+      padding-bottom: 48px !important;
+    }
+
+    .hero-float-badge {
+      display: none !important;
     }
   }
 
