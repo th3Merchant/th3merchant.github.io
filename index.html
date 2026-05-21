@@ -8,12 +8,16 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Merchant | Amazon Best Sellers &amp; Categories</title>
 <link href="https://www.merchant.dedyn.io/" rel="canonical"/>
-<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." name="description"/>
+<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick buying notes." name="description"/>
 <meta content="Merchant | Curated Amazon Picks by Category" property="og:title"/>
-<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick feedback summaries." property="og:description"/>
+<meta content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick buying notes." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://www.merchant.dedyn.io/" property="og:url"/>
-<meta content="summary" name="twitter:card"/>
+<meta content="https://www.merchant.dedyn.io/images/dreo-fan-1.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta name="twitter:title" content="Merchant | Curated Amazon Picks by Category"/>
+<meta name="twitter:description" content="Browse curated Amazon picks across baby, beauty, pet supplies, home, kitchen, sports, and best sellers with quick buying notes."/>
+<meta name="twitter:image" content="https://www.merchant.dedyn.io/images/dreo-fan-1.webp"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -378,22 +382,31 @@
 
     .review-highlights li { margin-bottom: 6px; }
 
+    /* Merchant standard Amazon CTA */
     .amazon-btn {
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
       text-align: center;
-      background: #ff9900;
+      background: linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd184 100%);
       color: #111827;
-      font-weight: 800;
+      font-weight: 900;
       padding: 12px 14px;
-      border-radius: 12px;
+      border-radius: 999px;
       margin-top: auto;
+      border: 1px solid rgba(255,209,132,.96);
+      box-shadow: 0 0 20px rgba(255,153,0,.30), 0 12px 30px rgba(255,153,0,.18);
       transition: 0.2s ease;
     }
 
     .amazon-btn:hover {
-      background: #ffad1f;
-      transform: translateY(-1px);
+      filter: brightness(1.07);
+      background: linear-gradient(135deg,#ff9900 0%,#ffb13d 48%,#ffd184 100%);
+      box-shadow: 0 0 32px rgba(255,153,0,.52), 0 16px 42px rgba(255,153,0,.28);
+      transform: translateY(-2px);
     }
+
 
     .categories-wrap {
       background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
@@ -667,20 +680,24 @@
   "@type": "WebSite",
   "name": "Merchant",
   "url": "https://www.merchant.dedyn.io/",
-  "description": "Merchant helps shoppers browse curated Amazon picks by category with quick feedback summaries.",
+  "description": "Merchant helps shoppers browse curated Amazon picks by category with quick buying notes.",
   "publisher": {
     "@type": "Organization",
     "name": "Merchant",
     "url": "https://www.merchant.dedyn.io/"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.merchant.dedyn.io/search.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
 }
-  </script>
+</script>
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
-</head>
-<body>
+
       
    <!-- Pinterest Tag -->
 <script>
@@ -699,7 +716,19 @@ pintrk('page');
 </noscript>
 <!-- end Pinterest Tag -->
    
-<header>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-30F9C00FC5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-30F9C00FC5');
+</script>
+
+</head>
+<body><header>
 <div class="container nav">
 <div class="nav-left">
 <a class="logo logo-home-active" href="https://www.merchant.dedyn.io/">Merchant</a>
@@ -728,7 +757,7 @@ pintrk('page');
 <div class="container">
 <h1>Best Amazon Picks in One Place</h1>
 <p>
-        Browse our best sellers, check quick feedback summaries, and explore products
+        Browse our best sellers, check quick buying notes, and explore products
         by familiar Amazon categories.
       </p>
 <div class="hero-actions">
@@ -741,7 +770,7 @@ pintrk('page');
 <div class="container">
 <h2 class="section-title">Best Sellers</h2>
 <p class="section-subtitle">
-        Our current best-selling picks with short descriptions, Merchant Pick Scores, feedback snapshots, and quick highlights.
+        Our current best-selling picks with short descriptions, Merchant Pick Scores, quick buying notes, and quick highlights.
       </p>
 <div class="products">
 
@@ -754,13 +783,12 @@ pintrk('page');
 <div class="product-card">
 <img alt="DREO Tower Fan" src="images/dreo-fan-1.webp" fetchpriority="high">
 <div class="product-content">
-<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span></div>
 <h3>DREO Tower Fan</h3>
 <p>A modern tower fan for home use with a clean design and convenient airflow for daily comfort.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for strong everyday airflow</li>
 <li>Frequently mentioned as quiet at normal settings</li>
@@ -775,14 +803,13 @@ pintrk('page');
 <div class="product-content">
 <div class="badge-row">
 <span class="badge">Best Seller</span>
-<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+<span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span>
 </div>
 <h3>Mini Compressed Towels</h3>
 <p>A pack of compact compressed towels that expand with water for travel, skincare, gym bags, and quick cleanups.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for travel and on-the-go freshness</li>
 <li>Compact format saves space in bags and drawers</li>
@@ -797,14 +824,13 @@ pintrk('page');
 <div class="product-content">
 <div class="badge-row">
 <span class="badge">Best Seller</span>
-<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+<span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span>
 </div>
 <h3>Neutrogena Makeup Remover Wipes</h3>
 <p>Alcohol-free micellar makeup remover wipes made for removing face makeup and waterproof mascara.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for easy makeup removal</li>
 <li>Useful for travel, night routines, and gym bags</li>
@@ -819,14 +845,13 @@ pintrk('page');
 <div class="product-content">
 <div class="badge-row">
 <span class="badge">Best Seller</span>
-<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+<span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span>
 </div>
 <h3>Aquaphor Healing Balm Stick</h3>
 <p>A compact skin protectant balm stick with avocado oil and shea butter for dry spots, lips, and on-the-go care.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.95/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for portable dry-skin care</li>
 <li>Stick format keeps application easy and less messy</li>
@@ -839,13 +864,12 @@ pintrk('page');
 </div><div class="product-card">
 <img alt="TERRO Ant Killer Bait Stations" loading="lazy" src="images/tero-1.webp"/>
 <div class="product-content">
-<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span></div>
 <h3>TERRO Ant Killer Bait Stations</h3>
 <p>Indoor ant bait stations designed for common household ant problems in a simple ready-to-use format.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.9/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for quick and simple use</li>
 <li>Frequently mentioned as useful for indoor ant issues</li>
@@ -860,14 +884,13 @@ pintrk('page');
 <div class="product-content">
 <div class="badge-row">
 <span class="badge">Best Seller</span>
-<span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span>
+<span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span>
 </div>
 <h3>Ring Indoor Cam</h3>
 <p>A compact indoor security camera for checking rooms, entry areas, or home activity from the Ring app.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.90/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for compact indoor monitoring</li>
 <li>Useful for rooms, entry areas, and home check-ins</li>
@@ -880,13 +903,12 @@ pintrk('page');
 </div><div class="product-card">
 <img alt="OLANLY Bathroom Rug 30x20" loading="lazy" src="images/olanly-1.webp"/>
 <div class="product-content">
-<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span></div>
 <h3>OLANLY Bathroom Rug 30x20</h3>
 <p>A soft and absorbent bath rug with a simple look that works well for everyday bathroom use.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for a soft and comfortable feel</li>
 <li>Frequently chosen for everyday bathroom use</li>
@@ -899,13 +921,12 @@ pintrk('page');
 </div><div class="product-card">
 <img alt="Queen Size 4 Piece Sheet Set" loading="lazy" src="images/queen-sheet-1.webp"/>
 <div class="product-content">
-<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">★</span>Customer Favorite</span></div>
+<div class="badge-row"><span class="badge">Best Seller</span><span class="customer-favorite-badge"><span class="cf-icon">✓</span>Practical Pick</span></div>
 <h3>Queen Size 4 Piece Sheet Set</h3>
 <p>A soft microfiber sheet set with deep pockets and a clean everyday look for queen-size beds.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.8/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for softness and everyday comfort</li>
 <li>Frequently mentioned as good value bedding</li>
@@ -922,9 +943,8 @@ pintrk('page');
 <h3>BISSELL Little Green Cleaner</h3>
 <p>A portable cleaner that works well for fabric spots, upholstery messes, and quick cleanup jobs around the house.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.7/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for targeted spot cleaning</li>
 <li>Frequently useful for upholstery and small messes</li>
@@ -941,9 +961,8 @@ pintrk('page');
 <h3>MINLU 65W GaN USB-C Charger Block</h3>
 <p>A compact 3-port GaN fast charger made for USB-C phones, tablets, and everyday desk or travel charging setups.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.55/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often liked for compact everyday charging</li>
 <li>Frequently useful for phones, tablets, and USB-C setups</li>
@@ -962,14 +981,13 @@ pintrk('page');
 <h3>Divoom Times Gate</h3>
 <p>A cyberpunk-style desk display clock that adds animated pixel-art flair to gaming setups, shelves, and desk spaces.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 4.20/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Eye-catching product for gaming and desk setups</li>
 <li>Strong visual appeal for setup photos and shelves</li>
 <li>Good fit for shoppers who like playful tech decor</li>
-<li>No Customer Favorite badge because the score is below 4.80</li>
+<li>More of a visual tech-decor pick than a broad essential</li>
 </ul>
 </div>
 <a class="amazon-btn amazon-track" href="https://www.amazon.com/-/es/Divoom-Times-Gate-configuraci%C3%B3n-personalizado/dp/B0F7QP994T?th=1&amp;linkCode=ll2&amp;tag=themerchant00-20&amp;linkId=1d51a592aca5f8b0787c092638f5f1f0&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
@@ -981,9 +999,8 @@ pintrk('page');
 <h3>THREE PEACHES Wireless Earbuds</h3>
 <p>Bluetooth earbuds with a touch-screen charging case for quick controls, battery visibility, and everyday listening.</p>
 <div class="review-box">
-<div class="review-label">Customer Feedback Snapshot</div>
-<div class="merchant-score">Merchant Pick Score: 3.95/5</div>
-<p class="review-summary">A quick overview of what shoppers commonly expressed.</p>
+<div class="review-label">Quick Buying Notes</div>
+<p class="review-summary">Practical points to review before opening the Amazon listing.</p>
 <ul class="review-highlights">
 <li>Often noticed for the touch-screen case design</li>
 <li>Useful for casual music, calls, and daily listening</li>
@@ -1088,7 +1105,7 @@ pintrk('page');
 <a href="privacy.html">Privacy Policy</a>
 </div>
 <div class="social-links">
-<a href="https://www.pinterest.com/merchantfinds/" target="_blank" rel="noopener noreferrer" aria-label="Follow Merchant on Pinterest">
+<a class="pinterest-track" href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" rel="noopener noreferrer" aria-label="Follow Merchant on Pinterest">
     Follow Merchant on Pinterest
   </a>
 </div>
@@ -1097,9 +1114,25 @@ pintrk('page');
 <script>
 document.addEventListener('click', function(e) {
   var amazonLink = e.target.closest('a.amazon-track');
-  if (amazonLink && typeof pintrk === 'function') {
+  if (amazonLink) {
+    if (typeof pintrk === 'function') {
+      pintrk('track', 'Lead', {
+        lead_type: 'amazon_outbound_click'
+      });
+    }
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'amazon_outbound_click', {
+        event_category: 'affiliate',
+        event_label: amazonLink.href
+      });
+    }
+  }
+
+  var pinterestLink = e.target.closest('a.pinterest-track');
+  if (pinterestLink && typeof pintrk === 'function') {
     pintrk('track', 'Lead', {
-      lead_type: 'amazon_outbound_click'
+      lead_type: 'pinterest_profile_click'
     });
   }
 });
