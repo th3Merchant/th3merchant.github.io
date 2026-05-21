@@ -139,12 +139,49 @@ pintrk('page');
   .center-btns { margin-left: auto !important; margin-right: auto !important; justify-content: center !important; }
 
   .cta-buttons a {
-    height: 56px !important; border-radius: 999px !important; display: inline-flex !important;
-    align-items: center !important; justify-content: center !important; font-weight: 900 !important;
-    color: #06131d !important; background: linear-gradient(135deg,#d8b56d 0%,#ffe2a2 50%,#8ec8ee 130%) !important;
-    border: 1px solid rgba(255,235,185,.85) !important; transition:0.22s ease !important;
+    height: 56px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    font-weight: 900 !important;
+    transition: 0.22s ease !important;
+    white-space: nowrap !important;
   }
-  .cta-buttons a:hover { transform:translateY(-2px) !important; box-shadow:0 12px 32px rgba(216,181,109,.32) !important; }
+  .cta-buttons a:hover {
+    transform: translateY(-2px) !important;
+  }
+  .btn-amazon {
+    color: #06131d !important;
+    background: linear-gradient(135deg,#ff9900 0%,#ffb13d 46%,#ffd184 100%) !important;
+    border: 1px solid rgba(255,209,132,.96) !important;
+    box-shadow:
+      0 0 22px rgba(255,153,0,.42),
+      0 14px 40px rgba(255,153,0,.28) !important;
+  }
+  .btn-amazon i {
+    font-size: 20px !important;
+    color: #06131d !important;
+    line-height: 1 !important;
+  }
+  .btn-amazon:hover {
+    filter: brightness(1.08) !important;
+    box-shadow:
+      0 0 38px rgba(255,153,0,.68),
+      0 0 26px rgba(255,209,132,.30),
+      0 18px 56px rgba(255,153,0,.36) !important;
+  }
+  .btn-site {
+    color: #f5f9fc !important;
+    background: rgba(142,200,238,.10) !important;
+    border: 1px solid rgba(142,200,238,.35) !important;
+    box-shadow: none !important;
+  }
+  .btn-site:hover {
+    background: rgba(142,200,238,.16) !important;
+    box-shadow: 0 10px 26px rgba(0,0,0,.18) !important;
+  }
 
   .hero-image { padding:60px 8% 60px 4%; position:relative; display:flex; align-items:center; justify-content:center; }
   .hero-img-wrap { position:relative; width:100%; max-width:540px; background:#10283a; border-radius:20px; padding:12px; box-shadow:0 24px 74px rgba(0,0,0,.42); }
@@ -204,13 +241,59 @@ pintrk('page');
   .pinterest-follow { max-width:760px; margin: 0 auto 22px !important; padding:24px; border-radius:18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; align-items:center; gap:14px; }
   .pinterest-btn { padding:12px 22px; border-radius:999px; background:#ff6b6b; color:white; font-size:13px; font-weight:900; }
 
+
+  /* Flying-card rule: cards sit outside the product frame, never over the image */
+  .hero-image {
+    padding-top: 142px !important;
+    padding-bottom: 142px !important;
+    overflow: visible !important;
+  }
+  .hero-img-wrap {
+    overflow: visible !important;
+  }
+  .float-card.fc1 {
+    top: auto !important;
+    bottom: calc(100% + 14px) !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+  .float-card.fc2 {
+    top: calc(100% + 14px) !important;
+    bottom: auto !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+
   @media(max-width:1100px){ .reviews-grid{grid-template-columns:repeat(2,1fr);} }
+
+  @media(max-width:900px) {
+    .hero-image {
+      padding-top: 116px !important;
+      padding-bottom: 116px !important;
+    }
+    .float-card.fc1 {
+      bottom: calc(100% + 12px) !important;
+      left: 0 !important;
+    }
+    .float-card.fc2 {
+      top: calc(100% + 12px) !important;
+      right: 0 !important;
+    }
+  }
+  @media(max-width:560px) {
+    .hero-image {
+      padding-top: 28px !important;
+      padding-bottom: 48px !important;
+    }
+  }
+
   @media(max-width:900px) {
     .two-col, .hero, .levels-grid, .specs-grid, .muscle-grid { grid-template-columns:1fr !important; text-align:center; }
     .cta-buttons { grid-template-columns:1fr !important; max-width:320px; margin:24px auto; }
     .float-card { display:none; }
   }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -232,8 +315,8 @@ pintrk('page');
       <div class="hero-stat"><span class="stat-val">5 Slots</span><span class="stat-label">family fit</span></div>
     </div>
     <div class="cta-buttons">
-      <a class="amazon-track" href="https://amzn.to/4beTGxK" target="_blank" rel="nofollow sponsored noopener noreferrer">View on Amazon</a>
-      <a href="https://www.merchant.dedyn.io/">Visit Site</a>
+      <a class="btn-amazon amazon-track" href="https://amzn.to/4beTGxK" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="View Bitvae toothbrush holder on Amazon"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
+      <a class="btn-site site-track" href="https://www.merchant.dedyn.io/">Visit Site</a>
     </div>
   </div>
   <div class="hero-image">
@@ -331,8 +414,8 @@ pintrk('page');
   <h2 class="section-h2">Ready to upgrade your bathroom hygiene?</h2>
   <div class="cta-final-img"><img src="images/bitvae-toothbrush-holder-landing-cta.webp" alt="CTA" loading="lazy"></div>
   <div class="cta-buttons center-btns">
-    <a class="amazon-track" href="https://amzn.to/4beTGxK" target="_blank" rel="nofollow sponsored noopener noreferrer">View on Amazon</a>
-    <a href="https://www.merchant.dedyn.io/">Visit Site</a>
+    <a class="btn-amazon amazon-track" href="https://amzn.to/4beTGxK" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="View Bitvae toothbrush holder on Amazon"><i class="fab fa-amazon" aria-hidden="true"></i> View on Amazon</a>
+    <a class="btn-site site-track" href="https://www.merchant.dedyn.io/">Visit Site</a>
   </div>
 </section>
 
