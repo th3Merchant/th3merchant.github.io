@@ -1074,6 +1074,67 @@
         aspect-ratio: 4 / 3;
       }
     }
+  
+    /* Final flying-card fix: clean, fixed cards outside image, no clipped symbols */
+    .hero-media {
+      padding-top: 96px !important;
+      padding-bottom: 96px !important;
+      overflow: visible !important;
+    }
+
+    .hero-card {
+      position: relative !important;
+      overflow: visible !important;
+    }
+
+    .float-card {
+      min-width: 220px !important;
+      max-width: 260px !important;
+      padding: 14px 18px !important;
+      overflow: visible !important;
+      animation: none !important;
+    }
+
+    .float-card.one {
+      left: 24px !important;
+      top: auto !important;
+      bottom: calc(100% + 18px) !important;
+      right: auto !important;
+    }
+
+    .float-card.two {
+      right: 24px !important;
+      bottom: auto !important;
+      top: calc(100% + 18px) !important;
+      left: auto !important;
+    }
+
+    .float-icon {
+      width: 34px !important;
+      height: 34px !important;
+      min-width: 34px !important;
+      border-radius: 12px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+      font-size: 14px !important;
+      line-height: 1 !important;
+      font-family: Arial, sans-serif !important;
+      flex: 0 0 34px !important;
+    }
+
+    @media (max-width: 980px) {
+      .hero-media {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .float-card {
+        display: none !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1154,7 +1215,7 @@
               </div>
 
               <div class="float-card one">
-                <span class="float-icon">↕</span>
+                <span class="float-icon">✓</span>
                 <div>
                   <strong>Controlled support</strong>
                   <span>adjusted manually</span>
@@ -1162,7 +1223,7 @@
               </div>
 
               <div class="float-card two">
-                <span class="float-icon">⌂</span>
+                <span class="float-icon">✓</span>
                 <div>
                   <strong>Home routine</strong>
                   <span>best for focused sessions</span>
