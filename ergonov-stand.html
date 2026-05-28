@@ -1,17 +1,234 @@
-<!-- بداية كارت ربط المنتج بصفحة الهبوط -->
-<div class="product-link-card" style="max-width: 320px; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px auto;">
-    
-    <!-- صورة المنتج (نفس الصورة الرئيسية) -->
-    <img src="merchant-landing-stand_01.jpg" alt="ERGONOV Tablet Pillow Stand" style="width: 100%; height: auto; border-bottom: 1px solid #e5e7eb;">
-    
-    <div style="padding: 20px;">
-        <h3 style="font-size: 1.2rem; color: #111827; margin: 0 0 10px 0;">ERGONOV Tablet Pillow Stand</h3>
-        <p style="font-size: 0.9rem; color: #6b7280; margin: 0 0 20px 0;">Ultimate hands-free comfort for your bed or couch.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERGONOV Tablet Pillow Stand | Ultimate Hands-Free Comfort</title>
+
+    <link rel="canonical" href="https://merchant.dedyn.io/ergonov-pillow-stand.html">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30F9C00FC5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-30F9C00FC5');
+    </script>
+
+    <script>
+    !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(
+    Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";
+    var t=document.createElement("script");t.async=!0;t.src=e;
+    var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}
+    ("https://s.pinimg.com/ct/core.js");
+    pintrk('load', '2614017476340');
+    pintrk('page');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&tid=2614017476340&noscript=1" />
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fafaf9; color: #292524; line-height: 1.6; }
+        img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
         
-        <!-- زرار الربط (بيوجه لصفحة الهبوط) -->
-        <a href="ergonov-stand.html" style="display: inline-block; background-color: #111827; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; transition: 0.3s;">
-            View Details
-        </a>
-    </div>
-</div>
-<!-- نهاية كارت ربط المنتج -->
+        /* Container */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Navbar / Header */
+        header { background-color: #ffffff; padding: 16px 24px; border-bottom: 1px solid #e7e5e4; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Calibri', sans-serif; font-size: 1.8rem; font-weight: bold; color: #1c1917; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
+        .logo:hover { text-shadow: 0 0 12px rgba(28, 25, 23, 0.4), 0 0 24px rgba(28, 25, 23, 0.2); color: #44403c; }
+        
+        /* Hero Section */
+        .hero { background: #ffffff; padding: 70px 0 60px 0; text-align: center; }
+        .hero h1 { font-size: 2.5rem; color: #1c1917; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.15rem; color: #57534e; margin-bottom: 35px; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .hero-img { max-width: 600px; margin: 0 auto 40px auto; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        
+        /* Hero Buttons */
+        .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-main { padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: 0.25s ease; }
+        .btn-site { background: #1c1917; color: #ffffff; box-shadow: 0 4px 12px rgba(28,25,23,0.15); }
+        .btn-site:hover { background: #292524; transform: translateY(-2px); }
+        .btn-blog { background: #ffffff; color: #1c1917; border: 1px solid #d6d3d1; }
+        .btn-blog:hover { background: #f5f5f4; border-color: #a8a29e; transform: translateY(-2px); }
+
+        /* Features Section */
+        .features { padding: 80px 0; }
+        .feature-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
+        .feature-row:nth-child(even) { flex-direction: row-reverse; }
+        .feature-text { flex: 1; }
+        .feature-text h2 { font-size: 1.9rem; margin-bottom: 16px; color: #1c1917; font-weight: 700; }
+        .feature-text p { font-size: 1.05rem; color: #57534e; }
+        .feature-image-container { flex: 1; }
+        .feature-image-container img { box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+        
+        /* Gallery Grid */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 20px 0 60px 0; }
+        .gallery img { box-shadow: 0 8px 16px rgba(0,0,0,0.04); transition: 0.3s ease; }
+        .gallery img:hover { transform: scale(1.02); }
+        
+        /* Final CTA Section */
+        .final-cta { text-align: center; padding: 70px 24px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #e7e5e4; margin-bottom: 60px; }
+        .final-cta h2 { font-size: 2.2rem; margin-bottom: 12px; color: #1c1917; font-weight: 800; }
+        .final-cta p { color: #57534e; font-size: 1.1rem; margin-bottom: 10px; }
+
+        /* --- AMAZON BUTTON CSS --- */
+        .amazon-button {
+          margin-top: 34px;
+          min-height: 56px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 11px;
+          padding: 15px 30px;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #ff9900 0%, #ffb545 46%, #fff2cc 135%);
+          color: #111827;
+          border: 1px solid rgba(255,181,69,.88);
+          box-shadow: 0 0 22px rgba(255,153,0,.28), 0 18px 46px rgba(16,11,8,.34);
+          font-size: .78rem;
+          font-weight: 900;
+          letter-spacing: .13em;
+          text-transform: uppercase;
+          transition: .22s ease;
+          text-decoration: none;
+        }
+        .amazon-button:hover {
+          transform: translateY(-3px);
+          filter: brightness(1.05);
+          box-shadow: 0 0 34px rgba(255,153,0,.46), 0 24px 58px rgba(16,11,8,.42);
+        }
+        .amazon-button i {
+          font-size: 1.08rem;
+          color: #111827;
+          line-height: 1;
+        }
+
+        /* Footer & Pinterest Follow Button */
+        footer { background: #1c1917; color: #a8a29e; text-align: center; padding: 50px 24px 30px 24px; font-size: 0.95rem; }
+        .pinterest-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #e60023;
+            color: #ffffff;
+            padding: 12px 26px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            transition: 0.25s ease;
+            box-shadow: 0 4px 14px rgba(230, 0, 35, 0.25);
+        }
+        .pinterest-button:hover {
+            background-color: #b6001a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 0, 35, 0.4);
+        }
+        .disclaimer { margin-top: 30px; font-size: 0.82rem; color: #78716c; border-top: 1px solid #44403c; padding-top: 25px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.1rem; }
+            .feature-row, .feature-row:nth-child(even) { flex-direction: column; text-align: center; gap: 30px; }
+            .final-cta h2 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="https://merchant.dedyn.io/" class="logo">Merchant</a>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="images/merchant-landing-stand_01.jpg" alt="ERGONOV Tablet Pillow Stand" class="hero-img">
+            <h1>Elevate Your Comfort with Hands-Free Viewing</h1>
+            <p>Experience true relaxation with the ERGONOV Tablet Pillow Stand. Designed for your lap, bed, or couch, it features a 360° rotating holder, dual adjustable joints, and a built-in snack tray for the perfect downtime.</p>
+            
+            <div class="hero-buttons">
+                <a href="https://merchant.dedyn.io/" class="btn-main btn-site">Visit Main Store</a>
+                <a href="https://merchant.dedyn.io/blog.html" class="btn-main btn-blog">Read Our Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features container">
+        
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>Stable & Adjustable Support</h2>
+                <p>Keep your hands completely free while reading your Kindle or watching shows. The detachable tablet arm features dual 180-degree adjustable joints crafted from sturdy alloy metal. With its damping pads, it guarantees precise positioning without any shaking.</p>
+            </div>
+            <div class="feature-image-container">
+                <img src="images/merchant-landing-stand_11.webp" alt="Ergonomic viewing angle adjustment">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>Removable Silicone Snack Tray</h2>
+                <p>Your relaxing spot is now fully equipped. The food-grade silicone bowl features three dedicated compartments for your favorite snacks, drinks, and small accessories. You can even detach the holding arm to transform the base into a standalone sofa cup holder.</p>
+            </div>
+            <div class="feature-image-container">
+                <img src="images/merchant-landing-stand_21.webp" alt="Silicone snack tray layout">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>360° Flexible Viewing</h2>
+                <p>Transition seamlessly between landscape and portrait orientations. The robust spherical joint and heavy-duty universal clip expand from 4.7 to 9.8 inches, offering wide compatibility for 4.7-13" Kindles, iPads, smartphones, and portable monitors.</p>
+            </div>
+            <div class="feature-image-container">
+                <img src="images/merchant-landing-stand_31.webp" alt="Multi-device compatibility">
+            </div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/merchant-landing-stand_41.webp" alt="Adjustable clip dimensions">
+            <img src="images/merchant-landing-stand_51.webp" alt="Wide base and stabilization design">
+            <img src="images/merchant-landing-stand_61.webp" alt="Product dimensional parameters">
+            <img src="images/merchant-landing-stand_71.webp" alt="Top view of the loaded snack tray">
+            <img src="images/merchant-landing-stand_81.webp" alt="Empty tablet stand isolated">
+        </div>
+
+    </section>
+
+    <section class="container">
+        <div class="final-cta">
+            <h2>Ready to Transform Your Lazy Days?</h2>
+            <p>Upgrade to the ERGONOV Tablet Pillow Stand and enjoy the ultimate hands-free experience.</p>
+            
+            <a class="amazon-button" href="https://amzn.to/4va4tlz" target="_blank" rel="nofollow sponsored noopener noreferrer" data-track="amazon_final_cta" data-product="ERGONOV Tablet Pillow Stand">
+              <i class="fab fa-amazon" aria-hidden="true"></i>
+              View on Amazon
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            
+            <a href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" rel="noopener noreferrer" class="pinterest-button">
+                <i class="fab fa-pinterest" aria-hidden="true"></i>
+                Follow Merchant on Pinterest
+            </a>
+
+            <p>&copy; 2026 Merchant. All rights reserved.</p>
+            
+            <p class="disclaimer">
+                Disclaimer: As an Amazon Associate, I earn from qualifying purchases. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
