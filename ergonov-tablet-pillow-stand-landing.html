@@ -137,16 +137,38 @@
       justify-content: space-between;
       gap: 18px;
     }
-    .merchant-logo,
-    .merchant-footer-logo {
-      font-family: 'Inter', Arial, sans-serif;
-      font-weight: 900;
-      letter-spacing: -0.055em;
-      color: #ffd21f;
-      line-height: 1;
-      text-shadow: 0 0 8px rgba(255,255,255,.75), 0 0 14px rgba(255,210,31,.90), 0 0 30px rgba(255,210,31,.48);
-      filter: drop-shadow(0 0 10px rgba(255,210,31,.38));
-    }
+.merchant-logo,
+.merchant-footer-logo,
+.nav-logo,
+.logo {
+  font-family: "Inter", "DM Sans", Arial, sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.055em !important;
+  color: #f4c531 !important;
+  line-height: 1 !important;
+  text-shadow:
+    0 0 2px rgba(244, 197, 49, 0.30),
+    0 0 8px rgba(244, 197, 49, 0.18) !important;
+  filter: none !important;
+  transition:
+    color 0.22s ease,
+    text-shadow 0.22s ease,
+    filter 0.22s ease,
+    transform 0.22s ease;
+}
+
+.merchant-logo:hover,
+.merchant-footer-logo:hover,
+.nav-logo:hover,
+.logo:hover {
+  color: #ffd84a !important;
+  text-shadow:
+    0 0 3px rgba(255, 255, 255, 0.38),
+    0 0 10px rgba(255, 216, 74, 0.48),
+    0 0 18px rgba(255, 216, 74, 0.30) !important;
+  filter: drop-shadow(0 0 5px rgba(255, 216, 74, 0.22)) !important;
+  transform: translateY(-1px);
+}
     .merchant-logo { font-size: clamp(32px, 3vw, 44px); }
     .merchant-blog-link {
       display: inline-flex;
