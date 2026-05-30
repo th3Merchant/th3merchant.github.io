@@ -160,6 +160,66 @@
       color: #0f172a;
     }
 
+
+    .business-verification-box {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 18px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    .business-verification-box h3 {
+      color: #fbbf24;
+      font-size: 18px;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .business-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .business-detail {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 13px 14px;
+    }
+
+    .business-detail span {
+      display: block;
+      color: #cbd5e1;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+    }
+
+    .business-detail strong {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .business-detail.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .verification-note {
+      color: #e2e8f0;
+      font-size: 14px;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+
     .note {
       background: #fff7ed;
       border: 1px solid #fdba74;
@@ -231,6 +291,10 @@
       .section h2 {
         font-size: 21px;
       }
+
+      .business-details-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -294,6 +358,62 @@
             <p>
               <strong>Contact method:</strong> Please use the contact option provided by the website owner
               or domain administrator.
+            </p>
+          </div>
+        </div>
+
+
+
+        <div class="section">
+          <h2>Business and Contact Details</h2>
+          <p>
+            This section lists the business and contact details for Merchant. These details should match
+            the information registered with the website owner’s payment and verification accounts.
+          </p>
+
+          <div class="business-verification-box" aria-label="Business and contact verification details">
+            <h3>Merchant Business Information</h3>
+
+            <div class="business-details-grid">
+              <div class="business-detail">
+                <span>Full name</span>
+                <strong>Walid Mostafa Noureldeen</strong>
+              </div>
+
+              <div class="business-detail">
+                <span>Business / Website name</span>
+                <strong>Merchant</strong>
+              </div>
+
+              <div class="business-detail full-width">
+                <span>Business type</span>
+                <strong>Affiliate marketing / Amazon product recommendation website</strong>
+              </div>
+
+              <div class="business-detail">
+                <span>Email address</span>
+                <strong>Add your Payoneer email here</strong>
+              </div>
+
+              <div class="business-detail">
+                <span>Phone number</span>
+                <strong>Add your Payoneer phone number here</strong>
+              </div>
+
+              <div class="business-detail full-width">
+                <span>Primary address</span>
+                <strong>Add your Payoneer primary address here</strong>
+              </div>
+
+              <div class="business-detail full-width">
+                <span>Website URL</span>
+                <strong>https://www.merchant.dedyn.io/</strong>
+              </div>
+            </div>
+
+            <p class="verification-note">
+              Please replace the placeholder fields above with the exact information shown in the
+              registered Payoneer account before submitting this page for verification.
             </p>
           </div>
         </div>
