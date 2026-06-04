@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Merchant Blog | Premium Problem-Solving Buying Guides</title>
-<link href="https://merchant.dedyn.io/blog.html" rel="canonical"/>
+<title>Merchant Blog | Problem-Solving Buying Guides & Product Ideas</title>
+<link href="https://www.merchant.dedyn.io/blog.html" rel="canonical"/>
 
-<meta name="description" content="Read Merchant buying guides built around real problems: dry skin, dog shedding, baby routines, small home clutter, kitchen mess, and compact home fitness ideas."/>
-<meta property="og:title" content="Merchant Blog | Premium Problem-Solving Buying Guides"/>
-<meta property="og:description" content="Premium Merchant guides for beauty, pets, home, baby, kitchen, fitness, and useful product ideas."/>
+<meta name="description" content="Read Merchant problem-solving buying guides built around real everyday needs: baby essentials, skincare routines, pet care, kitchen fixes, home storage, travel, fitness, and useful Amazon product ideas."/>
+<meta property="og:title" content="Merchant Blog | Problem-Solving Buying Guides & Product Ideas"/>
+<meta property="og:description" content="Useful Merchant guides built around real problems, practical routines, and curated product ideas."/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://merchant.dedyn.io/blog.html"/>
+<meta property="og:url" content="https://www.merchant.dedyn.io/blog.html"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta property="og:image" content="https://merchant.dedyn.io/images/laroche-cicaplast-article-1.webp"/>
+<meta property="og:image" content="https://www.merchant.dedyn.io/images/laroche-cicaplast-article-1.webp"/>
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -59,10 +59,10 @@ header{
   font-weight:900;
   letter-spacing:.3px;
   flex-shrink:0;
-  text-shadow:0 0 18px rgba(251,191,36,.55);
+  text-shadow:0 0 8px rgba(251,191,36,.25);
   transition:.2s ease;
 }
-.logo:hover{color:#fde68a;transform:translateY(-1px)}
+.logo:hover{color:#fde68a;transform:translateY(-1px);text-shadow:0 0 18px rgba(251,191,36,.50)}
 
 .header-search{
   flex:1 1 280px;
@@ -516,19 +516,43 @@ footer p{margin:6px 0;font-size:14px}
 {
   "@context": "https://schema.org",
   "@type": "Blog",
+  "@id": "https://www.merchant.dedyn.io/blog.html#blog",
   "name": "Merchant Blog",
-  "url": "https://merchant.dedyn.io/blog.html",
+  "url": "https://www.merchant.dedyn.io/blog.html",
   "description": "Problem-solving buying guides and practical product ideas from Merchant.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Merchant",
-    "url": "https://merchant.dedyn.io/"
+    "url": "https://www.merchant.dedyn.io/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Merchant",
-    "url": "https://merchant.dedyn.io/"
-  }
+    "url": "https://www.merchant.dedyn.io/"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Dry Skin Keeps Coming Back? Fix the Barrier Before Buying More",
+      "url": "https://www.merchant.dedyn.io/dry-skin-barrier-fix.html",
+      "image": "https://www.merchant.dedyn.io/images/laroche-cicaplast-article-1.webp"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "New Parent? We’ve Got You: 5 Baby Essentials That Make the First Months Easier",
+      "url": "https://www.merchant.dedyn.io/new-parent-baby-essentials.html"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Dog Hair Everywhere? Build a Cleaner Grooming Routine at Home",
+      "url": "https://www.merchant.dedyn.io/dog-shedding-clean-home.html"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "No Time for the Gym? This Compact Arm Exerciser Brings Strength Training Home",
+      "url": "https://www.merchant.dedyn.io/no-time-for-gym-arm-exerciser.html"
+    }
+  ]
 }
 </script>
 <!-- Pinterest Tag -->
@@ -540,6 +564,7 @@ var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}
 ("https://s.pinimg.com/ct/core.js");
 pintrk('load', '2614017476340');
 pintrk('page');
+pintrk('track', 'pagevisit');
 </script>
 <noscript>
   <img height="1" width="1" style="display:none;" alt=""
@@ -562,7 +587,7 @@ pintrk('page');
 <body>
 <header>
   <div class="container nav">
-    <a class="logo logo-home-active" href="https://merchant.dedyn.io/">Merchant</a>
+    <a class="logo logo-home-active" href="https://www.merchant.dedyn.io/">Merchant</a>
 
     <form action="search.html" class="header-search" method="get">
       <input aria-label="Search products" autocomplete="off" name="q" placeholder="Search products..." type="search"/>
@@ -570,13 +595,14 @@ pintrk('page');
     </form>
 
     <nav class="nav-links">
-      <a href="best-sellers.html">Best Sellers</a>
-      <a href="top-amazon-finds.html">Top Finds</a>
-      <a href="baby.html">Baby</a>
-      <a href="beauty.html">Beauty</a>
-      <a href="pet-supplies.html">Pet</a>
+      <a href="best-sellers.html" data-track="category_click" data-category="best_sellers">Best Sellers</a>
+      <a href="top-amazon-finds.html" data-track="category_click" data-category="top_finds">Top Finds</a>
+      <a class="active-page" href="blog.html">Blog</a>
+      <a href="baby.html" data-track="category_click" data-category="baby">Baby</a>
+      <a href="beauty.html" data-track="category_click" data-category="beauty">Beauty</a>
+      <a href="pet-supplies.html" data-track="category_click" data-category="pet">Pet</a>
       <a href="home-kitchen.html">Home &amp; Kitchen</a>
-      <a href="sports-outdoors.html">Sports</a>
+      <a href="sports-outdoors.html" data-track="category_click" data-category="sports">Sports</a>
     </nav>
   </div>
 </header>
@@ -587,12 +613,11 @@ pintrk('page');
     <span class="blog-eyebrow">Merchant Editorial</span>
     <h1>The Merchant Blog</h1>
     <p>
-      Premium problem-solving guides for real everyday needs — beauty routines, pet care,
-      home organization, baby routines, kitchen fixes, compact fitness tools, and useful finds worth your time.
+      Problem-first buying guides built to help readers solve everyday needs before choosing what to buy — baby routines, skincare, pet care, kitchen fixes, small-home storage, travel, fitness, and useful finds worth your time.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="dry-skin-barrier-fix.html">Read Featured Guide</a>
-      <a class="btn btn-secondary" href="#editorial-guides">Explore Guides</a>
+      <a class="btn btn-primary" href="dry-skin-barrier-fix.html" data-track="featured_guide_click" data-guide="dry_skin_barrier_fix">Read Featured Guide</a>
+      <a class="btn btn-secondary" href="#editorial-guides" data-track="explore_guides_click">Explore Guides</a>
     </div>
   </div>
 </section>
@@ -616,7 +641,7 @@ pintrk('page');
           <span>Barrier Routine</span>
           <span>Live Guide</span>
         </div>
-        <a class="btn btn-primary" href="dry-skin-barrier-fix.html">Read the Guide</a>
+        <a class="btn btn-primary" href="dry-skin-barrier-fix.html" data-track="hero_feature_click" data-guide="dry_skin_barrier_fix">Read the Guide</a>
       </div>
     </article>
 
@@ -686,19 +711,19 @@ pintrk('page');
             <p>
               Storage products work best when they solve a specific pressure point: counters, entryways, bathrooms, shelves, or tight corners.
             </p>
-            <a class="read-link" href="home-kitchen.html">Browse home picks</a>
+            <a class="read-link" href="small-home-storage-fixes.html" data-track="guide_click" data-guide="small_home_storage_fixes">Read storage guide</a>
           </div>
         </article>
 
         <article class="editorial-row">
           <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=85" alt="Baby care items on a soft bed" loading="lazy">
           <div>
-            <span class="article-tag">Baby • Daily Routine</span>
-            <h3>Baby Routine Feels Hard? Products That Make Repeated Moments Easier</h3>
+            <span class="article-tag">Baby • New Parent Guide</span>
+            <h3>New Parent? We’ve Got You: 5 Baby Essentials That Make the First Months Easier</h3>
             <p>
-              Feeding, changing, bathing, travel, and safety are repeated all day. The right products should make those moments calmer and easier.
+              A practical guide built around five repeated newborn and baby moments: feeding, changing, soothing, bath time, and going out with less stress.
             </p>
-            <a class="read-link" href="baby.html">Browse baby picks</a>
+            <a class="read-link" href="new-parent-baby-essentials.html" data-track="guide_click" data-guide="new_parent_baby_essentials">Read baby essentials guide</a>
           </div>
         </article>
 
@@ -710,7 +735,7 @@ pintrk('page');
             <p>
               A useful kitchen guide for prep, storage, cleanup, counter clutter, and products that solve repeated kitchen problems.
             </p>
-            <a class="read-link" href="home-kitchen.html">Browse kitchen picks</a>
+            <a class="read-link" href="kitchen-finds-save-time.html" data-track="guide_click" data-guide="kitchen_finds_save_time">Read kitchen guide</a>
           </div>
         </article>
       </section>
@@ -721,7 +746,7 @@ pintrk('page');
           <p>
             Start with the strongest live guide: dry skin and barrier support. Then move through beauty, pet care, home, baby, kitchen, and fitness guides.
           </p>
-          <a class="sidebar-button" href="dry-skin-barrier-fix.html">Read Featured Guide</a>
+          <a class="sidebar-button" href="dry-skin-barrier-fix.html" data-track="sidebar_featured_guide_click" data-guide="dry_skin_barrier_fix">Read Featured Guide</a>
         </section>
 
         <section class="sidebar-panel">
@@ -731,22 +756,22 @@ pintrk('page');
             <li><a href="skincare-dull-skin-fix.html">Skin looks dull or tired<span>Beauty • Skin routine</span></a></li>
             <li><a href="dog-shedding-clean-home.html">Dog hair keeps coming back<span>Pet Care • Shedding routine</span></a></li>
             <li><a href="no-time-for-gym-arm-exerciser.html">No time for the gym?<span>Fitness • Home gym</span></a></li>
-            <li><a href="home-kitchen.html">Small home feels cluttered<span>Home • Browse storage picks</span></a></li>
-            <li><a href="baby.html">Baby routine feels hard<span>Baby • Browse baby picks</span></a></li>
-            <li><a href="home-kitchen.html">Kitchen feels messy<span>Kitchen • Browse kitchen picks</span></a></li>
+            <li><a href="small-home-storage-fixes.html" data-track="popular_guide_click" data-guide="small_home_storage_fixes">Small home feels cluttered<span>Home • Storage guide</span></a></li>
+            <li><a href="new-parent-baby-essentials.html" data-track="popular_guide_click" data-guide="new_parent_baby_essentials">New parent? We’ve got you<span>Baby • Essentials guide</span></a></li>
+            <li><a href="kitchen-finds-save-time.html" data-track="popular_guide_click" data-guide="kitchen_finds_save_time">Kitchen feels messy<span>Kitchen • Time-saving guide</span></a></li>
           </ul>
         </section>
 
         <section class="sidebar-panel">
           <h2>Shop Categories</h2>
           <div class="topic-tags">
-            <a href="best-sellers.html">Best Sellers</a>
-            <a href="top-amazon-finds.html">Top Finds</a>
-            <a href="baby.html">Baby</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="pet-supplies.html">Pet</a>
-            <a href="home-kitchen.html">Home & Kitchen</a>
-            <a href="sports-outdoors.html">Sports</a>
+            <a href="best-sellers.html" data-track="category_click" data-category="best_sellers">Best Sellers</a>
+            <a href="top-amazon-finds.html" data-track="category_click" data-category="top_finds">Top Finds</a>
+            <a href="baby.html" data-track="category_click" data-category="baby">Baby</a>
+            <a href="beauty.html" data-track="category_click" data-category="beauty">Beauty</a>
+            <a href="pet-supplies.html" data-track="category_click" data-category="pet">Pet</a>
+            <a href="home-kitchen.html" data-track="category_click" data-category="home_kitchen">Home & Kitchen</a>
+            <a href="sports-outdoors.html" data-track="category_click" data-category="sports">Sports</a>
           </div>
         </section>
       </aside>
@@ -754,10 +779,9 @@ pintrk('page');
 
     <section class="trending-strip">
       <span class="article-tag">Follow Merchant</span>
-      <h2>New guides, product ideas, and seasonal finds will also be shared on Pinterest.</h2>
+      <h2>New problem-solving guides, product ideas, and seasonal finds will also be shared on Pinterest.</h2>
       <p>
-        Follow Merchant on Pinterest for practical kitchen fixes, small-home storage ideas, beauty routines,
-        pet care helpers, compact fitness picks, and fresh seasonal product guides.
+        Follow Merchant on Pinterest for practical kitchen fixes, new-parent baby essentials, small-home storage ideas, beauty routines, pet care helpers, compact fitness picks, and fresh seasonal product guides.
       </p>
       <div class="trending-tags">
         <span>Kitchen Fixes</span>
@@ -773,7 +797,7 @@ pintrk('page');
 </main>
 
 <footer>
-  <div class="footer-pinterest"><a href="https://www.pinterest.com/merchantfinds/" target="_blank" rel="noopener noreferrer">Follow Merchant on Pinterest</a></div>
+  <div class="footer-pinterest"><a href="https://pl.pinterest.com/m3rchantm3rchant/" target="_blank" rel="noopener noreferrer" data-track="footer_pinterest_click">Follow Merchant on Pinterest</a></div>
   <p>© 2026 Merchant. All rights reserved.</p>
   <p>This website contains affiliate links.</p>
   <p>As an Amazon Associate, Merchant earns from qualifying purchases.</p>
@@ -784,6 +808,47 @@ pintrk('page');
     <a href="privacy.html">Privacy Policy</a>
   </div>
 </footer>
+
+<script>
+(function(){
+  function sendMerchantEvent(eventName, params){
+    params = params || {};
+    try {
+      if (typeof gtag === "function") {
+        gtag("event", eventName, Object.assign({
+          page_title: document.title,
+          page_location: window.location.href
+        }, params));
+      }
+    } catch(e) {}
+    try {
+      if (typeof pintrk === "function" && eventName === "footer_pinterest_click") {
+        pintrk("track", "custom", {event_id: "merchant_footer_pinterest_click"});
+      }
+    } catch(e) {}
+  }
+
+  document.addEventListener("click", function(e){
+    var tracked = e.target.closest("[data-track]");
+    if (!tracked) return;
+
+    sendMerchantEvent(tracked.getAttribute("data-track"), {
+      link_url: tracked.href || "",
+      guide: tracked.getAttribute("data-guide") || "",
+      link_text: (tracked.textContent || "").trim().slice(0, 120)
+    });
+  });
+
+  var searchForm = document.querySelector(".header-search");
+  if (searchForm) {
+    searchForm.addEventListener("submit", function(){
+      sendMerchantEvent("site_search_submit", {
+        search_term: (searchForm.querySelector("input[name='q']") || {}).value || ""
+      });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
